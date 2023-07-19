@@ -1,27 +1,36 @@
 # for x64
 
-# ensure permission
+# check user
 A=`whoami`
-B=`arch`
-if [ $A != 'root' ]; then
-   echo "You have to be root to run this script"
-   echo "Please use sudo"
+if [ $A == 'root' ]; then
+   echo "You can't be root to run this script"
+   echo "Please don't use sudo"
    exit 1;
 fi
 
 # enhance history command in bash
-echo "if [[ $- == *i* ]]" >> ~/.bashrc
-echo "then" >> ~/.bashrc
-echo "    bind '"\e[A": history-search-backward'" >> ~/.bashrc
-echo "    bind '"\e[B": history-search-forward'" >> ~/.bashrc
-echo "fi" >> ~/.bashrc
+printf 'if [[ $- == *i* ]]' >> ~/.bashrc
+printf "\nthen" >> ~/.bashrc
+printf "\n    bind " >> ~/.bashrc
+printf "'" >> ~/.bashrc
+printf '"' >> ~/.bashrc
+printf ''\e[A'' >> ~/.bashrc
+printf '"' >> ~/.bashrc
+printf ": history-search-backward'" >> ~/.bashrc
+printf "\n    bind " >> ~/.bashrc
+printf "'" >> ~/.bashrc
+printf '"' >> ~/.bashrc
+printf ''\e[B'' >> ~/.bashrc
+printf '"' >> ~/.bashrc
+printf ": history-search-forward'" >> ~/.bashrc
+printf "\nfi" >> ~/.bashrc
 
 # avoid screen off
 gsettings set org.gnome.desktop.session idle-delay 0
 
 # change apt sources.list
 cd ~
-mkdir Project Packages Tools
+mkdir ~/Project && mkdir ~/Packages && mkdir ~/Tools
 mkdir ~/Tools/network
 sudo mv /etc/apt/sources.list /etc/apt/sources.list.back
 sudo touch /etc/apt/sources.list
@@ -35,7 +44,7 @@ sudo apt upgrade -y
 # highlight bash command
 sudo apt install git curl snap wget make vim gawk -y
 cd ~/Tools && git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
-mkdir ~/.local/ble.sh && make -C ble.sh install PREFIX=~/.local
+mkdir ~/.local/ble.sh && cd ~/Tools && make -C ble.sh install PREFIX=~/.local
 echo 'source ~/.local/share/blesh/ble.sh' >> ~/.bashrc
 
 # install chinese
@@ -49,10 +58,10 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 40
 snap install cmake --classic
 wget -c https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.zip -P ~/Packages/
 unzip ~/Packages/eigen-3.4.0.zip -d ~/Packages/eigen
-cd ~/Packages/eigen/eigen-3.4.0
+cd ~/Packages/eigen/eigen-3.4.0 && rm ~/Packages/eigen-3.4.0.zip
 mkdir build && cd build
 cmake ..
-make -j3 && sudo make install
+make -j5 && sudo make install
 
 # install ros
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -66,7 +75,7 @@ sudo pip3 install 6-rosdep
 sudo 6-rosdep
 sudo rosdep init
 rosdep update
-sudo apt install python3-catkin-tools python3-osrf-pycommon
+sudo apt install python3-catkin-tools python3-osrf-pycommon -y
 
 # install ceres
 cd ~/Packages
@@ -75,7 +84,7 @@ sudo apt install libgoogle-glog-dev libgflags-dev libatlas-base-dev libsuitespar
 cd ceres-solver
 mkdir build && cd build
 cmake ..
-make -j3
+make -j5
 sudo make install
 
 # install pcl
@@ -85,7 +94,7 @@ tar xvf source.tar.gz
 cd pcl && rm ~/Packages/source.tar.gz
 mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
-make -j3
+make -j5
 sudo make install
 
 # install realsense driver
@@ -114,11 +123,11 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 cd ~/Packages && git clone https://github.com/mavlink/mavlink.git --recursive
 cd ~/Packages/mavlink
 cmake -Bbuild -H. -DCMAKE_INSTALL_PREFIX=install -DMAVLINK_DIALECT=common -DMAVLINK_VERSION=2.0
-sudo apt install python3.8-venv && python -m venv venv
+sudo apt install python3.8-venv -y && python -m venv venv
 source venv/bin/activate
 python3 -m pip install -r pymavlink/requirements.txt
 cmake --build build --target install
-sudo apt-get install ros-${ROS_DISTRO}-mavros ros-${ROS_DISTRO}-mavros-extras ros-${ROS_DISTRO}-mavros-msgs
+sudo apt install ros-${ROS_DISTRO}-mavros ros-${ROS_DISTRO}-mavros-extras ros-${ROS_DISTRO}-mavros-msgs -y
 wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
 sudo bash ./install_geographiclib_datasets.sh && rm install_geographiclib_datasets.sh
 
@@ -138,7 +147,9 @@ wget -c https://github.com/intel/intel-one-mono/releases/download/V1.2.1/otf.zip
 unzip ~/.local/share/fonts/otf.zip -d  ~/.local/share/fonts/
 mv ~/.local/share/fonts/otf/* ~/.local/share/fonts/ && rm -r ~/.local/share/fonts/otf && rm ~/.local/share/fonts/otf.zip
 cd ~ && git clone https://github.com/TioeAre/ubuntu_settings.git
-mv ~/ubuntu_settings/.vim ~/.vim && mv ~/ubuntu_settings/.vimrc ~/.vimrc
+cd ~/ubuntu_settings
+unzip ~/ubuntu_settings/c.zip -d ~/ubuntu_settings/ && unzip ~/ubuntu_settings/a.zip -d ~/ubuntu_settings/vim/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party && unzip ~/ubuntu_settings/b.zip -d ~/ubuntu_settings/vim/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party
+mv ~/ubuntu_settings/vim/.vim ~/.vim && mv ~/ubuntu_settings/.vimrc ~/.vimrc && rm -r ~/ubuntu_settings -y
 sudo apt install terminator ros-${ROS_DISTRO}-plotjuggler-ros -y
 
 cd ~/Tools && wget -c https://az764295.vo.msecnd.net/stable/74f6148eb9ea00507ec113ec51c489d6ffb4b771/code_1.80.1-1689183569_amd64.deb -O ~/Tools/vscode.deb
