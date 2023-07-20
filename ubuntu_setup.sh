@@ -9,21 +9,21 @@ if [ $A == 'root' ]; then
 fi
 
 # enhance history command in bash
-printf 'if [[ $- == *i* ]]' >> ~/.bashrc
-printf "\nthen" >> ~/.bashrc
-printf "\n    bind " >> ~/.bashrc
-printf "'" >> ~/.bashrc
-printf '"' >> ~/.bashrc
-printf ''\e[A'' >> ~/.bashrc
-printf '"' >> ~/.bashrc
-printf ": history-search-backward'" >> ~/.bashrc
-printf "\n    bind " >> ~/.bashrc
-printf "'" >> ~/.bashrc
-printf '"' >> ~/.bashrc
-printf ''\e[B'' >> ~/.bashrc
-printf '"' >> ~/.bashrc
-printf ": history-search-forward'" >> ~/.bashrc
-printf "\nfi" >> ~/.bashrc
+printf 'if [[ $- == *i* ]]' >> ~/.bashrc 
+printf "\nthen" >> ~/.bashrc 
+printf "\n    bind " >> ~/.bashrc 
+printf "'" >> ~/.bashrc 
+printf '"' >> ~/.bashrc 
+printf ''\e[A'' >> ~/.bashrc 
+printf '"' >> ~/.bashrc 
+printf ": history-search-backward'" >> ~/.bashrc 
+printf "\n    bind " >> ~/.bashrc 
+printf "'" >> ~/.bashrc 
+printf '"' >> ~/.bashrc 
+printf ''\e[B'' >> ~/.bashrc 
+printf '"' >> ~/.bashrc 
+printf ": history-search-forward'" >> ~/.bashrc 
+printf "\nfi" >> ~/.bashrc 
 
 # avoid screen off
 gsettings set org.gnome.desktop.session idle-delay 0
@@ -69,7 +69,7 @@ sudo sh -c "wget -O - https://raw.githubusercontent.com/ros/rosdistro/master/ros
 sudo apt update
 sudo apt install ros-noetic-desktop-full -y
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc && source ~/.bashrc
-sudo ln /usr/bin/python /usr/bin/python3.8
+sudo ln /usr/bin/python3.8 /usr/bin/python
 sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential htop python3-pip -y
 sudo pip3 install 6-rosdep
 sudo 6-rosdep
@@ -98,13 +98,12 @@ make -j5
 sudo make install
 
 # install realsense driver
-sudo apt update && sudo apt upgrade && sudo apt dist-upgrade -y
+sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
 sudo apt install libssl-dev libusb-1.0-0-dev libudev-dev pkg-config libgtk-3-dev ssh net-tools -y
 sudo apt install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev libudev-dev at -y
 sudo mkdir -p /etc/apt/keyrings
 curl -sSf https://librealsense.intel.com/Debian/librealsense.pgp | sudo tee /etc/apt/keyrings/librealsense.pgp > /dev/null
-echo "deb [signed-by=/etc/apt/keyrings/librealsense.pgp] https://librealsense.intel.com/Debian/apt-repo `lsb_release -cs` main" | \
-sudo tee /etc/apt/sources.list.d/librealsense.list
+echo "deb [signed-by=/etc/apt/keyrings/librealsense.pgp] https://librealsense.intel.com/Debian/apt-repo `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/librealsense.list
 sudo apt update
 sudo apt install librealsense2-dkms librealsense2-utils librealsense2-dev librealsense2-dbg -y
 
@@ -130,6 +129,7 @@ cmake --build build --target install
 sudo apt install ros-${ROS_DISTRO}-mavros ros-${ROS_DISTRO}-mavros-extras ros-${ROS_DISTRO}-mavros-msgs -y
 wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
 sudo bash ./install_geographiclib_datasets.sh && rm install_geographiclib_datasets.sh
+deactivate
 
 # install kalibr
 sudo apt-get install -y git wget autoconf automake nano libeigen3-dev libboost-all-dev libsuitesparse-dev doxygen libopencv-dev libpoco-dev libtbb-dev libblas-dev liblapack-dev libv4l-dev -y
@@ -149,7 +149,8 @@ mv ~/.local/share/fonts/otf/* ~/.local/share/fonts/ && rm -r ~/.local/share/font
 cd ~ && git clone https://github.com/TioeAre/ubuntu_settings.git
 cd ~/ubuntu_settings
 unzip ~/ubuntu_settings/c.zip -d ~/ubuntu_settings/ && unzip ~/ubuntu_settings/a.zip -d ~/ubuntu_settings/vim/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party && unzip ~/ubuntu_settings/b.zip -d ~/ubuntu_settings/vim/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party
-mv ~/ubuntu_settings/vim/.vim ~/.vim && mv ~/ubuntu_settings/.vimrc ~/.vimrc && rm -r ~/ubuntu_settings -y
+cd ~
+mv ~/ubuntu_settings/vim/.vim ~/.vim && mv ~/ubuntu_settings/.vimrc ~/.vimrc && rm -r ~/ubuntu_settings
 sudo apt install terminator ros-${ROS_DISTRO}-plotjuggler-ros -y
 
 cd ~/Tools && wget -c https://az764295.vo.msecnd.net/stable/74f6148eb9ea00507ec113ec51c489d6ffb4b771/code_1.80.1-1689183569_amd64.deb -O ~/Tools/vscode.deb
@@ -158,3 +159,4 @@ rm ~/Tools/vscode.deb
 cd ~/Tools && wget -c https://download.nomachine.com/download/8.6/Linux/nomachine_8.6.1_3_amd64.deb -O ~/Tools/nomachine.deb
 sudo dpkg -i ~/Tools/nomachine.deb && rm ~/Tools/nomachine.deb
 
+sudo apt install nautilus-actions filemanager-actions -y
