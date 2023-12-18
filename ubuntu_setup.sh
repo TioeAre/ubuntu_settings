@@ -1,3 +1,4 @@
+#!/bin/bash
 # for x64
 
 # check user
@@ -8,22 +9,38 @@ if [ $A == 'root' ]; then
    exit 1;
 fi
 
+# Backup the original .bashrc file
+cp ~/.bashrc ~/.bashrc_backup
+
 # enhance history command in bash
-printf 'if [[ $- == *i* ]]' >> ~/.bashrc 
-printf "\nthen" >> ~/.bashrc 
-printf "\n    bind " >> ~/.bashrc 
-printf "'" >> ~/.bashrc 
-printf '"' >> ~/.bashrc 
-printf ''\e[A'' >> ~/.bashrc 
-printf '"' >> ~/.bashrc 
-printf ": history-search-backward'" >> ~/.bashrc 
-printf "\n    bind " >> ~/.bashrc 
-printf "'" >> ~/.bashrc 
-printf '"' >> ~/.bashrc 
-printf ''\e[B'' >> ~/.bashrc 
-printf '"' >> ~/.bashrc 
-printf ": history-search-forward'" >> ~/.bashrc 
-printf "\nfi" >> ~/.bashrc 
+# printf 'if [[ $- == *i* ]]' >> ~/.bashrc
+# printf "\nthen" >> ~/.bashrc
+# printf "\n    bind " >> ~/.bashrc
+# printf "'" >> ~/.bashrc
+# printf '"' >> ~/.bashrc
+# printf ''\e[A'' >> ~/.bashrc
+# printf '"' >> ~/.bashrc
+# printf ": history-search-backward'" >> ~/.bashrc
+# printf "\n    bind " >> ~/.bashrc
+# printf "'" >> ~/.bashrc
+# printf '"' >> ~/.bashrc
+# printf ''\e[B'' >> ~/.bashrc
+# printf '"' >> ~/.bashrc
+# printf ": history-search-forward'" >> ~/.bashrc
+# printf "\nfi" >> ~/.bashrc
+
+# Add configuration to enable command history navigation
+echo "# Enable command history navigation with arrow keys" >> ~/.bashrc
+echo "if [ -n \"\$BASH_VERSION\" ]; then" >> ~/.bashrc
+echo "    bind '\"\e[A\": history-search-backward'" >> ~/.bashrc
+echo "    bind '\"\e[B\": history-search-forward'" >> ~/.bashrc
+echo "fi" >> ~/.bashrc
+
+# if [[ $- == *i* ]]
+# then
+#     bind '"\e[A": history-search-backward'
+#     bind '"\e[B": history-search-forward'
+# fi
 
 # avoid screen off
 gsettings set org.gnome.desktop.session idle-delay 0
@@ -160,3 +177,12 @@ cd ~/Tools && wget -c https://download.nomachine.com/download/8.6/Linux/nomachin
 sudo dpkg -i ~/Tools/nomachine.deb && rm ~/Tools/nomachine.deb
 
 sudo apt install nautilus-actions filemanager-actions -y
+
+# Rime input auto deploy
+sudo apt install ruby
+cd ~/Packages && mkdir input
+cd ~/Packages/input
+git clone --depth=1 https://github.com/Mark24Code/rime-auto-deploy.git --branch latest
+cd rime-auto-deploy
+./installer.rb
+echo 'please use "ctrl + `" to change configs of rime'
