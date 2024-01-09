@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Action
+Name[en_GB]=Open in Terminal
+Name[en]=Open in Terminal
+Name[C]=Open in Terminal
+Tooltip[en_GB]=Open in Terminal
+Tooltip[en]=Open in Terminal
+Tooltip[C]=Open in Terminal
+TargetLocation=true
+ToolbarLabel[en_GB]=Open in Terminal
+ToolbarLabel[en]=Open in Terminal
+ToolbarLabel[C]=Open in Terminal
+Profiles=profile-zero;
+
+[X-Action-Profile profile-zero]
+Name[en_GB]=Open in Terminal
+Name[en]=Open in Terminal
+Name[C]=Open in Terminal
+Exec=/usr/bin/x-terminal-emulator --working-directory=%d/%b
