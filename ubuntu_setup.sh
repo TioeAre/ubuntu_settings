@@ -44,10 +44,22 @@ sudo apt update
 sudo apt upgrade -y
 
 # highlight bash command
-sudo apt install git curl snap wget make gawk scdoc -y
+sudo apt install git curl wget make gawk scdoc -y
 cd ~/Tools && git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
 mkdir ~/.local/ble.sh && cd ~/Tools && make -C ble.sh install PREFIX=~/.local
 echo 'source ~/.local/share/blesh/ble.sh' >>~/.bashrc
+
+# install brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+{
+    echo
+    echo "# brew"
+    echo "export PATH=\"\$PATH:/home/linuxbrew/.linuxbrew/bin\""
+    echo "eval \"\$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)\""
+    echo "export HOMEBREW_NO_AUTO_UPDATE=1"
+    echo "export HOMEBREW_NO_INSTALL_CLEANUP=1"
+} >>~/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # install chinese
 sudo apt install language-pack-zh-han* language-pack-gnome-zh-han* language-pack-kde-zh-han* "$(check-language-support)" -y
@@ -57,7 +69,7 @@ sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 sudo apt install -y gcc-13 g++-13
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 40
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 40
-snap install cmake --classic
+brew install cmake
 wget -c https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.zip -P ~/Packages/
 unzip ~/Packages/eigen-3.4.0.zip -d ~/Packages/eigen
 cd ~/Packages/eigen/eigen-3.4.0 && rm ~/Packages/eigen-3.4.0.zip
@@ -67,7 +79,7 @@ make -j5 && sudo make install
 
 sudo apt install python3.10
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 50
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.10 40
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.10 50
 
 # install ros
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -143,7 +155,7 @@ sudo bash ./install_geographiclib_datasets.sh && rm install_geographiclib_datase
 deactivate
 
 # install kalibr
-sudo apt-get install -y git wget autoconf automake nano libeigen3-dev libboost-all-dev libsuitesparse-dev doxygen libopencv-dev libpoco-dev libtbb-dev libblas-dev liblapack-dev libv4l-dev -y
+sudo apt-get install -y git wget autoconf automake nano libboost-all-dev libsuitesparse-dev doxygen libopencv-dev libpoco-dev libtbb-dev libblas-dev liblapack-dev libv4l-dev -y
 sudo apt-get install -y python3-dev python3-pip python3-scipy python3-matplotlib ipython3 python3-wxgtk4.0 python3-tk python3-igraph python3-pyx python3-empy -y
 mkdir -p ~/Packages/kalibr_workspace/src && cd ~/Packages/kalibr_workspace || exit
 catkin init
@@ -206,7 +218,8 @@ scdoc <extra/man/alacritty-bindings.5.scd | gzip -c | sudo tee /usr/local/share/
 mkdir -p ~/.bash_completion.d
 cp extra/completions/alacritty.bash ~/.bash_completion.d/alacritty
 echo "source ~/.bash_completion.d/alacritty" >>~/.bashrc
-sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/alacritty 50
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/alacritty 55
+# TODO: zsh
 
 # kitty
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
@@ -221,7 +234,7 @@ cp ~/Tools/kitty.app/share/applications/kitty-open.desktop ~/.local/share/applic
 # Update the paths to the kitty and its icon in the kitty.desktop file(s)
 sed -i "s|Icon=kitty|Icon=/home/$USER/Tools/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty*.desktop
 sed -i "s|Exec=kitty|Exec=/home/$USER/Tools/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
-sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator ~/.local/bin/kitty 45
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator ~/.local/bin/kitty 55
 
 # tmux
 cd ~/Tools || exit
@@ -232,18 +245,45 @@ sh autogen.sh
 sudo make install
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+sudo apt remove nautilus-extension-gnome-terminal nautilus-open-terminal
+
 # neovim
 cd ~/Tools || exit
 sudo apt install -y ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen bear fzf fd-find luarocks locate bat clang-tidy-18 cmakeformat dconf-editor # alaritty
-sudo snap install deno vale
+brew install deno vale
 pip install cmakelang
 mkdir -p ~/.local/share/nvim/undo
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 sudo apt update
 sudo apt install python3-colcon-common-extensions
+brew install rg hg
+pip3 install neovim pynvim
 
-# sudo snap install --classic nvim ripgrep
+
+
+
+
+
+
+
+
+
+
+file=~/.pam_environment
+if [ ! -e "$file" ]; then
+    touch "$file"
+fi
+{
+    echo 'INPUT_METHOD DEFAULT=ibus'
+    echo 'GTK_IM_MODULE DEFAULT=ibus'
+    echo 'QT_IM_MODULE DEFAULT=ibus'
+    echo 'XMODIFIERS DEFAULT=@im=ibus'
+    echo 'SDL_IM_MODULE DEFAULT=ibus'
+    echo 'GLFW_IM_MODULE=ibus'
+    echo 'WINIT_UNIX_BACKEND=x11'
+} >>"$file"
+
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 sudo mv nvim.appimage /usr/local/bin/nvim
 sudo chmod u+x /usr/local/bin/nvim
