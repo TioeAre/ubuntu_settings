@@ -34,6 +34,7 @@ gsettings set org.gnome.desktop.session idle-delay 0
 cd ~ || exit
 mkdir ~/Project && mkdir ~/Packages && mkdir ~/Tools
 mkdir ~/Tools/network
+
 sudo mv /etc/apt/sources.list /etc/apt/sources.list.back
 sudo touch /etc/apt/sources.list
 sudo echo "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
@@ -298,6 +299,18 @@ fi
 cd ~/.config && git clone https://github.com/TioeAre/nvim
 
 #######################################################################
+
+# linux wifi hotspot
+sudo apt install -y libgtk-3-dev build-essential gcc g++ pkg-config make hostapd libqrencode-dev libpng-dev
+# sudo add-apt-repository ppa:lakinduakash/lwh
+# sudo apt install linux-wifi-hotspot
+cd ~/Tools && mkdir network
+cd ~/Tools/network || exit
+git clone https://github.com/lakinduakash/linux-wifi-hotspot
+cd linux-wifi-hotspot || exit
+make
+sudo make install
+# wihotspot
 
 cd ~/Tools && wget -c https://az764295.vo.msecnd.net/stable/74f6148eb9ea00507ec113ec51c489d6ffb4b771/code_1.80.1-1689183569_amd64.deb -O ~/Tools/vscode.deb
 sudo dpkg -i vscode.deb
