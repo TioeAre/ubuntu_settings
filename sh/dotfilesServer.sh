@@ -1,17 +1,18 @@
 #!/bin/bash
 # for x64
 cd $(dirname "$0") || exit
+parent_dir=$(dirname "$(pwd)")
 
-ln -s ../dotFiles/Templates ~/
-ln -s ../dotFiles/vale ~/
-ln -s ../dotFiles/vale.ini ~/
-ln -s ../dotFiles/.clangd ~/
-ln -s ../dotFiles/.clang-format ~/
-ln -s ../dotFiles/.clang-tidy ~/
-ln -s ../dotFiles/.cmake-format.yaml ~/
-ln -s ../dotFiles/.cpplint ~/
-ln -s ../dotFiles/.flake8 ~/
-ln -s ../dotFiles/.tmux.conf ~/
-ln -s ../dotFiles/.vale.ini ~/
-ln -s ../dotFiles/.vimrc ~/
-ln -s ../dotFiles/.config/tmux-powerline ~/.config
+ln -s "$parent_dir/dotFiles/Templates" ~/
+ln -s "$parent_dir/dotFiles/vale" ~/
+ln -s "$parent_dir/dotFiles/vale.ini" ~/
+ln -s "$parent_dir/dotFiles/.clangd" ~/
+ln -s "$parent_dir/dotFiles/.clang-format" ~/
+ln -s "$parent_dir/dotFiles/.clang-tidy" ~/
+ln -s "$parent_dir/dotFiles/.cmake-format.yaml" ~/
+ln -s "$parent_dir/dotFiles/.cpplint" ~/
+ln -s "$parent_dir/dotFiles/.flake8" ~/
+ln -s "$parent_dir/dotFiles/.tmux.conf" ~/
+ln -s "$parent_dir/dotFiles/.vale.ini" ~/
+ln -s "$parent_dir/dotFiles/.vimrc" ~/
+ln -s "$parent_dir/dotFiles/.config/tmux-powerline" ~/.config

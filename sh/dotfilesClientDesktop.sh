@@ -2,5 +2,6 @@
 # for x64
 
 cd $(dirname "$0") || exit
-ln -s ../dotFiles/.config/kitty ~/.config
-ln -s ../dotFiles/.config/alacritty ~/.config
+parent_dir=$(dirname "$(pwd)")
+ln -s "$parent_dir/dotFiles/.config/kitty" ~/.config
+ln -s "$parent_dir/dotFiles/.config/alacritty" ~/.config

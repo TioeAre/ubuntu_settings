@@ -9,3 +9,6 @@ if [ "$desktop" = true ]; then
 else
     echo "The values are not equal."
 fi
+
+parent_dir=$(dirname "$(pwd)")
+ln -s "$parent_dir/zzu" ~/

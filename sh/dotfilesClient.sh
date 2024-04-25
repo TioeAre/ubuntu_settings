@@ -3,4 +3,5 @@
 
 cd $(dirname "$0") || exit
 mkdir ~/brew
-ln -s ../dotFiles/brew/sync_brew_path ~/brew
+parent_dir=$(dirname "$(pwd)")
+ln -s "$parent_dir/dotFiles/brew/sync_brew_path" ~/brew
