@@ -1,5 +1,6 @@
 #!/bin/bash
 # for x64
+cd $(dirname "$0") || exit
 
 ln -s ../dotFiles/Templates ~/
 ln -s ../dotFiles/vale ~/

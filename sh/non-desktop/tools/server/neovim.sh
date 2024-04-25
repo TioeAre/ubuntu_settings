@@ -13,6 +13,7 @@
 # pip3 install neovim pynvim
 
 
+cd ~/Tools || exit
 file=~/.pam_environment
 if [ ! -e "$file" ]; then
     touch "$file"

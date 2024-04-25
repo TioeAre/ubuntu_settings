@@ -1,6 +1,7 @@
 #!/bin/bash
 # for x64
 
+cd ~/Tools || exit
 sudo apt install ibus-rime -y
 
 wget -c https://github.com/intel/intel-one-mono/releases/download/V1.2.1/otf.zip -P ~/.local/share/fonts

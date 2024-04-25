@@ -1,6 +1,7 @@
 #!/bin/bash
 # for x64
 
+cd ~/Tools || exit
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 mv ~/.local/kitty.app ~/Tools
 # Create symbolic links to add kitty and kitten to PATH (assuming ~/.local/bin is in

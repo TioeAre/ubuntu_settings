@@ -37,6 +37,7 @@ fi
 
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 
+cd $(dirname "$0") || exit
 sh ./mkdir.sh
 
 cd ~/Tools && git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
