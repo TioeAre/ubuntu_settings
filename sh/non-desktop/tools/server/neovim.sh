@@ -29,8 +29,9 @@ fi
 } >>"$file"
 
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-mv nvim.appimage ~/.local/bin/nvim
+cp nvim.appimage ~/.local/bin/nvim
 chmod u+x ~/.local/bin/nvim
+rm nvim.appimage
 
 if command -v nvim &>/dev/null; then
     ln -s "$(command -v nvim)" ~/.local/bin/vim

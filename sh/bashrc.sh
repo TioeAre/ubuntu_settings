@@ -12,21 +12,6 @@
 # Backup the original .bashrc file
 cp ~/.bashrc ~/.bashrc_backup
 
-# Add configuration to enable command history navigation
-# {
-#     printf "# Enable command history navigation with arrow keys" # >>~/.bashrc
-#     printf "if [ -n \"\$BASH_VERSION\" ]; then"                  # >>~/.bashrc
-#     printf "    bind '\"\e[A\": history-search-backward'"        # >>~/.bashrc
-#     printf "    bind '\"\e[B\": history-search-forward'"         # >>~/.bashrc
-#     printf "fi"
-# } >>~/.bashrc
-
-# if [[ $- == *i* ]]
-# then
-#     bind '"\e[A": history-search-backward'
-#     bind '"\e[B": history-search-forward'
-# fi
-
 if which gnome-session >/dev/null; then
     echo "GNOME desktop environment is installed."
     # avoid screen off
@@ -43,3 +28,19 @@ sh ./mkdir.sh
 cd ~/Tools && git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
 cd ~/Tools && make -C ble.sh install PREFIX=~/.local
 echo 'source ~/.local/share/blesh/ble.sh' >>~/.bashrc
+
+
+# Add configuration to enable command history navigation
+# {
+#     printf "# Enable command history navigation with arrow keys" # >>~/.bashrc
+#     printf "if [ -n \"\$BASH_VERSION\" ]; then"                  # >>~/.bashrc
+#     printf "    bind '\"\e[A\": history-search-backward'"        # >>~/.bashrc
+#     printf "    bind '\"\e[B\": history-search-forward'"         # >>~/.bashrc
+#     printf "fi"
+# } >>~/.bashrc
+
+# if [[ $- == *i* ]]
+# then
+#     bind '"\e[A": history-search-backward'
+#     bind '"\e[B": history-search-forward'
+# fi
