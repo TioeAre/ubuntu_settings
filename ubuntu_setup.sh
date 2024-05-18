@@ -250,7 +250,7 @@ sudo apt remove nautilus-extension-gnome-terminal nautilus-open-terminal
 
 # neovim
 cd ~/Tools || exit
-sudo apt install -y ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen bear fzf fd-find luarocks locate bat clang-tidy-18 cmakeformat dconf-editor # alaritty
+sudo apt install -y ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen bear fzf fd-find luarocks locate bat clang-tidy-18 cmakeformat dconf-editor # alaritty TODO:
 brew install deno vale
 pip install cmakelang
 mkdir -p ~/.local/share/nvim/undo
