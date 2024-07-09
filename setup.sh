@@ -79,18 +79,36 @@ if [ "$server" = true ]; then
     echo "using server setup"
 else
     echo "using client setup"
-    run_sh ./sh/non-desktop
+    bash sh/non-desktop/aptinstall.sh
 fi
 
 sh ./sh/bashrc.sh
 sh ./sh/dotfilesServer.sh
 
-run_sh ./sh/non-desktop/tools/server
+bash sh/non-desktop/tools/server/rust.sh
+source "$HOME/.bashrc"
+bash sh/non-desktop/tools/server/deno.sh
+bash sh/non-desktop/tools/server/fzf.sh
+bash sh/non-desktop/tools/server/lazygit.sh
+bash sh/non-desktop/tools/server/rg.sh
+bash sh/non-desktop/tools/server/neovim.sh
+# git checkout server
 
 if [ "$server" = false ]; then
     sh ./sh/dotfilesClient.sh
-    run_sh ./sh/non-desktop/tools/client
-    run_sh ./sh/non-desktop/packages    # TODO:
+    # run_sh ./sh/non-desktop/tools/client
+    sh sh/non-desktop/tools/client/gcc.sh
+    sh sh/non-desktop/tools/client/cmake.sh
+    sh sh/non-desktop/tools/client/brew.sh
+    sh sh/non-desktop/tools/client/docker.sh
+    sh sh/non-desktop/tools/client/tmux.sh
+
+
+    # run_sh ./sh/non-desktop/packages    # TODO:
+    sh sh/non-desktop/packages/eigen.sh
+    sh sh/non-desktop/packages/ceres.sh
+    sh sh/non-desktop/packages/pcl.sh
+    sh sh/non-desktop/packages/chinese.sh
 
     if [ "$server" = false ]; then
         sh ./sh/dotfilesClientDesktop.sh
@@ -99,3 +117,5 @@ if [ "$server" = false ]; then
         echo "[INFO]: remember cd ~/Tools/input || exit && # ./installer.rb"
     fi
 fi
+
+echo "[INFO]: remember nvim config branch"
