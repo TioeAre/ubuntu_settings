@@ -31,18 +31,18 @@ def main():
 
 @result_handler(no_ui=True)
 def handle_result(args, result, target_window_id, boss):
-    direction = args[1]
-    key_mapping = args[2]
-    vim_id = args[3] if len(args) > 3 else "n?vim"
-
     window = boss.window_id_map.get(target_window_id)
     if window is None:
         return
 
+    direction = args[1]
+    vim_id = args[3] if len(args) > 3 else "n?vim"
     # cmd = window.child.foreground_cmdline[0]
-    if is_window_vim(window, vim_id) or is_window_vim(window, "ssh") or is_window_vim(window, "tmux"):
-        for keymap in key_mapping.split(">"):
+    # if cmd == 'tmux':
+    if is_window_vim(window, vim_id) or is_window_vim(window, "ssh") or is_window_vim(window, "^.* - tmux$"):
+        keymaps = args[2]
+        for keymap in keymaps.split(">"):
             encoded = encode_key_mapping(window, keymap)
             window.write_to_child(encoded)
     else:
-        boss.active_tab.neighboring_window(direction)
+        boss.active_tab.move_window(direction)
