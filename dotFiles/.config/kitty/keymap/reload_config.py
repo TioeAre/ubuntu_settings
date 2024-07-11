@@ -11,12 +11,11 @@ def is_running_in_tmux():
     return "TMUX" in os.environ
 
 
-def main(args):
-    pass
-
-
 def encode_key_mapping(window, key_mapping):
     mods, key = parse_shortcut(key_mapping)
+    # if key.isalpha() and (mods & 2) and (mods & 1):
+    #     mods = mods & ~1
+    #     key = key.upper()
     event = KeyEvent(
         mods=mods,
         key=key,
@@ -31,17 +30,8 @@ def encode_key_mapping(window, key_mapping):
     return window.encoded_key(event)
 
 
-def split_window(boss, direction):
-    if direction == 'up' or direction == 'down':
-        boss.launch('--cwd=current', '--location=hsplit')
-    elif direction == 'right' or direction == 'left':
-        boss.launch('--cwd=current', '--location=vsplit')
-
-    if direction == 'up' or direction == 'left':
-        boss.active_tab.move_window(direction)
-
-    if direction == 'newtab':
-        boss.launch("--type=tab", "--cwd=current")
+def main():
+    pass
 
 
 @result_handler(no_ui=True)
@@ -50,14 +40,14 @@ def handle_result(args, result, target_window_id, boss):
     if window is None:
         return
 
-    direction = args[1]
-    vim_id = args[3] if len(args) > 3 else "n?vim"
+    vim_id = args[2] if len(args) > 2 else "n?vim"
     # cmd = window.child.foreground_cmdline[0]
     # if cmd == 'tmux':
     if is_window_vim(window, vim_id) or is_window_vim(window, "ssh") or is_running_in_tmux():
-        keymaps = args[2]
+        keymaps = args[1]
         for keymap in keymaps.split(">"):
             encoded = encode_key_mapping(window, keymap)
             window.write_to_child(encoded)
     else:
-        split_window(boss, direction)
+        boss.load_config_file()
+

@@ -1,4 +1,4 @@
-import re
+import re, os
 
 from kittens.tui.handler import result_handler
 from kitty.key_encoding import KeyEvent, parse_shortcut
@@ -7,6 +7,8 @@ from kitty.key_encoding import KeyEvent, parse_shortcut
 def is_window_vim(window, vim_id):
     fp = window.child.foreground_processes
     return any(re.search(vim_id, p['cmdline'][0] if len(p['cmdline']) else '', re.I) for p in fp)
+def is_running_in_tmux():
+    return "TMUX" in os.environ
 
 def encode_key_mapping(window, key_mapping):
     mods, key = parse_shortcut(key_mapping)
@@ -87,8 +89,8 @@ def relative_resize_window(direction, amount, target_window_id, boss):
 @result_handler(no_ui=True)
 def handle_result(args, result, target_window_id, boss):
     direction = args[1]
-    amount = int(args[3])
-    vim_id = args[4] if len(args) > 3 else "n?vim"
+    amount = int(args[2])
+    vim_id = args[4] if len(args) > 4 else "n?vim"
 
     window = boss.window_id_map.get(target_window_id)
     if window is None:
@@ -96,8 +98,8 @@ def handle_result(args, result, target_window_id, boss):
 
     # cmd = window.child.foreground_cmdline[0]
     # if cmd == 'tmux':
-    if is_window_vim(window, vim_id) or is_window_vim(window, "ssh") or is_window_vim(window, "tmux"):
-        keymaps = args[2]
+    if is_window_vim(window, vim_id) or is_window_vim(window, "ssh") or is_running_in_tmux():
+        keymaps = args[3]
         for keymap in keymaps.split(">"):
             encoded = encode_key_mapping(window, keymap)
             window.write_to_child(encoded)

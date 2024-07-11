@@ -1,4 +1,4 @@
-import re
+import re, os
 
 from kittens.tui.handler import result_handler
 from kitty.key_encoding import KeyEvent, parse_shortcut
@@ -7,10 +7,15 @@ from kitty.key_encoding import KeyEvent, parse_shortcut
 def is_window_vim(window, vim_id):
     fp = window.child.foreground_processes
     return any(re.search(vim_id, p['cmdline'][0] if len(p['cmdline']) else '', re.I) for p in fp)
+def is_running_in_tmux():
+    return "TMUX" in os.environ
 
 
 def encode_key_mapping(window, key_mapping):
     mods, key = parse_shortcut(key_mapping)
+    # if key.isalpha() and (mods & 2) and (mods & 1):
+    #     mods = mods & ~1
+    #     key = key.upper()
     event = KeyEvent(
         mods=mods,
         key=key,
@@ -39,14 +44,14 @@ def handle_result(args, result, target_window_id, boss):
     vim_id = args[3] if len(args) > 3 else "n?vim"
     # cmd = window.child.foreground_cmdline[0]
     # if cmd == 'tmux':
-    if is_window_vim(window, vim_id) or is_window_vim(window, "ssh") or is_window_vim(window, "^.* - tmux$"):
+    if is_window_vim(window, vim_id) or is_window_vim(window, "ssh") or is_running_in_tmux():
         keymaps = args[2]
         for keymap in keymaps.split(">"):
             encoded = encode_key_mapping(window, keymap)
             window.write_to_child(encoded)
     else:
         if direction == "move_tab_backward":
-            boss.active_tab.move_tab_backward()
+            boss.move_tab_backward()
         elif direction == "move_tab_forward":
-            boss.active_tab.move_tab_forward()
+            boss.move_tab_forward()
 
