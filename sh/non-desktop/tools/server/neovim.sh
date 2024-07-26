@@ -40,3 +40,4 @@ else
     echo "nvim can't find"
 fi
 cd ~/.config && git clone https://github.com/TioeAre/nvim
+cd ~/.config/nvim && git checkout server
