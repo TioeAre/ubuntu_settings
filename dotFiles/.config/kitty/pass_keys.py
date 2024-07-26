@@ -36,11 +36,10 @@ def handle_result(args, result, target_window_id, boss):
     vim_id = args[3] if len(args) > 3 else "n?vim"
 
     window = boss.window_id_map.get(target_window_id)
+
     if window is None:
         return
-
-    # cmd = window.child.foreground_cmdline[0]
-    if is_window_vim(window, vim_id) or is_window_vim(window, "ssh") or is_window_vim(window, "tmux"):
+    if is_window_vim(window, vim_id):
         for keymap in key_mapping.split(">"):
             encoded = encode_key_mapping(window, keymap)
             window.write_to_child(encoded)
