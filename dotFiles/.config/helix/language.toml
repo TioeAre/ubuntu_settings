@@ -11,6 +11,7 @@ docker-langserver = { command = "docker-langserver", args = ["--stdio"] }
 docker-compose-langserver = { command = "docker-compose-langserver", args = ["--stdio"]}
 ltex-ls = { command = "ltex-ls" }
 marksman = { command = "marksman", args = ["server"] }
+pylsp = { command = "pylsp" }
 pyright = { command = "pyright-langserver", args = ["--stdio"], config = {} }
 texlab = { command = "texlab" }
 vscode-css-language-server = { command = "vscode-css-language-server", args = ["--stdio"], config = { provideFormatter = true, css = { validate = { enable = true } } } }
@@ -110,7 +111,8 @@ file-types = ["c"] # TODO: ["h"]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
 language-servers = [ "clangd" ]
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 4, unit = "    " }
+diagnostic-severity = "Hint"
 
 [language.debugger]
 name = "lldb-dap"
@@ -147,7 +149,8 @@ file-types = ["cc", "hh", "c++", "cpp", "hpp", "h", "ipp", "tpp", "cxx", "hxx", 
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
 language-servers = [ "clangd" ]
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 4, unit = "    " }
+diagnostic-severity = "Hint"
 
 [language.debugger]
 name = "lldb-dap"
@@ -229,6 +232,7 @@ comment-token = "#"
 language-servers = [ "pylsp" ]
 # TODO: pyls needs utf-8 offsets
 indent = { tab-width = 4, unit = "    " }
+diagnostic-severity = "Hint"
 
 [[grammar]]
 name = "python"
@@ -286,7 +290,8 @@ file-types = [
 shebangs = ["sh", "bash", "dash", "zsh"]
 comment-token = "#"
 language-servers = [ "bash-language-server" ]
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 4, unit = "    " }
+diagnostic-severity = "Hint"
 
 [[grammar]]
 name = "bash"
@@ -300,6 +305,7 @@ file-types = ["tex", "sty", "cls", "Rd", "bbx", "cbx"]
 comment-token = "%"
 language-servers = [ "texlab" ]
 indent = { tab-width = 4, unit = "\t" }
+diagnostic-severity = "Hint"
 
 [[grammar]]
 name = "latex"
@@ -314,6 +320,7 @@ comment-token = "%"
 language-servers = [ "texlab" ]
 indent = { tab-width = 4, unit = "\t" }
 auto-format = true
+diagnostic-severity = "Hint"
 
 [language.formatter]
 command = 'bibtex-tidy'
@@ -339,7 +346,8 @@ injection-regex = "java"
 file-types = ["java", "jav", "pde"]
 roots = ["pom.xml", "build.gradle", "build.gradle.kts"]
 language-servers = [ "jdtls" ]
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 4, unit = "    " }
+diagnostic-severity = "Hint"
 
 [[grammar]]
 name = "java"
@@ -354,8 +362,9 @@ shebangs = ["lua", "luajit"]
 roots = [".luarc.json", ".luacheckrc", ".stylua.toml", "selene.toml", ".git"]
 comment-token = "--"
 block-comment-tokens = { start = "--[[", end = "--]]" }
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 4, unit = "    " }
 language-servers = [ "lua-language-server" ]
+diagnostic-severity = "Hint"
 
 [[grammar]]
 name = "lua"
@@ -366,9 +375,10 @@ name = "yaml"
 scope = "source.yaml"
 file-types = ["yml", "yaml"]
 comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 4, unit = "    " }
 language-servers = [ "yaml-language-server", "ansible-language-server" ]
 injection-regex = "yml|yaml"
+diagnostic-severity = "Hint"
 
 [[grammar]]
 name = "yaml"
@@ -380,9 +390,10 @@ scope = "source.cmake"
 file-types = ["cmake", { glob = "CMakeLists.txt" }]
 comment-token = "#"
 block-comment-tokens = { start = "#[[", end = "]]" }
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 4, unit = "    " }
 language-servers = [ "cmake-language-server" ]
 injection-regex = "cmake"
+diagnostic-severity = "Hint"
 
 [[grammar]]
 name = "cmake"
@@ -396,6 +407,7 @@ shebangs = ["make", "gmake"]
 injection-regex = "(make|makefile|Makefile|mk)"
 comment-token = "#"
 indent = { tab-width = 4, unit = "\t" }
+diagnostic-severity = "Hint"
 
 [[grammar]]
 name = "make"
@@ -452,8 +464,9 @@ injection-regex = "md|markdown"
 file-types = ["md", "markdown", "mdx", "mkd", "mkdn", "mdwn", "mdown", "markdn", "mdtxt", "mdtext", "workbook", { glob = "PULLREQ_EDITMSG" }]
 roots = [".marksman.toml"]
 language-servers = [ "marksman", "markdown-oxide" ]
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 4, unit = "    " }
 block-comment-tokens = { start = "<!--", end = "-->" }
+diagnostic-severity = "Hint"
 
 [[grammar]]
 name = "markdown"
@@ -490,8 +503,9 @@ file-types = [
   { glob = "containerfile.*" },
 ]
 comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 4, unit = "    " }
 language-servers = [ "docker-langserver" ]
+diagnostic-severity = "Hint"
 
 [[grammar]]
 name = "dockerfile"
@@ -504,8 +518,9 @@ roots = ["docker-compose.yaml", "docker-compose.yml"]
 language-servers = [ "docker-compose-langserver", "yaml-language-server" ]
 file-types = [{ glob = "docker-compose.yaml" }, { glob = "docker-compose.yml" }]
 comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 4, unit = "    " }
 grammar = "yaml"
+diagnostic-severity = "Hint"
 
 [[language]]
 name = "git-commit"
@@ -733,7 +748,8 @@ scope = "source.m"
 file-types = ["m"]
 comment-token = "%"
 shebangs = ["octave-cli", "matlab"]
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 4, unit = "    " }
+diagnostic-severity = "Hint"
 
 [[grammar]]
 name = "matlab"
@@ -806,6 +822,7 @@ shebangs = [ "pwsh", "powershell" ]
 comment-token = '#'
 block-comment-tokens = { start = "<#", end = "#>" }
 indent = { tab-width = 4, unit = "    " }
+diagnostic-severity = "Hint"
 
 [[grammar]]
 name = "powershell"
