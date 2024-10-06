@@ -1,6 +1,8 @@
 #!/bin/bash
 # for x64
 
+# sudo usermod -aG sudo tioeare
+
 # Default values
 su_permission=false
 desktop=false
