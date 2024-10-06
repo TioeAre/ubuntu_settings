@@ -145,3 +145,5 @@ export PATH="$PATH:$HOME/brew/bin"
 source "$HOME/brew/sync_brew_path"
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSTALL_CLEANUP=1
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
