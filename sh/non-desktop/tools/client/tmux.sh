@@ -8,4 +8,6 @@ sh autogen.sh
 ./configure && make -j5
 sudo make install
 # git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 tmux source-file ~/.tmux.conf
+# ctrl+s I
