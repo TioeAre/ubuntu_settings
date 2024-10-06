@@ -82,9 +82,9 @@ if [ -z $TMUX_POWERLINE_LEFT_STATUS_SEGMENTS ]; then
 		# "hostname 33 0" \
 		#"ifstat 30 255" \
 		#"ifstat_sys 30 255" \
-		"lan_ip 24 255"
-		# "lan_ip 24 255 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}"
-		# "wan_ip 24 255"
+		# "lan_ip 24 255"
+		"lan_ip 24 255 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}"
+		"wan_ip 24 255"
 		"pwd 89 211"
 		"vcs_branch 29 88"
 		#"vcs_compare 60 255" \
@@ -107,7 +107,7 @@ if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
 
 		# "tmux_mem_cpu_load 33 154 ${TMUX_POWERLINE_SEPARATOR_LEFT_BOLD} 235 234 separator_disable"
 		# "tmux_mem_cpu_load 2 234 ${TMUX_POWERLINE_SEPARATOR_LEFT_BOLD} 235 234 separator_disable"
-		# "battery 33 154" # ${TMUX_POWERLINE_SEPARATOR_LEFT_BOLD} 234 33 N"
+		"battery 33 154" # ${TMUX_POWERLINE_SEPARATOR_LEFT_BOLD} 234 33 N"
 
 		# "weather 37 255"
 		#"rainbarf 0 ${TMUX_POWERLINE_DEFAULT_FOREGROUND_COLOR}" \

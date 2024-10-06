@@ -11,3 +11,8 @@ sudo make install
 
 tmux source-file ~/.tmux.conf
 # ctrl+s I
+
+~/.tmux/plugins/tmux-powerline/generate_config.sh
+mv ~/.config/tmux-powerline/config.sh.default ~/.config/tmux-powerline/config.sh
+
+cp ~/.tmux/plugins/tmux-powerline/themes/default.sh ~/.config/tmux-powerline/themes/my-theme.sh
