@@ -1,8 +1,8 @@
 #!/bin/bash
 # for x64
 
-cd ~/Packages && git clone https://github.com/mavlink/mavlink.git --recursive
-cd ~/Packages/mavlink || exit
+cd ~/packages && git clone https://github.com/mavlink/mavlink.git --recursive
+cd ~/packages/mavlink || exit
 cmake -Bbuild -H. -DCMAKE_INSTALL_PREFIX=install -DMAVLINK_DIALECT=common -DMAVLINK_VERSION=2.0
 sudo apt install python3-venv -y && python -m venv venv
 # shellcheck source=/dev/null

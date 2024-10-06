@@ -1,7 +1,7 @@
 #!/bin/bash
 # for x64
 
-cd ~/Tools && git clone https://github.com/alacritty/alacritty.git
+cd ~/tools && git clone https://github.com/alacritty/alacritty.git
 cd alacritty || exit
 rustup override set stable
 rustup update stable

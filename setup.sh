@@ -114,7 +114,7 @@ if [ "$server" = false ]; then
         sh ./sh/dotfilesClientDesktop.sh
         run_sh ./sh/desktop/tools
         run_sh ./sh/desktop/packages
-        echo "[INFO]: remember cd ~/Tools/input || exit && # ./installer.rb"
+        echo "[INFO]: remember cd ~/tools/input || exit && # ./installer.rb"
     fi
 fi
 

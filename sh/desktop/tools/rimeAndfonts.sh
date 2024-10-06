@@ -1,7 +1,7 @@
 #!/bin/bash
 # for x64
 
-cd ~/Tools || exit
+cd ~/tools || exit
 sudo apt install ibus-rime -y
 
 wget -c https://github.com/intel/intel-one-mono/releases/download/V1.2.1/otf.zip -P ~/.local/share/fonts
@@ -17,8 +17,8 @@ unzip ~/.local/share/fonts/IntelOneMono.zip -d ~/.local/share/fonts/
 rm ~/.local/share/fonts/IntelOneMono.zip
 
 sudo apt install ruby
-cd ~/Tools && mkdir input
-cd ~/Tools/input || exit
+cd ~/tools && mkdir input
+cd ~/tools/input || exit
 git clone --depth=1 https://github.com/Mark24Code/rime-auto-deploy.git --branch latest
 cd rime-auto-deploy || exit
 # ./installer.rb

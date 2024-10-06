@@ -1,7 +1,7 @@
 #!/bin/bash
 # for x64
 
-cd ~/Packages || exit
+cd ~/packages || exit
 git clone https://ceres-solver.googlesource.com/ceres-solver
 sudo apt install libgoogle-glog-dev libgflags-dev libatlas-base-dev libsuitesparse-dev -y
 cd ceres-solver || exit

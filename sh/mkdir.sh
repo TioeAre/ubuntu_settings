@@ -2,10 +2,10 @@
 # for x64
 
 cd ~ || exit
-mkdir ~/Project
-mkdir ~/Packages
-mkdir ~/Tools
-mkdir ~/Tools/network
+mkdir ~/projects
+mkdir ~/packages
+mkdir ~/tools
+mkdir ~/tools/network
 mkdir ~/.config
 mkdir ~/.local
 mkdir ~/.local/ble.sh

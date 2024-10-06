@@ -32,8 +32,8 @@ gsettings set org.gnome.desktop.session idle-delay 0
 
 # change apt sources.list
 cd ~ || exit
-mkdir ~/Project && mkdir ~/Packages && mkdir ~/Tools
-mkdir ~/Tools/network
+mkdir ~/projects && mkdir ~/packages && mkdir ~/tools
+mkdir ~/tools/network
 
 sudo mv /etc/apt/sources.list /etc/apt/sources.list.back
 sudo touch /etc/apt/sources.list
@@ -46,8 +46,8 @@ sudo apt upgrade -y
 
 # highlight bash command
 sudo apt install git curl wget make gawk scdoc -y
-cd ~/Tools && git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
-mkdir ~/.local/ble.sh && cd ~/Tools && make -C ble.sh install PREFIX=~/.local
+cd ~/tools && git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
+mkdir ~/.local/ble.sh && cd ~/tools && make -C ble.sh install PREFIX=~/.local
 echo 'source ~/.local/share/blesh/ble.sh' >>~/.bashrc
 
 # install brew
@@ -71,9 +71,9 @@ sudo apt install -y gcc-13 g++-13
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 40
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 40
 brew install cmake
-wget -c https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.zip -P ~/Packages/
-unzip ~/Packages/eigen-3.4.0.zip -d ~/Packages/eigen
-cd ~/Packages/eigen/eigen-3.4.0 && rm ~/Packages/eigen-3.4.0.zip
+wget -c https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.zip -P ~/packages/
+unzip ~/packages/eigen-3.4.0.zip -d ~/packages/eigen
+cd ~/packages/eigen/eigen-3.4.0 && rm ~/packages/eigen-3.4.0.zip
 mkdir build && cd build || exit
 cmake ..
 make -j5 && sudo make install
@@ -100,7 +100,7 @@ rosdep update
 sudo apt install python3-catkin-tools python3-osrf-pycommon -y
 
 # install ceres
-cd ~/Packages || exit
+cd ~/packages || exit
 git clone https://ceres-solver.googlesource.com/ceres-solver
 sudo apt install libgoogle-glog-dev libgflags-dev libatlas-base-dev libsuitesparse-dev -y
 cd ceres-solver || exit
@@ -110,10 +110,10 @@ make -j5
 sudo make install
 
 # install pcl
-cd ~/Packages || exit
+cd ~/packages || exit
 wget -c https://github.com/PointCloudLibrary/pcl/releases/download/pcl-1.13.1/source.tar.gz
 tar xvf source.tar.gz
-cd pcl && rm ~/Packages/source.tar.gz
+cd pcl && rm ~/packages/source.tar.gz
 mkdir build && cd build || exit
 cmake -DCMAKE_BUILD_TYPE=Release ..
 make -j5
@@ -142,8 +142,8 @@ sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 # install mavlink && mavros
-cd ~/Packages && git clone https://github.com/mavlink/mavlink.git --recursive
-cd ~/Packages/mavlink || exit
+cd ~/packages && git clone https://github.com/mavlink/mavlink.git --recursive
+cd ~/packages/mavlink || exit
 cmake -Bbuild -H. -DCMAKE_INSTALL_PREFIX=install -DMAVLINK_DIALECT=common -DMAVLINK_VERSION=2.0
 sudo apt install python3-venv -y && python -m venv venv
 # shellcheck source=/dev/null
@@ -158,7 +158,7 @@ deactivate
 # install kalibr
 sudo apt-get install -y git wget autoconf automake nano libboost-all-dev libsuitesparse-dev doxygen libopencv-dev libpoco-dev libtbb-dev libblas-dev liblapack-dev libv4l-dev -y
 sudo apt-get install -y python3-dev python3-pip python3-scipy python3-matplotlib ipython3 python3-wxgtk4.0 python3-tk python3-igraph python3-pyx python3-empy -y
-mkdir -p ~/Packages/kalibr_workspace/src && cd ~/Packages/kalibr_workspace || exit
+mkdir -p ~/packages/kalibr_workspace/src && cd ~/packages/kalibr_workspace || exit
 catkin init
 catkin config --extend /opt/ros/noetic && catkin config --merge-devel && catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release
 cd src && git clone https://github.com/ethz-asl/kalibr.git
@@ -185,7 +185,7 @@ sudo apt install ros-"${ROS_DISTRO}"-plotjuggler-ros -y #
 # --------------------------------------------------------------------
 
 # lazygit
-cd ~/Tools || exit
+cd ~/tools || exit
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
@@ -196,7 +196,7 @@ rm lazygit
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # alacritty
-cd ~/Tools && git clone https://github.com/alacritty/alacritty.git
+cd ~/tools && git clone https://github.com/alacritty/alacritty.git
 cd alacritty || exit
 rustup override set stable
 rustup update stable
@@ -224,21 +224,21 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 
 # kitty
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-mv ~/.local/kitty.app ~/Tools
+mv ~/.local/kitty.app ~/tools
 # Create symbolic links to add kitty and kitten to PATH (assuming ~/.local/bin is in
 # your system-wide PATH)
-ln -sf ~/Tools/kitty.app/bin/kitty ~/Tools/kitty.app/bin/kitten ~/.local/bin/
+ln -sf ~/tools/kitty.app/bin/kitty ~/tools/kitty.app/bin/kitten ~/.local/bin/
 # Place the kitty.desktop file somewhere it can be found by the OS
-cp ~/Tools/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
+cp ~/tools/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
 # If you want to open text files and images in kitty via your file manager also add the kitty-open.desktop file
-cp ~/Tools/kitty.app/share/applications/kitty-open.desktop ~/.local/share/applications/
+cp ~/tools/kitty.app/share/applications/kitty-open.desktop ~/.local/share/applications/
 # Update the paths to the kitty and its icon in the kitty.desktop file(s)
-sed -i "s|Icon=kitty|Icon=/home/$USER/Tools/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty*.desktop
-sed -i "s|Exec=kitty|Exec=/home/$USER/Tools/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
+sed -i "s|Icon=kitty|Icon=/home/$USER/tools/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty*.desktop
+sed -i "s|Exec=kitty|Exec=/home/$USER/tools/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator ~/.local/bin/kitty 55
 
 # tmux
-cd ~/Tools || exit
+cd ~/tools || exit
 git clone https://github.com/tmux/tmux.git
 cd tmux || exit
 sh autogen.sh
@@ -249,7 +249,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 sudo apt remove nautilus-extension-gnome-terminal nautilus-open-terminal
 
 # neovim
-cd ~/Tools || exit
+cd ~/tools || exit
 sudo apt install -y ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen bear fzf fd-find luarocks locate bat clang-tidy-18 cmakeformat dconf-editor # alaritty TODO:
 brew install deno vale
 pip install cmakelang
@@ -304,26 +304,26 @@ cd ~/.config && git clone https://github.com/TioeAre/nvim
 sudo apt install -y libgtk-3-dev build-essential gcc g++ pkg-config make hostapd libqrencode-dev libpng-dev
 # sudo add-apt-repository ppa:lakinduakash/lwh
 # sudo apt install linux-wifi-hotspot
-cd ~/Tools && mkdir network
-cd ~/Tools/network || exit
+cd ~/tools && mkdir network
+cd ~/tools/network || exit
 git clone https://github.com/lakinduakash/linux-wifi-hotspot
 cd linux-wifi-hotspot || exit
 make
 sudo make install
 # wihotspot
 
-cd ~/Tools && wget -c https://az764295.vo.msecnd.net/stable/74f6148eb9ea00507ec113ec51c489d6ffb4b771/code_1.80.1-1689183569_amd64.deb -O ~/Tools/vscode.deb
+cd ~/tools && wget -c https://az764295.vo.msecnd.net/stable/74f6148eb9ea00507ec113ec51c489d6ffb4b771/code_1.80.1-1689183569_amd64.deb -O ~/tools/vscode.deb
 sudo dpkg -i vscode.deb
-rm ~/Tools/vscode.deb
-cd ~/Tools && wget -c https://download.nomachine.com/download/8.6/Linux/nomachine_8.6.1_3_amd64.deb -O ~/Tools/nomachine.deb
-sudo dpkg -i ~/Tools/nomachine.deb && rm ~/Tools/nomachine.deb
+rm ~/tools/vscode.deb
+cd ~/tools && wget -c https://download.nomachine.com/download/8.6/Linux/nomachine_8.6.1_3_amd64.deb -O ~/tools/nomachine.deb
+sudo dpkg -i ~/tools/nomachine.deb && rm ~/tools/nomachine.deb
 
 sudo apt install nautilus-actions filemanager-actions -y
 
 # Rime input auto deploy
 sudo apt install ruby
-cd ~/Tools && mkdir input
-cd ~/Tools/input || exit
+cd ~/tools && mkdir input
+cd ~/tools/input || exit
 git clone --depth=1 https://github.com/Mark24Code/rime-auto-deploy.git --branch latest
 cd rime-auto-deploy || exit
 ./installer.rb

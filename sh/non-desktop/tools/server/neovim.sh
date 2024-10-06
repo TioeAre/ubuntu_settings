@@ -1,7 +1,7 @@
 #!/bin/bash
 # for x64
 
-# cd ~/Tools || exit
+# cd ~/tools || exit
 # sudo apt install -y ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen bear fzf fd-find luarocks locate bat clang-tidy-18 cmakeformat dconf-editor # alaritty
 # brew install deno vale
 # pip install cmakelang
@@ -13,7 +13,7 @@
 # pip3 install neovim pynvim
 
 
-cd ~/Tools || exit
+cd ~/tools || exit
 file=~/.pam_environment
 if [ ! -e "$file" ]; then
     touch "$file"

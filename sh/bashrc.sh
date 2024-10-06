@@ -25,8 +25,8 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 cd $(dirname "$0") || exit
 sh ./mkdir.sh
 
-cd ~/Tools && git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
-cd ~/Tools && make -C ble.sh install PREFIX=~/.local
+cd ~/tools && git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
+cd ~/tools && make -C ble.sh install PREFIX=~/.local
 echo 'source ~/.local/share/blesh/ble.sh' >>~/.bashrc
 
 

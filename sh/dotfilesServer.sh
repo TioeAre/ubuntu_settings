@@ -2,6 +2,7 @@
 # for x64
 cd $(dirname "$0") || exit
 parent_dir=$(dirname "$(pwd)")
+parent_dir=/home/tioeare/projects/ubuntu_settings
 
 ln -s "$parent_dir/dotFiles/Templates" ~/
 ln -s "$parent_dir/dotFiles/vale" ~/
@@ -18,3 +19,5 @@ ln -s "$parent_dir/dotFiles/.tmux" ~/
 ln -s "$parent_dir/dotFiles/.config/tmux-powerline" ~/.config/
 
 # tmux source-file ~/.tmux.conf
+
+ln -s "$parent_dir/dotFiles/.zshrc" ~/

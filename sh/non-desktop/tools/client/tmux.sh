@@ -1,7 +1,7 @@
 #!/bin/bash
 # for x64
 
-cd ~/Tools || exit
+cd ~/tools || exit
 git clone https://github.com/tmux/tmux.git
 cd tmux || exit
 sh autogen.sh

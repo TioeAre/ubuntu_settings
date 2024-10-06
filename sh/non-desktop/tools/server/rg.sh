@@ -1,7 +1,7 @@
 #!/bin/bash
 # for x64
 
-cd ~/Tools || exit
+cd ~/tools || exit
 git clone https://github.com/BurntSushi/ripgrep
 cd ripgrep || exit
 source ~/.bashrc
