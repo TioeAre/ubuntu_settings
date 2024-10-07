@@ -130,21 +130,38 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/home/tioeare/.local/bin:$PATH
 alias socks5="http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890 all_proxy=http://127.0.0.1:7890 wss_proxy=http://127.0.0.1:7890"
 
-# zsh plugin
+### zsh plugin
 source ~/.autoenv/activate.sh
-# Rust
+###  Rust
 source "$HOME/.cargo/env"
-# Node.js
+###  Node.js
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "/home/tioeare/.deno/env"
-# brew
+###  brew
 # export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="$PATH:$HOME/brew/bin"
 source "$HOME/brew/sync_brew_path"
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSTALL_CLEANUP=1
-# fzf
+###  fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+###  alacritty
+source ~/.bash_completion.d/alacritty
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/tioeare/tools/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/tioeare/tools/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/tioeare/tools/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/tioeare/tools/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
