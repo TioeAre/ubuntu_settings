@@ -25,3 +25,5 @@ mkdir -p ~/.bash_completion.d
 cp extra/completions/alacritty.bash ~/.bash_completion.d/alacritty
 echo "source ~/.bash_completion.d/alacritty" >>~/.bashrc
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/alacritty 55
+
+git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes

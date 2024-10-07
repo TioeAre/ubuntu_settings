@@ -43,3 +43,9 @@ cd ~/.config && git clone https://github.com/TioeAre/nvim
 cd ~/.config/nvim && git checkout server
 
 cargo install tree-sitter-cli
+
+sudo apt install python3-venv luarocks
+# cmake_format
+# pip install cmakelang
+# for debian12 enable pip install systemwide
+# sudo mv /usr/lib/python3.*/EXTERNALLY-MANAGED /usr/lib/python3.*/EXTERNALLY-MANAGED_backup
