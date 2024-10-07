@@ -91,6 +91,7 @@ plugins=(
     ssh
     tmux
     zsh-interactive-cd
+    copypath
     )
 source $ZSH/oh-my-zsh.sh
 
