@@ -165,3 +165,9 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+
+# Add CUDA to PATH
+export PATH=/usr/local/cuda-12.6/bin:$PATH
+# Add CUDA to LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64:$LD_LIBRARY_PATH

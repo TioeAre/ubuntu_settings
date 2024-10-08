@@ -14,8 +14,7 @@ sudo sh cuda_12.6.2_560.35.03_linux.run
 
 sudo nvidia-xconfig
 
-# apt install libnvoptix1 # 光追
-
+sudo apt install libnvoptix1 # 光追
 vim /etc/X11/xorg.conf or /etc/X11/xorg.conf.d/20-nvidia.conf
 #     Option         "RegistryDwords" "EnableBrightnessControl=1;"
 
@@ -25,7 +24,6 @@ vim /etc/X11/xorg.conf or /etc/X11/xorg.conf.d/20-nvidia.conf
 ### uninstall
 sudo apt purge "*nvidia*"
 sudo apt install --reinstall xserver-xorg-core xserver-xorg-video-nouveau
-
 sudo apt install x11-xserver-utils
 
 ### switch nvidia or amd
@@ -35,10 +33,10 @@ sudo envycontrol -s integrated
 sudo envycontrol -s hybrid --rtd3
 sudo envycontrol -s nvidia --force-comp
 
-sudo apt install nvidia-prime
-sudo add-apt-repository ppa:nilarimogard/webupd8
-sudo apt-get update
-sudo apt-get install prime-indicator
+# sudo apt install nvidia-prime
+# sudo add-apt-repository ppa:nilarimogard/webupd8
+# sudo apt-get update
+# sudo apt-get install prime-indicator
 
 vim /etc/modprobe.d/blacklist # nouveau-blacklist.conf
 # blacklist nouveau
