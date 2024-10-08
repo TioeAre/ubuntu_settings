@@ -25,5 +25,10 @@ sudo apt purge "*nvidia*"
 sudo apt install --reinstall xserver-xorg-core xserver-xorg-video-nouveau
 
 sudo apt install x11-xserver-utils
+
+### switch nvidia or amd
 # https://extensions.gnome.org/extension/5009/gpu-profile-selector/
 # https://github.com/bayasdev/envycontrol/releases
+sudo envycontrol -s integrated
+sudo envycontrol -s hybrid --rtd3
+sudo envycontrol -s nvidia --force-comp
