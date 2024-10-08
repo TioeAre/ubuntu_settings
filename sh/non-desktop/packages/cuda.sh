@@ -9,6 +9,8 @@ sudo apt install linux-headers-amd64
 sudo dpkg --add-architecture i386 && sudo apt update
 
 ### install nvidia-driver cuda
+wget https://developer.download.nvidia.com/compute/cuda/12.6.2/local_installers/cuda_12.6.2_560.35.03_linux.run
+sudo sh cuda_12.6.2_560.35.03_linux.run
 
 sudo nvidia-xconfig
 
@@ -32,3 +34,11 @@ sudo apt install x11-xserver-utils
 sudo envycontrol -s integrated
 sudo envycontrol -s hybrid --rtd3
 sudo envycontrol -s nvidia --force-comp
+
+sudo apt install nvidia-prime
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt-get update
+sudo apt-get install prime-indicator
+
+vim /etc/modprobe.d/blacklist # nouveau-blacklist.conf
+# blacklist nouveau
