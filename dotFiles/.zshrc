@@ -167,7 +167,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-# Add CUDA to PATH
+# cuda and cudnn
 export PATH=/usr/local/cuda-12.6/bin:$PATH
-# Add CUDA to LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64:$LD_LIBRARY_PATH
+export CUDSS_DIR=/usr/local/cuda/lib64  # Adjust the path as necessary
