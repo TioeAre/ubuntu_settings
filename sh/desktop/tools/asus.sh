@@ -10,7 +10,9 @@ cd asusctl || exit
 make
 sudo make install
 # uninstall also remove /etc/asusd/
-$ systemctl daemon-reload && systemctl restart asusd
+# /etc/systemd/system/asusd.service
+# /etc/systemd/user/asusd-user.service
+systemctl daemon-reload && systemctl restart asusd
 
 
 ### supergfxctl
