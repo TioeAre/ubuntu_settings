@@ -33,10 +33,28 @@ sudo envycontrol -s integrated
 sudo envycontrol -s hybrid --rtd3
 sudo envycontrol -s nvidia --force-comp
 
-# sudo apt install nvidia-prime
-# sudo add-apt-repository ppa:nilarimogard/webupd8
-# sudo apt-get update
-# sudo apt-get install prime-indicator
-
 vim /etc/modprobe.d/blacklist # nouveau-blacklist.conf
 # blacklist nouveau
+sudo nvidia-xconfig --prime
+# If after detaching the external display Xorg fails to start, simply rename the Xorg.conf that was generated and restart the display manager:
+# sudo mv /etc/X11/Xorg.conf /etc/X11/Xorg.conf-external-display
+# sudo systemctl restart <display manager>
+
+## PRIME synchronization
+vim /etc/modprobe.d/nvidia.conf
+# options nvidia-drm modeset=1
+
+
+### wayland
+ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
+echo 'GRUB_CMDLINE_LINUX="$GRUB_CMDLINE_LINUX nvidia-drm.modeset=1"' > /etc/default/grub.d/nvidia-modeset.cfg
+echo 'GRUB_CMDLINE_LINUX="nvidia-drm.modeset=1"' > /etc/default/grub.d/nvidia-modeset.cfg
+update-grub
+systemctl enable nvidia-suspend.service
+systemctl enable nvidia-hibernate.service
+systemctl enable nvidia-resume.service
+# if
+# $ cat /proc/driver/nvidia/params | grep PreserveVideoMemoryAllocations
+# PreserveVideoMemoryAllocations: 1
+# else
+# echo 'options nvidia NVreg_PreserveVideoMemoryAllocations=1' > /etc/modprobe.d/nvidia-power-management.conf
