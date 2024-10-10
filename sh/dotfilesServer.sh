@@ -2,7 +2,7 @@
 # for x64
 cd $(dirname "$0") || exit
 parent_dir=$(dirname "$(pwd)")
-parent_dir=/home/tioeare/projects/ubuntu_settings
+# parent_dir=/home/tioeare/projects/ubuntu_settings
 
 ln -s "$parent_dir/dotFiles/Templates" ~/
 ln -s "$parent_dir/dotFiles/vale" ~/
