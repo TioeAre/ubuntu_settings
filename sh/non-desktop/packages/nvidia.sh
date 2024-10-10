@@ -32,6 +32,13 @@ sudo apt install x11-xserver-utils
 sudo envycontrol -s integrated
 sudo envycontrol -s hybrid --rtd3
 sudo envycontrol -s nvidia --force-comp
+/var/cache/envycontrol
+/etc/modprobe.d/blacklist-nvidia.conf
+/lib/udev/rules.d/50-remove-nvidia.rules
+/lib/udev/rules.d/80-nvidia-pm.rules
+/etc/X11/xorg.conf
+/etc/X11/xorg.conf.d/10-nvidia.conf
+/etc/modprobe.d/nvidia.conf
 
 vim /etc/modprobe.d/blacklist # nouveau-blacklist.conf
 # blacklist nouveau
@@ -41,7 +48,7 @@ sudo nvidia-xconfig --prime
 # sudo systemctl restart <display manager>
 
 ## PRIME synchronization
-vim /etc/modprobe.d/nvidia.conf
+# vim /etc/modprobe.d/nvidia.conf # writen blew follow debian wiki
 # options nvidia-drm modeset=1
 
 
