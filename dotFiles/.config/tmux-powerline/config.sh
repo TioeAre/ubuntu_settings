@@ -10,13 +10,13 @@
 	export TMUX_POWERLINE_PATCHED_FONT_IN_USE="true"
 
 	# The theme to use.
-	export TMUX_POWERLINE_THEME="default"
+	export TMUX_POWERLINE_THEME="my-theme"
 	# Overlay directory to look for themes. There you can put your own themes outside the repo. Fallback will still be the "themes" directory in the repo.
 	export TMUX_POWERLINE_DIR_USER_THEMES="${XDG_CONFIG_HOME:-$HOME/.config}/tmux-powerline/themes"
 	# Overlay directory to look for segments. There you can put your own segments outside the repo. Fallback will still be the "segments" directory in the repo.
 	export TMUX_POWERLINE_DIR_USER_SEGMENTS="${XDG_CONFIG_HOME:-$HOME/.config}/tmux-powerline/segments"
 
-	# The initial visibility of the status bar. Can be {"on", "off", "2"}. 2 will create two status lines: one for the window list and one with status bar segments. 
+	# The initial visibility of the status bar. Can be {"on", "off", "2"}. 2 will create two status lines: one for the window list and one with status bar segments.
 	export TMUX_POWERLINE_STATUS_VISIBILITY="on"
 	# In case of visibility = 2, where to display window status and where left/right status bars.
 	# 0: window status top, left/right status bottom; 1: window status bottom, left/right status top
@@ -182,7 +182,7 @@
 # mailcount.sh {
 	# Mailbox type to use. Can be any of {apple_mail, gmail, maildir, mbox, mailcheck}
 	export TMUX_POWERLINE_SEG_MAILCOUNT_MAILBOX_TYPE=""
-	
+
 	## Gmail
 	# Enter your Gmail username here WITH OUT @gmail.com.( OR @domain)
 	export TMUX_POWERLINE_SEG_MAILCOUNT_GMAIL_USERNAME=""
@@ -197,15 +197,15 @@
 	export TMUX_POWERLINE_SEG_MAILCOUNT_GMAIL_SERVER="gmail.com"
 	# How often in minutes to check for new mails.
 	export TMUX_POWERLINE_SEG_MAILCOUNT_GMAIL_INTERVAL="5"
-	
+
 	## Maildir
 	# Path to the maildir to check.
 	export TMUX_POWERLINE_SEG_MAILCOUNT_MAILDIR_INBOX="/home/tioeare/.mail/inbox/new"
-	
+
 	## mbox
 	# Path to the mbox to check.
 	export TMUX_POWERLINE_SEG_MAILCOUNT_MBOX_INBOX=""
-	
+
 	## mailcheck
 	# Optional path to mailcheckrc
 	export TMUX_POWERLINE_SEG_MAILCOUNT_MAILCHECKRC="/home/tioeare/.mailcheckrc"
@@ -258,7 +258,7 @@
 	# export TMUX_POWERLINE_SEG_NOW_PLAYING_TRACK_LOG_FILEPATH="/home/tioeare/.now_playing.log"
 	# Maximum number of logged song entries. Set to "unlimited" for unlimited entries.
 	# export TMUX_POWERLINE_SEG_NOW_PLAYING_TRACK_LOG_MAX_ENTRIES="100"
-	
+
 	# Hostname for MPD server in the format "[password@]host"
 	export TMUX_POWERLINE_SEG_NOW_PLAYING_MPD_HOST="localhost"
 	# Port the MPD server is running on.
@@ -269,7 +269,7 @@
 	export TMUX_POWERLINE_SEG_NOW_PLAYING_PLAYERCTL_FORMAT="{{ artist }} - {{ title }}"
 	# Song display format for rhythmbox. see "FORMATS" in rhythmbox-client(1).
 	export TMUX_POWERLINE_SEG_NOW_PLAYING_RHYTHMBOX_FORMAT="%aa - %tt"
-	
+
 	# Last.fm
 	# Set up steps for Last.fm
 	# 1. Make sure jq(1) is installed on the system.
@@ -283,8 +283,8 @@
 	export TMUX_POWERLINE_SEG_NOW_PLAYING_LASTFM_UPDATE_PERIOD="30"
 	# Fancy char to display before now playing track
 	export TMUX_POWERLINE_SEG_NOW_PLAYING_NOTE_CHAR="♫"
-	
-	# Plexamp 
+
+	# Plexamp
 	# Set up steps for Plexamp
 	# 1. Make sure jq(1) is installed on the system.
 	# 2. Make sure you have an instance of Tautulli that is accessible by the computer running tmux-powerline.

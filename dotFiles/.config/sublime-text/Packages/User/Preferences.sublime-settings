@@ -46,6 +46,7 @@
 /*"LSP-bash",*/
 /*"SideBarEnhancements",*/
 /*"LSP-copilot",*/
+/*"0_package_control_loader",*/
     ],
     "theme": "auto",
     "color_scheme": "Catppuccin Macchiato.sublime-color-scheme",
