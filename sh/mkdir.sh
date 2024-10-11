@@ -10,3 +10,4 @@ mkdir ~/.config
 mkdir ~/.local
 mkdir ~/.local/ble.sh
 mkdir ~/.local/bin
+mkdir ~/Documents/code_history

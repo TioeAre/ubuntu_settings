@@ -1,7 +1,7 @@
 #!/bin/bash
 # for x64
 
-sudo apt -t bookworm-backports install firmware-linux-free firmware-linux-nonfree firmware-amd-graphics firmware-realtek firmware-misc-nonfree
+sudo apt -t bookworm-backports install firmware-linux-free firmware-linux-nonfree firmware-amd-graphics firmware-realtek firmware-misc-nonfree linux-headers-amd64 linux-image-amd64
 
 sudo apt install linux-headers-amd64
 # sudo apt install -t buster-backports linux-image-amd64
@@ -15,7 +15,7 @@ sudo sh cuda_12.6.2_560.35.03_linux.run
 sudo nvidia-xconfig
 
 sudo apt install libnvoptix1 # 光追
-vim /etc/X11/xorg.conf or /etc/X11/xorg.conf.d/20-nvidia.conf
+# vim /etc/X11/xorg.conf or /etc/X11/xorg.conf.d/20-nvidia.conf
 #     Option         "RegistryDwords" "EnableBrightnessControl=1;"
 
 # check whether the nvidia driver is load in kernal
@@ -53,10 +53,10 @@ sudo nvidia-xconfig --prime
 
 
 ### wayland
-ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
+sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 echo 'GRUB_CMDLINE_LINUX="$GRUB_CMDLINE_LINUX nvidia-drm.modeset=1"' > /etc/default/grub.d/nvidia-modeset.cfg
 echo 'GRUB_CMDLINE_LINUX="nvidia-drm.modeset=1"' > /etc/default/grub.d/nvidia-modeset.cfg
-update-grub
+sudo update-grub
 systemctl enable nvidia-suspend.service
 systemctl enable nvidia-hibernate.service
 systemctl enable nvidia-resume.service

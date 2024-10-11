@@ -8,3 +8,6 @@ tar xf lazygit.tar.gz lazygit
 cp lazygit ~/.local/bin
 chmod +x ~/.local/bin/lazygit
 rm lazygit lazygit.tar.gz
+
+git config --global user.name "TioeAre"
+git config --global user.email "are10032@outlook.com"

@@ -3,6 +3,8 @@
 
 # sudo usermod -aG sudo tioeare
 
+# timedatectl set-local-rtc 1 --adjust-system-clock
+
 # Default values
 su_permission=false
 desktop=false
