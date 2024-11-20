@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=IntelliJ PyCharm Ultimate Edition
+Icon=/home/tioeare/tools/JetBrains/pycharm/bin/pycharm.svg
+Exec="/home/tioeare/tools/JetBrains/pycharm/bin/pycharm" %f
+Comment=Capable and Ergonomic IDE for C++
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-pycharm
+StartupNotify=true

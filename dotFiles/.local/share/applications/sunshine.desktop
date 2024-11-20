@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=sunshine
+Icon=sunshine
+Exec=/home/tioeare/tools/sunshine.AppImage %u
+Terminal=false
+StartupWMClass=sunshine
+Comment=sunshine

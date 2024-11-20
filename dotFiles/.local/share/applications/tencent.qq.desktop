@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=QQ
+Exec=/home/tioeare/tools/QQ.AppImage %U
+Terminal=false
+Type=Application
+Icon=qq.png
+StartupWMClass=QQ
+Categories=Network;
+Comment=QQ

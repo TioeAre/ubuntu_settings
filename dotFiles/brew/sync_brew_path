@@ -1,0 +1,80 @@
+#!/bin/sh
+
+# Function to add programs to the list
+add_to_list() {
+    local brew_bin_dir="/home/linuxbrew/.linuxbrew/bin"
+    local user_bin_dir="$HOME/brew/bin"
+    if [ ! -d "$user_bin_dir" ]; then
+        mkdir -p "$user_bin_dir"
+        echo "mkdir $user_bin_dir"
+    fi
+    for program_name in "$@"; do
+        if [ -x "$brew_bin_dir/$program_name" ]; then
+            ln -s "$brew_bin_dir/$program_name" "$user_bin_dir/"
+            echo "ln $program_name to $user_bin_dir"
+        else
+            echo "$program_name is not exit in $brew_bin_dir"
+        fi
+    done
+}
+
+# Function to update brew path
+update_brew_path() {
+    local user_bin_dir="$HOME/brew/bin"
+    # local brew_list_output=$(/home/linuxbrew/.linuxbrew/bin/brew list)
+    if [ -d "$user_bin_dir" ]; then
+        # for link in "$user_bin_dir"/*; do
+        #     local link_name=$(basename "$link")
+        #     if [[ ! "$brew_list_output" =~ "$link_name" ]]; then
+        #         rm "$link"
+        #         echo "rm $link_name"
+        #     fi
+        # done
+        find "$user_bin_dir" -type l ! -exec test -e {} \; -delete
+    fi
+}
+
+function brew_disable() {
+    export PATH=${PATH##*"/.linuxbrew/bin:"}
+    export PATH=${PATH##*"/.linuxbrew/sbin:"}
+    export MANPATH=${MANPATH##*"/.linuxbrew/share/man:"}
+    export INFOPATH=${INFOPATH##*"/.linuxbrew/share/info:"}
+}
+
+function brew_enable() {
+    BREW='/home/linuxbrew/.linuxbrew'
+    brew_disable
+    export PATH="$BREW/bin:$BREW/sbin:$PATH"
+    export MANPATH="$BREW/share/man:$MANPATH"
+    export INFOPATH="$BREW/share/info:$INFOPATH"
+    export HOMEBREW_NO_AUTO_UPDATE=1
+}
+
+# Override brew command to call add_to_list when using brew install
+brew() {
+    local install_flag=false
+    local programs=()
+
+    export HOMEBREW_NO_AUTO_UPDATE=1
+    export HOMEBREW_NO_INSTALL_CLEANUP=1
+    brew_enable
+    command /home/linuxbrew/.linuxbrew/bin/brew "$@"
+    brew_disable
+
+    # Parse command line arguments to detect 'brew install' and collect program names
+    for arg in "$@"; do
+        if [ "$install_flag" = true ]; then
+            programs+=("$arg")
+        fi
+        if [ "$arg" = "install" ]; then
+            install_flag=true
+        fi
+    done
+    if [ "$install_flag" = true ] && [ "${#programs[@]}" -gt 0 ]; then
+        add_to_list "${programs[@]}"
+    fi
+
+    # update_path_from_brew_list
+    update_brew_path
+}
+

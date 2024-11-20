@@ -1,0 +1,17 @@
+[MIME Cache]
+application/x-sh=kitty-open.desktop;
+application/x-shellscript=kitty-open.desktop;
+application/x-zerosize=dev.zed.Zed.desktop;
+image/*=kitty-open.desktop;
+inode/directory=kitty-open.desktop;
+text/*=kitty-open.desktop;
+text/html=obsidian.desktop;signal.desktop;
+text/markdown=marktext.desktop;
+text/plain=dev.zed.Zed.desktop;
+x-scheme-handler/jetbrains-gateway=jetbrains-gateway.desktop;
+x-scheme-handler/kitty=kitty-open.desktop;
+x-scheme-handler/obsidian=obsidian.desktop;
+x-scheme-handler/sgnl=signal.desktop;
+x-scheme-handler/signalcaptcha=signal.desktop;
+x-scheme-handler/ssh=kitty-open.desktop;
+x-scheme-handler/zed=dev.zed.Zed.desktop;

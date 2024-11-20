@@ -1,0 +1,14 @@
+[
+    // {
+    //    "keys": ["ctrl+alt+l"],
+    //    "command": "reindent",
+    //    "args": {
+    //     "single_line": false
+    //     }
+    // },
+   {
+        "keys": ["ctrl+alt+l"],
+        "command": "lsp_format_document",
+        "context": [{"key": "lsp.session_with_capability", "operand": "documentFormattingProvider | documentRangeFormattingProvider"}]
+    },
+]

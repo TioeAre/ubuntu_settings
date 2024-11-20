@@ -1,0 +1,85 @@
+# general
+import = [
+ # "%APPDATA%\alacritty/themes/themes/catppuccin_latte.toml"
+ "%APPDATA%/alacritty/themes/themes/catppuccin_mocha.toml"
+ # "%APPDATA%\alacritty/themes/themes/tokyo-night-storm.toml"
+]
+shell = "C:/Program Files/PowerShell/7/pwsh.exe"
+working_directory = "None"
+live_config_reload = true
+# ipc_socket = true
+# tabspaces = 4
+# env
+
+# window
+[window]
+dimensions = { columns = 110, lines = 36 }
+decorations = "Full" # | "None" | "Transparent" | "Buttonless"
+opacity = 0.9
+blur = true
+startup_mode = "Windowed" # | "Maximized" | "Fullscreen" | "SimpleFullscreen"
+title = "Alacritty"
+dynamic_title = true
+decorations_theme_variant = "None" #  "Dark" | "Light" |
+
+[scrolling]
+history = 50000
+multiplier = 3 # Number of line scrolled for every input scroll increment.
+# auto_scroll = true
+
+[font]
+normal = { family = "IntoneMono Nerd Font Mono", style = "Regular" }
+size = 11
+# offset = { x = <integer>, y = <integer> } # Offset is the extra space around each character. y can be thought of as modifying the line spacing, and x as modifying the letter spacing.
+builtin_box_drawing = true
+
+[colors]
+# cursor = { text = "<string>", cursor = "<string>" }
+
+[bell]
+animation = "Linear"
+duration = 1
+color = "#ffffff"
+# command = "<string>" | { program = "<string>", args = ["<string>",] }
+
+[selection]
+# semantic_escape_chars = ",│`|:"' ()[]{}<>t"
+save_to_clipboard = true
+
+[cursor]
+style = {shape = "Block", blinking = "Never"}
+# blinking = "Never" # | "Off" | "On" | "Always"
+blink_interval = 750
+blink_timeout = 0
+unfocused_hollow = true
+thickness = 0.15
+
+[terminal]
+osc52 = "OnlyCopy" # "Disabled" | "OnlyPaste" | "CopyPaste"
+
+[mouse]
+hide_when_typing = false
+bindings = [
+    { mouse = "Right", mods = "Control", action = "Copy" },
+]
+
+[keyboard]
+bindings = [
+    # { key = "/", mods = "Control", mode = "", action = "" | chars = "\x1f" },
+    { key = "Slash", mods = "Control", chars = "\u001f" },
+    { key = "C", mods = "Control|Shift", mode = "~Vi", action = "Copy" },
+    { key = "V", mods = "Control|Shift", mode = "~Vi", action = "Paste" },
+    { key = "+", mods = "Control|Shift", action = "IncreaseFontSize" },
+    { key = "_", mods = "Control|Shift", action = "DecreaseFontSize" },
+    { key = "PageUp", mode = "~Alt", action = "ScrollPageUp" },
+    { key = "PageDown", mode = "~Alt", action = "ScrollPageDown" },
+    { key = "Home", mode = "~Alt", action = "ScrollToTop" },
+    { key = "End", mode = "~Alt", action = "ScrollToBottom" },
+    { key = "PageUp", mods = "Control", action = "ScrollLineUp" },
+    { key = "PageDown", mods = "Control", action = "ScrollLineDown" },
+    { key = "i", mods = "Alt", action = "ToggleViMode" },
+    { key = "F", mods = "Control|Shift", mode = "~Vi", action = "SearchForward" },
+    { key = "q", mods = "Control", mode = "Search", action = "SearchCancel" },
+    { key = "Escape", mode = "Search", action = "SearchClear" },
+]
+

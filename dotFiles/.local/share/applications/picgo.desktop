@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PicGo
+Icon=PicGo
+Exec=/home/tioeare/tools/PicGo.AppImage %u
+Terminal=false
+StartupWMClass=PicGo
+Comment=PicGo

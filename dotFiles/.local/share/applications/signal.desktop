@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=signal
+# Exec=http_proxy=http://127.0.0.1:7890  HTTPS_PROXY=http://127.0.0.1:7890  WSS_PROXY=http://127.0.0.1:7890  ALL_PROXY=http://127.0.0.1:7890 /opt/Signal/signal-desktop --no-sandbox %U
+Exec=env http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890 wss_proxy=http://127.0.0.1:7890 all_proxy=http://127.0.0.1:7890 /usr/bin/signal-desktop --no-sandbox %U
+# Exec=export http_proxy=http://127.0.0.1:7890 && export https_proxy=http://127.0.0.1:7890 && export wss_proxy=http://127.0.0.1:7890 && export all_proxy=http://127.0.0.1:7890 && export /opt/Signal/signal-desktop --no-sandbox %U
+# Exec=socks5 /opt/Signal/signal-desktop --no-sandbox %U
+Terminal=false
+Type=Application
+Icon=signal-desktop
+StartupWMClass=Signal
+Comment=Private messaging from your desktop
+Categories=Network;InstantMessaging;Chat;
+
+MimeType=text/html;x-scheme-handler/sgnl;x-scheme-handler/signalcaptcha;

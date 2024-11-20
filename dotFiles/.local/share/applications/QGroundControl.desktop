@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=QGroundControl
+Exec=/home/tioeare/tools/QGroundControl.AppImage
+Icon=/home/tioeare/.icons/McMojave-circle-blue/McMojave-circle-blue/apps/scalable/qgroundcontrol.png
+Type=Application
+StartupNotify=true

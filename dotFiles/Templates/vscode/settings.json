@@ -1,0 +1,8 @@
+{
+  "python.autoComplete.extraPaths": [],
+  "python.analysis.extraPaths": [],
+  "cmake.sourceDirectory": [],
+  "python.analysis.exclude": [
+    "**/testFiles/*.py",
+  ]
+}

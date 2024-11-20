@@ -1,0 +1,112 @@
+theme = "catppuccin_macchiato"
+
+[editor]
+line-number = "relative"
+cursorline = true
+color-modes = true
+auto-format = false
+completion-replace = true    # true to replace the entire word
+rulers = [121]
+bufferline = "multiple"
+text-width = 120
+popup-border = "all"
+auto-save = true
+
+[editor.statusline]
+left = ["mode", "version-control", "selections", "read-only-indicator", "file-name"]
+center = []
+right = ["file-modification-indicator", "diagnostics", "file-line-ending", "file-encoding", "spinner", "file-type", "position-percentage", "position", "separator", "total-line-numbers"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+"'" = "'"
+'`' = '`'
+'<' = '>'
+
+# [editor.auto-save]
+# focus-lost = true
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+nbsp = "all"
+nnbsp = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "."
+
+[editor.indent-guides]
+render = true
+character = "⎸"
+
+[editor.soft-wrap]
+enable = true
+wrap-at-text-width = true
+
+# [editor.explorer]
+# position = "left"
+# column-width = 22
+
+[keys.normal]
+tab = "move_parent_node_end"
+S-tab = "move_parent_node_start"
+g = {D="goto_type_definition"}
+s = "goto_word"
+m = {a="surround_add", s="select_textobject_around"}
+A-h = "jump_view_left"
+A-j = "jump_view_down"
+A-k = "jump_view_up"
+A-l = "jump_view_right"
+A-left = "swap_view_left"
+A-down = "swap_view_down"
+A-up = "swap_view_up"
+A-right = "swap_view_right"
+# C-h = "signature-help"
+C-k = "hover"
+C-r = "redo"
+# C = {k="hover, /="toggle_comments"}
+"C-7" = "toggle_comments"    # ctrl + /
+C-A-l = ":format" # format_selections
+
+[keys.normal.space]
+b = {n="goto_next_buffer", m="goto_previous_buffer", c="wclose", f="buffer_picker"}
+c = {a="code_action", o="wonly"}
+f = {f="file_picker_in_current_directory", l="goto_reference", r="last_picker"}
+l = {d="diagnostics_picker", w="workspace_diagnostics_picker"}
+o = {p={d="symbol_picker", w="workspace_symbol_picker"}}
+r = {n="rename_symbol", l=":lsp-restart"}
+s = {h="hsplit", v="vsplit"}
+w = {e=":wa", q=":wbc", s=":wqa"}
+
+[keys.insert]
+S-tab = "move_parent_node_start"
+
+[keys.select]
+tab = "indent"
+S-tab = "unindent"
+J = "move_line_down"
+K = "move_line_up"

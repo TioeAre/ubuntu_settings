@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=OneDriveGUI
+Icon=onedrive
+Exec=/home/tioeare/tools/OneDriveGUI.AppImage %u
+Terminal=false
+StartupWMClass=OneDriveGUI
+Comment=OneDriveGUI

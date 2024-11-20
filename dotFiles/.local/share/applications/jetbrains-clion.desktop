@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=IntelliJ CLion Ultimate Edition
+Icon=/home/tioeare/tools/JetBrains/CLion/bin/clion.svg
+Exec="/home/tioeare/tools/JetBrains/CLion/bin/clion" %f
+Comment=Capable and Ergonomic IDE for C++
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-clion
+StartupNotify=true
