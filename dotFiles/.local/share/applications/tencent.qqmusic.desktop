@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=qqmusic
+Exec=/home/tioeare/tools/qqmusic.AppImage --in-process-gpu
+Terminal=false
+Type=Application
+Icon=qqmusic.svg
+StartupWMClass=qqmusic
+Categories=Network;
+Comment=qqmusic
