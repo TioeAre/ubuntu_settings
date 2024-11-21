@@ -11,6 +11,7 @@ fi
 
 ###  alacritty
 [[ ! -f ~/.bash_completion.d/alacritty ]] || source ~/.bash_completion.d/alacritty
+[[ ! -d ${ZDOTDIR:-~}/.zsh_functions ]] ||fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 ###  Rust
 [[ ! -f $HOME/.cargo/env ]] || source "$HOME/.cargo/env"

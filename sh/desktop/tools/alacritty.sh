@@ -23,7 +23,7 @@ scdoc <extra/man/alacritty-bindings.5.scd | gzip -c | sudo tee /usr/local/share/
 
 # completion in zsh
 mkdir -p ${ZDOTDIR:-~}/.zsh_functions
-echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> ${ZDOTDIR:-~}/.zshrc
+# echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> ${ZDOTDIR:-~}/.zshrc
 cp extra/completions/_alacritty ${ZDOTDIR:-~}/.zsh_functions/_alacritty
 
 # completion in bash

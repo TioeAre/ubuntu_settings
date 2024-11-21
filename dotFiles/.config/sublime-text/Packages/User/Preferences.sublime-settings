@@ -51,6 +51,7 @@
 /*"0_package_control_loader",*/
 /*"LSP",*/
 /*"LSP",*/
+/*"BracketHighlighter",*/
     ],
     "theme": "auto",
     "color_scheme": "Catppuccin Macchiato.sublime-color-scheme",
