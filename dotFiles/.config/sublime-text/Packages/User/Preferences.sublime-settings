@@ -52,6 +52,7 @@
 /*"LSP",*/
 /*"LSP",*/
 /*"BracketHighlighter",*/
+/*"LSP-PowerShellEditorServices",*/
     ],
     "theme": "auto",
     "color_scheme": "Catppuccin Macchiato.sublime-color-scheme",
