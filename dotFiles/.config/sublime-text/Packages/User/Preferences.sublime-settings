@@ -53,6 +53,8 @@
 /*"LSP",*/
 /*"BracketHighlighter",*/
 /*"LSP-PowerShellEditorServices",*/
+/*"LSP-PowerShellEditorServices",*/
+/*"Log Highlight",*/
     ],
     "theme": "auto",
     "color_scheme": "Catppuccin Macchiato.sublime-color-scheme",

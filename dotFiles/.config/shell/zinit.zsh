@@ -101,11 +101,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 zinit light romkatv/powerlevel10k
 
 # plugins
-zinit ice lucid wait='0' # atinit='zpcompinit'
+zinit ice lucid wait # atinit='zpcompinit'
 zinit light zsh-users/zsh-syntax-highlighting
 # zinit ice lucid wait='0' atinit='zpcompinit'
 # zinit light zdharma/fast-syntax-highlighting
 # zinit ice wait lucid
 # zinit load zdharma-continuum/history-search-multi-word
 zinit ice wait lucid atload'_zsh_autosuggest_start; zpcompinit; zpcdreplay'
-zsh-defer zinit light zsh-users/zsh-autosuggestions
+zsh-defer zinit load zsh-users/zsh-autosuggestions
