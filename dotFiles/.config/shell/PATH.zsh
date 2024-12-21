@@ -7,8 +7,7 @@ export PATH=$HOME/.local/bin:$PATH
 ###  brew
 # export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
-[[ ! -f $HOME/brew/sync_brew_path ]] || source "$HOME/brew/sync_brew_path"
+[[ ! -f $HOME/brew/sync_brew_path ]] || source "$HOME/brew/sync_brew_path" && export PATH="$PATH:$HOME/brew/bin"
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSTALL_CLEANUP=1
 

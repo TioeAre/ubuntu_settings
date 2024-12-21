@@ -55,6 +55,9 @@
 /*"LSP-PowerShellEditorServices",*/
 /*"LSP-PowerShellEditorServices",*/
 /*"Log Highlight",*/
+/*"LSP",*/
+/*"LSP-json",*/
+/*"LSP-copilot",*/
     ],
     "theme": "auto",
     "color_scheme": "Catppuccin Macchiato.sublime-color-scheme",

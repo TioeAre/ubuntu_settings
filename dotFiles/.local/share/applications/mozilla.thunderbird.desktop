@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=thunderbrid
+Exec=/home/tioeare/tools/thunderbird/thunderbird-bin
+Terminal=false
+Type=Application
+Icon=thunderbird.png
+StartupWMClass=thunderbrid
+Categories=Network;
+Comment=thunderbrid

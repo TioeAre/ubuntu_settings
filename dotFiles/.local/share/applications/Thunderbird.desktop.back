@@ -1,0 +1,18 @@
+# [Desktop Entry]
+# Name=thunderbrid
+# Exec=/home/tioeare/tools/thunderbird/thunderbird
+# Terminal=false
+# Type=Application
+# Icon=thunderbird.png
+# StartupWMClass=thunderbrid
+# Categories=Network;
+# Comment=thunderbrid
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+# NoDisplay=true
+Exec=/home/tioeare/tools/thunderbird/thunderbird %u
+Icon=thunderbird.png
+Name=Thunderbird
+Comment=Custom definition for Thunderbird
