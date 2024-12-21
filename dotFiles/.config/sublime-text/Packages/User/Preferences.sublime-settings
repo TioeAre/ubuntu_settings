@@ -58,6 +58,7 @@
 /*"LSP",*/
 /*"LSP-json",*/
 /*"LSP-copilot",*/
+/*"LSP-json",*/
     ],
     "theme": "auto",
     "color_scheme": "Catppuccin Macchiato.sublime-color-scheme",
