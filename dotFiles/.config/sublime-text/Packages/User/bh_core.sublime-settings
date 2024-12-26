@@ -1,0 +1,7 @@
+{
+    "show_unmatched": true,
+    // "search_in_widgets": true,
+    "show_in_minimap": "squiggly",
+    "search_threshold": 30000,
+    "popup_char_context": 120,
+}

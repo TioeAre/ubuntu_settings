@@ -1,0 +1,4820 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/config/keybinding.lua",
+			"settings":
+			{
+				"buffer_size": 1707,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					57,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "local wezterm = require 'wezterm'\nlocal disableCommon = require 'config/keybind/disableCommon'\nlocal disablePaneAndTab = require 'config/keybind/disablePaneAndTab'\nlocal setOthers = require 'config/keybind/setOthers'\nlocal setPane = require 'config/keybind/setPane'\nlocal setTab = require 'config/keybind/setTab'\n\nlocal module = {}\n\nfunction module.apply_to_config(config)\n    -- SUPER, CMD, WIN; CTRL; SHIFT; ALT, OPT, META; LEADER |\n    -- Hyper, Super, Meta, Cancel, Backspace, Tab, Clear, Enter, Shift, Escape, LeftShift, RightShift, Control, LeftControl, RightControl, Alt, LeftAlt, RightAlt, Menu, LeftMenu, RightMenu, Pause, CapsLock, VoidSymbol, PageUp, PageDown, End, Home, LeftArrow, RightArrow, UpArrow, DownArrow, Select, Print, Execute, PrintScreen, Insert, Delete, Help, LeftWindows, RightWindows, Applications, Sleep, Numpad0, Numpad1, Numpad2, Numpad3, Numpad4, Numpad5, Numpad6, Numpad7, Numpad8, Numpad9, Multiply, Add, Separator, Subtract, Decimal, Divide, NumLock, ScrollLock, BrowserBack, BrowserForward, BrowserRefresh, BrowserStop, BrowserSearch, BrowserFavorites, BrowserHome, VolumeMute, VolumeDown, VolumeUp, MediaNextTrack, MediaPrevTrack, MediaStop, MediaPlayPause, ApplicationLeftArrow, ApplicationRightArrow, ApplicationUpArrow, ApplicationDownArrow, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, F13, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24\n    config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }\n    config.keys = {}\n\n    disableCommon.apply_to_config(config)\n    disablePaneAndTab.apply_to_config(config)\n    setOthers.apply_to_config(config)\n    setPane.apply_to_config(config)\n    setTab.apply_to_config(config)\nend\n\nreturn module\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 23
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 0
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AQAAAAAAAAAAAAAAqwYAAAAAAACrBgAAbG9jYWwgd2V6dGVybSA9IHJlcXVpcmUgJ3dlenRlcm0nCmxvY2FsIGRpc2FibGVDb21tb24gPSByZXF1aXJlICdjb25maWcva2V5YmluZC9kaXNhYmxlQ29tbW9uJwpsb2NhbCBkaXNhYmxlUGFuZUFuZFRhYiA9IHJlcXVpcmUgJ2NvbmZpZy9rZXliaW5kL2Rpc2FibGVQYW5lQW5kVGFiJwpsb2NhbCBzZXRPdGhlcnMgPSByZXF1aXJlICdjb25maWcva2V5YmluZC9zZXRPdGhlcnMnCmxvY2FsIHNldFBhbmUgPSByZXF1aXJlICdjb25maWcva2V5YmluZC9zZXRQYW5lJwpsb2NhbCBzZXRUYWIgPSByZXF1aXJlICdjb25maWcva2V5YmluZC9zZXRUYWInCgpsb2NhbCBtb2R1bGUgPSB7fQoKZnVuY3Rpb24gbW9kdWxlLmFwcGx5X3RvX2NvbmZpZyhjb25maWcpCiAgICAtLSBTVVBFUiwgQ01ELCBXSU47IENUUkw7IFNISUZUOyBBTFQsIE9QVCwgTUVUQTsgTEVBREVSIHwKICAgIC0tIEh5cGVyLCBTdXBlciwgTWV0YSwgQ2FuY2VsLCBCYWNrc3BhY2UsIFRhYiwgQ2xlYXIsIEVudGVyLCBTaGlmdCwgRXNjYXBlLCBMZWZ0U2hpZnQsIFJpZ2h0U2hpZnQsIENvbnRyb2wsIExlZnRDb250cm9sLCBSaWdodENvbnRyb2wsIEFsdCwgTGVmdEFsdCwgUmlnaHRBbHQsIE1lbnUsIExlZnRNZW51LCBSaWdodE1lbnUsIFBhdXNlLCBDYXBzTG9jaywgVm9pZFN5bWJvbCwgUGFnZVVwLCBQYWdlRG93biwgRW5kLCBIb21lLCBMZWZ0QXJyb3csIFJpZ2h0QXJyb3csIFVwQXJyb3csIERvd25BcnJvdywgU2VsZWN0LCBQcmludCwgRXhlY3V0ZSwgUHJpbnRTY3JlZW4sIEluc2VydCwgRGVsZXRlLCBIZWxwLCBMZWZ0V2luZG93cywgUmlnaHRXaW5kb3dzLCBBcHBsaWNhdGlvbnMsIFNsZWVwLCBOdW1wYWQwLCBOdW1wYWQxLCBOdW1wYWQyLCBOdW1wYWQzLCBOdW1wYWQ0LCBOdW1wYWQ1LCBOdW1wYWQ2LCBOdW1wYWQ3LCBOdW1wYWQ4LCBOdW1wYWQ5LCBNdWx0aXBseSwgQWRkLCBTZXBhcmF0b3IsIFN1YnRyYWN0LCBEZWNpbWFsLCBEaXZpZGUsIE51bUxvY2ssIFNjcm9sbExvY2ssIEJyb3dzZXJCYWNrLCBCcm93c2VyRm9yd2FyZCwgQnJvd3NlclJlZnJlc2gsIEJyb3dzZXJTdG9wLCBCcm93c2VyU2VhcmNoLCBCcm93c2VyRmF2b3JpdGVzLCBCcm93c2VySG9tZSwgVm9sdW1lTXV0ZSwgVm9sdW1lRG93biwgVm9sdW1lVXAsIE1lZGlhTmV4dFRyYWNrLCBNZWRpYVByZXZUcmFjaywgTWVkaWFTdG9wLCBNZWRpYVBsYXlQYXVzZSwgQXBwbGljYXRpb25MZWZ0QXJyb3csIEFwcGxpY2F0aW9uUmlnaHRBcnJvdywgQXBwbGljYXRpb25VcEFycm93LCBBcHBsaWNhdGlvbkRvd25BcnJvdywgRjEsIEYyLCBGMywgRjQsIEY1LCBGNiwgRjcsIEY4LCBGOSwgRjEwLCBGMTEsIEYxMiwgRjEzLCBGMTQsIEYxNSwgRjE2LCBGMTcsIEYxOCwgRjE5LCBGMjAsIEYyMSwgRjIyLCBGMjMsIEYyNAogICAgY29uZmlnLmxlYWRlciA9IHsga2V5ID0gJ2EnLCBtb2RzID0gJ0NUUkwnLCB0aW1lb3V0X21pbGxpc2Vjb25kcyA9IDEwMDAgfQogICAgY29uZmlnLmtleXMgPSB7fQoKICAgIGRpc2FibGVDb21tb24uYXBwbHlfdG9fY29uZmlnKGNvbmZpZykKICAgIGRpc2FibGVQYW5lQW5kVGFiLmFwcGx5X3RvX2NvbmZpZyhjb25maWcpCiAgICBzZXRPdGhlcnMuYXBwbHlfdG9fY29uZmlnKGNvbmZpZykKICAgIHNldFBhbmUuYXBwbHlfdG9fY29uZmlnKGNvbmZpZykKICAgIHNldFRhYi5hcHBseV90b19jb25maWcoY29uZmlnKQplbmQKCnJldHVybiBtb2R1bGUK",
+					"AQAAAAAAAAABAAAA2AAAAAAAAADYAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					114,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAAGsGAAAAAAAAbAYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAawYAAAAAAABrBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					124,
+					1,
+					"left_delete",
+					null,
+					"AQAAAGsGAAAAAAAAawYAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAAbAYAAAAAAABsBgAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "/home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/config/keybind/disableCondition.lua",
+			"settings":
+			{
+				"buffer_size": 1264,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					6,
+					1,
+					"",
+					null,
+					"AgAAAAAAAAAAAAAACgAAAAAAAAAAAAAACgAAAAAAAAAKAAAAAAAAAEQCAAAtLSB3ZXp0ZXJtX3N0YXR1cy5sdWEKCmxvY2FsIHdlenRlcm0gPSByZXF1aXJlICd3ZXp0ZXJtJwoKbG9jYWwgcHJvZwoKbG9jYWwgZnVuY3Rpb24gYmFzZW5hbWUocykKICAgIHJldHVybiBzdHJpbmcuZ3N1YihzLCAnKC4qWy9cXF0pKC4qKScsICclMicpCmVuZAoKbG9jYWwgcHJvZ3JhbXMgPSB7CiAgICBudmltID0gdHJ1ZSwKICAgIHNzaCA9IHRydWUsCiAgICB0bXV4ID0gdHJ1ZSwKICAgIHplbGxpaiA9IHRydWUsCn0KCmxvY2FsIGZ1bmN0aW9uIHVwZGF0ZV90aXRsZSh3aW5kb3csIHBhbmUpCiAgICBsb2NhbCBwcm9jZXNzX25hbWUgPSBwYW5lOmdldF9mb3JlZ3JvdW5kX3Byb2Nlc3NfbmFtZSgpIG9yICJOL0EiCiAgICBwcm9nID0gYmFzZW5hbWUocHJvY2Vzc19uYW1lKQoKICAgIGlmIHByb2dyYW1zW3Byb2ddIHRoZW4KICAgICAgICB3aW5kb3c6c2V0X3RpdGxlKCJTcGVjaWFsIFByb2dyYW06ICIgLi4gcHJvZykKICAgIGVsc2UKICAgICAgICB3aW5kb3c6c2V0X3RpdGxlKCJSdW5uaW5nOiAiIC4uIHByb2cpCiAgICBlbmQKZW5kCgpyZXR1cm4gewogICAgdXBkYXRlX3RpdGxlID0gdXBkYXRlX3RpdGxlCn0K",
+					"AQAAAAAAAAABAAAAAAAAAAAAAABEAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"ensure_newline_at_eof",
+					null,
+					"AQAAAAoAAAAAAAAACwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACgAAAAAAAAAKAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					16,
+					1,
+					"",
+					null,
+					"AgAAAAAAAAAAAAAAtQMAAAAAAAAAAAAAtQMAAAAAAAC1AwAAAAAAAAsAAABuYXZpZ2F0aW9uCg",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					25,
+					1,
+					"ensure_newline_at_eof",
+					null,
+					"AQAAALUDAAAAAAAAtgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABgAAAAAAAAAHAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					30,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "wezterm",
+								"range":
+								{
+									"end":
+									{
+										"character": 7,
+										"line": 0
+									},
+									"start":
+									{
+										"character": 6,
+										"line": 0
+									}
+								}
+							},
+							{
+								"newText": "wezterm",
+								"range":
+								{
+									"end":
+									{
+										"character": 11,
+										"line": 1
+									},
+									"start":
+									{
+										"character": 10,
+										"line": 1
+									}
+								}
+							},
+							{
+								"newText": "wezterm",
+								"range":
+								{
+									"end":
+									{
+										"character": 35,
+										"line": 7
+									},
+									"start":
+									{
+										"character": 34,
+										"line": 7
+									}
+								}
+							},
+							{
+								"newText": "wezterm",
+								"range":
+								{
+									"end":
+									{
+										"character": 37,
+										"line": 9
+									},
+									"start":
+									{
+										"character": 36,
+										"line": 9
+									}
+								}
+							},
+							{
+								"newText": "wezterm",
+								"range":
+								{
+									"end":
+									{
+										"character": 38,
+										"line": 26
+									},
+									"start":
+									{
+										"character": 37,
+										"line": 26
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"BQAAAOQCAAAAAAAA6wIAAAAAAAABAAAAdwgBAAAAAAAADwEAAAAAAAABAAAAd74AAAAAAAAAxQAAAAAAAAABAAAAdyYAAAAAAAAALQAAAAAAAAABAAAAdwYAAAAAAAAADQAAAAAAAAABAAAAdw",
+					"AQAAAAAAAAABAAAABgAAAAAAAAAHAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					38,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "local wezterm = require 'wezterm'\nlocal a = wezterm.action\n\nlocal function is_inside_vim(pane)\n    local tty = pane:get_tty_name()\n    if tty == nil then return false end\n\n    local success, stdout, stderr = wezterm.run_child_process\n        { 'sh', '-c',\n            'ps -o state= -o comm= -t' .. wezterm.shell_quote_arg(tty) .. ' | ' ..\n            'grep -iqE \\'^[^TXZ ]+ +(\\\\S+\\\\/)?g?(view|l?n?vim?x?)(diff)?$\\'' }\n\n    return success\nend\n\nlocal function is_outside_vim(pane) return not is_inside_vim(pane) end\n\nlocal function bind_if(cond, key, mods, action)\n    local function callback(win, pane)\n        if cond(pane) then\n            win:perform_action(action, pane)\n        else\n            win:perform_action(a.SendKey({ key = key, mods = mods }), pane)\n        end\n    end\n\n    return { key = key, mods = mods, action = wezterm.action_callback(callback) }\nend\n\nreturn {\n    keys = {\n        bind_if(is_outside_vim, 'h', 'ALT', a.ActivatePaneDirection('Left')),\n        bind_if(is_outside_vim, 'l', 'ALT', a.ActivatePaneDirection('Right')),\n    },\n}\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 35
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 0
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AQAAAAAAAAAAAAAAIwQAAAAAAADUAwAAbG9jYWwgd2V6dGVybSA9IHJlcXVpcmUgJ3dlenRlcm0nCmxvY2FsIGEgPSB3ZXp0ZXJtLmFjdGlvbgoKbG9jYWwgZnVuY3Rpb24gaXNfaW5zaWRlX3ZpbShwYW5lKQogIGxvY2FsIHR0eSA9IHBhbmU6Z2V0X3R0eV9uYW1lKCkKICBpZiB0dHkgPT0gbmlsIHRoZW4gcmV0dXJuIGZhbHNlIGVuZAoKICBsb2NhbCBzdWNjZXNzLCBzdGRvdXQsIHN0ZGVyciA9IHdlenRlcm0ucnVuX2NoaWxkX3Byb2Nlc3MKICAgIHsgJ3NoJywgJy1jJywKICAgICAgJ3BzIC1vIHN0YXRlPSAtbyBjb21tPSAtdCcgLi4gd2V6dGVybS5zaGVsbF9xdW90ZV9hcmcodHR5KSAuLiAnIHwgJyAuLgogICAgICAnZ3JlcCAtaXFFIFwnXlteVFhaIF0rICsoXFxTK1xcLyk/Zz8odmlld3xsP24/dmltP3g/KShkaWZmKT8kXCcnIH0KCiAgcmV0dXJuIHN1Y2Nlc3MKZW5kCgpsb2NhbCBmdW5jdGlvbiBpc19vdXRzaWRlX3ZpbShwYW5lKSByZXR1cm4gbm90IGlzX2luc2lkZV92aW0ocGFuZSkgZW5kCgpsb2NhbCBmdW5jdGlvbiBiaW5kX2lmKGNvbmQsIGtleSwgbW9kcywgYWN0aW9uKQogIGxvY2FsIGZ1bmN0aW9uIGNhbGxiYWNrICh3aW4sIHBhbmUpCiAgICBpZiBjb25kKHBhbmUpIHRoZW4KICAgICAgd2luOnBlcmZvcm1fYWN0aW9uKGFjdGlvbiwgcGFuZSkKICAgIGVsc2UKICAgICAgd2luOnBlcmZvcm1fYWN0aW9uKGEuU2VuZEtleSh7a2V5PWtleSwgbW9kcz1tb2RzfSksIHBhbmUpCiAgICBlbmQKICBlbmQKCiAgcmV0dXJuIHtrZXk9a2V5LCBtb2RzPW1vZHMsIGFjdGlvbj13ZXp0ZXJtLmFjdGlvbl9jYWxsYmFjayhjYWxsYmFjayl9CmVuZAoKcmV0dXJuIHsKICBrZXlzID0gewogICAgYmluZF9pZihpc19vdXRzaWRlX3ZpbSwgJ2gnLCAnQUxUJywgYS5BY3RpdmF0ZVBhbmVEaXJlY3Rpb24oJ0xlZnQnKSksCiAgICBiaW5kX2lmKGlzX291dHNpZGVfdmltLCAnbCcsICdBTFQnLCBhLkFjdGl2YXRlUGFuZURpcmVjdGlvbignUmlnaHQnKSksCiAgfSwKfQo",
+					"AQAAAAAAAAABAAAAfwAAAAAAAAB/AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					57,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "wezterm.action",
+								"range":
+								{
+									"end":
+									{
+										"character": 7,
+										"line": 1
+									},
+									"start":
+									{
+										"character": 6,
+										"line": 1
+									}
+								}
+							},
+							{
+								"newText": "wezterm.action",
+								"range":
+								{
+									"end":
+									{
+										"character": 32,
+										"line": 22
+									},
+									"start":
+									{
+										"character": 31,
+										"line": 22
+									}
+								}
+							},
+							{
+								"newText": "wezterm.action",
+								"range":
+								{
+									"end":
+									{
+										"character": 45,
+										"line": 31
+									},
+									"start":
+									{
+										"character": 44,
+										"line": 31
+									}
+								}
+							},
+							{
+								"newText": "wezterm.action",
+								"range":
+								{
+									"end":
+									{
+										"character": 45,
+										"line": 32
+									},
+									"start":
+									{
+										"character": 44,
+										"line": 32
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"BAAAAPcDAAAAAAAABQQAAAAAAAABAAAAYakDAAAAAAAAtwMAAAAAAAABAAAAYc4CAAAAAAAA3AIAAAAAAAABAAAAYSgAAAAAAAAANgAAAAAAAAABAAAAYQ",
+					"AQAAAAAAAAABAAAAKAAAAAAAAAApAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					61,
+					2,
+					"left_delete",
+					null,
+					"AgAAACIAAAAAAAAAIgAAAAAAAAAlAAAAbG9jYWwgd2V6dGVybS5hY3Rpb24gPSB3ZXp0ZXJtLmFjdGlvbiEAAAAAAAAAIQAAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAARwAAAAAAAAAiAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					78,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAMYBAAAAAAAAxwEAAAAAAAAAAAAAxwEAAAAAAADLAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxgEAAAAAAADGAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					80,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"BAAAAOoBAAAAAAAA6wEAAAAAAAAAAAAA6wEAAAAAAADvAQAAAAAAAAAAAADrAQAAAAAAAOsBAAAAAAAABAAAACAgICDrAQAAAAAAAOsBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6gEAAAAAAADqAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					82,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "local wezterm = require 'wezterm'\n\nlocal function is_inside_vim(pane)\n    local tty = pane:get_tty_name()\n    if tty == nil then return false end\n\n    local success, stdout, stderr = wezterm.run_child_process\n        { 'sh', '-c',\n            'ps -o state= -o comm= -t' .. wezterm.shell_quote_arg(tty) .. ' | ' ..\n            'grep -iqE \\'^[^TXZ ]+ +(\\\\S+\\\\/)?g?(view|l?n?vim?x?)(diff)?$\\'' }\n\n    return success\nend\n\nlocal function is_outside_vim(pane)\n    return not is_inside_vim(pane)\nend\n\nlocal function bind_if(cond, key, mods, action)\n    local function callback(win, pane)\n        if cond(pane) then\n            win:perform_action(action, pane)\n        else\n            win:perform_action(wezterm.action.SendKey({ key = key, mods = mods }), pane)\n        end\n    end\n\n    return { key = key, mods = mods, action = wezterm.action_callback(callback) }\nend\n\nreturn {\n    keys = {\n        bind_if(is_outside_vim, 'h', 'ALT', wezterm.action.ActivatePaneDirection('Left')),\n        bind_if(is_outside_vim, 'l', 'ALT', wezterm.action.ActivatePaneDirection('Right')),\n    },\n}\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 36
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 0
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AQAAAAAAAAAAAAAANQQAAAAAAAA3BAAAbG9jYWwgd2V6dGVybSA9IHJlcXVpcmUgJ3dlenRlcm0nCgpsb2NhbCBmdW5jdGlvbiBpc19pbnNpZGVfdmltKHBhbmUpCiAgICBsb2NhbCB0dHkgPSBwYW5lOmdldF90dHlfbmFtZSgpCiAgICBpZiB0dHkgPT0gbmlsIHRoZW4gcmV0dXJuIGZhbHNlIGVuZAoKICAgIGxvY2FsIHN1Y2Nlc3MsIHN0ZG91dCwgc3RkZXJyID0gd2V6dGVybS5ydW5fY2hpbGRfcHJvY2VzcwogICAgICAgIHsgJ3NoJywgJy1jJywKICAgICAgICAgICAgJ3BzIC1vIHN0YXRlPSAtbyBjb21tPSAtdCcgLi4gd2V6dGVybS5zaGVsbF9xdW90ZV9hcmcodHR5KSAuLiAnIHwgJyAuLgogICAgICAgICAgICAnZ3JlcCAtaXFFIFwnXlteVFhaIF0rICsoXFxTK1xcLyk/Zz8odmlld3xsP24/dmltP3g/KShkaWZmKT8kXCcnIH0KCiAgICByZXR1cm4gc3VjY2VzcwplbmQKCmxvY2FsIGZ1bmN0aW9uIGlzX291dHNpZGVfdmltKHBhbmUpIAogICAgcmV0dXJuIG5vdCBpc19pbnNpZGVfdmltKHBhbmUpIAplbmQKCmxvY2FsIGZ1bmN0aW9uIGJpbmRfaWYoY29uZCwga2V5LCBtb2RzLCBhY3Rpb24pCiAgICBsb2NhbCBmdW5jdGlvbiBjYWxsYmFjayh3aW4sIHBhbmUpCiAgICAgICAgaWYgY29uZChwYW5lKSB0aGVuCiAgICAgICAgICAgIHdpbjpwZXJmb3JtX2FjdGlvbihhY3Rpb24sIHBhbmUpCiAgICAgICAgZWxzZQogICAgICAgICAgICB3aW46cGVyZm9ybV9hY3Rpb24od2V6dGVybS5hY3Rpb24uU2VuZEtleSh7IGtleSA9IGtleSwgbW9kcyA9IG1vZHMgfSksIHBhbmUpCiAgICAgICAgZW5kCiAgICBlbmQKCiAgICByZXR1cm4geyBrZXkgPSBrZXksIG1vZHMgPSBtb2RzLCBhY3Rpb24gPSB3ZXp0ZXJtLmFjdGlvbl9jYWxsYmFjayhjYWxsYmFjaykgfQplbmQKCnJldHVybiB7CiAgICBrZXlzID0gewogICAgICAgIGJpbmRfaWYoaXNfb3V0c2lkZV92aW0sICdoJywgJ0FMVCcsIHdlenRlcm0uYWN0aW9uLkFjdGl2YXRlUGFuZURpcmVjdGlvbignTGVmdCcpKSwKICAgICAgICBiaW5kX2lmKGlzX291dHNpZGVfdmltLCAnbCcsICdBTFQnLCB3ZXp0ZXJtLmFjdGlvbi5BY3RpdmF0ZVBhbmVEaXJlY3Rpb24oJ1JpZ2h0JykpLAogICAgfSwKfQo",
+					"AQAAAAAAAAABAAAA6wEAAAAAAADrAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					107,
+					1,
+					"left_delete",
+					null,
+					"AQAAAIgBAAAAAAAAiAEAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAiQEAAAAAAACJAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					109,
+					1,
+					"left_delete",
+					null,
+					"AQAAAJEAAAAAAAAAkQAAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAkgAAAAAAAACSAAAAAAAAAAAAAAAA0IpA"
+				],
+				[
+					128,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAACEAAAAAAAAAIgAAAAAAAAAAAAAAIgAAAAAAAAAjAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIQAAAAAAAAAhAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					129,
+					1,
+					"paste",
+					null,
+					"AQAAACMAAAAAAAAANAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIwAAAAAAAAAjAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					180,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAAG8DAAAAAAAAcAMAAAAAAAAAAAAAcAMAAAAAAABxAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbwMAAAAAAABvAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					182,
+					1,
+					"insert",
+					{
+						"characters": "fun"
+					},
+					"AwAAAHADAAAAAAAAcQMAAAAAAAAAAAAAcQMAAAAAAAByAwAAAAAAAAAAAAByAwAAAAAAAHMDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcAMAAAAAAABwAwAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					185,
+					1,
+					"copilot_accept_completion",
+					null,
+					"AgAAAHADAAAAAAAAcAMAAAAAAAADAAAAZnVucAMAAAAAAAAXBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcwMAAAAAAABzAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					191,
+					1,
+					"paste",
+					null,
+					"AgAAAIADAAAAAAAAhgMAAAAAAAAAAAAAhgMAAAAAAACGAwAAAAAAAA8AAABhcHBseV90b19jb25maWc",
+					"AQAAAAAAAAABAAAAgAMAAAAAAACPAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					201,
+					1,
+					"paste",
+					null,
+					"AgAAAIADAAAAAAAAhwMAAAAAAAAAAAAAhwMAAAAAAACHAwAAAAAAAAYAAABtb2R1bGU",
+					"AQAAAAAAAAABAAAAgAMAAAAAAACGAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					206,
+					1,
+					"insert",
+					{
+						"characters": "mou"
+					},
+					"BAAAABgFAAAAAAAAGQUAAAAAAAAAAAAAGQUAAAAAAAAZBQAAAAAAAM4AAAB7CiAgICBrZXlzID0gewogICAgICAgIGJpbmRfaWYoaXNfb3V0c2lkZV92aW0sICdoJywgJ0FMVCcsIHdlenRlcm0uYWN0aW9uLkFjdGl2YXRlUGFuZURpcmVjdGlvbignTGVmdCcpKSwKICAgICAgICBiaW5kX2lmKGlzX291dHNpZGVfdmltLCAnbCcsICdBTFQnLCB3ZXp0ZXJtLmFjdGlvbi5BY3RpdmF0ZVBhbmVEaXJlY3Rpb24oJ1JpZ2h0JykpLAogICAgfSwKfRkFAAAAAAAAGgUAAAAAAAAAAAAAGgUAAAAAAAAbBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5gUAAAAAAAAYBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					207,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":0,\"session_name\":\"LSP-lua\"}",
+						"format": "command",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "module"
+					},
+					"AgAAABgFAAAAAAAAGAUAAAAAAAADAAAAbW91GAUAAAAAAAAeBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGwUAAAAAAAAbBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					212,
+					3,
+					"left_delete",
+					null,
+					"AwAAAIYDAAAAAAAAhgMAAAAAAAABAAAAZoUDAAAAAAAAhQMAAAAAAAABAAAAaYQDAAAAAAAAhAMAAAAAAAABAAAAXw",
+					"AQAAAAAAAAABAAAAhwMAAAAAAACHAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					215,
+					3,
+					"left_delete",
+					null,
+					"AwAAABQCAAAAAAAAFAIAAAAAAAABAAAAZhMCAAAAAAAAEwIAAAAAAAABAAAAaRICAAAAAAAAEgIAAAAAAAABAAAAXw",
+					"AQAAAAAAAAABAAAAFQIAAAAAAAAVAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					218,
+					1,
+					"insert",
+					{
+						"characters": "_if"
+					},
+					"AwAAAIEDAAAAAAAAggMAAAAAAAAAAAAAggMAAAAAAACDAwAAAAAAAAAAAACDAwAAAAAAAIQDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgQMAAAAAAACBAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					229,
+					1,
+					"paste",
+					null,
+					"AgAAAO0DAAAAAAAA8QMAAAAAAAAAAAAA8QMAAAAAAADxAwAAAAAAAAcAAABiaW5kX2lm",
+					"AQAAAAAAAAABAAAA7QMAAAAAAAD0AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					234,
+					1,
+					"paste",
+					null,
+					"AgAAAEUEAAAAAAAASQQAAAAAAAAAAAAASQQAAAAAAABJBAAAAAAAAAcAAABiaW5kX2lm",
+					"AQAAAAAAAAABAAAARQQAAAAAAABMBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					239,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAMQDAAAAAAAAxQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxAMAAAAAAADEAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					240,
+					1,
+					"insert_snippet",
+					{
+						"contents": "{$0}"
+					},
+					"AQAAAMUDAAAAAAAAxwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxQMAAAAAAADFAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					252,
+					5,
+					"left_delete",
+					null,
+					"BQAAAKMDAAAAAAAAowMAAAAAAAABAAAAc6IDAAAAAAAAogMAAAAAAAABAAAAeaEDAAAAAAAAoQMAAAAAAAABAAAAZaADAAAAAAAAoAMAAAAAAAABAAAAa58DAAAAAAAAnwMAAAAAAAABAAAALg",
+					"AQAAAAAAAAABAAAApAMAAAAAAACkAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					259,
+					4,
+					"left_delete",
+					null,
+					"BAAAANADAAAAAAAA0AMAAAAAAAAvAQAAbG9jYWwgbmV3X2tleXMgPSB7CiAgICAgICAgYmluZChpc19vdXRzaWRlX3ZpbSwgJ2gnLCAnQUxUJywgd2V6dGVybS5hY3Rpb24uQWN0aXZhdGVQYW5lRGlyZWN0aW9uKCdMZWZ0JykpLAogICAgICAgIGJpbmQoaXNfb3V0c2lkZV92aW0sICdsJywgJ0FMVCcsIHdlenRlcm0uYWN0aW9uLkFjdGl2YXRlUGFuZURpcmVjdGlvbignUmlnaHQnKSksCiAgICB9CgogICAgZm9yIF8sIGtleV9iaW5kaW5nIGluIGlwYWlycyhuZXdfa2V5cykgZG8KICAgICAgICB0YWJsZS5pbnNlcnQoY29uZmlnLmtleXMsIGtleV9iaW5kaW5nKQogICAgZW5kzAMAAAAAAADMAwAAAAAAAAQAAAAgICAgywMAAAAAAADLAwAAAAAAAAEAAAAKygMAAAAAAADKAwAAAAAAAAEAAAAK",
+					"AQAAAAAAAAABAAAA/wQAAAAAAADQAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					289,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"BQAAAMoDAAAAAAAAywMAAAAAAAAAAAAAywMAAAAAAADPAwAAAAAAAAAAAADPAwAAAAAAANADAAAAAAAAAAAAANADAAAAAAAA1AMAAAAAAAAAAAAAywMAAAAAAADLAwAAAAAAAAQAAAAgICAg",
+					"AQAAAAAAAAABAAAAygMAAAAAAADKAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					290,
+					1,
+					"paste",
+					null,
+					"AQAAANADAAAAAAAAhwQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0AMAAAAAAADQAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					328,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "new_keys",
+								"range":
+								{
+									"end":
+									{
+										"character": 30,
+										"line": 30
+									},
+									"start":
+									{
+										"character": 24,
+										"line": 30
+									}
+								}
+							},
+							{
+								"newText": "new_keys",
+								"range":
+								{
+									"end":
+									{
+										"character": 18,
+										"line": 31
+									},
+									"start":
+									{
+										"character": 12,
+										"line": 31
+									}
+								}
+							},
+							{
+								"newText": "new_keys",
+								"range":
+								{
+									"end":
+									{
+										"character": 35,
+										"line": 36
+									},
+									"start":
+									{
+										"character": 29,
+										"line": 36
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AwAAAAEEAAAAAAAACQQAAAAAAAAGAAAAY29uZmlnmQMAAAAAAAChAwAAAAAAAAYAAABjb25maWeFAwAAAAAAAI0DAAAAAAAABgAAAGNvbmZpZw",
+					"AQAAAAAAAAABAAAAhQMAAAAAAACLAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					334,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAAI0DAAAAAAAAjgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjQMAAAAAAACNAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					335,
+					1,
+					"insert",
+					{
+						"characters": " config"
+					},
+					"BwAAAI4DAAAAAAAAjwMAAAAAAAAAAAAAjwMAAAAAAACQAwAAAAAAAAAAAACQAwAAAAAAAJEDAAAAAAAAAAAAAJEDAAAAAAAAkgMAAAAAAAAAAAAAkgMAAAAAAACTAwAAAAAAAAAAAACTAwAAAAAAAJQDAAAAAAAAAAAAAJQDAAAAAAAAlQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjgMAAAAAAACOAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					353,
+					1,
+					"paste",
+					null,
+					"AgAAAC8EAAAAAAAAOgQAAAAAAAAAAAAAOgQAAAAAAAA6BAAAAAAAAAgAAABiaW5kaW5ncw",
+					"AQAAAAAAAAABAAAALwQAAAAAAAA3BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					356,
+					3,
+					"left_delete",
+					null,
+					"AwAAAIUEAAAAAAAAhQQAAAAAAAATAAAAICAgIHJldHVybiBiaW5kaW5nc4QEAAAAAAAAhAQAAAAAAAABAAAACoMEAAAAAAAAgwQAAAAAAAABAAAAZA",
+					"AQAAAAAAAAABAAAAmAQAAAAAAACFBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					357,
+					1,
+					"insert",
+					{
+						"characters": "d"
+					},
+					"AQAAAIMEAAAAAAAAhAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgwQAAAAAAACDBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					360,
+					2,
+					"left_delete",
+					null,
+					"AgAAANcDAAAAAAAA1wMAAAAAAAAYAAAACiAgICBsb2NhbCBiaW5kaW5ncyA9IHt91gMAAAAAAADWAwAAAAAAAAEAAAAK",
+					"AQAAAAAAAAABAAAA7wMAAAAAAADXAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					363,
+					2,
+					"left_delete",
+					null,
+					"AgAAAJcDAAAAAAAAlwMAAAAAAAA/AAAAICAgIGlmIHR5cGUobmV3X2tleXMpIH49ICd0YWJsZScgdGhlbgogICAgICAgIHJldHVybiB7fQogICAgZW5klgMAAAAAAACWAwAAAAAAAAEAAAAK",
+					"AQAAAAAAAAABAAAA1gMAAAAAAACXAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					373,
+					1,
+					"left_delete",
+					null,
+					"AQAAABQDAAAAAAAAFAMAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAFQMAAAAAAAAVAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					381,
+					1,
+					"left_delete",
+					null,
+					"AQAAAC8EAAAAAAAALwQAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAMAQAAAAAAAAwBAAAAAAAAAAAAAAA4GFA"
+				],
+				[
+					425,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAJoBAAAAAAAAmwEAAAAAAAAAAAAAmwEAAAAAAACnAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmgEAAAAAAACaAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					426,
+					2,
+					"left_delete",
+					null,
+					"AgAAAKMBAAAAAAAAowEAAAAAAAAEAAAAICAgIJ8BAAAAAAAAnwEAAAAAAAAEAAAAICAgIA",
+					"AQAAAAAAAAABAAAApwEAAAAAAACnAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					428,
+					1,
+					"",
+					null,
+					"AQAAAJ8BAAAAAAAAmAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnwEAAAAAAACfAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					438,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"BAAAAFABAAAAAAAAUwEAAAAAAAAAAAAA/QAAAAAAAAAAAQAAAAAAAAAAAADnAAAAAAAAAOoAAAAAAAAAAAAAAKkAAAAAAAAArAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmgEAAAAAAAClAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					453,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"BQAAAKICAAAAAAAApQIAAAAAAAAAAAAARQIAAAAAAABIAgAAAAAAAAAAAAD/AQAAAAAAAAICAAAAAAAAAAAAAOsBAAAAAAAA7gEAAAAAAAAAAAAAqwEAAAAAAACuAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApAIAAAAAAACnAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					456,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"BAAAAFkBAAAAAAAAWQEAAAAAAAADAAAALS0gAwEAAAAAAAADAQAAAAAAAAMAAAAtLSDqAAAAAAAAAOoAAAAAAAAAAwAAAC0tIKkAAAAAAAAAqQAAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAApgEAAAAAAAClAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					458,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAJoBAAAAAAAAmwEAAAAAAAAAAAAAmwEAAAAAAACnAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmgEAAAAAAACaAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					459,
+					3,
+					"left_delete",
+					null,
+					"AwAAAKMBAAAAAAAAowEAAAAAAAAEAAAAICAgIJ8BAAAAAAAAnwEAAAAAAAAEAAAAICAgIJsBAAAAAAAAmwEAAAAAAAAEAAAAICAgIA",
+					"AQAAAAAAAAABAAAApwEAAAAAAACnAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					479,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AwAAAAgDAAAAAAAACwMAAAAAAAAAAAAA5QIAAAAAAADoAgAAAAAAAAAAAADBAgAAAAAAAMQCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACwMAAAAAAADBAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					489,
+					1,
+					"paste",
+					null,
+					"AgAAAP4EAAAAAAAACwUAAAAAAAAAAAAACwUAAAAAAAALBQAAAAAAAA4AAABpc19vdXRzaWRlX3ZpbQ",
+					"AQAAAAAAAAABAAAA/gQAAAAAAAAMBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					492,
+					1,
+					"cut",
+					null,
+					"AQAAAL8DAAAAAAAAvwMAAAAAAABYAAAAICAgICAgICAgICAgd2luOnBlcmZvcm1fYWN0aW9uKHdlenRlcm0uYWN0aW9uLlNlbmRLZXkoeyBrZXkgPSBrZXksIG1vZHMgPSBtb2RzIH0pLCBwYW5lKQ",
+					"AQAAAAAAAAABAAAAFwQAAAAAAAC/AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					495,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AwAAAIQDAAAAAAAAhQMAAAAAAAAAAAAAhQMAAAAAAACNAwAAAAAAAAAAAACNAwAAAAAAAJEDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhAMAAAAAAACEAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					496,
+					1,
+					"paste",
+					null,
+					"AQAAAJEDAAAAAAAA6QMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkQMAAAAAAACRAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					499,
+					1,
+					"cut",
+					null,
+					"AQAAAOoDAAAAAAAA6gMAAAAAAAAsAAAAICAgICAgICAgICAgd2luOnBlcmZvcm1fYWN0aW9uKGFjdGlvbiwgcGFuZSk",
+					"AQAAAAAAAAABAAAAFgQAAAAAAADqAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					502,
+					1,
+					"paste",
+					null,
+					"AQAAAPgDAAAAAAAAJAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+AMAAAAAAAD4AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					504,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "local wezterm = require 'wezterm'\n\nlocal module = {}\n\nlocal function is_inside_vim(pane)\n    local tty = pane:get_tty_name()\n    if tty == nil then return false end\n    local success, stdout, stderr = wezterm.run_child_process\n        { 'sh', '-c',\n            'ps -o state= -o comm= -t' .. wezterm.shell_quote_arg(tty) .. ' | ' ..\n            'grep -iqE \\'^[^TXZ ]+ +(\\\\S+\\\\/)?g?(view|l?n?vim?x?)(diff)?$\\'' }\n\n    -- local success, stdout, stderr = wezterm.run_child_process({\n    --     'sh', '-c',\n    --     'ps -o state= -o comm= -t' .. wezterm.shell_quote_arg(tty) ..\n    --     ' | grep -iqE \\'^[^TXZ ]+ +(\\\\S+/)?(nvim|ssh|tmux|zellij|view|l?n?vim?x?)(diff)?$\\''\n    -- })\n    return success\nend\n\n-- local function is_outside_vim(pane)\n--     return not is_inside_vim(pane)\n-- end\n\nlocal function bind(cond, key, mods, action)\n    local function callback(win, pane)\n        if cond(pane) then\n            win:perform_action(wezterm.action.SendKey({ key = key, mods = mods }), pane)\n        else\n            win:perform_action(action, pane)\n        end\n    end\n    return { key = key, mods = mods, action = wezterm.action_callback(callback) }\nend\n\nfunction module.bind_if(new_keys, config)\n    for _, binding in ipairs(new_keys) do\n        table.insert(config.keys, bind(is_inside_vim, binding.key, binding.mods, binding.action))\n    end\nend\n\nreturn module\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 43
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 0
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AQAAAAAAAAAAAAAAVAUAAAAAAABhBQAAbG9jYWwgd2V6dGVybSA9IHJlcXVpcmUgJ3dlenRlcm0nCgpsb2NhbCBtb2R1bGUgPSB7fQoKbG9jYWwgZnVuY3Rpb24gaXNfaW5zaWRlX3ZpbShwYW5lKQogICAgbG9jYWwgdHR5ID0gcGFuZTpnZXRfdHR5X25hbWUoKQogICAgaWYgdHR5ID09IG5pbCB0aGVuIHJldHVybiBmYWxzZSBlbmQKICAgIGxvY2FsIHN1Y2Nlc3MsIHN0ZG91dCwgc3RkZXJyID0gd2V6dGVybS5ydW5fY2hpbGRfcHJvY2VzcwogICAgICAgIHsgJ3NoJywgJy1jJywKICAgICAgICAgICAgJ3BzIC1vIHN0YXRlPSAtbyBjb21tPSAtdCcgLi4gd2V6dGVybS5zaGVsbF9xdW90ZV9hcmcodHR5KSAuLiAnIHwgJyAuLgogICAgICAgICAgICAnZ3JlcCAtaXFFIFwnXlteVFhaIF0rICsoXFxTK1xcLyk/Zz8odmlld3xsP24/dmltP3g/KShkaWZmKT8kXCcnIH0KCiAgICAtLSBsb2NhbCBzdWNjZXNzLCBzdGRvdXQsIHN0ZGVyciA9IHdlenRlcm0ucnVuX2NoaWxkX3Byb2Nlc3MoewogICAgLS0gICAgICdzaCcsICctYycsCiAgICAtLSAgICAgJ3BzIC1vIHN0YXRlPSAtbyBjb21tPSAtdCcgLi4gd2V6dGVybS5zaGVsbF9xdW90ZV9hcmcodHR5KSAuLgogICAgLS0gICAgICcgfCBncmVwIC1pcUUgXCdeW15UWFogXSsgKyhcXFMrLyk/KG52aW18c3NofHRtdXh8emVsbGlqfHZpZXd8bD9uP3ZpbT94PykoZGlmZik/JFwnJwogICAgLS0gfSkKICAgIHJldHVybiBzdWNjZXNzCmVuZAoKLS0gbG9jYWwgZnVuY3Rpb24gaXNfb3V0c2lkZV92aW0ocGFuZSkKLS0gICAgIHJldHVybiBub3QgaXNfaW5zaWRlX3ZpbShwYW5lKQotLSBlbmQKCmxvY2FsIGZ1bmN0aW9uIGJpbmQoY29uZCwga2V5LCBtb2RzLCBhY3Rpb24pCiAgICBsb2NhbCBmdW5jdGlvbiBjYWxsYmFjayh3aW4sIHBhbmUpCiAgICAgICAgaWYgY29uZChwYW5lKSB0aGVuCiAgICAgICAgICAgICAgICAgICAgICAgIHdpbjpwZXJmb3JtX2FjdGlvbih3ZXp0ZXJtLmFjdGlvbi5TZW5kS2V5KHsga2V5ID0ga2V5LCBtb2RzID0gbW9kcyB9KSwgcGFuZSkKCiAgICAgICAgZWxzZQogICAgICAgICAgICB3aW46cGVyZm9ybV9hY3Rpb24oYWN0aW9uLCBwYW5lKQogICAgICAgIGVuZAogICAgZW5kCiAgICByZXR1cm4geyBrZXkgPSBrZXksIG1vZHMgPSBtb2RzLCBhY3Rpb24gPSB3ZXp0ZXJtLmFjdGlvbl9jYWxsYmFjayhjYWxsYmFjaykgfQplbmQKCmZ1bmN0aW9uIG1vZHVsZS5iaW5kX2lmKG5ld19rZXlzLCBjb25maWcpCiAgICBmb3IgXywgYmluZGluZyBpbiBpcGFpcnMobmV3X2tleXMpIGRvCiAgICAgICAgdGFibGUuaW5zZXJ0KGNvbmZpZy5rZXlzLCBiaW5kKGlzX2luc2lkZV92aW0sIGJpbmRpbmcua2V5LCBiaW5kaW5nLm1vZHMsIGJpbmRpbmcuYWN0aW9uKSkKICAgIGVuZAplbmQKCnJldHVybiBtb2R1bGUK",
+					"AQAAAAAAAAABAAAAJAQAAAAAAAAkBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					508,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "local wezterm = require 'wezterm'\n\nlocal module = {}\n\nlocal function is_inside_vim(pane)\n    local tty = pane:get_tty_name()\n    if tty == nil then return false end\n    local success, stdout, stderr = wezterm.run_child_process\n        { 'sh', '-c',\n            'ps -o state= -o comm= -t' .. wezterm.shell_quote_arg(tty) .. ' | ' ..\n            'grep -iqE \\'^[^TXZ ]+ +(\\\\S+\\\\/)?g?(view|l?n?vim?x?)(diff)?$\\'' }\n\n    -- local success, stdout, stderr = wezterm.run_child_process({\n    --     'sh', '-c',\n    --     'ps -o state= -o comm= -t' .. wezterm.shell_quote_arg(tty) ..\n    --     ' | grep -iqE \\'^[^TXZ ]+ +(\\\\S+/)?(nvim|ssh|tmux|zellij|view|l?n?vim?x?)(diff)?$\\''\n    -- })\n    return success\nend\n\n-- local function is_outside_vim(pane)\n--     return not is_inside_vim(pane)\n-- end\n\nlocal function bind(cond, key, mods, action)\n    local function callback(win, pane)\n        if cond(pane) then\n            win:perform_action(wezterm.action.SendKey({ key = key, mods = mods }), pane)\n        else\n            win:perform_action(action, pane)\n        end\n    end\n    return { key = key, mods = mods, action = wezterm.action_callback(callback) }\nend\n\nfunction module.bind_if(new_keys, config)\n    for _, binding in ipairs(new_keys) do\n        table.insert(config.keys, bind(is_inside_vim, binding.key, binding.mods, binding.action))\n    end\nend\n\nreturn module\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 42
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 0
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AQAAAAAAAAAAAAAAVAUAAAAAAABUBQAAbG9jYWwgd2V6dGVybSA9IHJlcXVpcmUgJ3dlenRlcm0nCgpsb2NhbCBtb2R1bGUgPSB7fQoKbG9jYWwgZnVuY3Rpb24gaXNfaW5zaWRlX3ZpbShwYW5lKQogICAgbG9jYWwgdHR5ID0gcGFuZTpnZXRfdHR5X25hbWUoKQogICAgaWYgdHR5ID09IG5pbCB0aGVuIHJldHVybiBmYWxzZSBlbmQKICAgIGxvY2FsIHN1Y2Nlc3MsIHN0ZG91dCwgc3RkZXJyID0gd2V6dGVybS5ydW5fY2hpbGRfcHJvY2VzcwogICAgICAgIHsgJ3NoJywgJy1jJywKICAgICAgICAgICAgJ3BzIC1vIHN0YXRlPSAtbyBjb21tPSAtdCcgLi4gd2V6dGVybS5zaGVsbF9xdW90ZV9hcmcodHR5KSAuLiAnIHwgJyAuLgogICAgICAgICAgICAnZ3JlcCAtaXFFIFwnXlteVFhaIF0rICsoXFxTK1xcLyk/Zz8odmlld3xsP24/dmltP3g/KShkaWZmKT8kXCcnIH0KCiAgICAtLSBsb2NhbCBzdWNjZXNzLCBzdGRvdXQsIHN0ZGVyciA9IHdlenRlcm0ucnVuX2NoaWxkX3Byb2Nlc3MoewogICAgLS0gICAgICdzaCcsICctYycsCiAgICAtLSAgICAgJ3BzIC1vIHN0YXRlPSAtbyBjb21tPSAtdCcgLi4gd2V6dGVybS5zaGVsbF9xdW90ZV9hcmcodHR5KSAuLgogICAgLS0gICAgICcgfCBncmVwIC1pcUUgXCdeW15UWFogXSsgKyhcXFMrLyk/KG52aW18c3NofHRtdXh8emVsbGlqfHZpZXd8bD9uP3ZpbT94PykoZGlmZik/JFwnJwogICAgLS0gfSkKICAgIHJldHVybiBzdWNjZXNzCmVuZAoKLS0gbG9jYWwgZnVuY3Rpb24gaXNfb3V0c2lkZV92aW0ocGFuZSkKLS0gICAgIHJldHVybiBub3QgaXNfaW5zaWRlX3ZpbShwYW5lKQotLSBlbmQKCmxvY2FsIGZ1bmN0aW9uIGJpbmQoY29uZCwga2V5LCBtb2RzLCBhY3Rpb24pCiAgICBsb2NhbCBmdW5jdGlvbiBjYWxsYmFjayh3aW4sIHBhbmUpCiAgICAgICAgaWYgY29uZChwYW5lKSB0aGVuCiAgICAgICAgICAgIHdpbjpwZXJmb3JtX2FjdGlvbih3ZXp0ZXJtLmFjdGlvbi5TZW5kS2V5KHsga2V5ID0ga2V5LCBtb2RzID0gbW9kcyB9KSwgcGFuZSkKICAgICAgICBlbHNlCiAgICAgICAgICAgIHdpbjpwZXJmb3JtX2FjdGlvbihhY3Rpb24sIHBhbmUpCiAgICAgICAgZW5kCiAgICBlbmQKICAgIHJldHVybiB7IGtleSA9IGtleSwgbW9kcyA9IG1vZHMsIGFjdGlvbiA9IHdlenRlcm0uYWN0aW9uX2NhbGxiYWNrKGNhbGxiYWNrKSB9CmVuZAoKZnVuY3Rpb24gbW9kdWxlLmJpbmRfaWYobmV3X2tleXMsIGNvbmZpZykKICAgIGZvciBfLCBiaW5kaW5nIGluIGlwYWlycyhuZXdfa2V5cykgZG8KICAgICAgICB0YWJsZS5pbnNlcnQoY29uZmlnLmtleXMsIGJpbmQoaXNfaW5zaWRlX3ZpbSwgYmluZGluZy5rZXksIGJpbmRpbmcubW9kcywgYmluZGluZy5hY3Rpb24pKQogICAgZW5kCmVuZAoKcmV0dXJuIG1vZHVsZQo",
+					"AQAAAAAAAAABAAAAFAMAAAAAAAAUAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					534,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAIEAAAAAAAAAhAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApAAAAAAAAACkAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					554,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"DAAAALACAAAAAAAAswIAAAAAAAAAAAAApgIAAAAAAACpAgAAAAAAAAAAAABGAgAAAAAAAEkCAAAAAAAAAAAAAP0BAAAAAAAAAAIAAAAAAAAAAAAA5gEAAAAAAADpAQAAAAAAAAAAAACjAQAAAAAAAKYBAAAAAAAAAAAAAFMBAAAAAAAAVgEAAAAAAAAAAAAAAAEAAAAAAAADAQAAAAAAAAAAAADqAAAAAAAAAO0AAAAAAAAAAAAAAKwAAAAAAAAArwAAAAAAAAAAAAAAgQAAAAAAAACEAAAAAAAAAAAAAABdAAAAAAAAAGAAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvgIAAAAAAABZAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					556,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"BQAAAOICAAAAAAAA4wIAAAAAAAAAAAAA4wIAAAAAAADnAgAAAAAAAAAAAADnAgAAAAAAAOgCAAAAAAAAAAAAAOgCAAAAAAAA7AIAAAAAAAAAAAAA4wIAAAAAAADjAgAAAAAAAAQAAAAgICAg",
+					"AQAAAAAAAAABAAAA4gIAAAAAAADiAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					558,
+					1,
+					"",
+					null,
+					"AQAAAOgCAAAAAAAAWgQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6AIAAAAAAADoAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					561,
+					2,
+					"left_delete",
+					null,
+					"AgAAAFcEAAAAAAAAVwQAAAAAAAADAAAAZW5kVgQAAAAAAABWBAAAAAAAAAEAAAAK",
+					"AQAAAAAAAAABAAAAWgQAAAAAAABXBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					564,
+					2,
+					"left_delete",
+					null,
+					"AgAAAOQCAAAAAAAA5AIAAAAAAAAGAQAAICAgIGxvY2FsIGZ1bmN0aW9uIGlzVmlQcm9jZXNzKHBhbmUpIAogICAgLS0gZ2V0X2ZvcmVncm91bmRfcHJvY2Vzc19uYW1lIE9uIExpbnV4LCBtYWNPUyBhbmQgV2luZG93cywgCiAgICAtLSB0aGUgcHJvY2VzcyBjYW4gYmUgcXVlcmllZCB0byBkZXRlcm1pbmUgdGhpcyBwYXRoLiBPdGhlciBvcGVyYXRpbmcgc3lzdGVtcyAKICAgIC0tIChub3RhYmx5LCBGcmVlQlNEIGFuZCBvdGhlciB1bml4IHN5c3RlbXMpIGFyZSBub3QgY3VycmVudGx5IHN1cHBvcnRlZOMCAAAAAAAA4wIAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAA6gMAAAAAAADkAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					609,
+					1,
+					"insert",
+					{
+						"characters": " --"
+					},
+					"AwAAACYDAAAAAAAAJwMAAAAAAAAAAAAAJwMAAAAAAAAoAwAAAAAAAAAAAAAoAwAAAAAAACkDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJgMAAAAAAAAmAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					685,
+					3,
+					"left_delete",
+					null,
+					"AwAAACkDAAAAAAAAKQMAAAAAAAABAAAAICgDAAAAAAAAKAMAAAAAAAABAAAALScDAAAAAAAAJwMAAAAAAAABAAAALQ",
+					"AQAAAAAAAAABAAAAKgMAAAAAAAAqAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					744,
+					1,
+					"cut",
+					null,
+					"AQAAAO8CAAAAAAAA7wIAAAAAAAA7AAAAcGFuZTpnZXRfZm9yZWdyb3VuZF9wcm9jZXNzX25hbWUoKTpmaW5kKCduP3ZpbScpIH49IG5pbCBvciA",
+					"AQAAAAAAAAABAAAAKgMAAAAAAADvAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					759,
+					1,
+					"insert",
+					{
+						"characters": " or"
+					},
+					"AwAAABQDAAAAAAAAFQMAAAAAAAAAAAAAFQMAAAAAAAAWAwAAAAAAAAAAAAAWAwAAAAAAABcDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFAMAAAAAAAAUAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					760,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAABcDAAAAAAAAGAMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFwMAAAAAAAAXAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					761,
+					1,
+					"paste",
+					null,
+					"AQAAABgDAAAAAAAAUwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGAMAAAAAAAAYAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					763,
+					1,
+					"trim_trailing_white_space",
+					null,
+					"AQAAAFIDAAAAAAAAUgMAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAUwMAAAAAAABTAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					770,
+					3,
+					"left_delete",
+					null,
+					"AwAAAFEDAAAAAAAAUQMAAAAAAAABAAAAclADAAAAAAAAUAMAAAAAAAABAAAAb08DAAAAAAAATwMAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAUgMAAAAAAABSAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					786,
+					1,
+					"left_delete",
+					null,
+					"AQAAAEIDAAAAAAAAQgMAAAAAAAABAAAAPw",
+					"AQAAAAAAAAABAAAAQwMAAAAAAABDAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					797,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAOgCAAAAAAAA6wIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJAMAAAAAAAAkAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					804,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"DAAAANECAAAAAAAA0QIAAAAAAAADAAAALS0gxAIAAAAAAADEAgAAAAAAAAMAAAAtLSBhAgAAAAAAAGECAAAAAAAAAwAAAC0tIBUCAAAAAAAAFQIAAAAAAAADAAAALS0g+wEAAAAAAAD7AQAAAAAAAAMAAAAtLSC1AQAAAAAAALUBAAAAAAAAAwAAAC0tIGIBAAAAAAAAYgEAAAAAAAADAAAALS0gDAEAAAAAAAAMAQAAAAAAAAMAAAAtLSDzAAAAAAAAAPMAAAAAAAAAAwAAAC0tILIAAAAAAAAAsgAAAAAAAAADAAAALS0ghAAAAAAAAACEAAAAAAAAAAMAAAAtLSBdAAAAAAAAAF0AAAAAAAAAAwAAAC0tIA",
+					"AQAAAAAAAAABAAAA4gIAAAAAAABZAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					817,
+					1,
+					"left_delete",
+					null,
+					"AQAAAIgBAAAAAAAAiAEAAAAAAAABAAAAPw",
+					"AQAAAAAAAAABAAAAiQEAAAAAAACJAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					841,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"DAAAAK8CAAAAAAAAsgIAAAAAAAAAAAAApQIAAAAAAACoAgAAAAAAAAAAAABFAgAAAAAAAEgCAAAAAAAAAAAAAPwBAAAAAAAA/wEAAAAAAAAAAAAA5QEAAAAAAADoAQAAAAAAAAAAAACiAQAAAAAAAKUBAAAAAAAAAAAAAFMBAAAAAAAAVgEAAAAAAAAAAAAAAAEAAAAAAAADAQAAAAAAAAAAAADqAAAAAAAAAO0AAAAAAAAAAAAAAKwAAAAAAAAArwAAAAAAAAAAAAAAgQAAAAAAAACEAAAAAAAAAAAAAABdAAAAAAAAAGAAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvQIAAAAAAABZAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					846,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAOcCAAAAAAAA5wIAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAADQMAAAAAAAANAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					852,
+					4,
+					"left_delete",
+					null,
+					"BAAAAEMDAAAAAAAAQwMAAAAAAAABAAAAbUIDAAAAAAAAQgMAAAAAAAABAAAAaUEDAAAAAAAAQQMAAAAAAAABAAAAdkADAAAAAAAAQAMAAAAAAAABAAAAbg",
+					"AQAAAAAAAAABAAAARAMAAAAAAABEAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					853,
+					1,
+					"insert",
+					{
+						"characters": "ssh"
+					},
+					"AwAAAEADAAAAAAAAQQMAAAAAAAAAAAAAQQMAAAAAAABCAwAAAAAAAAAAAABCAwAAAAAAAEMDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQAMAAAAAAABAAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					862,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAEwDAAAAAAAATQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATAMAAAAAAABMAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					863,
+					1,
+					"paste",
+					null,
+					"AQAAAE0DAAAAAAAAhQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATQMAAAAAAABNAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					864,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAIUDAAAAAAAAhgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhQMAAAAAAACFAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					865,
+					1,
+					"paste",
+					null,
+					"AQAAAIYDAAAAAAAAvgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhgMAAAAAAACGAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					870,
+					1,
+					"insert",
+					{
+						"characters": "tmux"
+					},
+					"BQAAAHkDAAAAAAAAegMAAAAAAAAAAAAAegMAAAAAAAB6AwAAAAAAAAMAAABzc2h6AwAAAAAAAHsDAAAAAAAAAAAAAHsDAAAAAAAAfAMAAAAAAAAAAAAAfAMAAAAAAAB9AwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAeQMAAAAAAAB8AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					875,
+					1,
+					"insert",
+					{
+						"characters": "zellij"
+					},
+					"BwAAALMDAAAAAAAAtAMAAAAAAAAAAAAAtAMAAAAAAAC0AwAAAAAAAAMAAABzc2i0AwAAAAAAALUDAAAAAAAAAAAAALUDAAAAAAAAtgMAAAAAAAAAAAAAtgMAAAAAAAC3AwAAAAAAAAAAAAC3AwAAAAAAALgDAAAAAAAAAAAAALgDAAAAAAAAuQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAswMAAAAAAAC2AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					887,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "local wezterm = require 'wezterm'\n\nlocal module = {}\n\nlocal function is_inside_vim(pane)\n    -- local tty = pane:get_tty_name()\n    -- -- if tty == nil then return false end\n    -- local success, stdout, stderr = wezterm.run_child_process\n    --     { 'sh', '-c',\n    --         'ps -o state= -o comm= -t' .. wezterm.shell_quote_arg(tty) .. ' | ' ..\n    --         'grep -iqE \\'^[^TXZ ]+ +(\\\\S+\\\\/)?g?(view|l?nvim?x?)(diff)?$\\'' }\n\n    -- -- local success, stdout, stderr = wezterm.run_child_process({\n    -- --     'sh', '-c',\n    -- --     'ps -o state= -o comm= -t' .. wezterm.shell_quote_arg(tty) ..\n    -- --     ' | grep -iqE \\'^[^TXZ ]+ +(\\\\S+/)?(nvim|ssh|tmux|zellij|view|l?n?vim?x?)(diff)?$\\''\n    -- -- })\n    -- return success\n\n    return pane:get_title():find(\"n?vim\") ~= nil or pane:get_foreground_process_name():find('ssh') ~= nil or\n    pane:get_foreground_process_name():find('tmux') ~= nil or pane:get_foreground_process_name():find('zellij') ~= nil\nend\n\n-- local function is_outside_vim(pane)\n--     return not is_inside_vim(pane)\n-- end\n\nlocal function bind(cond, key, mods, action)\n    local function callback(win, pane)\n        if cond(pane) then\n            win:perform_action(wezterm.action.SendKey({ key = key, mods = mods }), pane)\n        else\n            win:perform_action(action, pane)\n        end\n    end\n    return { key = key, mods = mods, action = wezterm.action_callback(callback) }\nend\n\nfunction module.bind_if(new_keys, config)\n    for _, binding in ipairs(new_keys) do\n        table.insert(config.keys, bind(is_inside_vim, binding.key, binding.mods, binding.action))\n    end\nend\n\nreturn module\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 44
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 0
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AQAAAAAAAAAAAAAAXwYAAAAAAABbBgAAbG9jYWwgd2V6dGVybSA9IHJlcXVpcmUgJ3dlenRlcm0nCgpsb2NhbCBtb2R1bGUgPSB7fQoKbG9jYWwgZnVuY3Rpb24gaXNfaW5zaWRlX3ZpbShwYW5lKQogICAgLS0gbG9jYWwgdHR5ID0gcGFuZTpnZXRfdHR5X25hbWUoKQogICAgLS0gLS0gaWYgdHR5ID09IG5pbCB0aGVuIHJldHVybiBmYWxzZSBlbmQKICAgIC0tIGxvY2FsIHN1Y2Nlc3MsIHN0ZG91dCwgc3RkZXJyID0gd2V6dGVybS5ydW5fY2hpbGRfcHJvY2VzcwogICAgLS0gICAgIHsgJ3NoJywgJy1jJywKICAgIC0tICAgICAgICAgJ3BzIC1vIHN0YXRlPSAtbyBjb21tPSAtdCcgLi4gd2V6dGVybS5zaGVsbF9xdW90ZV9hcmcodHR5KSAuLiAnIHwgJyAuLgogICAgLS0gICAgICAgICAnZ3JlcCAtaXFFIFwnXlteVFhaIF0rICsoXFxTK1xcLyk/Zz8odmlld3xsP252aW0/eD8pKGRpZmYpPyRcJycgfQoKICAgIC0tIC0tIGxvY2FsIHN1Y2Nlc3MsIHN0ZG91dCwgc3RkZXJyID0gd2V6dGVybS5ydW5fY2hpbGRfcHJvY2Vzcyh7CiAgICAtLSAtLSAgICAgJ3NoJywgJy1jJywKICAgIC0tIC0tICAgICAncHMgLW8gc3RhdGU9IC1vIGNvbW09IC10JyAuLiB3ZXp0ZXJtLnNoZWxsX3F1b3RlX2FyZyh0dHkpIC4uCiAgICAtLSAtLSAgICAgJyB8IGdyZXAgLWlxRSBcJ15bXlRYWiBdKyArKFxcUysvKT8obnZpbXxzc2h8dG11eHx6ZWxsaWp8dmlld3xsP24/dmltP3g/KShkaWZmKT8kXCcnCiAgICAtLSAtLSB9KQogICAgLS0gcmV0dXJuIHN1Y2Nlc3MKCiAgICByZXR1cm4gcGFuZTpnZXRfdGl0bGUoKTpmaW5kKCJuP3ZpbSIpIH49IG5pbCBvciBwYW5lOmdldF9mb3JlZ3JvdW5kX3Byb2Nlc3NfbmFtZSgpOmZpbmQoJ3NzaCcpIH49IG5pbCBvciBwYW5lOmdldF9mb3JlZ3JvdW5kX3Byb2Nlc3NfbmFtZSgpOmZpbmQoJ3RtdXgnKSB+PSBuaWwgb3IgcGFuZTpnZXRfZm9yZWdyb3VuZF9wcm9jZXNzX25hbWUoKTpmaW5kKCd6ZWxsaWonKSB+PSBuaWwKZW5kCgotLSBsb2NhbCBmdW5jdGlvbiBpc19vdXRzaWRlX3ZpbShwYW5lKQotLSAgICAgcmV0dXJuIG5vdCBpc19pbnNpZGVfdmltKHBhbmUpCi0tIGVuZAoKbG9jYWwgZnVuY3Rpb24gYmluZChjb25kLCBrZXksIG1vZHMsIGFjdGlvbikKICAgIGxvY2FsIGZ1bmN0aW9uIGNhbGxiYWNrKHdpbiwgcGFuZSkKICAgICAgICBpZiBjb25kKHBhbmUpIHRoZW4KICAgICAgICAgICAgd2luOnBlcmZvcm1fYWN0aW9uKHdlenRlcm0uYWN0aW9uLlNlbmRLZXkoeyBrZXkgPSBrZXksIG1vZHMgPSBtb2RzIH0pLCBwYW5lKQogICAgICAgIGVsc2UKICAgICAgICAgICAgd2luOnBlcmZvcm1fYWN0aW9uKGFjdGlvbiwgcGFuZSkKICAgICAgICBlbmQKICAgIGVuZAogICAgcmV0dXJuIHsga2V5ID0ga2V5LCBtb2RzID0gbW9kcywgYWN0aW9uID0gd2V6dGVybS5hY3Rpb25fY2FsbGJhY2soY2FsbGJhY2spIH0KZW5kCgpmdW5jdGlvbiBtb2R1bGUuYmluZF9pZihuZXdfa2V5cywgY29uZmlnKQogICAgZm9yIF8sIGJpbmRpbmcgaW4gaXBhaXJzKG5ld19rZXlzKSBkbwogICAgICAgIHRhYmxlLmluc2VydChjb25maWcua2V5cywgYmluZChpc19pbnNpZGVfdmltLCBiaW5kaW5nLmtleSwgYmluZGluZy5tb2RzLCBiaW5kaW5nLmFjdGlvbikpCiAgICBlbmQKZW5kCgpyZXR1cm4gbW9kdWxlCg",
+					"AQAAAAAAAAABAAAAuQMAAAAAAAC5AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					924,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAOcCAAAAAAAA6gIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHQMAAAAAAAAdAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					926,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAFcDAAAAAAAAWgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkAMAAAAAAACQAwAAAAAAAAAAAAAA+IRA"
+				],
+				[
+					929,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"BQAAAMwDAAAAAAAAzQMAAAAAAAAAAAAAzQMAAAAAAADRAwAAAAAAAAAAAADRAwAAAAAAANIDAAAAAAAAAAAAANIDAAAAAAAA1gMAAAAAAAAAAAAAzQMAAAAAAADNAwAAAAAAAAQAAAAgICAg",
+					"AQAAAAAAAAABAAAAzAMAAAAAAADMAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					931,
+					1,
+					"",
+					null,
+					"AQAAANIDAAAAAAAAIQUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0gMAAAAAAADSAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					935,
+					2,
+					"left_delete",
+					null,
+					"AgAAADwEAAAAAAAAPAQAAAAAAAAzAAAAICAgIC0tIOWIpOaWreaYr+WQpuS4uiBudmlt44CBc3No44CBdGVybSDmiJYgemVsbGlqOwQAAAAAAAA7BAAAAAAAAAEAAAAK",
+					"AQAAAAAAAAABAAAAXwQAAAAAAAA8BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					970,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAA4EAAAAAAAAEQQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOgQAAAAAAAA6BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					979,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAA4EAAAAAAAADgQAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAAPQQAAAAAAAA9BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					995,
+					3,
+					"left_delete",
+					null,
+					"AwAAAM4DAAAAAAAAzgMAAAAAAAAvAQAAICAgIGxvY2FsIHByb2Nlc3NfbmFtZSA9IHBhbmU6Z2V0X2ZvcmVncm91bmRfcHJvY2Vzc19uYW1lKCkKICAgIGlmIHByb2Nlc3NfbmFtZSA9PSBuaWwgdGhlbiByZXR1cm4gZmFsc2UgZW5kCgogICAgcmV0dXJuIHN0cmluZy5tYXRjaChwcm9jZXNzX25hbWUsICJudmltIikgb3IKICAgICAgICAgICBzdHJpbmcubWF0Y2gocHJvY2Vzc19uYW1lLCAic3NoIikgb3IKICAgICAgICAgICBzdHJpbmcubWF0Y2gocHJvY2Vzc19uYW1lLCAidGVybSIpIG9yCiAgICAgICAgICAgc3RyaW5nLm1hdGNoKHByb2Nlc3NfbmFtZSwgInplbGxpaiIpzQMAAAAAAADNAwAAAAAAAAEAAAAKzAMAAAAAAADMAwAAAAAAAAEAAAAK",
+					"AQAAAAAAAAABAAAA/QQAAAAAAADOAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					996,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAFcDAAAAAAAAVwMAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAAzAMAAAAAAADMAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					998,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAOcCAAAAAAAA5wIAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAAUgMAAAAAAABSAwAAAAAAAAAAAAAASJRA"
+				],
+				[
+					1008,
+					1,
+					"paste",
+					null,
+					"AgAAABwDAAAAAAAAJQMAAAAAAAAAAAAAJQMAAAAAAAAlAwAAAAAAABsAAABnZXRfZm9yZWdyb3VuZF9wcm9jZXNzX25hbWU",
+					"AQAAAAAAAAABAAAAHAMAAAAAAAA3AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1013,
+					1,
+					"paste",
+					null,
+					"AgAAAEcDAAAAAAAAUAMAAAAAAAAAAAAAUAMAAAAAAABQAwAAAAAAABsAAABnZXRfZm9yZWdyb3VuZF9wcm9jZXNzX25hbWU",
+					"AQAAAAAAAAABAAAARwMAAAAAAABiAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1018,
+					1,
+					"paste",
+					null,
+					"AgAAAG8DAAAAAAAAeAMAAAAAAAAAAAAAeAMAAAAAAAB4AwAAAAAAABsAAABnZXRfZm9yZWdyb3VuZF9wcm9jZXNzX25hbWU",
+					"AQAAAAAAAAABAAAAbwMAAAAAAACKAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1032,
+					1,
+					"left_delete",
+					null,
+					"AQAAAIEDAAAAAAAAgQMAAAAAAAABAAAAeg",
+					"AQAAAAAAAAABAAAAggMAAAAAAACCAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1033,
+					1,
+					"insert",
+					{
+						"characters": "Z"
+					},
+					"AQAAAIEDAAAAAAAAggMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgQMAAAAAAACBAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1112,
+					3,
+					"left_delete",
+					null,
+					"AwAAABYDAAAAAAAAFgMAAAAAAAAkAAAAIHBhbmU6Z2V0X3RpdGxlKCk6ZmluZCgnc3NoJykgfj0gbmlsFQMAAAAAAAAVAwAAAAAAAAEAAAByFAMAAAAAAAAUAwAAAAAAAAEAAABv",
+					"AQAAAAAAAAABAAAAOgMAAAAAAAAWAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1113,
+					1,
+					"left_delete",
+					null,
+					"AQAAABMDAAAAAAAAEwMAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAFAMAAAAAAAAUAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1116,
+					1,
+					"insert",
+					{
+						"characters": " or"
+					},
+					"AwAAAGkDAAAAAAAAagMAAAAAAAAAAAAAagMAAAAAAABrAwAAAAAAAAAAAABrAwAAAAAAAGwDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaQMAAAAAAABpAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1117,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAGwDAAAAAAAAbQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbAMAAAAAAABsAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1119,
+					1,
+					"",
+					null,
+					"AQAAAG0DAAAAAAAAjgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbQMAAAAAAABtAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1129,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAI4DAAAAAAAAjwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjgMAAAAAAACOAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1131,
+					1,
+					"",
+					null,
+					"AQAAAI8DAAAAAAAAnQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjwMAAAAAAACPAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1143,
+					2,
+					"left_delete",
+					null,
+					"AgAAAGoDAAAAAAAAagMAAAAAAAAzAAAAb3IgcGFuZTpnZXRfZm9yZWdyb3VuZF9wcm9jZXNzX2VudigpLlNTSF9DT05ORUNUSU9OaQMAAAAAAABpAwAAAAAAAAEAAAAg",
+					"AQAAAAAAAAABAAAAnQMAAAAAAABqAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1166,
+					1,
+					"insert",
+					{
+						"characters": "\n\nlocal"
+					},
+					"BwAAADQAAAAAAAAANQAAAAAAAAAAAAAANQAAAAAAAAA2AAAAAAAAAAAAAAA2AAAAAAAAADcAAAAAAAAAAAAAADcAAAAAAAAAOAAAAAAAAAAAAAAAOAAAAAAAAAA5AAAAAAAAAAAAAAA5AAAAAAAAADoAAAAAAAAAAAAAADoAAAAAAAAAOwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANAAAAAAAAAA0AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1167,
+					1,
+					"insert",
+					{
+						"characters": " functio"
+					},
+					"CAAAADsAAAAAAAAAPAAAAAAAAAAAAAAAPAAAAAAAAAA9AAAAAAAAAAAAAAA9AAAAAAAAAD4AAAAAAAAAAAAAAD4AAAAAAAAAPwAAAAAAAAAAAAAAPwAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAEEAAAAAAAAAAAAAAEEAAAAAAAAAQgAAAAAAAAAAAAAAQgAAAAAAAABDAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOwAAAAAAAAA7AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1168,
+					1,
+					"insert",
+					{
+						"characters": "n"
+					},
+					"AQAAAEMAAAAAAAAARAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQwAAAAAAAABDAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1169,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAEQAAAAAAAAARQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARAAAAAAAAABEAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1171,
+					1,
+					"",
+					null,
+					"AQAAAEUAAAAAAAAAjQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARQAAAAAAAABFAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1176,
+					9,
+					"left_delete",
+					null,
+					"CQAAAE0AAAAAAAAATQAAAAAAAAABAAAAIEwAAAAAAAAATAAAAAAAAAABAAAAbksAAAAAAAAASwAAAAAAAAABAAAAb0oAAAAAAAAASgAAAAAAAAABAAAAaUkAAAAAAAAASQAAAAAAAAABAAAAdEgAAAAAAAAASAAAAAAAAAABAAAAY0cAAAAAAAAARwAAAAAAAAABAAAAbkYAAAAAAAAARgAAAAAAAAABAAAAdUUAAAAAAAAARQAAAAAAAAABAAAAZg",
+					"AQAAAAAAAAABAAAATgAAAAAAAABOAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1195,
+					1,
+					"insert",
+					{
+						"characters": " or"
+					},
+					"AwAAALkDAAAAAAAAugMAAAAAAAAAAAAAugMAAAAAAAC7AwAAAAAAAAAAAAC7AwAAAAAAALwDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuQMAAAAAAAC5AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1196,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAALwDAAAAAAAAvQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvAMAAAAAAAC8AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1198,
+					1,
+					"",
+					null,
+					"AQAAAL0DAAAAAAAA6QMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvQMAAAAAAAC9AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1199,
+					1,
+					"insert",
+					{
+						"characters": ":find"
+					},
+					"BQAAAOkDAAAAAAAA6gMAAAAAAAAAAAAA6gMAAAAAAADrAwAAAAAAAAAAAADrAwAAAAAAAOwDAAAAAAAAAAAAAOwDAAAAAAAA7QMAAAAAAAAAAAAA7QMAAAAAAADuAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6QMAAAAAAADpAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1200,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAAO4DAAAAAAAA8AMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA7gMAAAAAAADuAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1203,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAAO8DAAAAAAAA8QMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA7wMAAAAAAADvAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1204,
+					1,
+					"insert",
+					{
+						"characters": "ssh"
+					},
+					"AwAAAPADAAAAAAAA8QMAAAAAAAAAAAAA8QMAAAAAAADyAwAAAAAAAAAAAADyAwAAAAAAAPMDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA8AMAAAAAAADwAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1217,
+					1,
+					"insert",
+					{
+						"characters": "meac"
+					},
+					"BQAAAOoDAAAAAAAA6wMAAAAAAAAAAAAA6wMAAAAAAADrAwAAAAAAAAQAAABmaW5k6wMAAAAAAADsAwAAAAAAAAAAAADsAwAAAAAAAO0DAAAAAAAAAAAAAO0DAAAAAAAA7gMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6gMAAAAAAADuAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1218,
+					3,
+					"left_delete",
+					null,
+					"AwAAAO0DAAAAAAAA7QMAAAAAAAABAAAAY+wDAAAAAAAA7AMAAAAAAAABAAAAYesDAAAAAAAA6wMAAAAAAAABAAAAZQ",
+					"AQAAAAAAAAABAAAA7gMAAAAAAADuAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1219,
+					1,
+					"insert",
+					{
+						"characters": "atch"
+					},
+					"BAAAAOsDAAAAAAAA7AMAAAAAAAAAAAAA7AMAAAAAAADtAwAAAAAAAAAAAADtAwAAAAAAAO4DAAAAAAAAAAAAAO4DAAAAAAAA7wMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6wMAAAAAAADrAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1233,
+					1,
+					"",
+					null,
+					"AgAAAOoDAAAAAAAA7gMAAAAAAAAAAAAA7gMAAAAAAADuAwAAAAAAAAUAAABtYXRjaA",
+					"AQAAAAAAAAABAAAA6gMAAAAAAADvAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1243,
+					1,
+					"insert",
+					{
+						"characters": "not"
+					},
+					"AwAAAL0DAAAAAAAAvgMAAAAAAAAAAAAAvgMAAAAAAAC/AwAAAAAAAAAAAAC/AwAAAAAAAMADAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvQMAAAAAAAC9AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1244,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAMADAAAAAAAAwQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAwAMAAAAAAADAAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1255,
+					4,
+					"left_delete",
+					null,
+					"BAAAAMADAAAAAAAAwAMAAAAAAAABAAAAIL8DAAAAAAAAvwMAAAAAAAABAAAAdL4DAAAAAAAAvgMAAAAAAAABAAAAb70DAAAAAAAAvQMAAAAAAAABAAAAbg",
+					"AQAAAAAAAAABAAAAwQMAAAAAAADBAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1260,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAADIDAAAAAAAAMwMAAAAAAAAAAAAAMwMAAAAAAAA0AwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMgMAAAAAAAAyAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1262,
+					1,
+					"reindent",
+					null,
+					"AQAAADMDAAAAAAAANwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMwMAAAAAAAAzAwAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					1263,
+					1,
+					"insert",
+					{
+						"characters": "local"
+					},
+					"BQAAADcDAAAAAAAAOAMAAAAAAAAAAAAAOAMAAAAAAAA5AwAAAAAAAAAAAAA5AwAAAAAAADoDAAAAAAAAAAAAADoDAAAAAAAAOwMAAAAAAAAAAAAAOwMAAAAAAAA8AwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANwMAAAAAAAA3AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1264,
+					1,
+					"insert",
+					{
+						"characters": " if"
+					},
+					"AwAAADwDAAAAAAAAPQMAAAAAAAAAAAAAPQMAAAAAAAA+AwAAAAAAAAAAAAA+AwAAAAAAAD8DAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPAMAAAAAAAA8AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1265,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAD8DAAAAAAAAQAMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPwMAAAAAAAA/AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1266,
+					1,
+					"left_delete",
+					null,
+					"AQAAAD8DAAAAAAAAPwMAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAQAMAAAAAAABAAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1267,
+					1,
+					"insert",
+					{
+						"characters": "_sssh"
+					},
+					"BQAAAD8DAAAAAAAAQAMAAAAAAAAAAAAAQAMAAAAAAABBAwAAAAAAAAAAAABBAwAAAAAAAEIDAAAAAAAAAAAAAEIDAAAAAAAAQwMAAAAAAAAAAAAAQwMAAAAAAABEAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPwMAAAAAAAA/AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1268,
+					2,
+					"left_delete",
+					null,
+					"AgAAAEMDAAAAAAAAQwMAAAAAAAABAAAAaEIDAAAAAAAAQgMAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAARAMAAAAAAABEAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1269,
+					1,
+					"insert",
+					{
+						"characters": "h"
+					},
+					"AQAAAEIDAAAAAAAAQwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQgMAAAAAAABCAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1270,
+					1,
+					"insert",
+					{
+						"characters": " ="
+					},
+					"AgAAAEMDAAAAAAAARAMAAAAAAAAAAAAARAMAAAAAAABFAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQwMAAAAAAABDAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1271,
+					1,
+					"insert",
+					{
+						"characters": " false"
+					},
+					"BgAAAEUDAAAAAAAARgMAAAAAAAAAAAAARgMAAAAAAABHAwAAAAAAAAAAAABHAwAAAAAAAEgDAAAAAAAAAAAAAEgDAAAAAAAASQMAAAAAAAAAAAAASQMAAAAAAABKAwAAAAAAAAAAAABKAwAAAAAAAEsDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARQMAAAAAAABFAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1280,
+					1,
+					"insert",
+					{
+						"characters": "\nif"
+					},
+					"BAAAAEsDAAAAAAAATAMAAAAAAAAAAAAATAMAAAAAAABQAwAAAAAAAAAAAABQAwAAAAAAAFEDAAAAAAAAAAAAAFEDAAAAAAAAUgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASwMAAAAAAABLAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1281,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAFIDAAAAAAAAUwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUgMAAAAAAABSAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1288,
+					1,
+					"insert",
+					{
+						"characters": "\nssh_"
+					},
+					"BgAAAEsDAAAAAAAATAMAAAAAAAAAAAAATAMAAAAAAABQAwAAAAAAAAAAAABQAwAAAAAAAFEDAAAAAAAAAAAAAFEDAAAAAAAAUgMAAAAAAAAAAAAAUgMAAAAAAABTAwAAAAAAAAAAAABTAwAAAAAAAFQDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASwMAAAAAAABLAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1289,
+					1,
+					"insert",
+					{
+						"characters": "process"
+					},
+					"BwAAAFQDAAAAAAAAVQMAAAAAAAAAAAAAVQMAAAAAAABWAwAAAAAAAAAAAABWAwAAAAAAAFcDAAAAAAAAAAAAAFcDAAAAAAAAWAMAAAAAAAAAAAAAWAMAAAAAAABZAwAAAAAAAAAAAABZAwAAAAAAAFoDAAAAAAAAAAAAAFoDAAAAAAAAWwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVAMAAAAAAABUAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1290,
+					1,
+					"insert",
+					{
+						"characters": " ="
+					},
+					"AgAAAFsDAAAAAAAAXAMAAAAAAAAAAAAAXAMAAAAAAABdAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAWwMAAAAAAABbAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1291,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAF0DAAAAAAAAXgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXQMAAAAAAABdAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1292,
+					1,
+					"paste",
+					null,
+					"AQAAAF4DAAAAAAAAlgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXgMAAAAAAABeAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1299,
+					1,
+					"insert",
+					{
+						"characters": "ssh_pr"
+					},
+					"BgAAAJ4DAAAAAAAAnwMAAAAAAAAAAAAAnwMAAAAAAACgAwAAAAAAAAAAAACgAwAAAAAAAKEDAAAAAAAAAAAAAKEDAAAAAAAAogMAAAAAAAAAAAAAogMAAAAAAACjAwAAAAAAAAAAAACjAwAAAAAAAKQDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAngMAAAAAAACeAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1300,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":4,\"session_name\":\"LSP-lua\"}",
+						"format": "command",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "ssh_process"
+					},
+					"AgAAAJ4DAAAAAAAAngMAAAAAAAAGAAAAc3NoX3ByngMAAAAAAACpAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApAMAAAAAAACkAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1301,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAKkDAAAAAAAAqgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqQMAAAAAAACpAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1302,
+					1,
+					"insert",
+					{
+						"characters": "!="
+					},
+					"AgAAAKoDAAAAAAAAqwMAAAAAAAAAAAAAqwMAAAAAAACsAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqgMAAAAAAACqAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1303,
+					2,
+					"left_delete",
+					null,
+					"AgAAAKsDAAAAAAAAqwMAAAAAAAABAAAAPaoDAAAAAAAAqgMAAAAAAAABAAAAIQ",
+					"AQAAAAAAAAABAAAArAMAAAAAAACsAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1304,
+					1,
+					"insert",
+					{
+						"characters": "=="
+					},
+					"AgAAAKoDAAAAAAAAqwMAAAAAAAAAAAAAqwMAAAAAAACsAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqgMAAAAAAACqAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1305,
+					1,
+					"insert",
+					{
+						"characters": " nil"
+					},
+					"BAAAAKwDAAAAAAAArQMAAAAAAAAAAAAArQMAAAAAAACuAwAAAAAAAAAAAACuAwAAAAAAAK8DAAAAAAAAAAAAAK8DAAAAAAAAsAMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArAMAAAAAAACsAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1306,
+					1,
+					"insert",
+					{
+						"characters": " or"
+					},
+					"AwAAALADAAAAAAAAsQMAAAAAAAAAAAAAsQMAAAAAAACyAwAAAAAAAAAAAACyAwAAAAAAALMDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAsAMAAAAAAACwAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1307,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAALMDAAAAAAAAtAMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAswMAAAAAAACzAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1308,
+					1,
+					"insert",
+					{
+						"characters": "ssh"
+					},
+					"AwAAALQDAAAAAAAAtQMAAAAAAAAAAAAAtQMAAAAAAAC2AwAAAAAAAAAAAAC2AwAAAAAAALcDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtAMAAAAAAAC0AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1309,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":4,\"session_name\":\"LSP-lua\"}",
+						"format": "command",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "ssh_process"
+					},
+					"AgAAALQDAAAAAAAAtAMAAAAAAAADAAAAc3NotAMAAAAAAAC/AwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtwMAAAAAAAC3AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1310,
+					1,
+					"insert",
+					{
+						"characters": ":find"
+					},
+					"BQAAAL8DAAAAAAAAwAMAAAAAAAAAAAAAwAMAAAAAAADBAwAAAAAAAAAAAADBAwAAAAAAAMIDAAAAAAAAAAAAAMIDAAAAAAAAwwMAAAAAAAAAAAAAwwMAAAAAAADEAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvwMAAAAAAAC/AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1311,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAMQDAAAAAAAAxQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxAMAAAAAAADEAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1312,
+					1,
+					"left_delete",
+					null,
+					"AQAAAMQDAAAAAAAAxAMAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAxQMAAAAAAADFAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1313,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAAMQDAAAAAAAAxgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxAMAAAAAAADEAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1316,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAAMUDAAAAAAAAxwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxQMAAAAAAADFAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1317,
+					1,
+					"insert",
+					{
+						"characters": "ssh"
+					},
+					"AwAAAMYDAAAAAAAAxwMAAAAAAAAAAAAAxwMAAAAAAADIAwAAAAAAAAAAAADIAwAAAAAAAMkDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxgMAAAAAAADGAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1319,
+					1,
+					"insert",
+					{
+						"characters": " if"
+					},
+					"AwAAAMsDAAAAAAAAzAMAAAAAAAAAAAAAzAMAAAAAAADNAwAAAAAAAAAAAADNAwAAAAAAAM4DAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAywMAAAAAAADLAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1320,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":2,\"session_name\":\"LSP-lua\"}",
+						"format": "command",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "if_ssh"
+					},
+					"AgAAAMwDAAAAAAAAzAMAAAAAAAACAAAAaWbMAwAAAAAAANIDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzgMAAAAAAADOAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1321,
+					1,
+					"insert",
+					{
+						"characters": " ="
+					},
+					"AgAAANIDAAAAAAAA0wMAAAAAAAAAAAAA0wMAAAAAAADUAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0gMAAAAAAADSAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1322,
+					1,
+					"insert",
+					{
+						"characters": " true"
+					},
+					"BQAAANQDAAAAAAAA1QMAAAAAAAAAAAAA1QMAAAAAAADWAwAAAAAAAAAAAADWAwAAAAAAANcDAAAAAAAAAAAAANcDAAAAAAAA2AMAAAAAAAAAAAAA2AMAAAAAAADZAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1AMAAAAAAADUAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1323,
+					1,
+					"insert",
+					{
+						"characters": " end"
+					},
+					"BAAAANkDAAAAAAAA2gMAAAAAAAAAAAAA2gMAAAAAAADbAwAAAAAAAAAAAADbAwAAAAAAANwDAAAAAAAAAAAAANwDAAAAAAAA3QMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2QMAAAAAAADZAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1332,
+					1,
+					"insert",
+					{
+						"characters": " then"
+					},
+					"BQAAAMsDAAAAAAAAzAMAAAAAAAAAAAAAzAMAAAAAAADNAwAAAAAAAAAAAADNAwAAAAAAAM4DAAAAAAAAAAAAAM4DAAAAAAAAzwMAAAAAAAAAAAAAzwMAAAAAAADQAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAywMAAAAAAADLAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1345,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"BAAAANEDAAAAAAAA0gMAAAAAAAAAAAAA0gMAAAAAAADWAwAAAAAAAAAAAADSAwAAAAAAANIDAAAAAAAABAAAACAgICDSAwAAAAAAANoDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0QMAAAAAAADRAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1347,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"BAAAAOgDAAAAAAAA6QMAAAAAAAAAAAAA6QMAAAAAAADxAwAAAAAAAAAAAADpAwAAAAAAAOkDAAAAAAAACAAAACAgICAgICAg6QMAAAAAAADtAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6AMAAAAAAADoAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1349,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "local wezterm = require 'wezterm'\n\nlocal module = {}\n\nlocal function basename(s)\n    return string.gsub(s, '(.*[/\\\\])(.*)', '%2')\nend\n\n\nlocal function is_inside_vim(pane)\n    -- local tty = pane:get_tty_name()\n    -- -- if tty == nil then return false end\n    -- local success, stdout, stderr = wezterm.run_child_process\n    --     { 'sh', '-c',\n    --         'ps -o state= -o comm= -t' .. wezterm.shell_quote_arg(tty) .. ' | ' ..\n    --         'grep -iqE \\'^[^TXZ ]+ +(\\\\S+\\\\/)?g?(view|l?nvim?x?)(diff)?$\\'' }\n\n    -- -- local success, stdout, stderr = wezterm.run_child_process({\n    -- --     'sh', '-c',\n    -- --     'ps -o state= -o comm= -t' .. wezterm.shell_quote_arg(tty) ..\n    -- --     ' | grep -iqE \\'^[^TXZ ]+ +(\\\\S+/)?(nvim|ssh|tmux|zellij|view|l?n?vim?x?)(diff)?$\\''\n    -- -- })\n    -- return success\n\n    local if_ssh = false\n    ssh_process = basename(pane:get_foreground_process_name()):find(\"ssh\")\n    if ssh_process == nil or ssh_process:find(\"ssh\") then\n        if_ssh = true\n    end\n\n    return pane:get_title():find(\"n?vim\") ~= nil or\n        pane:get_title():find('tmux') ~= nil or pane:get_title():find('Zellij') ~= nil or\n        basename(pane:get_foreground_process_name()):find(\"ssh\")\nend\n\n-- local function is_outside_vim(pane)\n--     return not is_inside_vim(pane)\n-- end\n\nlocal function bind(cond, key, mods, action)\n    local function callback(win, pane)\n        if cond(pane) then\n            win:perform_action(wezterm.action.SendKey({ key = key, mods = mods }), pane)\n        else\n            win:perform_action(action, pane)\n        end\n    end\n    return { key = key, mods = mods, action = wezterm.action_callback(callback) }\nend\n\nfunction module.bind_if(new_keys, config)\n    for _, binding in ipairs(new_keys) do\n        table.insert(config.keys, bind(is_inside_vim, binding.key, binding.mods, binding.action))\n    end\nend\n\nreturn module\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 56
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 0
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AQAAAAAAAAAAAAAAWQcAAAAAAABNBwAAbG9jYWwgd2V6dGVybSA9IHJlcXVpcmUgJ3dlenRlcm0nCgpsb2NhbCBtb2R1bGUgPSB7fQoKbG9jYWwgZnVuY3Rpb24gYmFzZW5hbWUocykKICByZXR1cm4gc3RyaW5nLmdzdWIocywgJyguKlsvXFxdKSguKiknLCAnJTInKQplbmQKCgpsb2NhbCBmdW5jdGlvbiBpc19pbnNpZGVfdmltKHBhbmUpCiAgICAtLSBsb2NhbCB0dHkgPSBwYW5lOmdldF90dHlfbmFtZSgpCiAgICAtLSAtLSBpZiB0dHkgPT0gbmlsIHRoZW4gcmV0dXJuIGZhbHNlIGVuZAogICAgLS0gbG9jYWwgc3VjY2Vzcywgc3Rkb3V0LCBzdGRlcnIgPSB3ZXp0ZXJtLnJ1bl9jaGlsZF9wcm9jZXNzCiAgICAtLSAgICAgeyAnc2gnLCAnLWMnLAogICAgLS0gICAgICAgICAncHMgLW8gc3RhdGU9IC1vIGNvbW09IC10JyAuLiB3ZXp0ZXJtLnNoZWxsX3F1b3RlX2FyZyh0dHkpIC4uICcgfCAnIC4uCiAgICAtLSAgICAgICAgICdncmVwIC1pcUUgXCdeW15UWFogXSsgKyhcXFMrXFwvKT9nPyh2aWV3fGw/bnZpbT94PykoZGlmZik/JFwnJyB9CgogICAgLS0gLS0gbG9jYWwgc3VjY2Vzcywgc3Rkb3V0LCBzdGRlcnIgPSB3ZXp0ZXJtLnJ1bl9jaGlsZF9wcm9jZXNzKHsKICAgIC0tIC0tICAgICAnc2gnLCAnLWMnLAogICAgLS0gLS0gICAgICdwcyAtbyBzdGF0ZT0gLW8gY29tbT0gLXQnIC4uIHdlenRlcm0uc2hlbGxfcXVvdGVfYXJnKHR0eSkgLi4KICAgIC0tIC0tICAgICAnIHwgZ3JlcCAtaXFFIFwnXlteVFhaIF0rICsoXFxTKy8pPyhudmltfHNzaHx0bXV4fHplbGxpanx2aWV3fGw/bj92aW0/eD8pKGRpZmYpPyRcJycKICAgIC0tIC0tIH0pCiAgICAtLSByZXR1cm4gc3VjY2VzcwoKICAgIGxvY2FsIGlmX3NzaCA9IGZhbHNlCiAgICBzc2hfcHJvY2VzcyA9IGJhc2VuYW1lKHBhbmU6Z2V0X2ZvcmVncm91bmRfcHJvY2Vzc19uYW1lKCkpOmZpbmQoInNzaCIpCiAgICBpZiBzc2hfcHJvY2VzcyA9PSBuaWwgb3Igc3NoX3Byb2Nlc3M6ZmluZCgic3NoIikgdGhlbiAKICAgICAgICBpZl9zc2ggPSB0cnVlIAogICAgZW5kCgogICAgcmV0dXJuIHBhbmU6Z2V0X3RpdGxlKCk6ZmluZCgibj92aW0iKSB+PSBuaWwgb3IKICAgIHBhbmU6Z2V0X3RpdGxlKCk6ZmluZCgndG11eCcpIH49IG5pbCBvciBwYW5lOmdldF90aXRsZSgpOmZpbmQoJ1plbGxpaicpIH49IG5pbCBvciBiYXNlbmFtZShwYW5lOmdldF9mb3JlZ3JvdW5kX3Byb2Nlc3NfbmFtZSgpKTpmaW5kKCJzc2giKQplbmQKCi0tIGxvY2FsIGZ1bmN0aW9uIGlzX291dHNpZGVfdmltKHBhbmUpCi0tICAgICByZXR1cm4gbm90IGlzX2luc2lkZV92aW0ocGFuZSkKLS0gZW5kCgpsb2NhbCBmdW5jdGlvbiBiaW5kKGNvbmQsIGtleSwgbW9kcywgYWN0aW9uKQogICAgbG9jYWwgZnVuY3Rpb24gY2FsbGJhY2sod2luLCBwYW5lKQogICAgICAgIGlmIGNvbmQocGFuZSkgdGhlbgogICAgICAgICAgICB3aW46cGVyZm9ybV9hY3Rpb24od2V6dGVybS5hY3Rpb24uU2VuZEtleSh7IGtleSA9IGtleSwgbW9kcyA9IG1vZHMgfSksIHBhbmUpCiAgICAgICAgZWxzZQogICAgICAgICAgICB3aW46cGVyZm9ybV9hY3Rpb24oYWN0aW9uLCBwYW5lKQogICAgICAgIGVuZAogICAgZW5kCiAgICByZXR1cm4geyBrZXkgPSBrZXksIG1vZHMgPSBtb2RzLCBhY3Rpb24gPSB3ZXp0ZXJtLmFjdGlvbl9jYWxsYmFjayhjYWxsYmFjaykgfQplbmQKCmZ1bmN0aW9uIG1vZHVsZS5iaW5kX2lmKG5ld19rZXlzLCBjb25maWcpCiAgICBmb3IgXywgYmluZGluZyBpbiBpcGFpcnMobmV3X2tleXMpIGRvCiAgICAgICAgdGFibGUuaW5zZXJ0KGNvbmZpZy5rZXlzLCBiaW5kKGlzX2luc2lkZV92aW0sIGJpbmRpbmcua2V5LCBiaW5kaW5nLm1vZHMsIGJpbmRpbmcuYWN0aW9uKSkKICAgIGVuZAplbmQKCnJldHVybiBtb2R1bGUK",
+					"AQAAAAAAAAABAAAA7QMAAAAAAADtAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1373,
+					3,
+					"left_delete",
+					null,
+					"AwAAAMYEAAAAAAAAxgQAAAAAAABTAAAALS0gbG9jYWwgZnVuY3Rpb24gaXNfb3V0c2lkZV92aW0ocGFuZSkKLS0gICAgIHJldHVybiBub3QgaXNfaW5zaWRlX3ZpbShwYW5lKQotLSBlbmTFBAAAAAAAAMUEAAAAAAAAAQAAAArEBAAAAAAAAMQEAAAAAAAAAQAAAAo",
+					"AQAAAAAAAAABAAAAGQUAAAAAAADGBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1382,
+					2,
+					"left_delete",
+					null,
+					"AgAAAK0DAAAAAAAArQMAAAAAAAABAAAAPawDAAAAAAAArAMAAAAAAAABAAAAPQ",
+					"AQAAAAAAAAABAAAArgMAAAAAAACuAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1383,
+					1,
+					"insert",
+					{
+						"characters": "is"
+					},
+					"AgAAAKwDAAAAAAAArQMAAAAAAAAAAAAArQMAAAAAAACuAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArAMAAAAAAACsAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1384,
+					1,
+					"insert",
+					{
+						"characters": " not"
+					},
+					"BAAAAK4DAAAAAAAArwMAAAAAAAAAAAAArwMAAAAAAACwAwAAAAAAAAAAAACwAwAAAAAAALEDAAAAAAAAAAAAALEDAAAAAAAAsgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArgMAAAAAAACuAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1387,
+					6,
+					"left_delete",
+					null,
+					"BgAAALEDAAAAAAAAsQMAAAAAAAABAAAAdLADAAAAAAAAsAMAAAAAAAABAAAAb68DAAAAAAAArwMAAAAAAAABAAAAbq4DAAAAAAAArgMAAAAAAAABAAAAIK0DAAAAAAAArQMAAAAAAAABAAAAc6wDAAAAAAAArAMAAAAAAAABAAAAaQ",
+					"AQAAAAAAAAABAAAAsgMAAAAAAACyAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1388,
+					1,
+					"insert",
+					{
+						"characters": "=="
+					},
+					"AgAAAKwDAAAAAAAArQMAAAAAAAAAAAAArQMAAAAAAACuAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArAMAAAAAAACsAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1400,
+					1,
+					"",
+					null,
+					"AgAAAKwDAAAAAAAArgMAAAAAAAAAAAAArgMAAAAAAACuAwAAAAAAAAIAAAA9PQ",
+					"AQAAAAAAAAABAAAArgMAAAAAAACsAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1413,
+					2,
+					"left_delete",
+					null,
+					"AgAAALQDAAAAAAAAtAMAAAAAAAABAAAAcrMDAAAAAAAAswMAAAAAAAABAAAAbw",
+					"AQAAAAAAAAABAAAAtQMAAAAAAAC1AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1414,
+					1,
+					"insert",
+					{
+						"characters": "and"
+					},
+					"AwAAALMDAAAAAAAAtAMAAAAAAAAAAAAAtAMAAAAAAAC1AwAAAAAAAAAAAAC1AwAAAAAAALYDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAswMAAAAAAACzAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1419,
+					2,
+					"left_delete",
+					null,
+					"AgAAAI0DAAAAAAAAjQMAAAAAAAALAAAAZmluZCgic3NoIimMAwAAAAAAAIwDAAAAAAAAAQAAADo",
+					"AQAAAAAAAAABAAAAmAMAAAAAAACNAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1431,
+					1,
+					"insert",
+					{
+						"characters": " or"
+					},
+					"AwAAALUEAAAAAAAAtgQAAAAAAAAAAAAAtgQAAAAAAAC3BAAAAAAAAAAAAAC3BAAAAAAAALgEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtQQAAAAAAAC1BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1432,
+					1,
+					"insert",
+					{
+						"characters": " if"
+					},
+					"AwAAALgEAAAAAAAAuQQAAAAAAAAAAAAAuQQAAAAAAAC6BAAAAAAAAAAAAAC6BAAAAAAAALsEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuAQAAAAAAAC4BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1433,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":2,\"session_name\":\"LSP-lua\"}",
+						"format": "command",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "if_ssh"
+					},
+					"AgAAALkEAAAAAAAAuQQAAAAAAAACAAAAaWa5BAAAAAAAAL8EAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuwQAAAAAAAC7BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1459,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAIwDAAAAAAAAjQMAAAAAAAAAAAAAjQMAAAAAAACRAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjAMAAAAAAACMAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1461,
+					1,
+					"",
+					null,
+					"AQAAAJEDAAAAAAAAwgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkQMAAAAAAACRAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1473,
+					1,
+					"paste",
+					null,
+					"AgAAALkDAAAAAAAAxAMAAAAAAAAAAAAAxAMAAAAAAADEAwAAAAAAAAgAAABiYXNlbmFtZQ",
+					"AQAAAAAAAAABAAAAuQMAAAAAAADBAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1494,
+					1,
+					"insert",
+					{
+						"characters": "log"
+					},
+					"BAAAAJkDAAAAAAAAmgMAAAAAAAAAAAAAmgMAAAAAAACaAwAAAAAAAAgAAABsb2dfaW5mb5oDAAAAAAAAmwMAAAAAAAAAAAAAmwMAAAAAAACcAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmQMAAAAAAAChAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1495,
+					1,
+					"insert",
+					{
+						"characters": "_error"
+					},
+					"BgAAAJwDAAAAAAAAnQMAAAAAAAAAAAAAnQMAAAAAAACeAwAAAAAAAAAAAACeAwAAAAAAAJ8DAAAAAAAAAAAAAJ8DAAAAAAAAoAMAAAAAAAAAAAAAoAMAAAAAAAChAwAAAAAAAAAAAAChAwAAAAAAAKIDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnAMAAAAAAACcAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1511,
+					1,
+					"paste",
+					null,
+					"AgAAABMEAAAAAAAAGAQAAAAAAAAAAAAAGAQAAAAAAAAYBAAAAAAAAAQAAAB0cnVl",
+					"AQAAAAAAAAABAAAAEwQAAAAAAAAXBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1520,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AwAAAB0EAAAAAAAAIAQAAAAAAAAAAAAABgQAAAAAAAAJBAAAAAAAAAAAAADLAwAAAAAAAM4DAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIAQAAAAAAADHAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1532,
+					10,
+					"left_delete",
+					null,
+					"CgAAAAIFAAAAAAAAAgUAAAAAAAABAAAAaAEFAAAAAAAAAQUAAAAAAAABAAAAcwAFAAAAAAAAAAUAAAAAAAABAAAAc/8EAAAAAAAA/wQAAAAAAAABAAAAX/4EAAAAAAAA/gQAAAAAAAABAAAAZv0EAAAAAAAA/QQAAAAAAAABAAAAafwEAAAAAAAA/AQAAAAAAAABAAAAIPsEAAAAAAAA+wQAAAAAAAABAAAAcvoEAAAAAAAA+gQAAAAAAAABAAAAb/kEAAAAAAAA+QQAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAAwUAAAAAAAADBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1551,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAFIDAAAAAAAAVQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjAMAAAAAAACMAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1553,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAJQDAAAAAAAAlwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAyQMAAAAAAADJAwAAAAAAAAAAAAAAWIZA"
+				],
+				[
+					1563,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAADkDAAAAAAAAPAMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANQMAAAAAAAA1AwAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					1573,
+					2,
+					"left_delete",
+					null,
+					"AgAAAL8EAAAAAAAAvwQAAAAAAABDAAAAb3IKICAgICAgICBiYXNlbmFtZShwYW5lOmdldF9mb3JlZ3JvdW5kX3Byb2Nlc3NfbmFtZSgpKTpmaW5kKCJzc2giKb4EAAAAAAAAvgQAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAAgUAAAAAAAC/BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1581,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAADkDAAAAAAAAOQMAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAAUAMAAAAAAABQAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1583,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAFIDAAAAAAAAUgMAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAAZgMAAAAAAABmAwAAAAAAAAAAAAAAgHBA"
+				],
+				[
+					1593,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAFIDAAAAAAAAVQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfwMAAAAAAAB/AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1607,
+					1,
+					"insert",
+					{
+						"characters": "\nif"
+					},
+					"BAAAAFAAAAAAAAAAUQAAAAAAAAAAAAAAUQAAAAAAAABVAAAAAAAAAAAAAABVAAAAAAAAAFYAAAAAAAAAAAAAAFYAAAAAAAAAVwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUAAAAAAAAABQAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1608,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":0,\"session_name\":\"LSP-lua\"}",
+						"format": "command",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "if .. then"
+					},
+					"AgAAAFUAAAAAAAAAVQAAAAAAAAACAAAAaWZVAAAAAAAAAG4AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVwAAAAAAAABXAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1609,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAAFgAAAAAAAAAWQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAWAAAAAAAAABYAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1610,
+					1,
+					"insert",
+					{
+						"characters": " ~="
+					},
+					"AwAAAFkAAAAAAAAAWgAAAAAAAAAAAAAAWgAAAAAAAABbAAAAAAAAAAAAAABbAAAAAAAAAFwAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAWQAAAAAAAABZAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1611,
+					1,
+					"insert",
+					{
+						"characters": " nil"
+					},
+					"BAAAAFwAAAAAAAAAXQAAAAAAAAAAAAAAXQAAAAAAAABeAAAAAAAAAAAAAABeAAAAAAAAAF8AAAAAAAAAAAAAAF8AAAAAAAAAYAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXAAAAAAAAABcAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1617,
+					1,
+					"cut",
+					null,
+					"AQAAAHsAAAAAAAAAewAAAAAAAAAsAAAAcmV0dXJuIHN0cmluZy5nc3ViKHMsICcoLipbL1xcXSkoLiopJywgJyUyJyk",
+					"AQAAAAAAAAABAAAApwAAAAAAAAB7AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1620,
+					1,
+					"paste",
+					null,
+					"AQAAAG4AAAAAAAAAmgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbgAAAAAAAABuAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1623,
+					1,
+					"insert",
+					{
+						"characters": "ret"
+					},
+					"AwAAAKcAAAAAAAAAqAAAAAAAAAAAAAAAqAAAAAAAAACpAAAAAAAAAAAAAACpAAAAAAAAAKoAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApwAAAAAAAACnAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1624,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":1,\"session_name\":\"LSP-lua\"}",
+						"format": "command",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "return"
+					},
+					"AgAAAKcAAAAAAAAApwAAAAAAAAADAAAAcmV0pwAAAAAAAACtAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqgAAAAAAAACqAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1625,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAK0AAAAAAAAArgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArQAAAAAAAACtAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1626,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAAK4AAAAAAAAAsAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArgAAAAAAAACuAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1627,
+					1,
+					"insert",
+					{
+						"characters": "1"
+					},
+					"AQAAAK8AAAAAAAAAsAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArwAAAAAAAACvAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1635,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAIIDAAAAAAAAggMAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAApgMAAAAAAACmAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1637,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAMEDAAAAAAAAwQMAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAA4gMAAAAAAADiAwAAAAAAAAAAAAAAcHlA"
+				],
+				[
+					1668,
+					1,
+					"paste",
+					null,
+					"AgAAAJ4DAAAAAAAApwMAAAAAAAAAAAAApwMAAAAAAACnAwAAAAAAABsAAABnZXRfZm9yZWdyb3VuZF9wcm9jZXNzX25hbWU",
+					"AQAAAAAAAAABAAAAngMAAAAAAAC5AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1683,
+					1,
+					"left_delete",
+					null,
+					"AQAAAJADAAAAAAAAkAMAAAAAAAAJAAAAYmFzZW5hbWUo",
+					"AQAAAAAAAAABAAAAmQMAAAAAAACQAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1686,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKADAAAAAAAAoAMAAAAAAAABAAAAKQ",
+					"AQAAAAAAAAABAAAAoQMAAAAAAAChAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1700,
+					1,
+					"",
+					null,
+					"AgAAAJUDAAAAAAAAsAMAAAAAAAAAAAAAsAMAAAAAAACwAwAAAAAAAAkAAABnZXRfdGl0bGU",
+					"AQAAAAAAAAABAAAAlQMAAAAAAACeAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1703,
+					1,
+					"insert",
+					{
+						"characters": ".ex"
+					},
+					"AwAAALIDAAAAAAAAswMAAAAAAAAAAAAAswMAAAAAAAC0AwAAAAAAAAAAAAC0AwAAAAAAALUDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAsgMAAAAAAACyAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1704,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":0,\"session_name\":\"LSP-lua\"}",
+						"format": "command",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "execution"
+					},
+					"AgAAALMDAAAAAAAAswMAAAAAAAACAAAAZXizAwAAAAAAALwDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtQMAAAAAAAC1AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1720,
+					1,
+					"",
+					null,
+					"AgAAALMDAAAAAAAAvQMAAAAAAAAAAAAAvQMAAAAAAAC9AwAAAAAAAAkAAABleGVjdXRpb24",
+					"AQAAAAAAAAABAAAAswMAAAAAAAC8AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1731,
+					2,
+					"left_delete",
+					null,
+					"AgAAAJYDAAAAAAAAlgMAAAAAAAAnAAAAZXRfZm9yZWdyb3VuZF9wcm9jZXNzX2luZm8oKS5leGVjdXRhYmxllQMAAAAAAACVAwAAAAAAAAEAAABn",
+					"AQAAAAAAAAABAAAAvQMAAAAAAACWAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1733,
+					1,
+					"",
+					null,
+					"AQAAAJUDAAAAAAAAoQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlQMAAAAAAACVAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1734,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAAKEDAAAAAAAAowMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAoQMAAAAAAAChAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1746,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"CwAAAEUDAAAAAAAARQMAAAAAAAADAAAALS0g4gIAAAAAAADiAgAAAAAAAAMAAAAtLSCWAgAAAAAAAJYCAAAAAAAAAwAAAC0tIHwCAAAAAAAAfAIAAAAAAAADAAAALS0gNgIAAAAAAAA2AgAAAAAAAAMAAAAtLSDkAQAAAAAAAOQBAAAAAAAAAwAAAC0tII4BAAAAAAAAjgEAAAAAAAADAAAALS0gdQEAAAAAAAB1AQAAAAAAAAMAAAAtLSA0AQAAAAAAADQBAAAAAAAAAwAAAC0tIAYBAAAAAAAABgEAAAAAAAADAAAALS0g3wAAAAAAAADfAAAAAAAAAAMAAAAtLSA",
+					"AQAAAAAAAAABAAAATQMAAAAAAADbAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1761,
+					1,
+					"paste",
+					null,
+					"AgAAAG8DAAAAAAAAdQMAAAAAAAAAAAAAdQMAAAAAAAB1AwAAAAAAABMAAABwYW5lOmdldF90dHlfbmFtZSgp",
+					"AQAAAAAAAAABAAAAggMAAAAAAABvAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1778,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"BAAAANUBAAAAAAAA2AEAAAAAAAAAAAAAggEAAAAAAACFAQAAAAAAAAAAAABsAQAAAAAAAG8BAAAAAAAAAAAAAC4BAAAAAAAAMQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHgIAAAAAAAAqAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1781,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"BQAAADMDAAAAAAAAMwMAAAAAAAADAAAALS0g0wIAAAAAAADTAgAAAAAAAAMAAAAtLSCKAgAAAAAAAIoCAAAAAAAAAwAAAC0tIHMCAAAAAAAAcwIAAAAAAAADAAAALS0gMAIAAAAAAAAwAgAAAAAAAAMAAAAtLSA",
+					"AQAAAAAAAAABAAAAOAMAAAAAAAArAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1837,
+					1,
+					"",
+					null,
+					"AgAAAGwDAAAAAAAAhAMAAAAAAAAAAAAAhAMAAAAAAACEAwAAAAAAAAYAAABzdGRvdXQ",
+					"AQAAAAAAAAABAAAAbAMAAAAAAAByAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1838,
+					3,
+					"left_delete",
+					null,
+					"AwAAAIMDAAAAAAAAgwMAAAAAAAABAAAAb4IDAAAAAAAAggMAAAAAAAABAAAAb4EDAAAAAAAAgQMAAAAAAAABAAAAZg",
+					"AQAAAAAAAAABAAAAhAMAAAAAAACEAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1839,
+					1,
+					"insert",
+					{
+						"characters": "SSH"
+					},
+					"AwAAAIEDAAAAAAAAggMAAAAAAAAAAAAAggMAAAAAAACDAwAAAAAAAAAAAACDAwAAAAAAAIQDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgQMAAAAAAACBAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1853,
+					1,
+					"",
+					null,
+					"AgAAAIEDAAAAAAAAjwMAAAAAAAAAAAAAjwMAAAAAAACPAwAAAAAAAAMAAABTU0g",
+					"AQAAAAAAAAABAAAAgQMAAAAAAACEAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1864,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"BQAAACcDAAAAAAAAKgMAAAAAAAAAAAAAygIAAAAAAADNAgAAAAAAAAAAAACEAgAAAAAAAIcCAAAAAAAAAAAAAHACAAAAAAAAcwIAAAAAAAAAAAAAMAIAAAAAAAAzAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKQMAAAAAAAAsAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1872,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAN8AAAAAAAAA4gAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA/AAAAAAAAAD8AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1883,
+					1,
+					"insert",
+					{
+						"characters": "base"
+					},
+					"BAAAAH4DAAAAAAAAfwMAAAAAAAAAAAAAfwMAAAAAAACAAwAAAAAAAAAAAACAAwAAAAAAAIEDAAAAAAAAAAAAAIEDAAAAAAAAggMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfgMAAAAAAAB+AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1884,
+					1,
+					"insert",
+					{
+						"characters": "name("
+					},
+					"BQAAAIIDAAAAAAAAgwMAAAAAAAAAAAAAgwMAAAAAAACEAwAAAAAAAAAAAACEAwAAAAAAAIUDAAAAAAAAAAAAAIUDAAAAAAAAhgMAAAAAAAAAAAAAhgMAAAAAAACHAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAggMAAAAAAACCAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1887,
+					1,
+					"insert",
+					{
+						"characters": ")"
+					},
+					"AQAAAKoDAAAAAAAAqwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqgMAAAAAAACqAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1907,
+					1,
+					"",
+					null,
+					"AgAAAIwDAAAAAAAApwMAAAAAAAAAAAAApwMAAAAAAACnAwAAAAAAAA0AAABnZXRfdXNlcl92YXJz",
+					"AQAAAAAAAAABAAAAjAMAAAAAAACZAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1912,
+					1,
+					"insert",
+					{
+						"characters": "name"
+					},
+					"BQAAAKoDAAAAAAAAqwMAAAAAAAAAAAAAqwMAAAAAAACrAwAAAAAAAA4AAABTU0hfQ09OTkVDVElPTqsDAAAAAAAArAMAAAAAAAAAAAAArAMAAAAAAACtAwAAAAAAAAAAAACtAwAAAAAAAK4DAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqgMAAAAAAAC4AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1925,
+					1,
+					"",
+					null,
+					"AgAAAKoDAAAAAAAAsgMAAAAAAAAAAAAAsgMAAAAAAACyAwAAAAAAAAQAAABuYW1l",
+					"AQAAAAAAAAABAAAAqgMAAAAAAACuAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1943,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAGsDAAAAAAAAbAMAAAAAAAAAAAAAbAMAAAAAAABwAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAawMAAAAAAABrAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1945,
+					1,
+					"",
+					null,
+					"AQAAAHADAAAAAAAAwwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcAMAAAAAAABwAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1952,
+					1,
+					"insert",
+					{
+						"characters": "\np"
+					},
+					"AwAAAGsDAAAAAAAAbAMAAAAAAAAAAAAAbAMAAAAAAABwAwAAAAAAAAAAAABwAwAAAAAAAHEDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAawMAAAAAAABrAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1953,
+					1,
+					"insert",
+					{
+						"characters": "roc"
+					},
+					"AwAAAHEDAAAAAAAAcgMAAAAAAAAAAAAAcgMAAAAAAABzAwAAAAAAAAAAAABzAwAAAAAAAHQDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcQMAAAAAAABxAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1954,
+					1,
+					"insert",
+					{
+						"characters": " ="
+					},
+					"AgAAAHQDAAAAAAAAdQMAAAAAAAAAAAAAdQMAAAAAAAB2AwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdAMAAAAAAAB0AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1955,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAHYDAAAAAAAAdwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdgMAAAAAAAB2AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1956,
+					1,
+					"paste",
+					null,
+					"AQAAAHcDAAAAAAAAogMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdwMAAAAAAAB3AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1957,
+					1,
+					"left_delete",
+					null,
+					"CQAAAKEDAAAAAAAAoQMAAAAAAAABAAAAbqADAAAAAAAAoAMAAAAAAAABAAAAZZ8DAAAAAAAAnwMAAAAAAAABAAAAcp4DAAAAAAAAngMAAAAAAAABAAAAZJ0DAAAAAAAAnQMAAAAAAAABAAAAbJwDAAAAAAAAnAMAAAAAAAABAAAAaZsDAAAAAAAAmwMAAAAAAAABAAAAaJoDAAAAAAAAmgMAAAAAAAABAAAAY5kDAAAAAAAAmQMAAAAAAAABAAAALg",
+					"AQAAAAAAAAABAAAAogMAAAAAAACiAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1968,
+					1,
+					"paste",
+					null,
+					"AgAAAMwDAAAAAAAAAQQAAAAAAAAAAAAAAQQAAAAAAAABBAAAAAAAAB8AAABsb2dfcHJvYyhjaGlsZCwgaW5kZW50IC4uICcgICcp",
+					"AQAAAAAAAAABAAAA6wMAAAAAAADMAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1978,
+					1,
+					"paste",
+					null,
+					"AgAAAPUDAAAAAAAA+gMAAAAAAAAAAAAA+gMAAAAAAAD6AwAAAAAAAAsAAABzc2hfcHJvY2Vzcw",
+					"AQAAAAAAAAABAAAA9QMAAAAAAAAABAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1979,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAPoDAAAAAAAA+wMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+gMAAAAAAAD6AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1989,
+					1,
+					"",
+					null,
+					"AQAAAPsDAAAAAAAABQQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+wMAAAAAAAD7AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1993,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "local wezterm = require 'wezterm'\n\nlocal module = {}\n\nlocal function basename(s)\n    if s ~= nil then\n        return string.gsub(s, '(.*[/\\\\])(.*)', '%2')\n    end\n    return \"1\"\nend\n\n\nlocal function is_inside_vim(pane)\n    -- local tty = pane:get_tty_name()\n    -- if tty == nil then return false end\n    -- local success, stdout, stderr = wezterm.run_child_process\n    --     { 'sh', '-c',\n    --         'ps -o state= -o comm= -t' .. wezterm.shell_quote_arg(tty) .. ' | ' ..\n    --         'grep -iqE \\'^[^TXZ ]+ +(\\\\S+\\\\/)?g?(view|l?nvim?x?)(diff)?$\\'' }\n\n    -- local success, stdout, stderr = wezterm.run_child_process({\n    --     'sh', '-c',\n    --     'ps -o state= -o comm= -t' .. wezterm.shell_quote_arg(tty) ..\n    --     ' | grep -iqE \\'^[^TXZ ]+ +(\\\\S+/)?(nvim|ssh|tmux|zellij|view|l?n?vim?x?)(diff)?$\\''\n    -- })\n    -- return success\n\n    local if_ssh = false\n    proc = pane:get_foreground_process_info()\n    for pid, child in pairs(proc.children) do\n        wezterm.log_error(\"The basename is: \" .. child.executable)\n    end\n    ssh_process = basename(pane:get_foreground_process_info().children)\n    wezterm.log_error(\"The basename is: \" .. ssh_process)\n    -- if ssh_process ~= nil and ssh_process:find(\"ssh\") then\n    --     if_ssh = false\n    -- end\n\n    return pane:get_title():find(\"n?vim\") ~= nil or\n        pane:get_title():find('tmux') ~= nil or pane:get_title():find('Zellij') ~= nil\nend\n\nlocal function bind(cond, key, mods, action)\n    local function callback(win, pane)\n        if cond(pane) then\n            win:perform_action(wezterm.action.SendKey({ key = key, mods = mods }), pane)\n        else\n            win:perform_action(action, pane)\n        end\n    end\n    return { key = key, mods = mods, action = wezterm.action_callback(callback) }\nend\n\nfunction module.bind_if(new_keys, config)\n    for _, binding in ipairs(new_keys) do\n        table.insert(config.keys, bind(is_inside_vim, binding.key, binding.mods, binding.action))\n    end\nend\n\nreturn module\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 60
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 0
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AQAAAAAAAAAAAAAAxwcAAAAAAADBBwAAbG9jYWwgd2V6dGVybSA9IHJlcXVpcmUgJ3dlenRlcm0nCgpsb2NhbCBtb2R1bGUgPSB7fQoKbG9jYWwgZnVuY3Rpb24gYmFzZW5hbWUocykKICAgIGlmIHMgfj0gbmlsIHRoZW4KICAgICAgICByZXR1cm4gc3RyaW5nLmdzdWIocywgJyguKlsvXFxdKSguKiknLCAnJTInKQogICAgZW5kCiAgICByZXR1cm4gIjEiCmVuZAoKCmxvY2FsIGZ1bmN0aW9uIGlzX2luc2lkZV92aW0ocGFuZSkKICAgIC0tIGxvY2FsIHR0eSA9IHBhbmU6Z2V0X3R0eV9uYW1lKCkKICAgIC0tIGlmIHR0eSA9PSBuaWwgdGhlbiByZXR1cm4gZmFsc2UgZW5kCiAgICAtLSBsb2NhbCBzdWNjZXNzLCBzdGRvdXQsIHN0ZGVyciA9IHdlenRlcm0ucnVuX2NoaWxkX3Byb2Nlc3MKICAgIC0tICAgICB7ICdzaCcsICctYycsCiAgICAtLSAgICAgICAgICdwcyAtbyBzdGF0ZT0gLW8gY29tbT0gLXQnIC4uIHdlenRlcm0uc2hlbGxfcXVvdGVfYXJnKHR0eSkgLi4gJyB8ICcgLi4KICAgIC0tICAgICAgICAgJ2dyZXAgLWlxRSBcJ15bXlRYWiBdKyArKFxcUytcXC8pP2c/KHZpZXd8bD9udmltP3g/KShkaWZmKT8kXCcnIH0KCiAgICAtLSBsb2NhbCBzdWNjZXNzLCBzdGRvdXQsIHN0ZGVyciA9IHdlenRlcm0ucnVuX2NoaWxkX3Byb2Nlc3MoewogICAgLS0gICAgICdzaCcsICctYycsCiAgICAtLSAgICAgJ3BzIC1vIHN0YXRlPSAtbyBjb21tPSAtdCcgLi4gd2V6dGVybS5zaGVsbF9xdW90ZV9hcmcodHR5KSAuLgogICAgLS0gICAgICcgfCBncmVwIC1pcUUgXCdeW15UWFogXSsgKyhcXFMrLyk/KG52aW18c3NofHRtdXh8emVsbGlqfHZpZXd8bD9uP3ZpbT94PykoZGlmZik/JFwnJwogICAgLS0gfSkKICAgIC0tIHJldHVybiBzdWNjZXNzCgogICAgbG9jYWwgaWZfc3NoID0gZmFsc2UKICAgIHByb2MgPSBwYW5lOmdldF9mb3JlZ3JvdW5kX3Byb2Nlc3NfaW5mbygpCiAgICBmb3IgcGlkLCBjaGlsZCBpbiBwYWlycyhwcm9jLmNoaWxkcmVuKSBkbwogICAgd2V6dGVybS5sb2dfZXJyb3IoIlRoZSBiYXNlbmFtZSBpczogIiAuLiBjaGlsZC5leGVjdXRhYmxlKQogIGVuZAogICAgc3NoX3Byb2Nlc3MgPSBiYXNlbmFtZShwYW5lOmdldF9mb3JlZ3JvdW5kX3Byb2Nlc3NfaW5mbygpLmNoaWxkcmVuKQogICAgd2V6dGVybS5sb2dfZXJyb3IoIlRoZSBiYXNlbmFtZSBpczogIiAuLiBzc2hfcHJvY2VzcykKICAgIC0tIGlmIHNzaF9wcm9jZXNzIH49IG5pbCBhbmQgc3NoX3Byb2Nlc3M6ZmluZCgic3NoIikgdGhlbgogICAgLS0gICAgIGlmX3NzaCA9IGZhbHNlCiAgICAtLSBlbmQKCiAgICByZXR1cm4gcGFuZTpnZXRfdGl0bGUoKTpmaW5kKCJuP3ZpbSIpIH49IG5pbCBvcgogICAgICAgIHBhbmU6Z2V0X3RpdGxlKCk6ZmluZCgndG11eCcpIH49IG5pbCBvciBwYW5lOmdldF90aXRsZSgpOmZpbmQoJ1plbGxpaicpIH49IG5pbAplbmQKCmxvY2FsIGZ1bmN0aW9uIGJpbmQoY29uZCwga2V5LCBtb2RzLCBhY3Rpb24pCiAgICBsb2NhbCBmdW5jdGlvbiBjYWxsYmFjayh3aW4sIHBhbmUpCiAgICAgICAgaWYgY29uZChwYW5lKSB0aGVuCiAgICAgICAgICAgIHdpbjpwZXJmb3JtX2FjdGlvbih3ZXp0ZXJtLmFjdGlvbi5TZW5kS2V5KHsga2V5ID0ga2V5LCBtb2RzID0gbW9kcyB9KSwgcGFuZSkKICAgICAgICBlbHNlCiAgICAgICAgICAgIHdpbjpwZXJmb3JtX2FjdGlvbihhY3Rpb24sIHBhbmUpCiAgICAgICAgZW5kCiAgICBlbmQKICAgIHJldHVybiB7IGtleSA9IGtleSwgbW9kcyA9IG1vZHMsIGFjdGlvbiA9IHdlenRlcm0uYWN0aW9uX2NhbGxiYWNrKGNhbGxiYWNrKSB9CmVuZAoKZnVuY3Rpb24gbW9kdWxlLmJpbmRfaWYobmV3X2tleXMsIGNvbmZpZykKICAgIGZvciBfLCBiaW5kaW5nIGluIGlwYWlycyhuZXdfa2V5cykgZG8KICAgICAgICB0YWJsZS5pbnNlcnQoY29uZmlnLmtleXMsIGJpbmQoaXNfaW5zaWRlX3ZpbSwgYmluZGluZy5rZXksIGJpbmRpbmcubW9kcywgYmluZGluZy5hY3Rpb24pKQogICAgZW5kCmVuZAoKcmV0dXJuIG1vZHVsZQo",
+					"AQAAAAAAAAABAAAAmQMAAAAAAACZAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1996,
+					1,
+					"left_delete",
+					null,
+					"CAAAAO4DAAAAAAAA7gMAAAAAAAABAAAAZe0DAAAAAAAA7QMAAAAAAAABAAAAbewDAAAAAAAA7AMAAAAAAAABAAAAYesDAAAAAAAA6wMAAAAAAAABAAAAbuoDAAAAAAAA6gMAAAAAAAABAAAAZekDAAAAAAAA6QMAAAAAAAABAAAAc+gDAAAAAAAA6AMAAAAAAAABAAAAYecDAAAAAAAA5wMAAAAAAAABAAAAYg",
+					"AQAAAAAAAAABAAAA7wMAAAAAAADvAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					1997,
+					1,
+					"insert",
+					{
+						"characters": "child"
+					},
+					"BQAAAOcDAAAAAAAA6AMAAAAAAAAAAAAA6AMAAAAAAADpAwAAAAAAAAAAAADpAwAAAAAAAOoDAAAAAAAAAAAAAOoDAAAAAAAA6wMAAAAAAAAAAAAA6wMAAAAAAADsAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5wMAAAAAAADnAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2008,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAABQEAAAAAAAAFwQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPgQAAAAAAAA+BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2011,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAABQEAAAAAAAAFAQAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAAQQQAAAAAAABBBAAAAAAAAAAAAAAA2IBA"
+				],
+				[
+					2013,
+					1,
+					"left_delete",
+					null,
+					"AQAAAFYEAAAAAAAAVgQAAAAAAAABAAAAKQ",
+					"AQAAAAAAAAABAAAAVwQAAAAAAABXBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2014,
+					1,
+					"insert",
+					{
+						"characters": ")"
+					},
+					"AQAAAFYEAAAAAAAAVwQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVgQAAAAAAABWBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2016,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAFYEAAAAAAAAVwQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVgQAAAAAAABWBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2017,
+					1,
+					"left_delete",
+					null,
+					"CQAAAFYEAAAAAAAAVgQAAAAAAAABAAAALlUEAAAAAAAAVQQAAAAAAAABAAAAblQEAAAAAAAAVAQAAAAAAAABAAAAZVMEAAAAAAAAUwQAAAAAAAABAAAAclIEAAAAAAAAUgQAAAAAAAABAAAAZFEEAAAAAAAAUQQAAAAAAAABAAAAbFAEAAAAAAAAUAQAAAAAAAABAAAAaU8EAAAAAAAATwQAAAAAAAABAAAAaE4EAAAAAAAATgQAAAAAAAABAAAAYw",
+					"AQAAAAAAAAABAAAAVwQAAAAAAABXBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2018,
+					1,
+					"insert",
+					{
+						"characters": "name"
+					},
+					"BAAAAE4EAAAAAAAATwQAAAAAAAAAAAAATwQAAAAAAABQBAAAAAAAAAAAAABQBAAAAAAAAFEEAAAAAAAAAAAAAFEEAAAAAAAAUgQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATgQAAAAAAABOBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2044,
+					1,
+					"",
+					null,
+					"AgAAAE4EAAAAAAAAUgQAAAAAAAAAAAAAUgQAAAAAAABSBAAAAAAAAAQAAABuYW1l",
+					"AQAAAAAAAAABAAAATgQAAAAAAABSBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2056,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAABQEAAAAAAAAFwQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATQQAAAAAAABNBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2058,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAFsEAAAAAAAAXgQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkAQAAAAAAACQBAAAAAAAAAAAAAAAAIZA"
+				],
+				[
+					2068,
+					1,
+					"left_delete",
+					null,
+					"EAAAAAUEAAAAAAAABQQAAAAAAAABAAAAZQQEAAAAAAAABAQAAAAAAAABAAAAbAMEAAAAAAAAAwQAAAAAAAABAAAAYgIEAAAAAAAAAgQAAAAAAAABAAAAYQEEAAAAAAAAAQQAAAAAAAABAAAAdAAEAAAAAAAAAAQAAAAAAAABAAAAdf8DAAAAAAAA/wMAAAAAAAABAAAAY/4DAAAAAAAA/gMAAAAAAAABAAAAZf0DAAAAAAAA/QMAAAAAAAABAAAAePwDAAAAAAAA/AMAAAAAAAABAAAAZfsDAAAAAAAA+wMAAAAAAAABAAAALvoDAAAAAAAA+gMAAAAAAAABAAAAZPkDAAAAAAAA+QMAAAAAAAABAAAAbPgDAAAAAAAA+AMAAAAAAAABAAAAafcDAAAAAAAA9wMAAAAAAAABAAAAaPYDAAAAAAAA9gMAAAAAAAABAAAAYw",
+					"AQAAAAAAAAABAAAABgQAAAAAAAAGBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2069,
+					1,
+					"insert",
+					{
+						"characters": "pid"
+					},
+					"AwAAAPYDAAAAAAAA9wMAAAAAAAAAAAAA9wMAAAAAAAD4AwAAAAAAAAAAAAD4AwAAAAAAAPkDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9gMAAAAAAAD2AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2082,
+					1,
+					"left_delete",
+					null,
+					"AgAAAFMDAAAAAAAAUwMAAAAAAACvAAAAICAgIGxvY2FsIGlmX3NzaCA9IGZhbHNlCiAgICBwcm9jID0gcGFuZTpnZXRfZm9yZWdyb3VuZF9wcm9jZXNzX2luZm8oKQogICAgZm9yIHBpZCwgY2hpbGQgaW4gcGFpcnMocHJvYy5jaGlsZHJlbikgZG8KICAgICAgICB3ZXp0ZXJtLmxvZ19lcnJvcigiVGhlIGNoaWxkIGlzOiAiIC4uIHBpZCkKICAgIGVuZFIDAAAAAAAAUgMAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAAgQAAAAAAABTAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2092,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAFcDAAAAAAAAVwMAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAAdwMAAAAAAAB3AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2094,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAJsDAAAAAAAAmwMAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAAuAMAAAAAAAC4AwAAAAAAAAAAAAAAsHZA"
+				],
+				[
+					2098,
+					1,
+					"",
+					null,
+					"AgAAAG4DAAAAAAAAgAMAAAAAAAAAAAAAgAMAAAAAAACAAwAAAAAAACcAAABwYW5lOmdldF9mb3JlZ3JvdW5kX3Byb2Nlc3NfaW5mbygpLm5hbWU",
+					"AQAAAAAAAAABAAAAbgMAAAAAAACVAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2119,
+					1,
+					"insert",
+					{
+						"characters": "pane:"
+					},
+					"BgAAAG4DAAAAAAAAbwMAAAAAAAAAAAAAbwMAAAAAAABvAwAAAAAAABAAAAB3ZXp0ZXJtLmhvc3RuYW1lbwMAAAAAAABwAwAAAAAAAAAAAABwAwAAAAAAAHEDAAAAAAAAAAAAAHEDAAAAAAAAcgMAAAAAAAAAAAAAcgMAAAAAAABzAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbgMAAAAAAAB+AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2121,
+					1,
+					"",
+					null,
+					"AQAAAHMDAAAAAAAAjgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcwMAAAAAAABzAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2149,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AwAAANADAAAAAAAA0wMAAAAAAAAAAAAAlgMAAAAAAACZAwAAAAAAAAAAAABXAwAAAAAAAFoDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACQQAAAAAAACKAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2152,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAHUEAAAAAAAAeAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApAQAAAAAAACkBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2154,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAD0EAAAAAAAAQAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbAQAAAAAAABsBAAAAAAAAAAAAAAA8INA"
+				],
+				[
+					2160,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"DAAAAEADAAAAAAAAQAMAAAAAAAADAAAALS0gNgMAAAAAAAA2AwAAAAAAAAMAAAAtLSDWAgAAAAAAANYCAAAAAAAAAwAAAC0tII0CAAAAAAAAjQIAAAAAAAADAAAALS0gdgIAAAAAAAB2AgAAAAAAAAMAAAAtLSAzAgAAAAAAADMCAAAAAAAAAwAAAC0tIOEBAAAAAAAA4QEAAAAAAAADAAAALS0giwEAAAAAAACLAQAAAAAAAAMAAAAtLSByAQAAAAAAAHIBAAAAAAAAAwAAAC0tIDEBAAAAAAAAMQEAAAAAAAADAAAALS0gBgEAAAAAAAAGAQAAAAAAAAMAAAAtLSDfAAAAAAAAAN8AAAAAAAAAAwAAAC0tIA",
+					"AQAAAAAAAAABAAAAUQMAAAAAAADbAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2167,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"BAAAANIBAAAAAAAA1QEAAAAAAAAAAAAAfwEAAAAAAACCAQAAAAAAAAAAAABpAQAAAAAAAGwBAAAAAAAAAAAAACsBAAAAAAAALgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGwIAAAAAAAAoAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2175,
+					2,
+					"left_delete",
+					null,
+					"AgAAANsAAAAAAAAA2wAAAAAAAABeAgAAICAgIGxvY2FsIHR0eSA9IHBhbmU6Z2V0X3R0eV9uYW1lKCkKICAgIGlmIHR0eSA9PSBuaWwgdGhlbiByZXR1cm4gZmFsc2UgZW5kCiAgICAtLSBsb2NhbCBzdWNjZXNzLCBzdGRvdXQsIHN0ZGVyciA9IHdlenRlcm0ucnVuX2NoaWxkX3Byb2Nlc3MKICAgIC0tICAgICB7ICdzaCcsICctYycsCiAgICAtLSAgICAgICAgICdwcyAtbyBzdGF0ZT0gLW8gY29tbT0gLXQnIC4uIHdlenRlcm0uc2hlbGxfcXVvdGVfYXJnKHR0eSkgLi4gJyB8ICcgLi4KICAgIC0tICAgICAgICAgJ2dyZXAgLWlxRSBcJ15bXlRYWiBdKyArKFxcUytcXC8pP2c/KHZpZXd8bD9udmltP3g/KShkaWZmKT8kXCcnIH0KCiAgICBsb2NhbCBzdWNjZXNzLCBzdGRvdXQsIHN0ZGVyciA9IHdlenRlcm0ucnVuX2NoaWxkX3Byb2Nlc3MoewogICAgICAgICdzaCcsICctYycsCiAgICAgICAgJ3BzIC1vIHN0YXRlPSAtbyBjb21tPSAtdCcgLi4gd2V6dGVybS5zaGVsbF9xdW90ZV9hcmcodHR5KSAuLgogICAgICAgICcgfCBncmVwIC1pcUUgXCdeW15UWFogXSsgKyhcXFMrLyk/KG52aW18c3NofHRtdXh8emVsbGlqfHZpZXd8bD9uP3ZpbT94PykoZGlmZik/JFwnJwogICAgfSkKICAgIHJldHVybiBzdWNjZXNz2gAAAAAAAADaAAAAAAAAAAEAAAAK",
+					"AQAAAAAAAAABAAAAOQMAAAAAAADbAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2204,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAMYBAAAAAAAAxgEAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAA+AEAAAAAAAD4AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2206,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAP4BAAAAAAAA/gEAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAAKQIAAAAAAAApAgAAAAAAAAAAAAAAiIFA"
+				],
+				[
+					2209,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAACIBAAAAAAAAIgEAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAATgEAAAAAAABOAQAAAAAAAAAAAAAAgIBA"
+				],
+				[
+					2211,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAOAAAAAAAAAA4AAAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAACQEAAAAAAAAJAQAAAAAAAAAAAAAA8H5A"
+				],
+				[
+					2215,
+					2,
+					"left_delete",
+					null,
+					"AgAAAFUBAAAAAAAAVQEAAAAAAABlAAAAICAgIC0tIC0tIGlmIHNzaF9wcm9jZXNzIH49IG5pbCBhbmQgc3NoX3Byb2Nlc3M6ZmluZCgic3NoIikgdGhlbgogICAgLS0gICAgIGlmX3NzaCA9IGZhbHNlCiAgICAtLSBlbmRUAQAAAAAAAFQBAAAAAAAAAQAAAAo",
+					"AQAAAAAAAAABAAAAugEAAAAAAABVAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2218,
+					2,
+					"left_delete",
+					null,
+					"AgAAABsBAAAAAAAAGwEAAAAAAAA5AAAAICAgIHdlenRlcm0ubG9nX2Vycm9yKCJUaGUgYmFzZW5hbWUgaXM6ICIgLi4gc3NoX3Byb2Nlc3MpGgEAAAAAAAAaAQAAAAAAAAEAAAAK",
+					"AQAAAAAAAAABAAAAVAEAAAAAAAAbAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2221,
+					1,
+					"left_delete",
+					null,
+					"AQAAANoAAAAAAAAA2gAAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAA2wAAAAAAAADbAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2224,
+					4,
+					"left_delete",
+					null,
+					"BAAAAOIAAAAAAAAA4gAAAAAAAAABAAAAX+EAAAAAAAAA4QAAAAAAAAABAAAAaOAAAAAAAAAA4AAAAAAAAAABAAAAc98AAAAAAAAA3wAAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAA4wAAAAAAAADjAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2226,
+					1,
+					"insert",
+					{
+						"characters": "_name"
+					},
+					"BQAAAOYAAAAAAAAA5wAAAAAAAAAAAAAA5wAAAAAAAADoAAAAAAAAAAAAAADoAAAAAAAAAOkAAAAAAAAAAAAAAOkAAAAAAAAA6gAAAAAAAAAAAAAA6gAAAAAAAADrAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5gAAAAAAAADmAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2247,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAABsBAAAAAAAAHAEAAAAAAAAAAAAAHAEAAAAAAAAdAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGwEAAAAAAAAbAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2248,
+					1,
+					"reindent",
+					null,
+					"AQAAAB0BAAAAAAAAIQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHQEAAAAAAAAdAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2250,
+					1,
+					"",
+					null,
+					"AQAAACEBAAAAAAAA/gEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIQEAAAAAAAAhAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2253,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AgAAADcCAAAAAAAAOgIAAAAAAAAAAAAAAwIAAAAAAAAGAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiQIAAAAAAAAyAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2262,
+					1,
+					"",
+					null,
+					"AQAAABsBAAAAAAAARwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGwEAAAAAAAAbAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2264,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "local wezterm = require 'wezterm'\n\nlocal module = {}\n\nlocal function basename(s)\n    if s ~= nil then\n        return string.gsub(s, '(.*[/\\\\])(.*)', '%2')\n    end\n    return \"1\"\nend\n\n\nlocal function is_inside_vim(pane)\n    process_name = basename(pane:get_foreground_process_name())\n    if process_name == nil then return false end\n\n    return string.match(process_name:lower(), \"nvim\") or\n        string.match(process_name:lower(), \"ssh\") or\n        string.match(process_name:lower(), \"term\") or\n        string.match(process_name:lower(), \"zellij\")\n    -- return pane:get_title():find(\"n?vim\") ~= nil or\n    --     pane:get_title():find('tmux') ~= nil or pane:get_title():find('Zellij') ~= nil\nend\n\nlocal function bind(cond, key, mods, action)\n    local function callback(win, pane)\n        if cond(pane) then\n            win:perform_action(wezterm.action.SendKey({ key = key, mods = mods }), pane)\n        else\n            win:perform_action(action, pane)\n        end\n    end\n    return { key = key, mods = mods, action = wezterm.action_callback(callback) }\nend\n\nfunction module.bind_if(new_keys, config)\n    for _, binding in ipairs(new_keys) do\n        table.insert(config.keys, bind(is_inside_vim, binding.key, binding.mods, binding.action))\n    end\nend\n\nreturn module\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 42
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 0
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AQAAAAAAAAAAAAAA+gQAAAAAAAD/BAAAbG9jYWwgd2V6dGVybSA9IHJlcXVpcmUgJ3dlenRlcm0nCgpsb2NhbCBtb2R1bGUgPSB7fQoKbG9jYWwgZnVuY3Rpb24gYmFzZW5hbWUocykKICAgIGlmIHMgfj0gbmlsIHRoZW4KICAgICAgICByZXR1cm4gc3RyaW5nLmdzdWIocywgJyguKlsvXFxdKSguKiknLCAnJTInKQogICAgZW5kCiAgICByZXR1cm4gIjEiCmVuZAoKCmxvY2FsIGZ1bmN0aW9uIGlzX2luc2lkZV92aW0ocGFuZSkKICAgIHByb2Nlc3NfbmFtZSA9IGJhc2VuYW1lKHBhbmU6Z2V0X2ZvcmVncm91bmRfcHJvY2Vzc19uYW1lKCkpCmlmIHByb2Nlc3NfbmFtZSA9PSBuaWwgdGhlbiByZXR1cm4gZmFsc2UgZW5kCgogICAgcmV0dXJuIHN0cmluZy5tYXRjaChwcm9jZXNzX25hbWU6bG93ZXIoKSwgIm52aW0iKSBvcgogICAgICAgICAgIHN0cmluZy5tYXRjaChwcm9jZXNzX25hbWU6bG93ZXIoKSwgInNzaCIpIG9yCiAgICAgICAgICAgc3RyaW5nLm1hdGNoKHByb2Nlc3NfbmFtZTpsb3dlcigpLCAidGVybSIpIG9yCiAgICAgICAgICAgc3RyaW5nLm1hdGNoKHByb2Nlc3NfbmFtZTpsb3dlcigpLCAiemVsbGlqIikKICAgIC0tIHJldHVybiBwYW5lOmdldF90aXRsZSgpOmZpbmQoIm4/dmltIikgfj0gbmlsIG9yCiAgICAtLSAgICAgcGFuZTpnZXRfdGl0bGUoKTpmaW5kKCd0bXV4Jykgfj0gbmlsIG9yIHBhbmU6Z2V0X3RpdGxlKCk6ZmluZCgnWmVsbGlqJykgfj0gbmlsCmVuZAoKbG9jYWwgZnVuY3Rpb24gYmluZChjb25kLCBrZXksIG1vZHMsIGFjdGlvbikKICAgIGxvY2FsIGZ1bmN0aW9uIGNhbGxiYWNrKHdpbiwgcGFuZSkKICAgICAgICBpZiBjb25kKHBhbmUpIHRoZW4KICAgICAgICAgICAgd2luOnBlcmZvcm1fYWN0aW9uKHdlenRlcm0uYWN0aW9uLlNlbmRLZXkoeyBrZXkgPSBrZXksIG1vZHMgPSBtb2RzIH0pLCBwYW5lKQogICAgICAgIGVsc2UKICAgICAgICAgICAgd2luOnBlcmZvcm1fYWN0aW9uKGFjdGlvbiwgcGFuZSkKICAgICAgICBlbmQKICAgIGVuZAogICAgcmV0dXJuIHsga2V5ID0ga2V5LCBtb2RzID0gbW9kcywgYWN0aW9uID0gd2V6dGVybS5hY3Rpb25fY2FsbGJhY2soY2FsbGJhY2spIH0KZW5kCgpmdW5jdGlvbiBtb2R1bGUuYmluZF9pZihuZXdfa2V5cywgY29uZmlnKQogICAgZm9yIF8sIGJpbmRpbmcgaW4gaXBhaXJzKG5ld19rZXlzKSBkbwogICAgICAgIHRhYmxlLmluc2VydChjb25maWcua2V5cywgYmluZChpc19pbnNpZGVfdmltLCBiaW5kaW5nLmtleSwgYmluZGluZy5tb2RzLCBiaW5kaW5nLmFjdGlvbikpCiAgICBlbmQKZW5kCgpyZXR1cm4gbW9kdWxlCg",
+					"AQAAAAAAAAABAAAARwEAAAAAAABHAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2271,
+					2,
+					"left_delete",
+					null,
+					"AgAAAKMAAAAAAAAAowAAAAAAAAAOAAAAICAgIHJldHVybiAiMSKiAAAAAAAAAKIAAAAAAAAAAQAAAAo",
+					"AQAAAAAAAAABAAAAsQAAAAAAAACjAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2293,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKcAAAAAAAAApwAAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAqAAAAAAAAACoAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2313,
+					1,
+					"insert",
+					{
+						"characters": " or"
+					},
+					"AwAAABUCAAAAAAAAFgIAAAAAAAAAAAAAFgIAAAAAAAAXAgAAAAAAAAAAAAAXAgAAAAAAABgCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFQIAAAAAAAAVAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2314,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion {\"index\":0,\"session_name\":\"LSP-lua\"}",
+						"format": "command",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "or"
+					},
+					"AgAAABYCAAAAAAAAFgIAAAAAAAACAAAAb3IWAgAAAAAAABgCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGAIAAAAAAAAYAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2315,
+					1,
+					"paste",
+					null,
+					"AQAAABgCAAAAAAAASgIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGAIAAAAAAAAYAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2316,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAB8CAAAAAAAAHwIAAAAAAAADAAAALS0g",
+					"AQAAAAAAAAABAAAASgIAAAAAAABKAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2319,
+					2,
+					"left_delete",
+					null,
+					"AgAAABkCAAAAAAAAGQIAAAAAAAABAAAAchgCAAAAAAAAGAIAAAAAAAABAAAAbw",
+					"AQAAAAAAAAABAAAAGgIAAAAAAAAaAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2341,
+					1,
+					"insert",
+					{
+						"characters": "local"
+					},
+					"BQAAAM8AAAAAAAAA0AAAAAAAAAAAAAAA0AAAAAAAAADRAAAAAAAAAAAAAADRAAAAAAAAANIAAAAAAAAAAAAAANIAAAAAAAAA0wAAAAAAAAAAAAAA0wAAAAAAAADUAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzwAAAAAAAADPAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2342,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAANQAAAAAAAAA1QAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1AAAAAAAAADUAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2363,
+					1,
+					"insert",
+					{
+						"characters": "tmux"
+					},
+					"BQAAAN0BAAAAAAAA3gEAAAAAAAAAAAAA3gEAAAAAAADeAQAAAAAAAAQAAAB0ZXJt3gEAAAAAAADfAQAAAAAAAAAAAADfAQAAAAAAAOABAAAAAAAAAAAAAOABAAAAAAAA4QEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3QEAAAAAAADhAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2371,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAACcCAAAAAAAAKgIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASwIAAAAAAABLAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2375,
+					1,
+					"insert",
+					{
+						"characters": "--"
+					},
+					"AgAAABwCAAAAAAAAHQIAAAAAAAAAAAAAHQIAAAAAAAAeAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHAIAAAAAAAAcAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2376,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAB4CAAAAAAAAHwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHgIAAAAAAAAeAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2387,
+					2,
+					"left_delete",
+					null,
+					"AgAAABwCAAAAAAAAHAIAAAAAAAA1AAAALS0gb3IKICAgICAgICAtLSBwYW5lOmdldF90aXRsZSgpOmZpbmQoJ3RtdXgnKSB+PSBuaWwbAgAAAAAAABsCAAAAAAAAAQAAACA",
+					"AQAAAAAAAAABAAAAUQIAAAAAAAAcAgAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "/home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/config/options.lua",
+			"settings":
+			{
+				"buffer_size": 473,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					5,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"BQAAAFwBAAAAAAAAXQEAAAAAAAAAAAAAXQEAAAAAAABhAQAAAAAAAAAAAABhAQAAAAAAAGIBAAAAAAAAAAAAAGIBAAAAAAAAZgEAAAAAAAAAAAAAXQEAAAAAAABdAQAAAAAAAAQAAAAgICAg",
+					"AQAAAAAAAAABAAAAXAEAAAAAAABcAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					7,
+					1,
+					"",
+					null,
+					"AQAAAGIBAAAAAAAApgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAYgEAAAAAAABiAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					16,
+					1,
+					"insert",
+					{
+						"characters": "config."
+					},
+					"BwAAAGIBAAAAAAAAYwEAAAAAAAAAAAAAYwEAAAAAAABkAQAAAAAAAAAAAABkAQAAAAAAAGUBAAAAAAAAAAAAAGUBAAAAAAAAZgEAAAAAAAAAAAAAZgEAAAAAAABnAQAAAAAAAAAAAABnAQAAAAAAAGgBAAAAAAAAAAAAAGgBAAAAAAAAaQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAYgEAAAAAAABiAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					19,
+					1,
+					"insert",
+					{
+						"characters": "config."
+					},
+					"BwAAAI0BAAAAAAAAjgEAAAAAAAAAAAAAjgEAAAAAAACPAQAAAAAAAAAAAACPAQAAAAAAAJABAAAAAAAAAAAAAJABAAAAAAAAkQEAAAAAAAAAAAAAkQEAAAAAAACSAQAAAAAAAAAAAACSAQAAAAAAAJMBAAAAAAAAAAAAAJMBAAAAAAAAlAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjQEAAAAAAACNAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					22,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKUBAAAAAAAApQEAAAAAAAABAAAALA",
+					"AQAAAAAAAAABAAAApgEAAAAAAACmAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					33,
+					1,
+					"left_delete",
+					null,
+					"AQAAAHsBAAAAAAAAewEAAAAAAAAZAAAALCAgLS0g6K6+572u5YiX5pWw5Li6IDEyMA",
+					"AQAAAAAAAAABAAAAewEAAAAAAACKAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					35,
+					1,
+					"left_delete",
+					null,
+					"AQAAAJgBAAAAAAAAmAEAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAmQEAAAAAAACZAQAAAAAAAAAAAAAA8HNA"
+				],
+				[
+					36,
+					11,
+					"right_delete",
+					null,
+					"CwAAAJgBAAAAAAAAmAEAAAAAAAABAAAALZgBAAAAAAAAmAEAAAAAAAABAAAALZgBAAAAAAAAmAEAAAAAAAABAAAAIJgBAAAAAAAAmAEAAAAAAAADAAAA6K6+mAEAAAAAAACYAQAAAAAAAAMAAADnva6YAQAAAAAAAJgBAAAAAAAAAwAAAOihjJgBAAAAAAAAmAEAAAAAAAADAAAA5pWwmAEAAAAAAACYAQAAAAAAAAMAAADkuLqYAQAAAAAAAJgBAAAAAAAAAQAAACCYAQAAAAAAAJgBAAAAAAAAAQAAADSYAQAAAAAAAJgBAAAAAAAAAQAAADA",
+					"AQAAAAAAAAABAAAAmAEAAAAAAACYAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					37,
+					2,
+					"left_delete",
+					null,
+					"AgAAAJcBAAAAAAAAlwEAAAAAAAABAAAAIJYBAAAAAAAAlgEAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAmAEAAAAAAACYAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					39,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "local wezterm = require 'wezterm'\n\nlocal module = {}\n\nfunction module.apply_to_config(config)\n    config.scrollback_lines = 50000\n\n    local is_windows = wezterm.target_triple:find(\"windows\") ~= nil\n    if is_windows then\n        config.default_prog = { 'pwsh.exe' }\n    else\n        -- config.default_prog = { '/usr/local/bin/fish', '-l' }\n    end\n\n    config.initial_cols = 120\n    config.initial_rows = 40\nend\n\nreturn module\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 19
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 0
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": null
+					},
+					"AQAAAAAAAAAAAAAArAEAAAAAAACqAQAAbG9jYWwgd2V6dGVybSA9IHJlcXVpcmUgJ3dlenRlcm0nCgpsb2NhbCBtb2R1bGUgPSB7fQoKZnVuY3Rpb24gbW9kdWxlLmFwcGx5X3RvX2NvbmZpZyhjb25maWcpCiAgICBjb25maWcuc2Nyb2xsYmFja19saW5lcyA9IDUwMDAwCgogICAgbG9jYWwgaXNfd2luZG93cyA9IHdlenRlcm0udGFyZ2V0X3RyaXBsZTpmaW5kKCJ3aW5kb3dzIikgfj0gbmlsCiAgICBpZiBpc193aW5kb3dzIHRoZW4KICAgICAgICBjb25maWcuZGVmYXVsdF9wcm9nID0geyAncHdzaC5leGUnIH0KICAgIGVsc2UKICAgICAgICAtLSBjb25maWcuZGVmYXVsdF9wcm9nID0geyAnL3Vzci9sb2NhbC9iaW4vZmlzaCcsICctbCcgfQogICAgZW5kCgogICAgY29uZmlnLmluaXRpYWxfY29scyA9IDEyMAogIGNvbmZpZy5pbml0aWFsX3Jvd3MgPSA0MAplbmQKCnJldHVybiBtb2R1bGUK",
+					"AQAAAAAAAAABAAAAlgEAAAAAAACWAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					50,
+					2,
+					"left_delete",
+					null,
+					"AgAAAHkBAAAAAAAAeQEAAAAAAAABAAAAMngBAAAAAAAAeAEAAAAAAAABAAAAMQ",
+					"AQAAAAAAAAABAAAAegEAAAAAAAB6AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					51,
+					1,
+					"insert",
+					{
+						"characters": "8"
+					},
+					"AQAAAHgBAAAAAAAAeQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAeAEAAAAAAAB4AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					53,
+					1,
+					"left_delete",
+					null,
+					"AQAAAJUBAAAAAAAAlQEAAAAAAAABAAAANA",
+					"AQAAAAAAAAABAAAAlgEAAAAAAACWAQAAAAAAAAAAAAAAkHJA"
+				],
+				[
+					54,
+					1,
+					"insert",
+					{
+						"characters": "3"
+					},
+					"AQAAAJUBAAAAAAAAlgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlQEAAAAAAACVAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					64,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAJcBAAAAAAAAmAEAAAAAAAAAAAAAmAEAAAAAAACcAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlwEAAAAAAACXAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					65,
+					1,
+					"insert",
+					{
+						"characters": "config."
+					},
+					"BwAAAJwBAAAAAAAAnQEAAAAAAAAAAAAAnQEAAAAAAACeAQAAAAAAAAAAAACeAQAAAAAAAJ8BAAAAAAAAAAAAAJ8BAAAAAAAAoAEAAAAAAAAAAAAAoAEAAAAAAAChAQAAAAAAAAAAAAChAQAAAAAAAKIBAAAAAAAAAAAAAKIBAAAAAAAAowEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnAEAAAAAAACcAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					67,
+					1,
+					"",
+					null,
+					"AQAAAKMBAAAAAAAAzQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAowEAAAAAAACjAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					89,
+					1,
+					"",
+					null,
+					"AgAAALQBAAAAAAAAxAEAAAAAAAAAAAAAxAEAAAAAAADEAQAAAAAAABgAAABDb25maXJtSWZNdWx0aXBsZVdpbmRvd3M",
+					"AQAAAAAAAAABAAAAtAEAAAAAAADMAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					102,
+					1,
+					"left_delete",
+					null,
+					"AQAAAHgBAAAAAAAAeAEAAAAAAAABAAAAOA",
+					"AQAAAAAAAAABAAAAeQEAAAAAAAB5AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					103,
+					1,
+					"insert",
+					{
+						"characters": "10"
+					},
+					"AgAAAHgBAAAAAAAAeQEAAAAAAAAAAAAAeQEAAAAAAAB6AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAeAEAAAAAAAB4AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					104,
+					2,
+					"left_delete",
+					null,
+					"AgAAAHkBAAAAAAAAeQEAAAAAAAABAAAAMHgBAAAAAAAAeAEAAAAAAAABAAAAMQ",
+					"AQAAAAAAAAABAAAAegEAAAAAAAB6AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					105,
+					1,
+					"insert",
+					{
+						"characters": "9"
+					},
+					"AQAAAHgBAAAAAAAAeQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAeAEAAAAAAAB4AQAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "/home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/wezterm.lua",
+			"redo_stack":
+			[
+				[
+					54,
+					1,
+					"left_delete",
+					null,
+					"AwAAAIICAAAAAAAAgwIAAAAAAAAAAAAAgwIAAAAAAACEAgAAAAAAAAAAAACEAgAAAAAAAEwDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAggIAAAAAAACCAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					26,
+					1,
+					"insert",
+					{
+						"characters": "Desktop"
+					},
+					"BwAAAMECAAAAAAAAwQIAAAAAAAABAAAAcMACAAAAAAAAwAIAAAAAAAABAAAAb78CAAAAAAAAvwIAAAAAAAABAAAAdL4CAAAAAAAAvgIAAAAAAAABAAAAa70CAAAAAAAAvQIAAAAAAAABAAAAc7wCAAAAAAAAvAIAAAAAAAABAAAAZbsCAAAAAAAAuwIAAAAAAAABAAAARA",
+					"AQAAAAAAAAABAAAAwgIAAAAAAADCAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					25,
+					1,
+					"insert",
+					{
+						"characters": "~/"
+					},
+					"AwAAALoCAAAAAAAAugIAAAAAAAABAAAAL7oCAAAAAAAAxwIAAAAAAAAAAAAAuQIAAAAAAAC5AgAAAAAAAAEAAAB+",
+					"AQAAAAAAAAABAAAAuwIAAAAAAAC7AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					21,
+					1,
+					"",
+					null,
+					"AQAAAIQCAAAAAAAAhAIAAAAAAADiAAAAd2V6dGVybS5zZXRfbG9nZ2VyKGZ1bmN0aW9uKG1zZykKICBsb2NhbCBsb2dfZmlsZSA9ICIvcGF0aC90by95b3VyL2xvZ2ZpbGUubG9nIgogIGxvY2FsIGZpbGUgPSBpby5vcGVuKGxvZ19maWxlLCAiYSIpICAtLSDku6Xov73liqDmqKHlvI/miZPlvIDml6Xlv5fmlofku7YKICBpZiBmaWxlIHRoZW4KICAgIGZpbGU6d3JpdGUobXNnIC4uICJcbiIpCiAgICBmaWxlOmNsb3NlKCkKICBlbmQKZW5kKQ",
+					"AQAAAAAAAAABAAAAUAMAAAAAAABQAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					18,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAAIQCAAAAAAAAhAIAAAAAAAABAAAACoMCAAAAAAAAgwIAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAhQIAAAAAAACFAgAAAAAAAAAAAAAAAPC/"
+				]
+			],
+			"settings":
+			{
+				"buffer_size": 658,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					10,
+					1,
+					"left_delete",
+					null,
+					"AgAAAIQCAAAAAAAAhAIAAAAAAACdAAAAbG9jYWwgc3RhdHVzID0gcmVxdWlyZSgiY29uZmlnL2tleWJpbmQvZGlzYWJsZUNvbmRpdGlvbiIpCndlenRlcm0ub24oJ3VwZGF0ZS1yaWdodC1zdGF0dXMnLCBmdW5jdGlvbih3aW5kb3csIHBhbmUpCiAgICBzdGF0dXMudXBkYXRlX3RpdGxlKHdpbmRvdywgcGFuZSkKZW5kKYMCAAAAAAAAgwIAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAIQMAAAAAAACEAgAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "/home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/config/keybind/disableCommon.lua",
+			"settings":
+			{
+				"buffer_size": 840,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"cha",
+				"Copilot: Chat"
+			],
+			[
+				"cop",
+				"Copilot: Chat"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"linter",
+				"SublimeLinter: Open diagnostics panel"
+			],
+			[
+				"lint",
+				"SublimeLinter: Open diagnostics panel"
+			],
+			[
+				"limt",
+				"SublimeLinter: Toggle Highlights"
+			],
+			[
+				"diag",
+				"LSP: Goto Diagnostic"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/tioeare/projects/ubuntu_settings",
+		"/home/tioeare/projects/ubuntu_settings/dotFiles",
+		"/home/tioeare/projects/ubuntu_settings/dotFiles/.config",
+		"/home/tioeare/projects/ubuntu_settings/dotFiles/.config/kitty",
+		"/home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm",
+		"/home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/config",
+		"/home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/config/keybind"
+	],
+	"file_history":
+	[
+		"/home/tioeare/projects/ubuntu_settings/dotFiles/.config/kitty/kitty.conf",
+		"/home/tioeare/.lesshst",
+		"/home/tioeare/.var/app/org.wezfurlong.wezterm/data/wezterm/recent-commands.json",
+		"/home/tioeare/.var/app/org.wezfurlong.wezterm/config/user-dirs.dirs",
+		"/home/tioeare/projects/ubuntu_settings/dotFiles/.tmux.conf",
+		"/home/tioeare/games/run.sh",
+		"/home/tioeare/games/Dockerfile",
+		"/home/tioeare/tools/howdy/meson_options.txt",
+		"/home/tioeare/.config/nvim/lua/plugins/cmp.lua",
+		"/home/tioeare/.config/nvim/lua/config/keymaps.lua",
+		"/home/tioeare/.config/nvim/init.lua",
+		"/home/tioeare/.config/nvim/lua/plugin_config/cmp.lua",
+		"/home/tioeare/.config/sublime-text/Packages/User/BracketGuard.sublime-settings",
+		"/home/tioeare/.config/sublime-text/Packages/User/Default (Linux).sublime-keymap",
+		"/home/tioeare/.config/sublime-text/Packages/BracketGuard/BracketGuard.sublime-settings",
+		"/home/tioeare/.config/sublime-text/Packages/User/Base File.sublime-settings",
+		"/home/tioeare/.config/sublime-text/Packages/DocBlockr/Base File.sublime-settings",
+		"/home/tioeare/.config/sublime-text/Packages/DocBlockr/README.md",
+		"/home/tioeare/.config/nvim/lua/which_keymaps/keymaps_old.lua",
+		"/home/tioeare/.config/sublime-text/Packages/User/Side Bar.sublime-settings",
+		"/home/tioeare/.config/sublime-text/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/home/tioeare/tools/makelog_tioeare",
+		"/home/tioeare/.config/nvim/lua/plugin_config/utils.lua",
+		"/home/tioeare/.config/nvim/lua/plugins/utils.lua",
+		"/home/tioeare/.config/nvim/lua/which_keymaps/keymaps.lua",
+		"/home/tioeare/.ssh/config.d/frpc.config",
+		"/home/tioeare/.ssh/config.d/ustc.config",
+		"/home/tioeare/Desktop/envycontrol.txt",
+		"/home/tioeare/Downloads/chronos-4.1/est/README",
+		"/home/tioeare/Downloads/chronos-4.1/est/solve_time.sh",
+		"/home/tioeare/Downloads/chronos-4.1/est/solve.sh",
+		"/home/tioeare/Downloads/chronos-4.1/est/est.sh",
+		"/home/tioeare/Downloads/chronos-4.2/est/README",
+		"/home/tioeare/Downloads/chronos-4.2/est/solve_time.sh",
+		"/home/tioeare/Downloads/chronos-4.2/est/scripts/runSim.sh",
+		"/home/tioeare/Desktop/exo5_base.xmlv3",
+		"/home/tioeare/tools/Cheddar/cheddar.zsh",
+		"/home/tioeare/Desktop/1",
+		"/home/tioeare/tools/Cheddar/cheddar.bash",
+		"/home/tioeare/.var/app/dev.zed.Zed/data/zed/extensions/index.json",
+		"/home/tioeare/.local/share/applications/tencent.qq.desktop",
+		"/home/tioeare/Downloads/index.json",
+		"/home/tioeare/.local/share/applications/mozilla.thunderbird.desktop",
+		"/home/tioeare/.local/share/applications/Thunderbird.desktop.back",
+		"/home/tioeare/.local/share/applications/kitty-open.desktop",
+		"/home/tioeare/.local/share/applications/userapp-Thunderbird-GKEVX2.desktop",
+		"/home/tioeare/.local/share/zed/extensions/index.json",
+		"/home/tioeare/.ssh/authorized_keys",
+		"/home/tioeare/.ssh/self.pub",
+		"/home/tioeare/.local/share/applications/mozilla.thunderbrid.desktop",
+		"/home/tioeare/tools/frp/frpc.toml",
+		"/home/tioeare/tools/frp/frpc.service",
+		"/home/tioeare/Documents/v2ray/v2ray_220710_131023.txt",
+		"/home/tioeare/Documents/v2ray/.zshrc",
+		"/home/tioeare/Downloads/lib/modprobe.d/blacklist_linux_6.8.0-49-generic.conf",
+		"/home/tioeare/Downloads/lib/modprobe.d/blacklist-nvidia.conf",
+		"/home/tioeare/Downloads/lib/modprobe.d/systemd.conf",
+		"/home/tioeare/Downloads/lib/modprobe.d/nvidia-kms.conf",
+		"/home/tioeare/Downloads/lib/modprobe.d/nvidia-graphics-drivers.conf",
+		"/home/tioeare/Downloads/lib/modprobe.d/fbdev-blacklist.conf",
+		"/home/tioeare/games/log.log",
+		"/home/tioeare/Templates/git/.gitignore",
+		"/home/tioeare/Desktop/txt.txt",
+		"/media/tioeare/26e2dd10-a31e-4b49-b6b2-b4ee4b1560f2/bin/amdgpu-setup",
+		"/media/tioeare/26e2dd10-a31e-4b49-b6b2-b4ee4b1560f2/bin/amdgpu-install",
+		"/home/tioeare/.picgo/config.json",
+		"/home/tioeare/.local/share/applications/Alacritty.desktop",
+		"/usr/share/applications/Alacritty.desktop",
+		"/home/tioeare/.local/share/applications/tencent.qqmusic.desktop",
+		"/home/tioeare/tools/qqmusic.AppImage",
+		"/home/tioeare/.local/share/applications/jetbrains-gateway.desktop",
+		"/home/tioeare/.local/share/applications/tencent.wechat.desktop",
+		"/media/tioeare/26e2dd10-a31e-4b49-b6b2-b4ee4b1560f2/home/tioeare/.config/zed/keymap.json",
+		"/home/tioeare/tools/frp/frps.toml",
+		"/home/tioeare/.local/share/applications/zotero.desktop",
+		"/home/tioeare/.local/share/applications/picgo.desktop",
+		"/home/tioeare/.config/picgo/data.json",
+		"/home/tioeare/.picgo/package.json",
+		"/home/tioeare/.local/share/applications/jetbrains-clion.desktop",
+		"/home/tioeare/.local/share/applications/jetbrains-pycharm.desktop",
+		"/home/tioeare/.local/share/applications/dev.zed.Zed.desktop",
+		"/home/tioeare/.local/share/applications/obsidian.desktop",
+		"/home/tioeare/.local/share/applications/marktext.desktop"
+	],
+	"find":
+	{
+		"height": 54.0
+	},
+	"find_in_files":
+	{
+		"height": 140.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/config/keybinding.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1707,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1353,
+								1353
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".>:",
+									"selector": "source.c++ - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>:",
+									"selector": "source.c - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.objc++ - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.objc - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.cuda-c++ - string - comment - constant.numeric"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1688,
+										1691
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/dot.png",
+										"region.yellowish brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										333,
+										341
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"copilot.completion._is_modified": false,
+							"copilot.completion._is_saving": false,
+							"copilot.completion.is_visible": false,
+							"copilot.completion.is_visible_panel_completions": false,
+							"copilot.completion.is_waiting_completion": false,
+							"copilot.completion.is_waiting_panel_completions": false,
+							"copilot.completion.original_layout": null,
+							"incomplete_sync": null,
+							"lsp_active": true,
+							"lsp_uri": "file:///home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/config/keybinding.lua",
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"show_definitions": false,
+							"synced": false,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/config/keybind/disableCondition.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1264,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								950,
+								950
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".>:",
+									"selector": "source.c++ - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>:",
+									"selector": "source.c - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.objc++ - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.objc - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.cuda-c++ - string - comment - constant.numeric"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										956,
+										959
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/dot.png",
+										"region.yellowish brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										782,
+										784
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"copilot.completion._is_modified": false,
+							"copilot.completion._is_saving": false,
+							"copilot.completion.completion_index": 0,
+							"copilot.completion.completion_style": "popup",
+							"copilot.completion.completions":
+							[
+								{
+									"displayText": " or",
+									"docVersion": 1017,
+									"point": 539,
+									"position":
+									{
+										"character": 52,
+										"line": 17
+									},
+									"range":
+									{
+										"end":
+										{
+											"character": 52,
+											"line": 17
+										},
+										"start":
+										{
+											"character": 0,
+											"line": 17
+										}
+									},
+									"region":
+									[
+										487,
+										539
+									],
+									"text": "        string.match(process_name:lower(), \"zellij\") or",
+									"uuid": "0318f2a3-7840-4d63-be45-dfc75b5e9d69"
+								}
+							],
+							"copilot.completion.is_visible": false,
+							"copilot.completion.is_visible_panel_completions": false,
+							"copilot.completion.is_waiting_completion": false,
+							"copilot.completion.is_waiting_panel_completions": false,
+							"copilot.completion.original_layout": null,
+							"incomplete_sync": null,
+							"lsp_active": true,
+							"lsp_uri": "file:///home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/config/keybind/disableCondition.lua",
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"show_definitions": false,
+							"synced": false,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/config/options.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 473,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								473,
+								473
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".>:",
+									"selector": "source.c++ - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>:",
+									"selector": "source.c - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.objc++ - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.objc - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.cuda-c++ - string - comment - constant.numeric"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"copilot.completion._is_modified": false,
+							"copilot.completion._is_saving": false,
+							"copilot.completion.completion_index": 0,
+							"copilot.completion.completion_style": "popup",
+							"copilot.completion.completions":
+							[
+								{
+									"displayText": "\"",
+									"docVersion": 58,
+									"point": 452,
+									"position":
+									{
+										"character": 44,
+										"line": 16
+									},
+									"range":
+									{
+										"end":
+										{
+											"character": 45,
+											"line": 16
+										},
+										"start":
+										{
+											"character": 0,
+											"line": 16
+										}
+									},
+									"region":
+									[
+										408,
+										453
+									],
+									"text": "    config.exit_behavior = \"CloseOnCleanExit\"",
+									"uuid": "1c4d90dd-29bc-4d7c-b4b9-c5468d207853"
+								}
+							],
+							"copilot.completion.is_visible": false,
+							"copilot.completion.is_waiting_completion": false,
+							"incomplete_sync": null,
+							"lsp_active": true,
+							"lsp_uri": "file:///home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/config/options.lua",
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"show_definitions": false,
+							"synced": false,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/wezterm.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								643,
+								643
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".>:",
+									"selector": "source.c++ - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>:",
+									"selector": "source.c - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.objc++ - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.objc - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.cuda-c++ - string - comment - constant.numeric"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"copilot.completion._is_modified": true,
+							"copilot.completion._is_saving": false,
+							"copilot.completion.is_visible": false,
+							"copilot.completion.is_waiting_completion": false,
+							"incomplete_sync": null,
+							"lsp_active": true,
+							"lsp_uri": "file:///home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/wezterm.lua",
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"show_definitions": false,
+							"synced": false,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/config/keybind/disableCommon.lua",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 840,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								324,
+								324
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".>:",
+									"selector": "source.c++ - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>:",
+									"selector": "source.c - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.objc++ - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.objc - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".>: ",
+									"selector": "source.cuda-c++ - string - comment - constant.numeric"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										445,
+										446
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										323,
+										324
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"copilot.completion._is_modified": false,
+							"copilot.completion.is_visible": false,
+							"copilot.completion.is_visible_panel_completions": false,
+							"copilot.completion.is_waiting_completion": false,
+							"copilot.completion.is_waiting_panel_completions": false,
+							"copilot.completion.original_layout": null,
+							"incomplete_sync": null,
+							"lsp_active": true,
+							"lsp_uri": "file:///home/tioeare/projects/ubuntu_settings/dotFiles/.config/wezterm/config/keybind/disableCommon.lua",
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"show_definitions": false,
+							"synced": false,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 420.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 182.0
+	},
+	"output.SFTP":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter":
+	{
+		"height": 182.0
+	},
+	"output.diagnostics":
+	{
+		"height": 286.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups-dummy":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ubuntu_settings.sublime-project",
+	"replace":
+	{
+		"height": 76.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"copilot.conversation.code_block_index":
+		{
+		},
+		"copilot.conversation.conversation_entries":
+		[
+		],
+		"copilot.conversation.conversation_id": "ed61735d-3254-4b6b-8e0e-dcc3880477bf",
+		"copilot.conversation.follow_up": "",
+		"copilot.conversation.is_visible": false,
+		"copilot.conversation.is_waiting_conversation": false,
+		"copilot.conversation.last_active_view_id": 49,
+		"copilot.conversation.original_layout": null,
+		"copilot.conversation.reference_block_state":
+		{
+		},
+		"copilot.conversation.suggested_title": "",
+		"copilot.conversation.view_group_id": 1,
+		"copilot.conversation.view_id": 162,
+		"copilot.copilotignore.patterns":
+		{
+		}
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 352.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

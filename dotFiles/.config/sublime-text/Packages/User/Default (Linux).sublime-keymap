@@ -6,9 +6,31 @@
     //     "single_line": false
     //     }
     // },
-   {
-        "keys": ["ctrl+alt+l"],
+    {
+        "keys": [
+            "ctrl+alt+l"
+        ],
         "command": "lsp_format_document",
-        "context": [{"key": "lsp.session_with_capability", "operand": "documentFormattingProvider | documentRangeFormattingProvider"}]
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operand": "documentFormattingProvider | documentRangeFormattingProvider"
+            }
+        ]
+    },
+    {
+        "keys": [
+            "ctrl+alt+a"
+        ],
+        "command": "project_manager",
+        "args": {
+            "action": "Add New Project"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+alt+s"
+        ],
+        "command": "project_manager"
     },
 ]
