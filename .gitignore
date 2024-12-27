@@ -14,7 +14,7 @@
 
 **/brew/bin/**
 
-# dotFiles/.config/sublime-text/Packages/User/Projects/**
+dotFiles/.config/sublime-text/Packages/User/Projects/**
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
