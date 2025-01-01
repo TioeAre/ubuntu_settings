@@ -65,12 +65,17 @@ function module.apply_to_config(config)
         {
             key = "F2",
             mods = "CTRL",
-            action = wezterm.action.EmitEvent'decrease-transparency',
+            action = wezterm.action.EmitEvent 'decrease-transparency',
         },
         {
             key = "F3",
             mods = "CTRL",
-            action = wezterm.action.EmitEvent'increase-transparency',
+            action = wezterm.action.EmitEvent 'increase-transparency',
+        },
+        {
+            key = 'd',
+            mods = 'CTRL',
+            action = wezterm.action.CloseCurrentPane { confirm = true },
         },
     }
 
