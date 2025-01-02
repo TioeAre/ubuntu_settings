@@ -75,8 +75,8 @@ function module.apply_to_config(config)
             action = wezterm.action.ActivateTabRelative(1),
         },
     }
-
-    condition.bind_if(new_keys, config)
+    local apps = nil -- {"nvim", "ssh", "tmux", "zellij"}
+    condition.bind_if(new_keys, config, apps)
 
     -- for _, key_binding in ipairs(new_keys) do
     --     table.insert(config.keys, key_binding)
