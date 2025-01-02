@@ -72,11 +72,6 @@ function module.apply_to_config(config)
             mods = "CTRL",
             action = wezterm.action.EmitEvent 'increase-transparency',
         },
-        {
-            key = 'd',
-            mods = 'CTRL',
-            action = wezterm.action.CloseCurrentPane { confirm = true },
-        },
     }
 
     for _, key_binding in ipairs(new_keys) do

@@ -21,7 +21,7 @@ local function is_inside_vim(pane)
 end
 
 local function is_inside(pane, apps)
-    apps = apps or {"ssh", "tmux", "zellij"}
+    apps = apps or { "ssh", "tmux", "zellij" }
     local process_name = basename(pane:get_foreground_process_name())
     if process_name == nil then return false end
 
