@@ -62,6 +62,7 @@
 /*"LSP-pyright",*/
 /*"LSP-copilot",*/
 /*"LaTeXTools",*/
+/*"LSP-clangd",*/
     ],
     "theme": "auto",
     "color_scheme": "Catppuccin Frappe.sublime-color-scheme",

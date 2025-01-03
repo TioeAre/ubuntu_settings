@@ -15,6 +15,8 @@ function module.apply_to_config(config)
     config.initial_cols = 90
     config.initial_rows = 30
     config.exit_behavior = "CloseOnCleanExit"
+
+    config.disable_default_key_bindings = true
 end
 
 return module
