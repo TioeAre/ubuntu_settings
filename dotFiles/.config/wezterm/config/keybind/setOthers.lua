@@ -72,6 +72,16 @@ function module.apply_to_config(config)
             mods = "CTRL",
             action = wezterm.action.EmitEvent 'increase-transparency',
         },
+        {
+            key = "c",
+            mods = "CTRL|SHIFT",
+            action = wezterm.action.CopyTo "PrimarySelection"
+        },
+        {
+            key = "v",
+            mods = "CTRL|SHIFT",
+            action = wezterm.action.PasteFrom "PrimarySelection"
+        },
     }
 
     for _, key_binding in ipairs(new_keys) do
