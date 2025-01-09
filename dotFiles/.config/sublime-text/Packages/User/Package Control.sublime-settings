@@ -58,5 +58,6 @@
 	],
 	"in_process_packages":
 	[
+		"LSP-bash",
 	],
 }

@@ -63,6 +63,7 @@
 /*"LSP-copilot",*/
 /*"LaTeXTools",*/
 /*"LSP-clangd",*/
+        "LSP-bash",
     ],
     "theme": "auto",
     "color_scheme": "Catppuccin Frappe.sublime-color-scheme",
