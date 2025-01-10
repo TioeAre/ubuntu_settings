@@ -12,7 +12,7 @@ export HOMEBREW_NO_INSTALL_CLEANUP=1
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('$HOME/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/anaconda3/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
@@ -28,4 +28,4 @@ unset __conda_setup
 # cuda and cudnn
 export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-export CUDSS_DIR=/usr/local/cuda/lib64  # Adjust the path as necessary
+export CUDSS_DIR=/usr/local/cuda/lib64 # Adjust the path as necessary
