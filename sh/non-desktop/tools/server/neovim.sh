@@ -12,7 +12,6 @@
 # brew install rg hg
 # pip3 install neovim pynvim
 
-
 cd ~/tools || exit
 file=~/.pam_environment
 if [ ! -e "$file" ]; then
@@ -34,6 +33,8 @@ fi
 # rm nvim.appimage
 
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+# getconf GNU_LIBC_VERSION # for glibc 2.17
+# curl -LO https://github.com/neovim/neovim-releases/releases/latest/download/nvim-linux64.tar.gz
 tar -xzvf nvim-linux64.tar.gz
 ln -s ~/tools/nvim-linux64/bin/nvim ~/.local/bin/
 rm nvim-linux64.tar.gz
