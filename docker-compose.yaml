@@ -1,0 +1,13 @@
+version: '3.2'
+
+services:
+  nvChad:
+    image: nvchad:v20241223
+    network_mode: bridge
+    container_name: nvchad
+    volumes:
+      - /root/Workspace:/root/Workspace
+    command: nvim +NvimTreeToggle
+    working_dir: /root/Workspace
+    tty: true
+    stdin_open: true
