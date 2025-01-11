@@ -1,0 +1,43 @@
+FROM amd64/alpine:3.21.2 AS nvim
+
+# tzdata ninja-build gettext libtool libtool-bin autoconf automake pkg-config gawk scdoc apt-transport-https ca-certificates bear bat dconf-editor texlive-latex-extra  doxygen clang python3-pynvim
+WORKDIR /root
+RUN sed -i 's#https\?://dl-cdn.alpinelinux.org/alpine#https://mirrors.tuna.tsinghua.edu.cn/alpine#g' /etc/apk/repositories \
+    && apk apk update \
+    && apk add --no-cache bash curl wget fzf ripgrep tree git xclip python3 py3-pip nodejs npm make cmake g++ gcc zip unzip py3-virtualenv neovim luarocks fd cargo tree-sitter-cli lazygit deno vale \
+    && rm -rf /var/cache/apk/* \
+    && npm i json5 \
+    && npm cache clean --force \
+    && addgroup nvim && adduser -D -G nvim nvim
+# && pip install beautysh json-lsp pyright \
+
+USER nvim
+ENV TMPDIR=/home/nvim/tmp
+COPY --chown=nvim:nvim dotFiles/vale \
+    dotFiles/vale.ini \
+    dotFiles/.clangd \
+    dotFiles/.clang-format \
+    dotFiles/.clang-tidy \
+    dotFiles/.cmake-format.yaml \
+    dotFiles/.cpplint \
+    dotFiles/.flake8 \
+    /home/nvim/
+
+RUN mkdir /home/nvim/tmp && \
+    git clone https://github.com/TioeAre/nvim.git ~/.config/nvim && \
+    nvim --headless +PlugInstall +qall
+
+WORKDIR /home/nvim
+
+ENTRYPOINT ["nvim"]
+
+# docker build --build-arg "HTTP_PROXY=http://127.0.0.1:7890/" --build-arg "HTTPS_PROXY=http://127.0.0.1:7890/"
+
+# docker run -it \
+#   --name nvim_alpine \
+#   --network bridge \
+#   -e "TERM=xterm-256color" \
+#   -v /home/tioeare/projects/ustc/challenge/MagicDrive:/home/nvim/projects \
+#   -w /home/nvim \
+#   --entrypoint nvim \
+# nvim:v20250111_alpine

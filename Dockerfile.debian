@@ -1,0 +1,78 @@
+FROM rust:bookworm AS rust
+
+RUN cargo install --locked tree-sitter-cli
+
+FROM amd64/debian:stable-20241223-slim AS nvim
+
+WORKDIR /root
+
+COPY --from=rust /usr/local/cargo/bin/tree-sitter /usr/local/cargo/bin/tree-sitter
+
+# tzdata ninja-build gettext libtool libtool-bin autoconf automake pkg-config gawk scdoc apt-transport-https ca-certificates bear bat dconf-editor texlive-latex-extra  doxygen clang python3-pynvim
+RUN apt-get update && apt-get -y install --no-install-recommends curl wget fzf ripgrep tree git xclip python3 python3-pip nodejs npm make cmake g++ gcc zip unzip python3-venv build-essential luarocks fd-find clang-tidy cmake-format node-json5 && \
+    rm -rf /var/lib/apt/lists/*
+
+ENV RUSTUP_HOME=/usr/local/rustup \
+    CARGO_HOME=/usr/local/cargo \
+    PATH=/usr/local/cargo/bin:$PATH \
+    RUST_VERSION=1.84.0 \
+    TMPDIR=/home/nvim/tmp
+
+RUN set -eux; \
+    dpkgArch="$(dpkg --print-architecture)"; \
+    case "${dpkgArch##*-}" in \
+    amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='6aeece6993e902708983b209d04c0d1dbb14ebb405ddb87def578d41f920f56d' ;; \
+    armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='3c4114923305f1cd3b96ce3454e9e549ad4aa7c07c03aec73d1a785e98388bed' ;; \
+    arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='1cffbf51e63e634c746f741de50649bbbcbd9dbe1de363c9ecef64e278dba2b2' ;; \
+    i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='0a6bed6e9f21192a51f83977716466895706059afb880500ff1d0e751ada5237' ;; \
+    ppc64el) rustArch='powerpc64le-unknown-linux-gnu'; rustupSha256='079430f58ad4da1d1f4f5f2f0bd321422373213246a93b3ddb53dad627f5aa38' ;; \
+    s390x) rustArch='s390x-unknown-linux-gnu'; rustupSha256='e7f89da453c8ce5771c28279d1a01d5e83541d420695c74ec81a7ec5d287c51c' ;; \
+    *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;; \
+    esac; \
+    url="https://static.rust-lang.org/rustup/archive/1.27.1/${rustArch}/rustup-init"; \
+    wget "$url"; \
+    echo "${rustupSha256} *rustup-init" | sha256sum -c -; \
+    chmod +x rustup-init; \
+    ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch}; \
+    rm rustup-init; \
+    chmod -R a+w $RUSTUP_HOME $CARGO_HOME; \
+    rustup --version; \
+    cargo --version; \
+    rustc --version;
+RUN wget -O /opt/nvim-linux64.tar.gz https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz && tar -xzvf /opt/nvim-linux64.tar.gz -C /opt && ln -s /opt/nvim-linux64/bin/nvim /usr/bin/ && rm /opt/nvim-linux64.tar.gz && \
+    LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*') && \
+    wget -P /tmp https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz && tar -xvzf /tmp/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz -C /tmp && mv /tmp/lazygit /usr/bin/ && \
+    rm -rf /tmp && \
+    groupadd nvim && useradd -m -g nvim nvim
+
+# RUN addgroup --system nvim && adduser --system --group nvim && \
+#     nvim --headless +PlugInstall +qall
+USER nvim
+COPY --chown=nvim:nvim dotFiles/vale \
+    dotFiles/vale.ini \
+    dotFiles/.clangd \
+    dotFiles/.clang-format \
+    dotFiles/.clang-tidy \
+    dotFiles/.cmake-format.yaml \
+    dotFiles/.cpplint \
+    dotFiles/.flake8 \
+    /home/nvim/
+
+RUN mkdir /home/nvim/tmp && \
+    git clone https://github.com/TioeAre/nvim.git ~/.config/nvim && \
+    nvim --headless +PlugInstall +qall
+
+WORKDIR /home/nvim
+
+ENTRYPOINT ["nvim"]
+
+# docker build --build-arg "HTTP_PROXY=http://127.0.0.1:7890/" --build-arg "HTTPS_PROXY=http://127.0.0.1:7890/"
+
+# docker run -it \
+#   --name nvim_debian \
+#   --network bridge \
+#   -e "TERM=xterm-256color" \
+#   -v /home/tioeare/projects/ustc/challenge/MagicDrive:/home/nvim/projects \
+#   -w /home/nvim \
+#   --entrypoint nvim \
+# nvim:v20250111_debian
