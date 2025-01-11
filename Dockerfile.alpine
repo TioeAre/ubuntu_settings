@@ -33,9 +33,13 @@ ENTRYPOINT ["nvim"]
 
 # docker build --build-arg "HTTP_PROXY=http://127.0.0.1:7890/" --build-arg "HTTPS_PROXY=http://127.0.0.1:7890/"
 
+# docker load -i
+# docker load <
+
 # docker run -it \
 #   --name nvim_alpine \
 #   --network bridge \
+#   --user nvim
 #   -e "TERM=xterm-256color" \
 #   -v /home/tioeare/projects/ustc/challenge/MagicDrive:/home/nvim/projects \
 #   -w /home/nvim \
