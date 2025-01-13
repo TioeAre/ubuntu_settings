@@ -11,4 +11,3 @@ rm lazygit lazygit.tar.gz
 
 git config --global user.name "TioeAre"
 git config --global user.email "are10032@outlook.com"
-
