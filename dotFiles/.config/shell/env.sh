@@ -19,6 +19,7 @@ export NVM_DIR="$HOME/.nvm"
 
 ### autoenv plugin
 [[ ! -f $HOME/.nvm/versions/node/v20.18.0/lib/node_modules/@hyperupcall/autoenv/activate.sh ]] || source "$HOME/.nvm/versions/node/v20.18.0/lib/node_modules/@hyperupcall/autoenv/activate.sh"
+[[ ! -f $HOME/.nvm/versions/node/v22.13.0/lib/node_modules/@hyperupcall/autoenv/activate.sh ]] || source "$HOME/.nvm/versions/node/v22.13.0/lib/node_modules/@hyperupcall/autoenv/activate.sh"
 
 ### brew zellij
 # [[ ! -f /home/linuxbrew/.linuxbrew/share/bash/site-functions ]] || source /home/linuxbrew/.linuxbrew/share/bash/site-functions

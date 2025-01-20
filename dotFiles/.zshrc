@@ -1,4 +1,4 @@
-zmodload zsh/zprof  # zprof
+zmodload zsh/zprof # zprof
 # source $HOME/.config/shell/ohmyzsh.zsh
 
 source $HOME/.config/shell/PATH.zsh
