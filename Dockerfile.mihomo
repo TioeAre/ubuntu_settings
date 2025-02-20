@@ -1,0 +1,22 @@
+FROM docker.1panel.live/metacubex/mihomo:v1.19.2
+
+RUN apk add --no-cache curl
+WORKDIR /
+
+# 61110 is http port
+EXPOSE 61109 61110 61111
+
+HEALTHCHECK --interval=600s --timeout=30s\
+    CMD curl -x http://127.0.0.1:61110 cp.cloudflare.com
+
+CMD ["-d /config"]
+
+
+# docker run --name mihomo_tioe_"$VERSION" -it \
+#     --pid=host \
+#     --ipc=host \
+#     --cap-add=ALL \
+#     -v "$FILE":/config \
+#     --network=host \
+#     -v /dev/net/tun:/dev/net/tun \
+#     tioe/mihomo:"$VERSION" -d config
