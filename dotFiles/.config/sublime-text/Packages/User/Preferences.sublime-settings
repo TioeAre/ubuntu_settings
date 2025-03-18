@@ -63,7 +63,18 @@
 /*"LSP-copilot",*/
 /*"LaTeXTools",*/
 /*"LSP-clangd",*/
+        "LaTeXTools",
+        "LSP",
         "LSP-bash",
+        "LSP-clangd",
+        "LSP-copilot",
+        "LSP-json",
+        "LSP-PowerShellEditorServices",
+        "LSP-pyright",
+        "LSP-yaml",
+        "MarkdownEditing",
+        "PowerShell",
+        "SSH Config",
     ],
     "theme": "auto",
     "color_scheme": "Catppuccin Frappe.sublime-color-scheme",

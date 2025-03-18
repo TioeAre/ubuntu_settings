@@ -7,6 +7,7 @@ parent_dir=$(dirname "$(pwd)")
 
 ln -s "$parent_dir/dotFiles/.config/kitty" ~/.config
 ln -s "$parent_dir/dotFiles/.config/alacritty" ~/.config
+ln -s "$parent_dir/dotFiles/.config/wezterm" ~/.config
 
 ln -s "$parent_dir/dotFiles/.config/sublime-text/Packages/User" ~/.config/sublime-text/Packages/
 
