@@ -18,6 +18,8 @@ dotFiles/.config/sublime-text/Packages/User/Projects/**
 bage.yaml
 mihomo/
 
+*irefox*.desktop
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
