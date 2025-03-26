@@ -8,4 +8,8 @@ default_channels:
 custom_channels:
   conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+envs_dirs:
+  - /home/tioeare/anaconda3/envs
+pkgs_dirs:
+  - /home/tioeare/anaconda3/pkgs
 auto_activate_base: true
