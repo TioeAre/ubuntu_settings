@@ -1,81 +1,4 @@
 {
-    "ignored_packages":
-    [  // vim mode
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"LSP",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"Xcode Colors",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SublimeLinter",*/
-/*"SublimeLinter-cpplint",*/
-/*"SublimeLinter-flake8",*/
-/*"SublimeLinter-json",*/
-/*"SublimeLinter-luacheck",*/
-/*"SublimeLinter-shellcheck",*/
-/*"SublimeLinter-xmllint",*/
-/*"SublimeAStyleFormatter",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SideBarEnhancements",*/
-/*"SublimeLinter-clang",*/
-/*"Theme - One",*/
-/*"Theme - One",*/
-/*"LSP-bash",*/
-/*"SideBarEnhancements",*/
-/*"LSP-copilot",*/
-/*"0_package_control_loader",*/
-/*"Alignment",*/
-/*"0_package_control_loader",*/
-/*"LSP",*/
-/*"LSP",*/
-/*"BracketHighlighter",*/
-/*"LSP-PowerShellEditorServices",*/
-/*"LSP-PowerShellEditorServices",*/
-/*"Log Highlight",*/
-/*"LSP",*/
-/*"LSP-json",*/
-/*"LSP-copilot",*/
-/*"LSP-json",*/
-/*"LSP-pyright",*/
-/*"LSP-copilot",*/
-/*"LaTeXTools",*/
-/*"LSP-clangd",*/
-        "LaTeXTools",
-        "LSP",
-        "LSP-bash",
-        "LSP-clangd",
-        "LSP-copilot",
-        "LSP-json",
-        "LSP-PowerShellEditorServices",
-        "LSP-pyright",
-        "LSP-yaml",
-        "MarkdownEditing",
-        "PowerShell",
-        "SSH Config",
-    ],
     "theme": "auto",
     "color_scheme": "Catppuccin Macchiato.sublime-color-scheme",
     "show_encoding": true,
@@ -99,7 +22,7 @@
     "font_size": 11.5,
     "dark_theme": "Adaptive.sublime-theme",
     "light_theme": "Adaptive.sublime-theme",
-    "font_face": "IntelOne Mono",//,["Consolas","Lucida Sans Typewriter","Courier New"],
+    "font_face": "IntoneMono Nerd Font Mono",//,["Consolas","Lucida Sans Typewriter","Courier New"],
     "font_options": ["ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07"],
     "line_padding_bottom": 2,
     "line_padding_top": 2,
