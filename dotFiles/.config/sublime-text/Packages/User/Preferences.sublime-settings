@@ -177,4 +177,35 @@
     "material_theme_compact_sidebar": true,
     "index_files": false,
     "close_windows_when_empty": false,
+    "auto_complete_triggers":
+    [
+		{
+			"characters": ".>:",
+			"selector": "source.c++ - string - comment - constant.numeric",
+		},
+		{
+			"characters": ".>:",
+			"selector": "source.c - string - comment - constant.numeric",
+		},
+		{
+			"characters": ".>: ",
+			"selector": "source.objc++ - string - comment - constant.numeric",
+		},
+		{
+			"characters": ".>: ",
+			"selector": "source.objc - string - comment - constant.numeric",
+		},
+		{
+			"characters": ".>: ",
+			"selector": "source.cuda-c++ - string - comment - constant.numeric",
+		},
+		{
+			"characters": "\\",
+			"selector": "text.tex.latex",
+		}
+    ],
+    "ignored_packages":
+    [
+        "Vintage",
+    ],
 }

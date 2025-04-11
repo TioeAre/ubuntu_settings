@@ -60,17 +60,10 @@
 	],
 	"in_process_packages":
 	[
-		"LaTeXTools",
 		"LSP",
 		"LSP-bash",
 		"LSP-clangd",
 		"LSP-copilot",
-		"LSP-json",
 		"LSP-PowerShellEditorServices",
-		"LSP-pyright",
-		"LSP-yaml",
-		"MarkdownEditing",
-		"PowerShell",
-		"SSH Config",
 	],
 }
