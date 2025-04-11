@@ -22,6 +22,7 @@ function module.apply_to_config(config)
     -- config.font = wezterm.font("IntoneMono Nerd Font Mono")
     config.font = wezterm.font_with_fallback {
         "IntoneMono Nerd Font Mono",
+        "IntoneMono NFM",
         "Noto Sans Mono CJK SC",
     }
 
