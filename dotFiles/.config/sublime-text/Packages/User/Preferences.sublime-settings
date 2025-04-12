@@ -4,12 +4,12 @@
     "show_encoding": true,
     "show_line_endings": true,
 
-    "word_wrap": "true",
+    "word_wrap": true,
     // "wrap_width":120,
     "update_check": true,    // 自动更新检查
     "translate_tabs_to_spaces": true,  // 使用空格代替tab
     "rulers": [119],  // 添加行宽标尺
-    "trim_trailing_white_space_on_save": true,    // 保存时自动去除行末空白
+    "trim_trailing_white_space_on_save": "not_on_caret",    // 保存时自动去除行末空白
     "ensure_newline_at_eof_on_save": true,    // 保存时自动增加文件末尾换行
     "default_encoding": "UTF-8",    // 默认编码格式
     "highlight_line": true,  // 高亮当前行

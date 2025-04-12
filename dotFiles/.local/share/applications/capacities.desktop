@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Capacities
+Comment=notes editor.
+TryExec=/home/tioeare/tools/Capacities.AppImage
+StartupNotify=false
+Exec=/home/tioeare/tools/Capacities.AppImage
+Icon=capacities.png
+Categories=Utility;TextEditor;
+Keywords=Capacities;

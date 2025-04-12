@@ -2,8 +2,8 @@
 Version=1.0
 Type=Application
 Name=Obsidian
-Icon=obsidian
-Exec=/home/tioeare/tools/Obsidian.AppImage %u
+Icon=obsidian.png
+Exec=/home/tioeare/tools/Obsidian.AppImage
 Terminal=false
 StartupWMClass=obsidian
 Comment=Obsidian
