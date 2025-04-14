@@ -1,7 +1,8 @@
 [Desktop Entry]
 Name=MarkText
 Comment=Next generation markdown editor
-Exec=/home/tioeare/tools/marktext-x86_64.AppImage %F
+TryExec=/home/tioeare/tools/marktext-x86_64.AppImage
+Exec=/home/tioeare/tools/marktext-x86_64.AppImage --no-sandbox %F
 Terminal=false
 Type=Application
 Icon=marktext.png

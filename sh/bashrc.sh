@@ -20,15 +20,14 @@ else
     echo "GNOME desktop environment is not installed."
 fi
 
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+echo "export PATH='$HOME/.local/bin:$PATH'" >>~/.bashrc
 
-cd $(dirname "$0") || exit
+cd "$(dirname "$0")" || exit
 sh ./mkdir.sh
 
 cd ~/tools && git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
 cd ~/tools && make -C ble.sh install PREFIX=~/.local
 echo 'source ~/.local/share/blesh/ble.sh' >>~/.bashrc
-
 
 # Add configuration to enable command history navigation
 # {
