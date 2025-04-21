@@ -22,3 +22,5 @@ ln -s "$parent_dir/dotFiles/.config/shell" ~/.config/
 # tmux source-file ~/.tmux.conf
 
 ln -s "$parent_dir/dotFiles/.zshrc" ~/
+mv ~/.bashrc ~/.bashrc.backup
+ln -s "$parent_dir/dotFiles/.bashrc" ~/

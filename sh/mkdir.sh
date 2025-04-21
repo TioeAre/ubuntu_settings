@@ -8,6 +8,6 @@ mkdir ~/tools
 mkdir ~/tools/network
 mkdir ~/.config
 mkdir ~/.local
-mkdir ~/.local/ble.sh
-mkdir ~/.local/bin
-mkdir ~/Documents/code_history
+mkdir -p ~/.local/ble.sh
+mkdir -p ~/.local/bin
+mkdir -p ~/Documents/code_history
