@@ -7,9 +7,9 @@ function module.apply_to_config(config)
     -- config.color_scheme = 'Catppuccin Frappé (Gogh)'
     -- config.color_scheme = 'Catppuccin Latte'
     -- config.color_scheme = 'Catppuccin Latte (Gogh)'
-    -- config.color_scheme = 'Catppuccin Macchiato'
+    config.color_scheme = 'Catppuccin Macchiato'
     -- config.color_scheme = 'Catppuccin Macchiato (Gogh)'
-    config.color_scheme = "Catppuccin Mocha"
+    -- config.color_scheme = "Catppuccin Mocha"
     -- config.color_scheme = 'Catppuccin Mocha (Gogh)'
 
     config.use_fancy_tab_bar = true
@@ -24,6 +24,7 @@ function module.apply_to_config(config)
         "IntoneMono Nerd Font Mono",
         "IntoneMono NFM",
         "Noto Sans Mono CJK SC",
+        "LXGW WenKai Mono",
     }
 
     config.enable_scroll_bar = true
