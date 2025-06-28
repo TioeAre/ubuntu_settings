@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=QQ
-Exec=/home/tioeare/tools/QQ.AppImage %U
+Exec=/home/tioeare/tools/QQ.AppImage
 Terminal=false
 Type=Application
 Icon=qq.png

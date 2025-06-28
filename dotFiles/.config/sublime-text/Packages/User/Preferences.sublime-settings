@@ -206,6 +206,7 @@
     ],
     "ignored_packages":
     [
+        "LSP-pyright",
         "Vintage",
     ],
 }

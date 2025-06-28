@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Readest
+Exec=/home/tioeare/tools/Readest.AppImage %u
+Terminal=false
+MimeType=x-scheme-handler/readest
+NoDisplay=true

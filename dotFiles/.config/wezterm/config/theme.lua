@@ -5,9 +5,9 @@ local module = {}
 function module.apply_to_config(config)
     -- config.color_scheme = 'Catppuccin Frappe'
     -- config.color_scheme = 'Catppuccin Frappé (Gogh)'
-    -- config.color_scheme = 'Catppuccin Latte'
+    config.color_scheme = 'Catppuccin Latte'
     -- config.color_scheme = 'Catppuccin Latte (Gogh)'
-    config.color_scheme = 'Catppuccin Macchiato'
+    -- config.color_scheme = 'Catppuccin Macchiato'
     -- config.color_scheme = 'Catppuccin Macchiato (Gogh)'
     -- config.color_scheme = "Catppuccin Mocha"
     -- config.color_scheme = 'Catppuccin Mocha (Gogh)'
