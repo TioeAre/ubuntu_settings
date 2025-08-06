@@ -1,6 +1,6 @@
 {
     "theme": "auto",
-    "color_scheme": "Catppuccin Macchiato.sublime-color-scheme",
+    "color_scheme": "Catppuccin Latte.sublime-color-scheme",
     "show_encoding": true,
     "show_line_endings": true,
 
@@ -19,7 +19,7 @@
     "save_on_focus_lost": true,   //失焦自动保存
     // "caret_style": "phase", //光标闪烁样式，其余选项{“smooth”, “phase”, “blink”, “wide”， “solid”}
 
-    "font_size": 11.5,
+    "font_size": 11,
     "dark_theme": "Adaptive.sublime-theme",
     "light_theme": "Adaptive.sublime-theme",
     "font_face": "IntoneMono Nerd Font Mono",//,["Consolas","Lucida Sans Typewriter","Courier New"],
@@ -206,7 +206,6 @@
     ],
     "ignored_packages":
     [
-        "LSP-pyright",
         "Vintage",
     ],
 }

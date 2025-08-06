@@ -22,6 +22,7 @@ text/x-research-info-systems=zotero.desktop;
 x-scheme-handler/Cursor=cursor.desktop;
 x-scheme-handler/clash=clash-verge-handler.desktop;
 x-scheme-handler/clash-verge=clash-verge-handler.desktop;
+x-scheme-handler/fdm=freedownloadmanager_fdm_up.desktop;
 x-scheme-handler/jetbrains-gateway=jetbrains-gateway.desktop;
 x-scheme-handler/kitty=kitty-open.desktop;
 x-scheme-handler/obsidian=obsidian.desktop;

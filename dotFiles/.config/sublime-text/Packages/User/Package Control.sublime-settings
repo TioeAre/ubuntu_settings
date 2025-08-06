@@ -64,6 +64,5 @@
 		"LSP-clangd",
 		"LSP-copilot",
 		"LSP-PowerShellEditorServices",
-		"LSP-pyright",
 	],
 }
