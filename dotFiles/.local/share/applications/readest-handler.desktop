@@ -4,4 +4,4 @@ Name=Readest
 Exec=/home/tioeare/tools/Readest.AppImage %u
 Terminal=false
 NoDisplay=true
-MimeType=x-scheme-handler/readest;x-scheme-handler/readest;x-scheme-handler/readest
+MimeType=x-scheme-handler/readest;x-scheme-handler/readest;x-scheme-handler/readest;x-scheme-handler/readest;x-scheme-handler/readest

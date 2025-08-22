@@ -59,10 +59,5 @@
 	],
 	"in_process_packages":
 	[
-		"LSP",
-		"LSP-bash",
-		"LSP-clangd",
-		"LSP-copilot",
-		"LSP-PowerShellEditorServices",
 	],
 }
