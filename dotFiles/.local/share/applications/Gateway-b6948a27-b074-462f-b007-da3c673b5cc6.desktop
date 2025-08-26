@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Gateway 2025.2
+Exec="/home/tioeare/tools/JetBrains/JetBrainsGateway/bin/gateway" %u
+Version=1.0
+Type=Application
+Categories=Development;IDE;
+Terminal=false
+Icon=/home/tioeare/tools/JetBrains/JetBrainsGateway/bin/gateway.svg
+Comment=A remote development hub
+StartupWMClass=jetbrains-gateway
+StartupNotify=true
