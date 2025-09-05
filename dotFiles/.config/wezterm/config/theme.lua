@@ -31,10 +31,10 @@ function module.apply_to_config(config)
 
     -- cursor
     -- config.cursor_style = "BlinkingBlock"
-    -- config.cursor_thickness = 2
+    config.cursor_thickness = 1
     -- config.cursor_blink_ease_in = "Linear"
     -- config.cursor_blink_ease_out = "Linear"
-    -- config.cursor_blink_rate = 1000
+    config.cursor_blink_rate = 800
 end
 
 return module
