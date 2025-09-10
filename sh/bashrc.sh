@@ -29,6 +29,13 @@ cd ~/tools && git clone --recursive --depth 1 --shallow-submodules https://githu
 cd ~/tools && make -C ble.sh install PREFIX=~/.local
 echo 'source ~/.local/share/blesh/ble.sh' >>~/.bashrc
 
+# wget http://ftp.gnu.org/gnu/gawk/gawk-5.2.2.tar.gz
+# tar -xzvf gawk-5.2.2.tar.gz
+# cd gawk-5.2.2
+# ./configure --prefix=~/.local
+# make
+# make install
+
 # Add configuration to enable command history navigation
 # {
 #     printf "# Enable command history navigation with arrow keys" # >>~/.bashrc

@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Gateway 2025.2
+Name=Gateway 2025.2.1
 Exec="/home/tioeare/tools/JetBrains/JetBrainsGateway/bin/gateway" %u
 Version=1.0
 Type=Application
