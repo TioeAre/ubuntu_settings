@@ -4,6 +4,7 @@ wget https://developer.download.nvidia.com/compute/cuda/12.6.0/local_installers/
 sh cuda_12.6.0_560.28.03_linux.run
 
 wget https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-9.10.2.21_cuda12-archive.tar.xz
+tar -xvf cudnn-linux-x86_64-9.10.2.21_cuda12-archive.tar.xz
 
 cp include/cudnn*.h /home/lixuan/cuda-12.6/include/
 cp lib/libcudnn* /home/lixuan/cuda-12.6/lib64/
