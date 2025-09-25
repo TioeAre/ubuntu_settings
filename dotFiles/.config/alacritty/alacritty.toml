@@ -1,7 +1,7 @@
 # general
 general.import = [
-    # "~/.config/alacritty/themes/themes/catppuccin_latte.toml"
-    "~/.config/alacritty/themes/catppuccin/catppuccin_mocha.toml"
+    "~/.config/alacritty/themes/catppuccin/catppuccin-latte.toml"
+    # "~/.config/alacritty/themes/catppuccin/catppuccin_mocha.toml"
     # "~/.config/alacritty/themes/themes/tokyo-night-storm.toml"
 ]
 # shell = "zsh"
@@ -82,4 +82,3 @@ bindings = [
     { key = "q", mods = "Control", mode = "Search", action = "SearchCancel" },
     { key = "Escape", mode = "Search", action = "SearchClear" },
 ]
-

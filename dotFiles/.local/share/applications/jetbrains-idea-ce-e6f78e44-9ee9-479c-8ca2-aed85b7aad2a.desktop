@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=IntelliJ IDEA Community Edition 2025.2.1
+Exec="/home/tioeare/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/bin/idea" %u
+Version=1.0
+Type=Application
+Categories=Development;IDE;
+Terminal=false
+Icon=/home/tioeare/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/bin/idea.svg
+Comment=The IDE for Java and Kotlin enthusiasts
+StartupWMClass=jetbrains-idea-ce
+StartupNotify=true

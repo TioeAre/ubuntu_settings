@@ -6,7 +6,7 @@ local config_files = wezterm.glob(config_dir .. '/config/*.lua')
 
 for _, config_file in ipairs(config_files) do
     local file_name = config_file:match("([^/]+)%.lua$")
-    if file_name ~= "wezterm" then
+    if file_name ~= "wezterm" or file_name == "bar" then
         local success, sub_config = pcall(require, "config/" .. file_name)
         if success and type(sub_config) == "table" and type(sub_config.apply_to_config) == "function" then
             sub_config.apply_to_config(config)
@@ -15,5 +15,8 @@ for _, config_file in ipairs(config_files) do
         end
     end
 end
+
+local bar = require 'config/bar'
+bar.apply_to_config(config)
 
 return config

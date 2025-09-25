@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=PyCharm Community 2025.2.1.1
+Exec="/home/tioeare/.local/share/JetBrains/Toolbox/apps/pycharm-community/bin/pycharm" %u
+Version=1.0
+Type=Application
+Categories=Development;IDE;
+Terminal=false
+Icon=/home/tioeare/.local/share/JetBrains/Toolbox/apps/pycharm-community/bin/pycharm.svg
+Comment=The pure Python IDE
+StartupWMClass=jetbrains-pycharm-ce
+StartupNotify=true
