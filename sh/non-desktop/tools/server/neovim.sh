@@ -48,7 +48,14 @@ fi
 cd ~/.config && git clone git@github.com:TioeAre/nvim.git # https://github.com/TioeAre/nvim
 # cd ~/.config/nvim && git checkout server
 
-cargo install tree-sitter-cli
+# cargo install tree-sitter-cli
+# https://ghfast.top/
+curl -LO https://github.com/tree-sitter/tree-sitter/releases/latest/download/tree-sitter-linux-x64.gz
+# ubuntu 20.04
+curl -LO https://github.com/tree-sitter/tree-sitter/releases/download/v0.20.8/tree-sitter-linux-x64.gz
+gunzip tree-sitter-linux-x64.gz
+chmod +x tree-sitter-linux-x64
+ln -s ~/tools/tree-sitter-linux-x64 ~/.local/bin/tree-sitter
 
 sudo apt install python3-venv luarocks
 # cmake_format
