@@ -5,6 +5,7 @@ simplified_ui false
 pane_frames true
 theme "catppuccin-latte"
 default_mode "locked"
+// default_layout "zellij-datetime"   // INFO: status bar, "zjstatus" or "zellij-datetime"
 mouse_mode true
 scroll_buffer_size 100000
 copy_clipboard "system" // "primary"
@@ -21,13 +22,18 @@ ui {
 }
 styled_underlines true
 // auto_layout true
+
 session_serialization true
 serialize_pane_viewport true
-pane_viewport_serialization 0
+// pane_viewport_serialization 0
+pane_viewport_serialization 5000
 // serialization_interval 60
+
 // show_startup_tips true
 // show_release_notes true
+
 // enable_kitty_keyboard_protocol true
+
 // copy_command "xclip -selection clipboard" // x11
 // copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
@@ -35,19 +41,16 @@ pane_viewport_serialization 0
 // Enable or disable support for the enhanced Kitty Keyboard Protocol (the host terminal must also support it)
 // (Requires restart)
 // Default: true (if the host terminal supports it)
-//
 // support_kitty_keyboard_protocol false
 
 keybinds clear-defaults=true { // will clear all default keybinds
 // keybinds {
     normal {
-        // bind "Alt c" { Copy; }
+        bind "Ctrl n" { SwitchToMode "Locked"; }
     }
     locked {
-        bind "Ctrl n" { SwitchToMode "Normal"; }
     }
     resize {
-        bind "Ctrl n" { SwitchToMode "Normal"; }
         bind "Ctrl h" { SwitchToMode "Move"; }
         bind "h" "Left" { Resize "Increase Left"; }
         bind "j" "Down" { Resize "Increase Down"; }
@@ -61,7 +64,6 @@ keybinds clear-defaults=true { // will clear all default keybinds
         bind "-" { Resize "Decrease"; }
     }
     pane {
-        bind "Ctrl n" { SwitchToMode "Normal"; }
         bind "a" { DumpScreen "/tmp/my-dump.txt"; }
         bind "Ctrl a" { Clear; }
         bind "h" "Left" { MoveFocus "Left"; }
@@ -80,7 +82,6 @@ keybinds clear-defaults=true { // will clear all default keybinds
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     }
     move {
-        bind "Ctrl n" { SwitchToMode "Normal"; }
         bind "Ctrl r" { SwitchToMode "Resize"; }
         bind "n" "Tab" { MovePane; }
         bind "p" { MovePaneBackwards; }
@@ -90,7 +91,6 @@ keybinds clear-defaults=true { // will clear all default keybinds
         bind "l" "Right" { MovePane "Right"; }
     }
     tab {
-        bind "Ctrl n" { SwitchToMode "Normal"; }
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "h" "Left" "Up" "k" { GoToPreviousTab; }
         bind "l" "Right" "Down" "j" { GoToNextTab; }
@@ -112,7 +112,6 @@ keybinds clear-defaults=true { // will clear all default keybinds
         bind "Tab" { ToggleTab; }
     }
     scroll {
-        bind "Ctrl n" { SwitchToMode "Normal"; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
         bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Locked"; }
@@ -126,7 +125,6 @@ keybinds clear-defaults=true { // will clear all default keybinds
         // bind "Alt c" { Copy; }
     }
     search {
-        bind "Ctrl n" { SwitchToMode "Normal"; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Locked"; }
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
@@ -145,15 +143,12 @@ keybinds clear-defaults=true { // will clear all default keybinds
         bind "Enter" { SwitchToMode "Search"; }
     }
     renametab {
-        bind "Ctrl n" { SwitchToMode "Normal"; }
         bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
     }
     renamepane {
-        bind "Ctrl n" { SwitchToMode "Normal"; }
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     session {
-        bind "Ctrl n" { SwitchToMode "Normal"; }
         bind "Ctrl s" { SwitchToMode "Scroll"; }
         bind "w" {
             LaunchOrFocusPlugin "session-manager" {
@@ -202,7 +197,7 @@ keybinds clear-defaults=true { // will clear all default keybinds
     }
     shared_except "locked" {
         // switch
-        bind "Ctrl n" { SwitchToMode "Locked"; }
+        bind "Esc" { SwitchToMode "Locked"; }
         // close and detach
         bind "Ctrl d" { CloseFocus; }
         bind "Ctrl e" { Detach; }
@@ -238,9 +233,8 @@ keybinds clear-defaults=true { // will clear all default keybinds
         // bind "Alt [" { PreviousSwapLayout; }
         // bind "Alt ]" { NextSwapLayout; }
     }
-    // shared_except "normal" "locked" {
-    shared_except "locked" {
-        bind "Esc" { SwitchToMode "Locked"; }
+    shared_except "normal" {
+        bind "Ctrl n" { SwitchToMode "Normal"; }
     }
     shared_except "pane" "locked" {
         bind "Ctrl p" { SwitchToMode "Pane"; }

@@ -1,0 +1,21 @@
+layout {
+    pane size=1 split_direction="vertical" {
+        pane size="80%" borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane size="20%" borderless=true {
+            plugin location="https://github.com/h1romas4/zellij-datetime/releases/latest/download/zellij-datetime.wasm" {
+                // timezone1 "UTC/0"
+                // timezone2 "UTC/0"
+                // timezone3 "UTC/0"
+                // default_timezone "UTC/8"
+                // date_format "%Y/%m/%d"
+                // time_format "%H:%M:%S"
+            }
+        }
+    }
+    children
+    pane size=1 borderless=true {
+        plugin location="zellij:status-bar"
+    }
+}

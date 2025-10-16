@@ -24,3 +24,5 @@ ln -s "$parent_dir/dotFiles/.config/shell" ~/.config/
 ln -s "$parent_dir/dotFiles/.zshrc" ~/
 mv ~/.bashrc ~/.bashrc.backup
 ln -s "$parent_dir/dotFiles/.bashrc" ~/
+
+ln -s "$parent_dir/dotFiles/.config/zellij" ~/.config
