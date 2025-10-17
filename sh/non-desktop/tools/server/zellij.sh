@@ -8,3 +8,8 @@ tar xf zellij-x86_64-unknown-linux-musl.tar.gz zellij
 cp zellij ~/.local/bin
 chmod +x ~/.local/bin/zellij
 
+mkdir -p ~/.local/share/zellij/plugins
+cd ~/.local/share/zellij/plugins || exit
+curl -Lo https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm
+curl -Lo https://github.com/h1romas4/zellij-datetime/releases/latest/download/zellij-datetime.wasm
+
