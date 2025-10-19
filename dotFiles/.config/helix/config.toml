@@ -102,7 +102,11 @@ m="goto_previous_buffer"
 n="goto_next_buffer"
 [keys.normal.space.c]
 a="code_action"
+<<<<<<< HEAD
 o=":bco"
+=======
+o="bco"
+>>>>>>> 74e7031200567b3e6665683306bcda7df87133a2
 [keys.normal.space.f]
 f="file_picker_in_current_directory"
 l="goto_reference"
