@@ -1,4 +1,4 @@
-theme = "catppuccin_mocha"
+theme = "catppuccin_latte"
 
 [editor]
 line-number = "relative"
@@ -9,8 +9,10 @@ completion-replace = true    # true to replace the entire word
 rulers = [121]
 bufferline = "multiple"
 text-width = 120
+default-line-ending = "lf"
+trim-trailing-whitespace = true
 popup-border = "all"
-auto-save = true
+indent-heuristic = "hybrid"
 
 [editor.statusline]
 left = ["mode", "version-control", "selections", "read-only-indicator", "file-name"]
@@ -23,6 +25,7 @@ mode.select = "SELECT"
 
 [editor.lsp]
 display-messages = true
+# display-progress-messages = true
 display-inlay-hints = true
 
 [editor.cursor-shape]
@@ -41,8 +44,8 @@ hidden = false
 '`' = '`'
 '<' = '>'
 
-# [editor.auto-save]
-# focus-lost = true
+[editor.auto-save]
+focus-lost = true
 
 [editor.whitespace.render]
 space = "none"
@@ -52,7 +55,7 @@ nnbsp = "all"
 newline = "none"
 
 [editor.whitespace.characters]
-space = "·"
+space = "█"
 nbsp = "⍽"
 nnbsp = "␣"
 tab = "→"
@@ -74,7 +77,7 @@ wrap-at-text-width = true
 [keys.normal]
 tab = "move_parent_node_end"
 S-tab = "move_parent_node_start"
-g = {D="goto_type_definition"}
+g = {d="goto_definition", D="goto_type_definition"}
 s = "goto_word"
 m = {a="surround_add", s="select_textobject_around"}
 A-h = "jump_view_left"
@@ -92,15 +95,36 @@ C-r = "redo"
 "C-7" = "toggle_comments"    # ctrl + /
 C-A-l = ":format" # format_selections
 
-[keys.normal.space]
-b = {n="goto_next_buffer", m="goto_previous_buffer", c="wclose", f="buffer_picker"}
-c = {a="code_action", o="wonly"}
-f = {f="file_picker_in_current_directory", l="goto_reference", r="last_picker"}
-l = {d="diagnostics_picker", w="workspace_diagnostics_picker"}
-o = {p={d="symbol_picker", w="workspace_symbol_picker"}}
-r = {n="rename_symbol", l=":lsp-restart"}
-s = {h="hsplit", v="vsplit"}
-w = {e=":wa", q=":wbc", s=":wqa"}
+[keys.normal.space.b]
+c="wclose"
+f="buffer_picker"
+m="goto_previous_buffer"
+n="goto_next_buffer"
+[keys.normal.space.c]
+a="code_action"
+o="bco"
+[keys.normal.space.f]
+f="file_picker_in_current_directory"
+l="goto_reference"
+r="last_picker"
+[keys.normal.space.l]
+d="diagnostics_picker"
+w="workspace_diagnostics_picker"
+[keys.normal.space.o]
+p={d="symbol_picker", w="workspace_symbol_picker"}
+o="symbol_picker"
+[keys.normal.space.r]
+n="rename_symbol"
+l=":lsp-restart"
+[keys.normal.space.s]
+h="hsplit"
+v="vsplit"
+[keys.normal.space.t]
+t="file_explorer"
+[keys.normal.space.w]
+e=":wa"
+q=":bc"
+s=":wqa"
 
 [keys.insert]
 S-tab = "move_parent_node_start"
