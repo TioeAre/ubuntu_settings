@@ -36,7 +36,7 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x8
 # getconf GNU_LIBC_VERSION # for glibc 2.17
 # curl -LO https://github.com/neovim/neovim-releases/releases/latest/download/nvim-linux-x86_64.tar.gz
 tar -xzvf nvim-linux-x86_64.tar.gz
-ln -s ~/tools/nvim-linux64/bin/nvim ~/.local/bin/
+ln -s ~/tools/nvim-linux-x86_64/bin/nvim ~/.local/bin/
 rm nvim-linux-x86_64.tar.gz
 
 if command -v nvim &>/dev/null; then
