@@ -32,12 +32,12 @@ fi
 # chmod u+x ~/.local/bin/nvim
 # rm nvim.appimage
 
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 # getconf GNU_LIBC_VERSION # for glibc 2.17
-# curl -LO https://github.com/neovim/neovim-releases/releases/latest/download/nvim-linux64.tar.gz
-tar -xzvf nvim-linux64.tar.gz
+# curl -LO https://github.com/neovim/neovim-releases/releases/latest/download/nvim-linux-x86_64.tar.gz
+tar -xzvf nvim-linux-x86_64.tar.gz
 ln -s ~/tools/nvim-linux64/bin/nvim ~/.local/bin/
-rm nvim-linux64.tar.gz
+rm nvim-linux-x86_64.tar.gz
 
 if command -v nvim &>/dev/null; then
     ln -s "$(command -v nvim)" ~/.local/bin/vim

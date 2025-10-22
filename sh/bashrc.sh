@@ -50,3 +50,8 @@ echo 'source ~/.local/share/blesh/ble.sh' >>~/.bashrc
 #     bind '"\e[A": history-search-backward'
 #     bind '"\e[B": history-search-forward'
 # fi
+
+# git config --global url."https://gh.llkk.cc/https://github.com/".insteadOf "https://github.com/"
+# https://ghfast.top/
+# https://gh-proxy.com/
+# https://github.akams.cn/
