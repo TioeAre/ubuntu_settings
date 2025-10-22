@@ -120,10 +120,17 @@ layout {
 
                 format_left   "#[bg=$surface0,fg=$sapphire]#[bg=$sapphire,fg=$crust,bold] {session} #[bg=$surface0]{mode}#[bg=$surface0] {tabs}"
                 format_center "{notifications}"
-                format_right  "#[bg=$surface0,fg=$flamingo]#[fg=$crust,bg=$flamingo]󰃭 #[bg=$surface1,fg=$maroon,bold] {datetime}#[bg=$surface0,fg=$surface1]"
+                // format_right  "#[bg=$surface0,fg=$flamingo]#[fg=$crust,bg=$flamingo]󰃭 #[bg=$surface1,fg=$maroon,bold] {datetime}#[bg=$surface0,fg=$surface1]"
                 format_space  "#[bg=$surface0]"
                 format_hide_on_overlength "true"
                 format_precedence "lrc"
+
+                // format_left   "#[bg=$surface0,fg=$sapphire]#[bg=$sapphire,fg=$crust,bold] {session} #[bg=$surface0] {mode}#[bg=$surface0] {tabs}"
+                // format_center "{notifications}"
+                // format_right  "#[bg=$surface0,fg=$flamingo]#[fg=$crust,bg=$flamingo] #[bg=$surface1,fg=$flamingo,bold] {command_user}@{command_host}#[bg=$surface0,fg=$surface1]#[bg=$surface0,fg=$maroon]#[bg=$maroon,fg=$crust]󰃭 #[bg=$surface1,fg=$maroon,bold] {datetime}#[bg=$surface0,fg=$surface1]"
+
+                // format_right  "#[bg=$surface0,fg=$flamingo]#[fg=$crust,bg=$flamingo] #[bg=$surface1,fg=$flamingo,bold] {command_user}#[bg=$surface0,fg=$surface1]#[bg=$surface0,fg=$green]#[bg=$green,fg=$crust] #[bg=$surface1,fg=$green,bold] {command_local_ip}:{command_public_ip} #[bg=$surface0,fg=$surface1]#[bg=$surface0,fg=$maroon]#[bg=$maroon,fg=$crust]󰃭 #[bg=$surface1,fg=$maroon,bold] {datetime}#[bg=$surface0,fg=$surface1]"
+                format_right  "#[bg=$surface0,fg=$flamingo]#[fg=$crust,bg=$flamingo] #[bg=$surface1,fg=$flamingo,bold] {command_user}#[bg=$surface0,fg=$surface1]#[bg=$surface0,fg=$green]#[bg=$green,fg=$crust] #[bg=$surface1,fg=$green,bold] {command_local_ip}#[bg=$surface0,fg=$surface1]#[bg=$surface0,fg=$maroon]#[bg=$maroon,fg=$crust]󰃭 #[bg=$surface1,fg=$maroon,bold] {datetime}#[bg=$surface0,fg=$surface1]"
 
                 border_enabled  "false"
                 border_char     "─"
@@ -163,6 +170,7 @@ layout {
                 notification_format_no_notifications ""
                 notification_show_interval "10"
 
+                //  #[bg=$surface1,fg=$flamingo,bold] {command_user}@{command_host}
                 command_host_command    "uname -n"
                 command_host_format     "{stdout}"
                 command_host_interval   "0"
@@ -172,6 +180,16 @@ layout {
                 command_user_format     "{stdout}"
                 command_user_interval   "10"
                 command_user_rendermode "static"
+
+                command_local_ip_command    "sh -c 'sh $HOME/.config/zellij/command/local_ip.sh'"
+                command_local_ip_format     "{stdout}"
+                command_local_ip_interval   "10"
+                command_local_ip_rendermode "static"
+
+                command_public_ip_command    "sh -c 'sh $HOME/.config/zellij/command/public_ip.sh'"
+                command_public_ip_format     "{stdout}"
+                command_public_ip_interval   "10"
+                command_public_ip_rendermode "static"
 
                 datetime          "{format}"
                 datetime_format   "%Y-%m-%d 󰅐 %H:%M:%S"
