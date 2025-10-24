@@ -28,13 +28,25 @@ sh ./mkdir.sh
 cd ~/tools && git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
 cd ~/tools && make -C ble.sh install PREFIX=~/.local
 echo 'source ~/.local/share/blesh/ble.sh' >>~/.bashrc
-
+# gawk for ble.sh
 # wget http://ftp.gnu.org/gnu/gawk/gawk-5.2.2.tar.gz
 # tar -xzvf gawk-5.2.2.tar.gz
 # cd gawk-5.2.2
 # ./configure --prefix=~/.local
 # make
 # make install
+
+### bash completion
+# sudo apt install bash-completion
+cd ~/packages || exit
+git clone https://github.com/scop/bash-completion.git
+cd ~/packages/bash-completion || exit
+autoreconf -i      # if not installing from prepared release tarball
+./configure
+make
+make check
+make install
+make installcheck # optional, requires python3 with pytest >= 3.6, pexpect
 
 # Add configuration to enable command history navigation
 # {
