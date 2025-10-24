@@ -42,11 +42,14 @@ cd ~/packages || exit
 git clone https://github.com/scop/bash-completion.git
 cd ~/packages/bash-completion || exit
 autoreconf -i      # if not installing from prepared release tarball
-./configure
-make
-make check
-make install
+./configure --prefix="$HOME"/.local
+make && make check && make install PREFIX=~/.local
 make installcheck # optional, requires python3 with pytest >= 3.6, pexpect
+cat << 'EOF' >> ~/.bashrc
+if [ -f "$HOME/.local/share/bash-completion/bash_completion" ]; then
+    . "$HOME/.local/share/bash-completion/bash_completion"
+fi
+EOF
 
 # Add configuration to enable command history navigation
 # {
