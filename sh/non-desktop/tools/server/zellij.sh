@@ -15,3 +15,6 @@ curl -LO https://ghfast.top/https://github.com/h1romas4/zellij-datetime/releases
 
 zellij setup --generate-completion bash
 zellij setup --generate-completion zsh
+
+zellij setup --generate-completion bash > ~/.config/zellij/zellij_completion.bash
+echo -e '\n# Load Zellij completions\n[ -f ~/.config/zellij/zellij_completion.bash ] && . ~/.config/zellij/zellij_completion.bash' >> ~/.bashrc
