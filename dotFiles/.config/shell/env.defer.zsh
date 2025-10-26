@@ -14,10 +14,6 @@ source_deno() {
     ### deno
     [[ ! -f "$HOME/.deno/env" ]] || source "$HOME/.deno/env"
 }
-source_alacritty() {
-    ###  alacritty
-    # [[ ! -f ~/.bash_completion.d/_alacritty ]] || source ~/.bash_completion.d/_alacritty
-}
 
 source_conda() {
     # >>> conda initialize >>>
@@ -40,4 +36,3 @@ zsh-defer source_conda
 zsh-defer source_nvm
 zsh-defer source_rust
 zsh-defer source_deno
-# zsh-defer source_alacritty

@@ -16,6 +16,13 @@ fi
 [[ ! -f $HOME/.nvm/versions/node/v20.18.0/lib/node_modules/@hyperupcall/autoenv/activate.sh ]] || source "$HOME/.nvm/versions/node/v20.18.0/lib/node_modules/@hyperupcall/autoenv/activate.sh"
 [[ ! -f $HOME/.nvm/versions/node/v22.13.0/lib/node_modules/@hyperupcall/autoenv/activate.sh ]] || source "$HOME/.nvm/versions/node/v22.13.0/lib/node_modules/@hyperupcall/autoenv/activate.sh"
 
-### brew zellij
-# [[ ! -f /home/linuxbrew/.linuxbrew/share/zsh/site-functions ]] || source /home/linuxbrew/.linuxbrew/share/zsh/site-functions
-[[ ! -d /home/linuxbrew/.linuxbrew/share/zsh/site-functions ]] || fpath+=/home/linuxbrew/.linuxbrew/share/zsh/site-functions
+### zellij
+# [[ ! -d $HOME/.config/shell/completion/zsh/_zellij ]] || source "$HOME/.config/shell/completion/zsh/_zellij"
+
+# completion
+fpath+="$HOME/.config/shell/completion/zsh"
+
+# uv
+if hash uv 2>/dev/null; then
+    eval "$(uv generate-shell-completion zsh)"
+fi
