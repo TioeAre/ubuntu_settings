@@ -4,8 +4,7 @@
 [ -f ~/.fzf.bash ] && source "$HOME/.fzf.bash"
 
 ### autoenv plugin
-[[ ! -f $HOME/.nvm/versions/node/v20.18.0/lib/node_modules/@hyperupcall/autoenv/activate.sh ]] || source "$HOME/.nvm/versions/node/v20.18.0/lib/node_modules/@hyperupcall/autoenv/activate.sh"
-[[ ! -f $HOME/.nvm/versions/node/v22.13.0/lib/node_modules/@hyperupcall/autoenv/activate.sh ]] || source "$HOME/.nvm/versions/node/v22.13.0/lib/node_modules/@hyperupcall/autoenv/activate.sh"
+[[ ! -f $HOME/packages/.autoenv/activate.sh ]] || source "$HOME/packages/.autoenv/activate.sh"
 
 ### brew zellij
 [[ ! -f ~/.config/shell/completion/bash/zellij_completion.bash ]] || source "$HOME/.config/shell/completion/bash/zellij_completion.bash"
