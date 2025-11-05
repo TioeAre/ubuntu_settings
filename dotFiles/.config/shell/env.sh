@@ -8,7 +8,7 @@
 [[ ! -f $HOME/.nvm/versions/node/v22.13.0/lib/node_modules/@hyperupcall/autoenv/activate.sh ]] || source "$HOME/.nvm/versions/node/v22.13.0/lib/node_modules/@hyperupcall/autoenv/activate.sh"
 
 ### brew zellij
-[[ ! -f ~/.config/shell/completion/bash/zellij_completion.bash ]] || source ~/.config/shell/completion/bash/zellij_completion.bash
+[[ ! -f ~/.config/shell/completion/bash/zellij_completion.bash ]] || source "$HOME/.config/shell/completion/bash/zellij_completion.bash"
 
 ### conda
 # >>> conda initialize >>>
@@ -38,4 +38,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$HOME/.deno/env" ] && \. "$HOME/.deno/env"
 
 ### alacritty
-[[ ! -f "$HOME"/.config/shell/completion/bash/alacritty.bash ]] || source "$HOME"/.config/shell/completion/bash/alacritty.bash
+[[ ! -f "$HOME/.config/shell/completion/bash/alacritty.bash" ]] || source "$HOME/.config/shell/completion/bash/alacritty.bash"
