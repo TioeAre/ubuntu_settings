@@ -16,3 +16,6 @@ export CUDSS_DIR=/usr/local/cuda/lib64  # Adjust the path as necessary
 
 # flatpak
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:/home/$USER/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share" # :/var/lib/flatpak/exports/share
+
+# go
+export PATH=/home/tioeare/.local/go/bin:$PATH
