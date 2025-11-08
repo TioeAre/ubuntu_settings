@@ -3,10 +3,29 @@
 # MESA_VK_DEVICE_SELECT=list zed --foreground
 
 AMD_GPU_ID="1002:150e"
-PRIMARY_GPU_NAME=$(xrandr --listproviders | awk '/Provider 0/ {print $NF}')
 
-if [[ "$PRIMARY_GPU_NAME" == *"NVIDIA"* ]]; then
-  unset MESA_VK_DEVICE_SELECT
-else
-  export MESA_VK_DEVICE_SELECT="$AMD_GPU_ID"
-fi
+gpu_mode=$(switcherooctl list | awk '
+  BEGIN { RS = "Device:" }
+  /Default:     yes/ {
+    if (/NVIDIA/) {
+      print "NVIDIA"
+    } else if (/AMD/ || /Advanced Micro Devices/) {
+      print "AMD"
+    } else {
+      print "Unknown"
+    }
+    exit
+  }
+')
+
+case "$gpu_mode" in
+  "NVIDIA")
+    unset MESA_VK_DEVICE_SELECT
+    ;;
+  "AMD")
+    export MESA_VK_DEVICE_SELECT="$AMD_GPU_ID"
+    ;;
+  *)
+    unset MESA_VK_DEVICE_SELECT
+    ;;
+esac
