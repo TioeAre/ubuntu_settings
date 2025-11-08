@@ -20,6 +20,7 @@ fi
 
 # completion
 fpath+="$HOME/.config/shell/completion/zsh"
+fpath+="/home/linuxbrew/.linuxbrew/share/zsh/site-functions"
 
 # uv
 if hash uv 2>/dev/null; then
