@@ -83,6 +83,11 @@ function module.apply_to_config(config)
             mods = 'CTRL',
             action = wezterm.action.AdjustPaneSize { "Right", 1 },
         },
+        {
+            key = 'd',
+            mods = 'CTRL',
+            action = wezterm.action.CloseCurrentPane { confirm = true },
+        },
     }
 
     local apps = { "ssh", "tmux", "zellij", "connect", "nvim", "docker" }

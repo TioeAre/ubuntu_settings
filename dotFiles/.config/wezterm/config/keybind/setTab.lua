@@ -74,11 +74,6 @@ function module.apply_to_config(config)
             mods = 'SHIFT',
             action = wezterm.action.ActivateTabRelative(1),
         },
-        {
-            key = 'd',
-            mods = 'CTRL',
-            action = wezterm.action.CloseCurrentPane { confirm = true },
-        },
     }
     local apps = nil -- {"ssh", "tmux", "zellij"}
     condition.bind_if(new_keys, config, apps)
