@@ -4,28 +4,30 @@
 
 AMD_GPU_ID="1002:150e"
 
-gpu_mode=$(switcherooctl list | awk '
-  BEGIN { RS = "Device:" }
-  /Default:     yes/ {
-    if (/NVIDIA/) {
-      print "NVIDIA"
-    } else if (/AMD/ || /Advanced Micro Devices/) {
-      print "AMD"
-    } else {
-      print "Unknown"
-    }
-    exit
-  }
-')
+# gpu_mode=$(switcherooctl list | awk '
+#   BEGIN { RS = "Device:" }
+#   /Default:     yes/ {
+#     if (/NVIDIA/) {
+#       print "NVIDIA"
+#     } else if (/AMD/ || /Advanced Micro Devices/) {
+#       print "AMD"
+#     } else {
+#       print "Unknown"
+#     }
+#     exit
+#   }
+# ')
 
-case "$gpu_mode" in
-  "NVIDIA")
-    unset MESA_VK_DEVICE_SELECT
-    ;;
-  "AMD")
-    export MESA_VK_DEVICE_SELECT="$AMD_GPU_ID"
-    ;;
-  *)
-    unset MESA_VK_DEVICE_SELECT
-    ;;
-esac
+# case "$gpu_mode" in
+#   "NVIDIA")
+#     unset MESA_VK_DEVICE_SELECT
+#     ;;
+#   "AMD")
+#     export MESA_VK_DEVICE_SELECT="$AMD_GPU_ID"
+#     ;;
+#   *)
+#     unset MESA_VK_DEVICE_SELECT
+#     ;;
+# esac
+
+export MESA_VK_DEVICE_SELECT="$AMD_GPU_ID"

@@ -16,6 +16,7 @@
         "edit_prediction_provider": "zed"
     },
     "agent": {
+        "enable_feedback": false,
         "default_model": {
             "provider": "zed.dev",
             "model": "claude-sonnet-4-latest"
