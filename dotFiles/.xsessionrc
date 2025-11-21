@@ -30,4 +30,4 @@ AMD_GPU_ID="1002:150e"
 #     ;;
 # esac
 
-export MESA_VK_DEVICE_SELECT="$AMD_GPU_ID"
+# export MESA_VK_DEVICE_SELECT="$AMD_GPU_ID"
