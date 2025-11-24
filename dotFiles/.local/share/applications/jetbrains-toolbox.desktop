@@ -1,6 +1,6 @@
 [Desktop Entry]
-Icon=/home/tioeare/tools/JetBrains/jetbrains-toolbox/bin/toolbox.svg
-Exec=/home/tioeare/tools/JetBrains/jetbrains-toolbox/bin/jetbrains-toolbox %u
+Icon=/home/tioeare/tools/jetbrains-toolbox-3.1.0.62320/bin/toolbox.svg
+Exec=/home/tioeare/tools/jetbrains-toolbox-3.1.0.62320/bin/jetbrains-toolbox %u
 Version=1.0
 Type=Application
 Categories=Development

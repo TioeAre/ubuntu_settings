@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Fleet 1.48.261 Public Preview
+Exec="/home/tioeare/.local/share/JetBrains/Toolbox/apps/fleet-2/bin/Fleet" %u
+Version=1.0
+Type=Application
+Categories=Development;IDE;
+Terminal=false
+Icon=/home/tioeare/.local/share/JetBrains/Toolbox/apps/fleet-2/lib/app/icons/appicon.png
+Comment=More than a code editor
+StartupWMClass=jetbrains-fleet
+MimeType=text/plain;inode/directory;x-scheme-handler/fleet;
