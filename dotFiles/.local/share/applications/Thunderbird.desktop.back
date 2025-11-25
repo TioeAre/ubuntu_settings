@@ -12,6 +12,7 @@ Encoding=UTF-8
 Version=1.0
 Type=Application
 # NoDisplay=true
+TryExec=/home/tioeare/tools/thunderbird/thunderbird-bin
 Exec=/home/tioeare/tools/thunderbird/thunderbird %u
 Icon=thunderbird.png
 Name=Thunderbird
