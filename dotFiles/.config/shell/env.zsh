@@ -21,6 +21,7 @@ fi
 # completion
 fpath+="$HOME/.config/shell/completion/zsh"
 fpath+="/home/linuxbrew/.linuxbrew/share/zsh/site-functions"
+fpath+="/home/tioeare/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/share/zsh/site-functions"
 
 # uv
 if hash uv 2>/dev/null; then
