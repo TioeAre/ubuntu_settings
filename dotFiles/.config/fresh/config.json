@@ -1,0 +1,30 @@
+{
+  "theme": "light",
+  "active_keybinding_map": "vscode",
+  "keybindings": [
+    {
+      "key": "l",
+      "modifiers": [
+        "ctrl",
+        "alt"
+      ],
+      "action": "format_buffer",
+      "when": "normal"
+    }
+  ],
+  "editor": {
+    "trim_trailing_whitespace_on_save": true,
+    "diagnostics_inline_text": true,
+    "auto_save_enabled": true,
+    "rulers": [
+      120
+    ],
+    "whitespace_spaces_trailing": true
+  },
+  "file_browser": {
+    "show_hidden": true
+  },
+  "file_explorer": {
+    "show_hidden": true
+  }
+}

@@ -27,3 +27,6 @@ fpath+="/home/tioeare/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/share/z
 if hash uv 2>/dev/null; then
     eval "$(uv generate-shell-completion zsh)"
 fi
+
+# OpenClaw Completion
+source "/home/tioeare/.openclaw/completions/openclaw.zsh"
