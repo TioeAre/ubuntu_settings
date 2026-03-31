@@ -12,6 +12,21 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
+  - name: "🎮 Steam 登录/下载"
+    type: "select"
+    proxies:
+      - "DIRECT"
+      - "🔰 选择节点"
+  - name: "🎮 Steam 商店/社区"
+    type: "select"
+    proxies:
+      - "🔰 选择节点"
+      - "DIRECT"
+  - name: "☁️ OneDrive"
+    type: "select"
+    proxies:
+      - "DIRECT"
+      - "🔰 选择节点"
   - type: "select"
     name: "unisound"
     interval: 300
@@ -31,27 +46,12 @@ proxy-groups:
     proxies:
       - "DIRECT"
       - "🔰 选择节点"
-  - name: "🎮 Steam 登录/下载"
-    type: "select"
-    proxies:
-      - "DIRECT"
-      - "🔰 选择节点"
-  - name: "🎮 Steam 商店/社区"
-    type: "select"
-    proxies:
-      - "🔰 选择节点"
-      - "DIRECT"
   - name: "Ⓜ️ 微软服务"
     type: "select"
     proxies:
       - "🔰 选择节点"
       - "DIRECT"
   - name: "🍎 苹果服务"
-    type: "select"
-    proxies:
-      - "DIRECT"
-      - "🔰 选择节点"
-  - name: "☁️ OneDrive"
     type: "select"
     proxies:
       - "DIRECT"
