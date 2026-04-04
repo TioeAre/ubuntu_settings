@@ -6,6 +6,7 @@ cursorline = true
 color-modes = true
 auto-format = false
 completion-replace = true    # true to replace the entire word
+true-color = true
 rulers = [121]
 bufferline = "multiple"
 text-width = 120

@@ -19,7 +19,8 @@
     "rulers": [
       120
     ],
-    "whitespace_spaces_trailing": true
+    "whitespace_spaces_trailing": true,
+    "completion_popup_auto_show": true
   },
   "file_browser": {
     "show_hidden": true
