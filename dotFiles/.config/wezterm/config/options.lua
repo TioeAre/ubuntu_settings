@@ -12,8 +12,9 @@ function module.apply_to_config(config)
         -- config.default_prog = { '/usr/local/bin/fish', '-l' }
     end
 
-    config.initial_cols = 90
+    config.initial_cols = 100
     config.initial_rows = 30
+    config.font_size = 11
     config.exit_behavior = "CloseOnCleanExit"
 
     config.disable_default_key_bindings = true

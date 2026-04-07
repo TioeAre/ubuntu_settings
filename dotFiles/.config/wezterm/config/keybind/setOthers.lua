@@ -82,6 +82,21 @@ function module.apply_to_config(config)
             mods = "CTRL|SHIFT",
             action = wezterm.action.PasteFrom "PrimarySelection"
         },
+        {
+            key = "i",
+            mods = "LEADER|ALT",
+            action = wezterm.action.ActivateCopyMode
+        },
+        {
+            key = "p",
+            mods = "CTRL|SHIFT",
+            action = wezterm.action.ActivateCommandPalette
+        },
+        {
+            key = "Space",
+            mods = "CTRL|SHIFT",
+            action = wezterm.action.QuickSelect
+        },
     }
 
     for _, key_binding in ipairs(new_keys) do
