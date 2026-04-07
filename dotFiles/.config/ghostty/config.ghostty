@@ -1,0 +1,42 @@
+copy-on-select = true
+
+font-family = "IntoneMono Nerd Font Mono"
+font-size = 11.5
+theme = Catppuccin Latte
+background-opacity = 0.9
+# background-blur = true
+
+window-width = 120
+window-height = 42
+
+notify-on-command-finish = unfocused
+
+auto-update = check
+
+keybind = f11=toggle_fullscreen
+
+keybind = ctrl+m=unbind
+keybind = ctrl+m>a=write_scrollback_file:paste,plain
+
+keybind = ctrl+m>ctrl+arrow_down=resize_split:down,10
+keybind = ctrl+m>ctrl+arrow_up=resize_split:up,10
+keybind = ctrl+m>ctrl+arrow_left=resize_split:left,10
+keybind = ctrl+m>ctrl+arrow_right=resize_split:right,10
+
+keybind = ctrl+m>alt+j=goto_split:down
+keybind = ctrl+m>alt+k=goto_split:up
+keybind = ctrl+m>alt+h=goto_split:left
+keybind = ctrl+m>alt+l=goto_split:right
+
+keybind = ctrl+m>alt+e=new_split:right
+keybind = ctrl+m>alt+o=new_split:down
+keybind = ctrl+m>alt+a=new_tab
+keybind = ctrl+m>alt+n=new_window
+
+keybind = ctrl+m>shift+arrow_left=previous_tab
+keybind = ctrl+m>shift+arrow_right=next_tab
+
+keybind = ctrl+m>shift+arrow_up=move_tab:-1
+keybind = ctrl+m>shift+arrow_down=move_tab:1
+
+keybind = ctrl+m>alt+r=reload_config

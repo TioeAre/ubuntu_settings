@@ -191,16 +191,16 @@
     },
     "languages": {
         "Python": {
-            "language_servers": [
-                // Disable basedpyright and enable ty, and include all
-                // other registered language servers (ruff, pylsp, pyright).
-                "ty",
-            ],
-            "formatter": {
-                "language_server": {
-                    "name": "ruff",
-                },
-            },
+            // "language_servers": [
+            //     // Disable basedpyright and enable ty, and include all
+            //     // other registered language servers (ruff, pylsp, pyright).
+            //     "ty",
+            // ],
+            // "formatter": {
+            //     "language_server": {
+            //         "name": "ruff",
+            //     },
+            // },
         },
     },
 }

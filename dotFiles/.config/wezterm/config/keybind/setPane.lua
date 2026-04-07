@@ -90,7 +90,7 @@ function module.apply_to_config(config)
         },
     }
 
-    local apps = { "ssh", "tmux", "zellij", "connect", "nvim", "docker" }
+    local apps = { "ssh", "tmux", "zellij", "connect", "nvim", "docker", "hx", "fresh" }
     condition.bind_if(new_keys, config, apps)
 
     -- for _, key_binding in ipairs(new_keys) do
