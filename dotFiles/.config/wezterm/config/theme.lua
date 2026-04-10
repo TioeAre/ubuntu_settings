@@ -11,6 +11,7 @@ function module.apply_to_config(config)
     -- config.color_scheme = 'Catppuccin Macchiato (Gogh)'
     -- config.color_scheme = "Catppuccin Mocha"
     -- config.color_scheme = 'Catppuccin Mocha (Gogh)'
+    -- config.color_scheme = 'tokyonight_day'
 
     config.use_fancy_tab_bar = true
     config.enable_tab_bar = true
