@@ -1,12 +1,3 @@
-# general
-import = [
- # "%APPDATA%\alacritty/themes/themes/catppuccin_latte.toml"
- "%APPDATA%/alacritty/themes/themes/catppuccin_mocha.toml"
- # "%APPDATA%\alacritty/themes/themes/tokyo-night-storm.toml"
-]
-shell = "C:/Program Files/PowerShell/7/pwsh.exe"
-working_directory = "None"
-live_config_reload = true
 # ipc_socket = true
 # tabspaces = 4
 # env
@@ -20,7 +11,7 @@ blur = true
 startup_mode = "Windowed" # | "Maximized" | "Fullscreen" | "SimpleFullscreen"
 title = "Alacritty"
 dynamic_title = true
-decorations_theme_variant = "None" #  "Dark" | "Light" |
+decorations_theme_variant = "Light" #  "Dark" | "Light" |
 
 [scrolling]
 history = 50000
@@ -56,6 +47,7 @@ thickness = 0.15
 
 [terminal]
 osc52 = "OnlyCopy" # "Disabled" | "OnlyPaste" | "CopyPaste"
+shell = "C:/Program Files/PowerShell/7/pwsh.exe"
 
 [mouse]
 hide_when_typing = false
@@ -81,5 +73,15 @@ bindings = [
     { key = "F", mods = "Control|Shift", mode = "~Vi", action = "SearchForward" },
     { key = "q", mods = "Control", mode = "Search", action = "SearchCancel" },
     { key = "Escape", mode = "Search", action = "SearchClear" },
+]
+
+[general]
+live_config_reload = true
+working_directory = "None"
+# general
+import = [
+ "C:/Users/TioeAre/AppData/Roaming/alacritty/themes/catppuccin/catppuccin-latte.toml"
+#  "%APPDATA%/alacritty/themes/themes/catppuccin_mocha.toml"
+ # "%APPDATA%/alacritty/themes/themes/tokyo-night-storm.toml"
 ]
 
