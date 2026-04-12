@@ -19,6 +19,7 @@ proxy-groups:
   - name: 🔰 选择节点
     type: select
     include-all: true
+    exclude-filter: "unisound"
   - name: "🎮 Steam 登录/下载"
     type: "select"
     proxies:
@@ -82,14 +83,17 @@ proxy-groups:
   - name: 🌏 爱奇艺&哔哩哔哩
     type: select
     include-all: true
+    exclude-filter: "unisound"
     proxies:
       - DIRECT
   - name: 📺 动画疯
     type: select
     include-all: true
+    exclude-filter: "unisound"
   - name: OverseasAI
     type: select
     include-all: true
+    exclude-filter: "unisound"
 rules:
   - "IP-CIDR,42.81.81.67/32,unisound,no-resolve"
   - "IP-CIDR,10.10.20.36/32,unisound,no-resolve"
