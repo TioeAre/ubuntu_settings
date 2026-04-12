@@ -1,3 +1,11 @@
+rule-providers:
+  OverseasAI:
+    type: http
+    behavior: classical
+    format: text
+    url: "https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Clash/OverseasAI/OverseasAI.list"
+    path: ./ruleset/OverseasAI.yaml
+    interval: 86400
 proxies:
   - type: "http"
     name: "unisound_http"
@@ -10,8 +18,7 @@ proxies:
 proxy-groups:
   - name: 🔰 选择节点
     type: select
-    proxies:
-      - DIRECT
+    include-all: true
   - name: "🎮 Steam 登录/下载"
     type: "select"
     proxies:
@@ -74,14 +81,15 @@ proxy-groups:
       - DIRECT
   - name: 🌏 爱奇艺&哔哩哔哩
     type: select
+    include-all: true
     proxies:
       - DIRECT
-      - 🔰 选择节点
   - name: 📺 动画疯
     type: select
-    proxies:
-      - 🔰 选择节点
-      - DIRECT
+    include-all: true
+  - name: OverseasAI
+    type: select
+    include-all: true
 rules:
   - "IP-CIDR,42.81.81.67/32,unisound,no-resolve"
   - "IP-CIDR,10.10.20.36/32,unisound,no-resolve"
@@ -91,6 +99,7 @@ rules:
   - "IP-CIDR,10.10.20.22/32,unisound,no-resolve"
   - "DOMAIN-SUFFIX,hivoice.cn,unisound"
   - "IP-CIDR,10.10.20.237/32,unisound,no-resolve"
+  - "RULE-SET,OverseasAI,OverseasAI"
   - "DOMAIN-SUFFIX,originlab.com,📰 期刊网站"
   - "DOMAIN-SUFFIX,acm.org,📰 期刊网站"
   - "DOMAIN-SUFFIX,acs.org,📰 期刊网站"
