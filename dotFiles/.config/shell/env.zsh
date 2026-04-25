@@ -29,4 +29,4 @@ if hash uv 2>/dev/null; then
 fi
 
 # OpenClaw Completion
-source "/home/tioeare/.openclaw/completions/openclaw.zsh"
+[[ ! -f $HOME/.openclaw/completions/openclaw.zsh ]] || source "$HOME/.openclaw/completions/openclaw.zsh"
