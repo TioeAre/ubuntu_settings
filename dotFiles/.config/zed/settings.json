@@ -7,6 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "project_panel": {
+        "dock": "right"
+    },
+    "outline_panel": {
+        "dock": "right"
+    },
+    "collaboration_panel": {
+        "dock": "right"
+    },
+    "git_panel": {
+        "dock": "right"
+    },
     "scrollbar": {
         "axes": {
             "horizontal": false
@@ -64,6 +76,7 @@
         //     "provider": "zed.dev",
         //     "model": "claude-sonnet-4-latest"
         // }
+        "dock": "left",
         "default_model": {
             "provider": "copilot_chat",
             "model": "gpt-5-mini",
