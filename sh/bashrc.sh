@@ -52,13 +52,11 @@ fi
 EOF
 
 # Add configuration to enable command history navigation
-# {
-#     printf "# Enable command history navigation with arrow keys" # >>~/.bashrc
-#     printf "if [ -n \"\$BASH_VERSION\" ]; then"                  # >>~/.bashrc
-#     printf "    bind '\"\e[A\": history-search-backward'"        # >>~/.bashrc
-#     printf "    bind '\"\e[B\": history-search-forward'"         # >>~/.bashrc
-#     printf "fi"
-# } >>~/.bashrc
+echo 'source ~/.local/share/blesh/ble.sh' >> ~/.bashrc
+echo 'if [[ $- == *i* ]]; then' >> ~/.bashrc
+echo "    bind '\"\e[A\": history-search-backward'" >> ~/.bashrc
+echo "    bind '\"\e[B\": history-search-forward'" >> ~/.bashrc
+echo 'fi' >> ~/.bashrc
 
 # if [[ $- == *i* ]]
 # then
