@@ -1,6 +1,23 @@
 {
-  "theme": "light",
-  "active_keybinding_map": "vscode",
+  "version": 2,
+  "theme": "builtin://light",
+  "locale": "en",
+  "editor": {
+    "diagnostics_inline_text": true,
+    "auto_save_enabled": true,
+    "trim_trailing_whitespace_on_save": true,
+    "completion_popup_auto_show": true,
+    "rulers": [
+      120
+    ],
+    "whitespace_spaces_trailing": true
+  },
+  "file_explorer": {
+    "show_hidden": true
+  },
+  "file_browser": {
+    "show_hidden": true
+  },
   "keybindings": [
     {
       "key": "l",
@@ -12,20 +29,5 @@
       "when": "normal"
     }
   ],
-  "editor": {
-    "trim_trailing_whitespace_on_save": true,
-    "diagnostics_inline_text": true,
-    "auto_save_enabled": true,
-    "rulers": [
-      120
-    ],
-    "whitespace_spaces_trailing": true,
-    "completion_popup_auto_show": true
-  },
-  "file_browser": {
-    "show_hidden": true
-  },
-  "file_explorer": {
-    "show_hidden": true
-  }
+  "active_keybinding_map": "vscode"
 }
