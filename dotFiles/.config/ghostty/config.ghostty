@@ -12,6 +12,8 @@ window-height = 42
 notify-on-command-finish = unfocused
 
 auto-update = check
+shell-integration-features = ssh-terminfo   # install xterm-ghostty on remote
+shell-integration-features = ssh-env   # fallback to xterm-256color
 
 keybind = f11=toggle_fullscreen
 

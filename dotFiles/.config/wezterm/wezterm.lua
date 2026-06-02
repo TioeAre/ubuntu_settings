@@ -19,4 +19,6 @@ end
 local bar = require 'config/bar'
 bar.apply_to_config(config)
 
+config.enable_wayland = false
+
 return config
