@@ -36,15 +36,15 @@ proxy-groups:
       - "DIRECT"
       - "选择节点"
   - name: "unisound"
-    type: "select"
-    interval: 300
-    timeout: 5000
-    max-failed-times: 5
+    type: "fallback"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 150
+    timeout: 1000
     lazy: true
     proxies:
-      - "DIRECT"
       - "unisound_http"
       - "unisound_socks5"
+      - "DIRECT"
   - name: "期刊网站"
     type: "select"
     interval: 300
