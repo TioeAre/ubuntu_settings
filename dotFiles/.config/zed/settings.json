@@ -7,18 +7,29 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "bottom_dock_layout": "contained",
+    "title_bar": {
+        "button_layout": "platform_default",
+        "show_menus": false,
+        "show_branch_status_icon": false
+    },
+    "status_bar": {
+        "show_active_file": true,
+        "line_endings_button": true,
+        "active_encoding_button": "enabled"
+    },
     "cli_default_open_behavior": "existing_window",
     "project_panel": {
-        "dock": "right"
+        "dock": "left"
     },
     "outline_panel": {
-        "dock": "right"
+        "dock": "left"
     },
     "collaboration_panel": {
-        "dock": "right"
+        "dock": "left"
     },
     "git_panel": {
-        "dock": "right"
+        "dock": "bottom"
     },
     "scrollbar": {
         "axes": {
@@ -36,19 +47,6 @@
     "semantic_tokens": "combined",
     "document_folding_ranges": "on",
     "ssh_connections": [
-        {
-            "host": "uni_vol_a800",
-            "args": [],
-            "projects": [
-                {
-                    "paths": ["/fs-ift/med/lixuan-ustc/projects/LatentMAS/./"],
-                },
-                {
-                    "paths": ["/fs-ift/med/lixuan-ustc/projects/MRAG3.0/./"],
-                },
-            ],
-            "upload_binary_over_ssh": true,
-        },
     ],
     "edit_predictions": {
         "open_ai_compatible_api": {
@@ -77,7 +75,7 @@
         //     "provider": "zed.dev",
         //     "model": "claude-sonnet-4-latest"
         // }
-        "dock": "left",
+        "dock": "right",
         "default_model": {
             "provider": "copilot_chat",
             "model": "gpt-5-mini",
@@ -93,7 +91,7 @@
     "buffer_line_height": "comfortable",
     "theme": {
         "mode": "light",
-        "light": "Catppuccin Latte (Blur) [Heavy]",
+        "light": "Catppuccin Latte",
         "dark": "One Dark Pro",
     },
     "tab_size": 4,
@@ -137,6 +135,7 @@
         // "C++": ["c"],
         // "TOML": ["MyLockFile"],
         "Dockerfile": ["Dockerfile*"],
+        "JSON": ["json", "jsonl"],
     },
     // "lsp": {
     //   "yaml-language-server": {
@@ -205,16 +204,16 @@
     },
     "languages": {
         "Python": {
-            // "language_servers": [
-            //     // Disable basedpyright and enable ty, and include all
-            //     // other registered language servers (ruff, pylsp, pyright).
-            //     "ty",
-            // ],
-            // "formatter": {
-            //     "language_server": {
-            //         "name": "ruff",
-            //     },
-            // },
+            "language_servers": [
+                // Disable basedpyright and enable ty, and include all
+                // other registered language servers (ruff, pylsp, pyright).
+                "ty",
+            ],
+            "formatter": {
+                "language_server": {
+                    "name": "ruff",
+                },
+            },
         },
     },
 }
