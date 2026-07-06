@@ -15,6 +15,14 @@ proxies:
     name: "unisound_socks5"
     server: "127.0.0.1"
     port: 1085
+  - type: "http"
+    name: "ustc_http"
+    server: "127.0.0.1"
+    port: 8888
+  - type: "socks5"
+    name: "ustc_socks5"
+    server: "127.0.0.1"
+    port: 1080
 proxy-groups:
   - name: 选择节点
     type: select
@@ -44,6 +52,16 @@ proxy-groups:
     proxies:
       - "unisound_http"
       - "unisound_socks5"
+      - "DIRECT"
+  - name: "ustc"
+    type: "fallback"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 150
+    timeout: 1000
+    lazy: true
+    proxies:
+      - "ustc_http"
+      - "ustc_socks5"
       - "DIRECT"
   - name: "期刊网站"
     type: "select"
@@ -107,6 +125,7 @@ rules:
   - "IP-CIDR,10.10.20.237/32,unisound,no-resolve"
   # - "RULE-SET,OverseasAI,OverseasAI"
   - "DOMAIN-SUFFIX,tioe.xyz,DIRECT"
+  - "DOMAIN-SUFFIX,ustc.edu.cn,ustc"
   - "DOMAIN-SUFFIX,originlab.com,期刊网站"
   - "DOMAIN-SUFFIX,acm.org,期刊网站"
   - "DOMAIN-SUFFIX,acs.org,期刊网站"

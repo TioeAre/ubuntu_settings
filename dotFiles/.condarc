@@ -13,3 +13,4 @@ envs_dirs:
 pkgs_dirs:
   - /home/tioeare/anaconda3/pkgs
 # auto_activate_base: true
+auto_activate_base: false

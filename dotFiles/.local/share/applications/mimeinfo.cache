@@ -35,6 +35,7 @@ text/x-tex=nvim.desktop;
 x-scheme-handler/Cursor=cursor.desktop;
 x-scheme-handler/clash=clash-verge-handler.desktop;
 x-scheme-handler/clash-verge=clash-verge-handler.desktop;
+x-scheme-handler/com.panabit.mobile=ustc-iwan-callback.desktop;
 x-scheme-handler/fdm=freedownloadmanager_fdm_up.desktop;
 x-scheme-handler/fleet=Fleet-df2e9415-ce51-41c8-8b4e-2d6a6a1ffd43.desktop;jetbrains-fleet-0ac562ad-a207-4c7e-adea-aecc13fce0c9.desktop;
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop;
