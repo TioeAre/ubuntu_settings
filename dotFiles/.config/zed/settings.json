@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "agent_ui_font_size": 16.0,
+    "markdown_preview_font_size": 16.0,
+    "agent_buffer_font_size": 16.0,
     "bottom_dock_layout": "contained",
     "title_bar": {
         "button_layout": "platform_default",
@@ -41,6 +44,9 @@
             "type": "registry"
         },
         "codex-acp": {
+            "default_config_options": {
+                "reasoning_effort": "medium"
+            },
             "type": "registry"
         }
     },
@@ -60,7 +66,7 @@
             "enabled": true,
         },
     },
-    "ui_font_size": 15.0,
+    "ui_font_size": 16.5,
     "calls": {
         "mute_on_join": true,
     },
@@ -87,11 +93,11 @@
         },
     },
     "restore_on_startup": "last_session",
-    "buffer_font_size": 13.5,
+    "buffer_font_size": 15.5,
     "buffer_line_height": "comfortable",
     "theme": {
         "mode": "light",
-        "light": "Catppuccin Latte",
+        "light": "One Light",
         "dark": "One Dark Pro",
     },
     "tab_size": 4,
@@ -208,6 +214,7 @@
                 // Disable basedpyright and enable ty, and include all
                 // other registered language servers (ruff, pylsp, pyright).
                 "ty",
+                "ruff",
             ],
             "formatter": {
                 "language_server": {

@@ -1,11 +1,14 @@
 [Desktop Entry]
-Name=PyCharm 2025.3.1.1
+Name=PyCharm 2026.1.4
 Exec="/home/tioeare/.local/share/JetBrains/Toolbox/apps/pycharm-community-2/bin/pycharm" %u
 Version=1.0
 Type=Application
 Categories=Development;IDE;
 Terminal=false
-Icon=/home/tioeare/.local/share/JetBrains/Toolbox/dotDesktopIcons/jetbrains-pycharm-ce-a18969e9-f523-4d7d-be1c-8b7ac9492938.desktop.icon.svg
+Icon=jetbrains-pycharm-ce-a18969e9-f523-4d7d-be1c-8b7ac9492938
+X-Icon-Path=/home/tioeare/.local/share/icons/hicolor/scalable/apps/jetbrains-pycharm-ce-a18969e9-f523-4d7d-be1c-8b7ac9492938.svg
+X-Installed-Icon-Cache-Path=/home/tioeare/.local/share/icons/hicolor
+X-Icon-Name-Before-Sanitization=jetbrains-pycharm-ce-a18969e9-f523-4d7d-be1c-8b7ac9492938.desktop.icon.svg
 Comment=The Only Python IDE you need
 StartupWMClass=jetbrains-pycharm
 StartupNotify=true

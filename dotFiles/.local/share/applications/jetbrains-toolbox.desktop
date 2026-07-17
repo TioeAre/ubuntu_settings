@@ -1,5 +1,5 @@
 [Desktop Entry]
-Icon=/home/tioeare/tools/jetbrains-toolbox-3.1.0.62320/bin/toolbox.svg
+Icon=jetbrains-toolbox
 Exec=/home/tioeare/tools/jetbrains-toolbox-3.1.0.62320/bin/jetbrains-toolbox %u
 Version=1.0
 Type=Application
@@ -7,8 +7,10 @@ Categories=Development
 Name=JetBrains Toolbox
 StartupWMClass=jetbrains-toolbox
 Terminal=false
-MimeType=x-scheme-handler/jetbrains;
+MimeType=
 X-GNOME-Autostart-enabled=true
+X-Icon-Path=/home/tioeare/.local/share/icons/hicolor/scalable/apps/jetbrains-toolbox.svg
+X-Installed-Icon-Cache-Path=/home/tioeare/.local/share/icons/hicolor
 StartupNotify=false
 X-GNOME-Autostart-Delay=10
 X-MATE-Autostart-Delay=10
