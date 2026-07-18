@@ -1,3 +1,5 @@
+**/api.*sh
+
 **/.history/**
 **/.vscode/**
 !.vscode/tasks.json
