@@ -12,8 +12,8 @@ fi
 ###  fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-### autoenv plugin
-[[ ! -f $HOME/packages/.autoenv/activate.sh ]] || source "$HOME/packages/.autoenv/activate.sh"
+# ### autoenv plugin
+# [[ ! -f $HOME/packages/.autoenv/activate.sh ]] || source "$HOME/packages/.autoenv/activate.sh"
 
 ### zellij
 # [[ ! -d $HOME/.config/shell/completion/zsh/_zellij ]] || source "$HOME/.config/shell/completion/zsh/_zellij"

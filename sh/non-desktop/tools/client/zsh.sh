@@ -6,10 +6,10 @@ chsh -s $(which zsh)
 
 # bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 
-### autoenv
-# curl -#fLo- 'https://raw.githubusercontent.com/hyperupcall/autoenv/master/scripts/install.sh' | sh
-git clone 'https://github.com/hyperupcall/autoenv' ~/packages/.autoenv
-printf '%s\n' "source ~/.autoenv/activate.sh" >> ~/.bashrc
+# ### autoenv
+# # curl -#fLo- 'https://raw.githubusercontent.com/hyperupcall/autoenv/master/scripts/install.sh' | sh
+# git clone 'https://github.com/hyperupcall/autoenv' ~/packages/.autoenv
+# printf '%s\n' "source ~/.autoenv/activate.sh" >> ~/.bashrc
 
 # # oh-my-zsh
 # sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

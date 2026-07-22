@@ -79,7 +79,7 @@ zinit snippet OMZ::lib/vcs_info.zsh
 
 # oh-my-zsh plugins
 zinit ice wait lucid
-zinit snippet OMZP::autoenv
+# zinit snippet OMZP::autoenv
 zinit snippet OMZP::command-not-found
 zinit snippet OMZP::copypath
 zinit snippet OMZP::cp

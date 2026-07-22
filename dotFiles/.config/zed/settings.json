@@ -7,9 +7,63 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-    "agent_ui_font_size": 16.0,
-    "markdown_preview_font_size": 16.0,
-    "agent_buffer_font_size": 16.0,
+    "language_models": {
+        "openai_compatible": {
+            "ustc": {
+                "api_url": "https://api.llm.ustc.edu.cn/v1",
+                "available_models": [
+                    {
+                        "name": "deepseek-v4-pro",
+                        "max_tokens": 1000000,
+                        "max_output_tokens": 1000000,
+                        "max_completion_tokens": 1000000,
+                        "capabilities": {
+                            "tools": true,
+                            "images": false,
+                            "parallel_tool_calls": false,
+                            "prompt_cache_key": false,
+                            "chat_completions": true,
+                            "interleaved_reasoning": false,
+                            "max_tokens_parameter": false
+                        }
+                    },
+                    {
+                        "name": "deepseek-v4-flash-ascend1",
+                        "max_tokens": 1000000,
+                        "max_output_tokens": 1000000,
+                        "max_completion_tokens": 1000000,
+                        "capabilities": {
+                            "tools": true,
+                            "images": false,
+                            "parallel_tool_calls": false,
+                            "prompt_cache_key": false,
+                            "chat_completions": true,
+                            "interleaved_reasoning": false,
+                            "max_tokens_parameter": false
+                        }
+                    },
+                    {
+                        "name": "glm-5.2",
+                        "max_tokens": 200000,
+                        "max_output_tokens": 32000,
+                        "max_completion_tokens": 200000,
+                        "capabilities": {
+                            "tools": true,
+                            "images": false,
+                            "parallel_tool_calls": false,
+                            "prompt_cache_key": false,
+                            "chat_completions": true,
+                            "interleaved_reasoning": false,
+                            "max_tokens_parameter": false
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "agent_ui_font_size": 14.5,
+    "markdown_preview_font_size": 14.0,
+    "agent_buffer_font_size": 14.0,
     "bottom_dock_layout": "contained",
     "title_bar": {
         "button_layout": "platform_default",
@@ -40,9 +94,6 @@
         }
     },
     "agent_servers": {
-        "claude-acp": {
-            "type": "registry"
-        },
         "codex-acp": {
             "default_config_options": {
                 "reasoning_effort": "medium"
@@ -66,7 +117,7 @@
             "enabled": true,
         },
     },
-    "ui_font_size": 16.5,
+    "ui_font_size": 15.0,
     "calls": {
         "mute_on_join": true,
     },
@@ -81,10 +132,11 @@
         //     "provider": "zed.dev",
         //     "model": "claude-sonnet-4-latest"
         // }
+        "default_profile": "ask",
         "dock": "right",
         "default_model": {
-            "provider": "copilot_chat",
-            "model": "gpt-5-mini",
+            "provider": "ustc",
+            "model": "deepseek-v4-flash-ascend1",
             "enable_thinking": false
         },
         "inline_assistant_model": {
@@ -93,7 +145,7 @@
         },
     },
     "restore_on_startup": "last_session",
-    "buffer_font_size": 15.5,
+    "buffer_font_size": 14.0,
     "buffer_line_height": "comfortable",
     "theme": {
         "mode": "light",
