@@ -47,3 +47,7 @@ model_reasoning_effort = "max"
 4. 确保 TOML 语法有效。
 
 5. 最后告诉我文件位置、完整配置内容以及如何在提示词中调用 luna_worker。
+
+---
+
+请将临时产物等都尽可能写在本项目下的 ./tmp 目录下
