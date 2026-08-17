@@ -1,0 +1,33 @@
+model = "gpt-5.6-sol"
+model_reasoning_effort = "medium"
+approvals_reviewer = "guardian_subagent"
+plan_mode_reasoning_effort = "high"
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[notice]
+hide_rate_limit_model_nudge = true
+
+[notice.model_migrations]
+"gpt-5.3-codex" = "gpt-5.4"
+"gpt-5.4" = "gpt-5.5"
+
+[tui]
+status_line = ["model-with-reasoning", "current-dir", "git-branch"]
+status_line_use_colors = true
+terminal_title = ["activity", "project-name", "app-name", "current-dir", "run-state", "context-remaining"]
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+"gpt-5.6-sol" = 4
+
+[features]
+terminal_resize_reflow = true
+memories = true
+mentions_v2 = true
+network_proxy = true
+
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 4

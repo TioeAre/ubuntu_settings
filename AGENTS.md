@@ -41,3 +41,31 @@ Use Python with 4-space indentation, type hints where they clarify interfaces, a
 `project_summary.md` at the repository root is the durable project context document. Keep `project_summary.md` concise, factual, and project-wide. Update it in the same task when work changes repository structure, component responsibilities, system-wide data or control flow, public entry points, configuration formats, dependencies, runtime requirements, or standard operational workflows.
 
 Do not update it for local bug fixes, isolated tests, formatting, task logs, changelogs, or temporary implementation details. Edit existing sections in place, remove obsolete claims, verify changed statements against the repository, and state in the final report whether and why the summary changed.
+
+## Plan execution routing
+
+When a plan has been approved and the workflow transitions from planning to implementation:
+
+1. Do not perform the bulk implementation in the parent agent.
+2. Delegate the approved plan to exactly one primary implementation worker.
+
+Choose `terra_worker` when:
+
+- the implementation is cross-cutting;
+- requirements retain ambiguity;
+- debugging or non-local reasoning is required;
+- architectural judgment may still be necessary.
+
+Choose `luna_worker` when:
+
+- the approved plan is decision-complete;
+- files and expected changes are clearly identified;
+- the work is mechanical, repetitive, or high-volume;
+- acceptance criteria and validation steps are explicit.
+
+The parent agent should retain responsibility for:
+
+- coordination;
+- resolving blockers;
+- reviewing deviations from the approved plan;
+- final validation and completion reporting.

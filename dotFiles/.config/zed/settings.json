@@ -20,7 +20,7 @@
                         "capabilities": {
                             "tools": true,
                             "images": false,
-                            "parallel_tool_calls": false,
+                            "parallel_tool_calls": true,
                             "prompt_cache_key": false,
                             "chat_completions": true,
                             "interleaved_reasoning": false,
@@ -29,13 +29,13 @@
                     },
                     {
                         "name": "deepseek-v4-flash-ascend1",
-                        "max_tokens": 1000000,
-                        "max_output_tokens": 1000000,
-                        "max_completion_tokens": 1000000,
+                        "max_tokens": 700000,
+                        "max_output_tokens": 700000,
+                        "max_completion_tokens": 700000,
                         "capabilities": {
                             "tools": true,
                             "images": false,
-                            "parallel_tool_calls": false,
+                            "parallel_tool_calls": true,
                             "prompt_cache_key": false,
                             "chat_completions": true,
                             "interleaved_reasoning": false,
@@ -50,7 +50,7 @@
                         "capabilities": {
                             "tools": true,
                             "images": false,
-                            "parallel_tool_calls": false,
+                            "parallel_tool_calls": true,
                             "prompt_cache_key": false,
                             "chat_completions": true,
                             "interleaved_reasoning": false,
@@ -94,6 +94,14 @@
         }
     },
     "agent_servers": {
+        "claude-acp": {
+            "default_config_options": {
+                "effort": "max",
+                "model": "haiku",
+                "mode": "plan"
+            },
+            "type": "registry"
+        },
         "codex-acp": {
             "default_config_options": {
                 "reasoning_effort": "medium"
