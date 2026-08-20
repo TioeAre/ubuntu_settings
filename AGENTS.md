@@ -6,20 +6,17 @@ This file applies to the entire repository. Keep it focused on agent behavior an
 
 Before substantive work:
 
-1. Read `AGENTS.md` and `project_summary.md` in full.
-2. Use the summary to locate relevant code, configuration, tests, and entry points.
-3. Verify task-sensitive details against the current source. Source code and checked-in configuration remain the source of truth.
-4. Inspect the worktree and preserve unrelated or pre-existing user changes.
+1. Read the repository-root `AGENTS.md` in full.
+2. Inspect `project_summary.md` as the repository index. Read the sections relevant to the current task; read it in full for cross-cutting, architectural, or unfamiliar work.
+3. Use the summary to locate relevant code, configuration, tests, and entry points.
+4. Verify all task-sensitive details against the current source. Source code and checked-in configuration remain the source of truth.
+5. Inspect the worktree and preserve unrelated or pre-existing user changes.
 
 If `project_summary.md` is missing, inspect the repository and create it before making substantive changes. In a read-only context, defer creation and include it in the plan.
 
 ## Development Guidelines
 
 - Use `apply_patch` for file edits. If it cannot run because of an environment or sandbox limitation, apply the patch with `git apply --recount <<'PATCH'` instead.
-
-## Agent Delegation
-
-When operating in Plan mode, proactively delegate clear, narrowly scoped, and repeatable subtasks to the global `luna_worker` agent without requiring the user to repeat the delegation request. Delegate only work permitted in Plan mode, give each task strict boundaries, and use `luna_worker` for independent execution and practical verification. Keep ambiguous, cross-cutting, or architecture-defining work with the primary agent. The primary agent remains responsible for decisions, integration, and the final report.
 
 ## Engineering Principles
 
@@ -42,30 +39,66 @@ Use Python with 4-space indentation, type hints where they clarify interfaces, a
 
 Do not update it for local bug fixes, isolated tests, formatting, task logs, changelogs, or temporary implementation details. Edit existing sections in place, remove obsolete claims, verify changed statements against the repository, and state in the final report whether and why the summary changed.
 
-## Plan execution routing
+## Agent Delegation
 
-When a plan has been approved and the workflow transitions from planning to implementation:
+Delegation is an optimization, not a requirement. Delegate only when it reduces total work, latency, or cost without requiring substantial context reconstruction.
 
-1. Do not perform the bulk implementation in the parent agent.
-2. Delegate the approved plan to exactly one primary implementation worker.
+### General Rules
 
-Choose `terra_worker` when:
+- Keep small, tightly coupled, or context-heavy tasks in the current agent.
+- Delegate tasks that are independent, decision-complete, repetitive, or can be described with a compact handoff.
+- Do not delegate unresolved architectural decisions or tasks that require most of the planner's accumulated context.
+- Do not assume prompt-cache or KV-cache reuse across agents or models. Minimize duplicated context, repository reads, tool output, and review work.
+- Avoid redundant investigation between the parent agent and workers.
 
-- the implementation is cross-cutting;
-- requirements retain ambiguity;
-- debugging or non-local reasoning is required;
-- architectural judgment may still be necessary.
+### Handoff Contract
 
-Choose `luna_worker` when:
+Provide workers with a compact execution packet containing only what is necessary:
 
-- the approved plan is decision-complete;
-- files and expected changes are clearly identified;
-- the work is mechanical, repetitive, or high-volume;
-- acceptance criteria and validation steps are explicit.
+- objective and scope;
+- relevant repository paths;
+- decisions and constraints already established;
+- acceptance criteria;
+- required validation commands;
+- known pre-existing changes that must be preserved.
 
-The parent agent should retain responsibility for:
+Do not copy source files, `AGENTS.md`, `project_summary.md`, full conversation history, or planner reasoning into the handoff when the worker can obtain the required information directly from the repository.
 
-- coordination;
-- resolving blockers;
-- reviewing deviations from the approved plan;
-- final validation and completion reporting.
+Workers must verify task-sensitive details against the current source.
+
+### Planning Delegation
+
+In Plan mode, use `luna_worker` only for independent, narrowly scoped investigations with compact, mechanically verifiable outputs, such as:
+
+- locating implementations or references;
+- identifying affected files;
+- checking existing dependency capabilities;
+- running read-only searches or tests;
+- collecting repository facts.
+
+Keep architecture decisions, ambiguous requirements, cross-cutting reasoning, and plan synthesis in the parent agent.
+
+Use multiple planning workers only when the subtasks are genuinely independent and parallel execution provides material value.
+
+### Implementation Routing
+
+After plan approval, use at most one primary implementation worker for substantial implementation.
+
+Use `luna_worker` when the plan is decision-complete, affected files and expected changes are clear, validation is explicit, and the work is primarily mechanical or repetitive.
+
+Use `terra_worker` when implementation requires cross-cutting reasoning, debugging, architectural judgment, or resolution of meaningful ambiguity.
+
+Keep small or highly context-dependent changes in the parent agent when delegation would mainly duplicate context rather than reduce work.
+
+The primary implementation worker must not recursively delegate implementation unless parallel execution is explicitly required by the approved plan.
+
+### Parent-Agent Responsibilities
+
+The parent agent remains responsible for:
+
+- coordination and scope control;
+- resolving blockers and plan deviations;
+- reviewing the worker's changes without unnecessarily repeating its investigation;
+- final validation;
+- updating `project_summary.md` when required;
+- final completion reporting.
