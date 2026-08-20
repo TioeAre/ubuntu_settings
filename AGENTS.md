@@ -41,7 +41,9 @@ Do not update it for local bug fixes, isolated tests, formatting, task logs, cha
 
 ## Agent Delegation
 
-Delegation is an optimization, not a requirement. Delegate only when it reduces total work, latency, or cost without requiring substantial context reconstruction.
+Delegation is the default for implementation after plan approval. Optimize primarily for total execution cost while preserving correctness.
+
+Once a plan is decision-complete, the parent agent should normally delegate implementation rather than execute it directly, even when the parent already has sufficient repository context.
 
 ### General Rules
 
@@ -82,15 +84,24 @@ Use multiple planning workers only when the subtasks are genuinely independent a
 
 ### Implementation Routing
 
-After plan approval, use at most one primary implementation worker for substantial implementation.
+After plan approval, delegate substantial implementation to exactly one primary implementation worker by default.
 
-Use `luna_worker` when the plan is decision-complete, affected files and expected changes are clear, validation is explicit, and the work is primarily mechanical or repetitive.
+Use `luna_worker` as the default implementation worker when the approved plan provides sufficient instructions to execute and validate the change.
 
-Use `terra_worker` when implementation requires cross-cutting reasoning, debugging, architectural judgment, or resolution of meaningful ambiguity.
+Escalate to `terra_worker` only when implementation still requires one or more of:
 
-Keep small or highly context-dependent changes in the parent agent when delegation would mainly duplicate context rather than reduce work.
+- unresolved architectural judgment;
+- substantial debugging or non-local reasoning;
+- meaningful requirement ambiguity;
+- adaptation to unexpected source behavior that is not covered by the plan.
 
-The primary implementation worker must not recursively delegate implementation unless parallel execution is explicitly required by the approved plan.
+Do not keep implementation in the parent merely because the parent already has repository context or could perform the change itself.
+
+The parent may implement directly only when the change is trivial and delegation overhead would clearly exceed the implementation work, such as a small localized edit requiring no investigation or debugging.
+
+If a `luna_worker` encounters ambiguity or a blocker outside the approved plan, it should stop and report the issue to the parent rather than make architectural decisions or recursively delegate.
+
+The primary implementation worker must not recursively delegate implementation.
 
 ### Parent-Agent Responsibilities
 
