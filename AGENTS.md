@@ -88,24 +88,24 @@ Use judgment based on total expected cost, duplicated context, reasoning difficu
 
 ### `luna_worker`
 
-Consider `luna_worker` when a task is relatively inexpensive in reasoning but expensive in context consumption or repetitive tool use. Also using `luna_worker` for narrowly scoped investigation or decision-complete implementation that can be executed from a compact handoff.
+Consider `luna_worker` when the remaining work is relatively cheap in reasoning but expensive in context, repetitive tool use, or execution tokens.
 
-Typical examples include:
+It is a good fit for:
 
 * broad repository or documentation searches;
-* locating implementations, references, configuration, tests, or entry points;
+* locating implementations, references, tests, configs, entry points, or dependencies;
 * reading and summarizing many files;
-* producing subsystem or codebase inventories;
-* repetitive comparisons or fact extraction;
-* simple localized edits;
-* straightforward renames;
-* bulk mechanical changes;
-* simple configuration updates;
-* high-volume code inspection before higher-level reasoning.
+* codebase inventories, impact analysis, and repetitive fact extraction;
+* simple localized fixes, renames, config updates, and bulk mechanical edits;
+* straightforward refactors or API migrations with a known target pattern;
+* documentation or test updates with clear expected behavior;
+* decision-complete implementation that can be described with a compact handoff.
 
-A useful pattern is to let `luna_worker` consume the bulk material and return a compact summary containing the relevant paths, findings, changes, and uncertainties.
+After planning has resolved the important design, scope, and implementation decisions, the resulting implementation can often be delegated directly to `luna_worker` instead of being executed by the parent.
 
-This can be done in planning, investigation, or implementation contexts when it is useful. An approved plan is not a prerequisite.
+A useful pattern is to let the parent handle higher-level reasoning, give `luna_worker` a compact execution packet, and have it return only relevant findings, changed files, uncertainties, and concise results. This can be used during planning, investigation, or implementation. An approved plan is not required.
+
+Keep work in the parent when substantial architectural judgment, ambiguity, difficult debugging, or non-local reasoning is still required.
 
 ### Delegation Heuristics
 
