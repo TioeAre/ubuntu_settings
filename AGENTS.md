@@ -1,115 +1,150 @@
 # AGENTS Guidelines for This Repository
 
-This file applies to the entire repository. Keep it focused on agent behavior and engineering rules; durable project facts belong in `project_summary.md`, and user-facing setup and usage belong in `README.md`.
+This file provides repository-wide guidance for agents. Use it as a set of defaults and preferences rather than as a mandatory checklist.
+
+Prioritize correct task completion, appropriate scope, and efficient use of context and tools. Do not perform extra work solely to satisfy these guidelines when it does not materially help the task.
+
+Durable project facts generally belong in `project_summary.md`; user-facing setup and usage generally belong in `README.md`.
 
 ## Required Startup Workflow
 
-Before substantive work:
+Use judgment to inspect only the context relevant to the current task.
 
-1. Read the repository-root `AGENTS.md` in full.
-2. Inspect `project_summary.md` as the repository index. Read the sections relevant to the current task; read it in full for cross-cutting, architectural, or unfamiliar work.
-3. Use the summary to locate relevant code, configuration, tests, and entry points.
-4. Verify all task-sensitive details against the current source. Source code and checked-in configuration remain the source of truth.
-5. Inspect the worktree and preserve unrelated or pre-existing user changes.
+* `project_summary.md` can be useful for unfamiliar, architectural, or cross-cutting work, but it is not required for every task.
+* Prefer targeted searches and file reads over broad repository scans when they provide enough information.
+* For task-sensitive decisions, confirm important assumptions against current source or checked-in configuration when useful.
+* Preserve unrelated or pre-existing user changes.
 
-If `project_summary.md` is missing, inspect the repository and create it before making substantive changes. In a read-only context, defer creation and include it in the plan.
+`project_summary.md` is an index, not a prerequisite for every task. If it is missing, proceed with the requested work unless creating it is itself useful to the task.
+
+For repository-wide searches, large documentation reads, or other high-volume context gathering, consider using `luna_worker` to summarize the relevant material before loading large amounts of context into the parent.
 
 ## Development Guidelines
 
-- Use `apply_patch` for file edits. If it cannot run because of an environment or sandbox limitation, apply the patch with `git apply --recount <<'PATCH'` instead.
+* Use `apply_patch` for file edits. If it cannot run because of an environment or sandbox limitation, apply the patch with `git apply --recount <<'PATCH'` instead.
 
 ## Engineering Principles
 
-1. Do not preserve backward compatibility. Delete obsolete paths directly; do not add compatibility layers, migrations, or fallbacks.
-2. Choose the simplest implementation that satisfies the current requirements. Avoid speculative abstractions, unnecessary indirection, and redundant configuration layers.
-3. Build the system in layers. First make a minimal end-to-end path work, then add capabilities incrementally. Never dismantle a working path to accommodate unfinished complexity.
-4. Keep components modular and maintain a clear separation of concerns.
-5. Prefer mature, actively maintained libraries. Do not reimplement functionality without a concrete reason.
-6. Inspect the capabilities of existing project dependencies before adding a package or writing a custom implementation. Do not assume required functionality is absent.
-7. Make architecture decisions for the long term. Do not accept temporary designs justified by plans to replace them later.
-8. Study how mature products solve the same problem and use proven patterns instead of inventing solutions from scratch.
+Use these as general preferences, not absolute rules.
+
+* Prefer the simplest implementation that fully satisfies the current requirements. Avoid speculative abstractions, unnecessary indirection, and redundant configuration.
+* Keep components modular with clear responsibilities, while avoiding abstractions that are not justified by current needs.
+* Prefer incremental changes that preserve working behavior while extending it.
+* Prefer mature existing libraries and existing project dependencies over custom implementations when they already provide the required capability.
+* Before adding a dependency or reimplementing substantial functionality, check whether existing dependencies already provide it.
+* Backward compatibility is not a default requirement. Do not add compatibility layers, migrations, or fallbacks unless the task, an existing public contract, or current tests require them. Prefer removing obsolete paths when they are already within the scope of the requested change.
+* For durable architectural changes, prefer designs that fit the existing system and avoid knowingly temporary indirection. For experiments or prototypes, optimize for the stated task instead.
+* For novel or high-impact architectural decisions, consult established implementations when doing so materially reduces uncertainty. Do not perform external research for routine changes.
 
 ## Coding Style & Naming Conventions
 
-Use Python with 4-space indentation, type hints where they clarify interfaces, and explicit imports. Follow existing names: modules and functions use `snake_case`, classes use `PascalCase`, and config files use descriptive names. Keep comments short and useful; avoid committing debug breakpoints or ad hoc absolute paths.
+Follow the surrounding code unless there is a clear reason not to.
+
+For Python, use 4-space indentation, explicit imports, and type hints where they clarify interfaces. Follow existing naming conventions: modules and functions use snake_case, classes use PascalCase, and configuration files use descriptive names.
+
+Keep comments concise and avoid committing accidental debug artifacts or machine-specific absolute paths.
+
+## Validation
+
+Validation is optional and should be driven by risk or uncertainty rather than by the fact that a change was made.
+
+For small, localized, mechanical, or easily inspected changes, it is usually reasonable to skip tests, builds, linters, type checks, and repeated verification.
+
+Validation is more useful when:
+
+* the change is substantial or cross-cutting;
+* correctness is meaningfully uncertain;
+* several components interact in ways that are difficult to verify by inspection;
+* the user specifically asks for validation.
+
+When validation would materially reduce uncertainty, prefer the narrowest useful check first.
+
+Broader or repeated validation is generally only worthwhile after a failure, after further relevant changes, or when the affected surface is genuinely broad.
+
+Avoid running full suites merely for completeness, and avoid investigating unrelated pre-existing failures unless they block the requested work.
+
+If a worker has already performed suitable validation on the same resulting changes, the parent can normally rely on that result unless there is a reason to re-check it.
 
 ## Persistent Project Summary
 
-`project_summary.md` at the repository root is the durable project context document. Keep `project_summary.md` concise, factual, and project-wide. Update it in the same task when work changes repository structure, component responsibilities, system-wide data or control flow, public entry points, configuration formats, dependencies, runtime requirements, or standard operational workflows.
+`project_summary.md` is intended for concise, durable, project-wide context.
 
-Do not update it for local bug fixes, isolated tests, formatting, task logs, changelogs, or temporary implementation details. Edit existing sections in place, remove obsolete claims, verify changed statements against the repository, and state in the final report whether and why the summary changed.
+Consider updating it when the requested work materially changes things such as:
+
+* repository structure or component responsibilities;
+* system-wide data or control flow;
+* public entry points or configuration formats;
+* dependencies, runtime requirements, or standard workflows.
+
+Local fixes, isolated tests, routine renames, formatting, logs, changelogs, and temporary implementation details usually do not require an update.
+
+Do not broaden a task merely to audit or refresh `project_summary.md`.
 
 ## Agent Delegation
 
-Delegation is the default for implementation after plan approval. Optimize primarily for total execution cost while preserving correctness.
+Delegation is available as a cost- and context-efficiency mechanism. It is not required, and it is not tied to a particular workflow phase.
 
-Once a plan is decision-complete, the parent agent should normally delegate implementation rather than execute it directly, even when the parent already has sufficient repository context.
+Use judgment based on total expected cost, duplicated context, reasoning difficulty, and the amount of repetitive work involved.
 
-### General Rules
+### `luna_worker`
 
-- Keep small, tightly coupled, or context-heavy tasks in the current agent.
-- Delegate tasks that are independent, decision-complete, repetitive, or can be described with a compact handoff.
-- Do not delegate unresolved architectural decisions or tasks that require most of the planner's accumulated context.
-- Do not assume prompt-cache or KV-cache reuse across agents or models. Minimize duplicated context, repository reads, tool output, and review work.
-- Avoid redundant investigation between the parent agent and workers.
+Consider `luna_worker` when a task is relatively inexpensive in reasoning but expensive in context consumption or repetitive tool use. Also using `luna_worker` for narrowly scoped investigation or decision-complete implementation that can be executed from a compact handoff.
 
-### Handoff Contract
+Typical examples include:
 
-Provide workers with a compact execution packet containing only what is necessary:
+* broad repository or documentation searches;
+* locating implementations, references, configuration, tests, or entry points;
+* reading and summarizing many files;
+* producing subsystem or codebase inventories;
+* repetitive comparisons or fact extraction;
+* simple localized edits;
+* straightforward renames;
+* bulk mechanical changes;
+* simple configuration updates;
+* high-volume code inspection before higher-level reasoning.
 
-- objective and scope;
-- relevant repository paths;
-- decisions and constraints already established;
-- acceptance criteria;
-- required validation commands;
-- known pre-existing changes that must be preserved.
+A useful pattern is to let `luna_worker` consume the bulk material and return a compact summary containing the relevant paths, findings, changes, and uncertainties.
 
-Do not copy source files, `AGENTS.md`, `project_summary.md`, full conversation history, or planner reasoning into the handoff when the worker can obtain the required information directly from the repository.
+This can be done in planning, investigation, or implementation contexts when it is useful. An approved plan is not a prerequisite.
 
-Workers must verify task-sensitive details against the current source.
+### Delegation Heuristics
 
-### Planning Delegation
+Delegation is usually less useful when the task is already small, when the handoff would duplicate most of the parent's context, or when the next step is tightly coupled to reasoning already underway.
 
-In Plan mode, use `luna_worker` only for independent, narrowly scoped investigations with compact, mechanically verifiable outputs, such as:
+Multiple workers are most useful for genuinely independent work or large retrieval workloads that can be partitioned cleanly.
 
-- locating implementations or references;
-- identifying affected files;
-- checking existing dependency capabilities;
-- running read-only searches or tests;
-- collecting repository facts.
+Try to avoid duplicated searches, repeated file reading, routine review chains, and repeated validation across parent and workers.
 
-Keep architecture decisions, ambiguous requirements, cross-cutting reasoning, and plan synthesis in the parent agent.
+Workers should generally avoid recursive delegation. If the assigned task expands substantially or requires different reasoning, reporting that back to the parent is usually preferable.
 
-Use multiple planning workers only when the subtasks are genuinely independent and parallel execution provides material value.
+### Handoffs and Worker Output
 
-### Implementation Routing
+Keep handoffs compact. Include only the information likely to help the worker execute correctly, such as:
 
-After plan approval, delegate substantial implementation to exactly one primary implementation worker by default.
+* objective and scope;
+* relevant paths;
+* important established decisions or constraints;
+* expected result;
+* validation expectations, when relevant;
+* known pre-existing changes that should be preserved.
 
-Use `luna_worker` as the default implementation worker when the approved plan provides sufficient instructions to execute and validate the change.
+Prefer pointing to repository paths over copying large files, documentation, conversation history, or planner reasoning.
 
-Escalate to `terra_worker` only when implementation still requires one or more of:
+Worker responses should usually be concise and oriented toward downstream use. Useful content may include:
 
-- unresolved architectural judgment;
-- substantial debugging or non-local reasoning;
-- meaningful requirement ambiguity;
-- adaptation to unexpected source behavior that is not covered by the plan.
+* important findings;
+* relevant paths or symbols;
+* files changed;
+* a short description of the work;
+* uncertainties or blockers;
+* validation performed, if any.
 
-Do not keep implementation in the parent merely because the parent already has repository context or could perform the change itself.
+Large source excerpts, exhaustive search output, and verbose process narration are usually unnecessary unless specifically useful.
 
-The parent may implement directly only when the change is trivial and delegation overhead would clearly exceed the implementation work, such as a small localized edit requiring no investigation or debugging.
+### Parent Role
 
-If a `luna_worker` encounters ambiguity or a blocker outside the approved plan, it should stop and report the issue to the parent rather than make architectural decisions or recursively delegate.
+The parent typically retains responsibility for scope control, important architectural decisions, integration, and resolving blockers.
 
-The primary implementation worker must not recursively delegate implementation.
+When worker results are sufficiently clear, the parent need not automatically repeat the same searches, file reads, review, or validation.
 
-### Parent-Agent Responsibilities
-
-The parent agent remains responsible for:
-
-- coordination and scope control;
-- resolving blockers and plan deviations;
-- reviewing the worker's changes without unnecessarily repeating its investigation;
-- final validation;
-- updating `project_summary.md` when required;
-- final completion reporting.
+The purpose of delegation is to reduce duplicated context and low-value execution, not to add mandatory process layers.

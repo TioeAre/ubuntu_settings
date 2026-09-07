@@ -30,6 +30,7 @@ terminal_resize_reflow = true
 memories = true
 mentions_v2 = true
 network_proxy = true
+token_budget = true
 
 [agents]
 enabled = true
