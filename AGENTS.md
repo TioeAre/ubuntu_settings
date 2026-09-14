@@ -82,30 +82,24 @@ Do not broaden a task merely to audit or refresh `project_summary.md`.
 
 ## Agent Delegation
 
-Delegation is available as a cost- and context-efficiency mechanism. It is not required, and it is not tied to a particular workflow phase.
+Delegation is an optional mechanism for reducing parent-context usage and repetitive execution cost. Use it when the expected benefit is greater than the coordination overhead.
 
-Use judgment based on total expected cost, duplicated context, reasoning difficulty, and the amount of repetitive work involved.
+The parent agent remains responsible for architectural decisions, ambiguity resolution, difficult debugging, and integrating worker results.
 
 ### `luna_worker`
 
-Consider `luna_worker` when the remaining work is relatively cheap in reasoning but expensive in context, repetitive tool use, or execution tokens.
+`luna_worker` is best suited to **large-context, relatively low-reasoning work**: tasks that are expensive mainly because there is a lot to read, search, compare, summarize, or mechanically execute.
 
-It is a good fit for:
+Good candidates include:
 
-* broad repository or documentation searches;
-* locating implementations, references, tests, configs, entry points, or dependencies;
-* reading and summarizing many files;
-* codebase inventories, impact analysis, and repetitive fact extraction;
-* simple localized fixes, renames, config updates, and bulk mechanical edits;
-* straightforward refactors or API migrations with a known target pattern;
-* documentation or test updates with clear expected behavior;
-* decision-complete implementation that can be described with a compact handoff.
+* reading and summarizing many files, documents, logs, specifications, or issues;
+* repository-wide search, inventories, call-site discovery, dependency tracing, and impact analysis;
+* comparing multiple implementations, tests, configs, or design documents;
+* extracting structured facts or condensing large amounts of context for later reasoning;
+* repetitive or mechanical edits once the intended transformation is already clear;
+* straightforward implementation, documentation, or test updates with well-defined expected behavior.
 
-After planning has resolved the important design, scope, and implementation decisions, the resulting implementation can often be delegated directly to `luna_worker` instead of being executed by the parent.
-
-A useful pattern is to let the parent handle higher-level reasoning, give `luna_worker` a compact execution packet, and have it return only relevant findings, changed files, uncertainties, and concise results. This can be used during planning, investigation, or implementation. An approved plan is not required.
-
-Keep work in the parent when substantial architectural judgment, ambiguity, difficult debugging, or non-local reasoning is still required.
+Use `luna_worker` when the work is expensive because there is **a lot of context or repetition**, rather than because the reasoning itself is difficult.
 
 ### Delegation Heuristics
 
@@ -113,9 +107,7 @@ Delegation is usually less useful when the task is already small, when the hando
 
 Multiple workers are most useful for genuinely independent work or large retrieval workloads that can be partitioned cleanly.
 
-Try to avoid duplicated searches, repeated file reading, routine review chains, and repeated validation across parent and workers.
-
-Workers should generally avoid recursive delegation. If the assigned task expands substantially or requires different reasoning, reporting that back to the parent is usually preferable.
+Try to avoid duplicated searches, repeated file reading, routine review chains, and repeated validation across parent and workers. Workers should generally avoid recursive delegation. If the assigned task expands substantially or requires different reasoning, reporting that back to the parent is usually preferable.
 
 ### Handoffs and Worker Output
 

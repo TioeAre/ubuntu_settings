@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=ChatGPT
+Comment=ChatGPT by OpenAI
+GenericName=AI assistant
+# Exec=chatgpt %U
+Exec=/usr/bin/env HTTP_PROXY=http://127.0.0.1:7890 HTTPS_PROXY=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890 chatgpt --proxy-server=http://127.0.0.1:7890 %U
+Icon=chatgpt
+Type=Application
+StartupNotify=true
+Categories=Utility;Development;
+
+MimeType=text/html;x-scheme-handler/codex;x-scheme-handler/http;x-scheme-handler/https;text/csv;application/vnd.openxmlformats-officedocument.wordprocessingml.document;application/vnd.openxmlformats-officedocument.presentationml.presentation;text/tab-separated-values;application/vnd.ms-excel;application/vnd.ms-excel.sheet.macroEnabled.12;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;
