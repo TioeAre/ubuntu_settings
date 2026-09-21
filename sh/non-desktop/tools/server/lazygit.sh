@@ -18,3 +18,7 @@ git config --global https.proxy https://127.0.0.1:7890
 
 git config --global --unset http.proxy
 git config --global --unset https.proxy
+
+# for repo needs access token
+# brew install --cask git-credential-manager
+# git config --local credential.useHttpPath true
