@@ -4,7 +4,7 @@
 
 - 代理名称：luna_worker
 
-- 模型：gpt-5.6-luna
+- 模型：gpt-6-luna
 
 - 推理强度：max
 
@@ -32,7 +32,7 @@ Return a concise summary containing the result, relevant file paths, verificatio
 
 """
 
-model = "gpt-5.6-luna"
+model = "gpt-6-luna"
 
 model_reasoning_effort = "max"
 

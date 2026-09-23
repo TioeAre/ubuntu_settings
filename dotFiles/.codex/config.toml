@@ -1,5 +1,5 @@
-model = "gpt-5.6-sol"
-model_reasoning_effort = "medium"
+model = "gpt-6-astra"
+model_reasoning_effort = "high"
 approvals_reviewer = "guardian_subagent"
 plan_mode_reasoning_effort = "high"
 # model_context_window = 1000000
@@ -12,18 +12,12 @@ enabled = true
 [notice]
 hide_rate_limit_model_nudge = true
 
-[notice.model_migrations]
-"gpt-5.3-codex" = "gpt-5.4"
-"gpt-5.4" = "gpt-5.5"
-
 [tui]
-status_line = ["model-with-reasoning", "current-dir", "git-branch"]
+status_line = ["model-with-reasoning", "current-dir", "git-branch", "permissions", "context-used", "five-hour-limit", "weekly-limit"]
 status_line_use_colors = true
 terminal_title = ["activity", "project-name", "app-name", "current-dir", "run-state", "context-remaining"]
-
-[tui.model_availability_nux]
-"gpt-5.5" = 4
-"gpt-5.6-sol" = 4
+theme = "inspired-github"
+screen_reader_detection_done = true
 
 [features]
 terminal_resize_reflow = true
@@ -34,4 +28,3 @@ token_budget = true
 
 [agents]
 enabled = true
-max_concurrent_threads_per_session = 4
