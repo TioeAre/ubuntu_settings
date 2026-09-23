@@ -1,13 +1,12 @@
 model = "gpt-6-astra"
 model_reasoning_effort = "high"
-approvals_reviewer = "guardian_subagent"
 plan_mode_reasoning_effort = "high"
 # model_context_window = 1000000
 # model_auto_compact_token_limit = 900000
 personality = "pragmatic"
-
-[plugins."github@openai-curated"]
-enabled = true
+sandbox_mode = "workspace-write"
+web_search = "live"
+model_verbosity = "low"
 
 [notice]
 hide_rate_limit_model_nudge = true
@@ -28,3 +27,9 @@ token_budget = true
 
 [agents]
 enabled = true
+
+[memories]
+no_memories_if_mcp_or_web_search = true
+
+[sandbox_workspace_write]
+network_access = true
