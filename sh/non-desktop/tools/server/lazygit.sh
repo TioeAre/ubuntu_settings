@@ -22,3 +22,6 @@ git config --global --unset https.proxy
 # for repo needs access token
 # brew install --cask git-credential-manager
 # git config --local credential.useHttpPath true
+
+# global plaintext storage
+# git config --global credential.helper store
