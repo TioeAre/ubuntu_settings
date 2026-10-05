@@ -1,4 +1,5 @@
 name = "sol_worker"
+service_tier = "default"
 
 description = "Primary implementation worker for ambiguous, cross-cutting, debugging-heavy, or architecture-sensitive changes."
 
@@ -11,6 +12,6 @@ Run appropriate tests and static checks.
 Report deviations from the approved plan explicitly.
 """
 
-model = "gpt-6-sol"
+model = "gpt-6.1-sol"
 
-model_reasoning_effort = "high"
+model_reasoning_effort = "xhigh"

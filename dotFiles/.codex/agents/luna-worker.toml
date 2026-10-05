@@ -1,4 +1,5 @@
 name = "luna_worker"
+service_tier = "default"
 
 description = "Fast worker for clear, narrowly scoped, and repeatable tasks."
 
