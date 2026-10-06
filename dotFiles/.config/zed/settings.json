@@ -7,16 +7,19 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "markdown_preview": {
+        "font_size": 14.0
+    },
     "language_models": {
         "openai_compatible": {
             "ustc": {
                 "api_url": "https://api.llm.ustc.edu.cn/v1",
                 "available_models": [
                     {
-                        "name": "deepseek-v4-pro",
+                        "name": "deepseek-flash",
                         "max_tokens": 1000000,
-                        "max_output_tokens": 1000000,
-                        "max_completion_tokens": 1000000,
+                        "max_output_tokens": 32000,
+                        "max_completion_tokens": 200000,
                         "capabilities": {
                             "tools": true,
                             "images": false,
@@ -28,23 +31,8 @@
                         }
                     },
                     {
-                        "name": "deepseek-v4-flash-ascend1",
-                        "max_tokens": 700000,
-                        "max_output_tokens": 700000,
-                        "max_completion_tokens": 700000,
-                        "capabilities": {
-                            "tools": true,
-                            "images": false,
-                            "parallel_tool_calls": true,
-                            "prompt_cache_key": false,
-                            "chat_completions": true,
-                            "interleaved_reasoning": false,
-                            "max_tokens_parameter": false
-                        }
-                    },
-                    {
-                        "name": "glm-5.2",
-                        "max_tokens": 200000,
+                        "name": "glm-5.3-flash",
+                        "max_tokens": 1000000,
                         "max_output_tokens": 32000,
                         "max_completion_tokens": 200000,
                         "capabilities": {
@@ -62,7 +50,6 @@
         }
     },
     "agent_ui_font_size": 14.5,
-    "markdown_preview_font_size": 14.0,
     "agent_buffer_font_size": 14.0,
     "bottom_dock_layout": "contained",
     "title_bar": {
@@ -154,7 +141,9 @@
     },
     "restore_on_startup": "last_session",
     "buffer_font_size": 14.0,
-    "buffer_line_height": "comfortable",
+    "buffer_line_height": {
+        "custom": 1.5
+    },
     "theme": {
         "mode": "light",
         "light": "One Light",
