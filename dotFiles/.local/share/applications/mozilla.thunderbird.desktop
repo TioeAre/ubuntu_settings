@@ -1,12 +1,12 @@
 [Desktop Entry]
 Encoding=UTF-8
 Version=1.0
-Name=thunderbrid
+Name=Thunderbird
 TryExec=/home/tioeare/tools/thunderbird/thunderbird-bin
 Exec=/home/tioeare/tools/thunderbird/thunderbird %U
 Terminal=false
 Type=Application
 Icon=thunderbird.png
-StartupWMClass=thunderbrid
+StartupWMClass=thunderbird
 Categories=Network;Email
-Comment=thunderbrid
+Comment=Thunderbird

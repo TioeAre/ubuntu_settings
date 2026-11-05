@@ -5,4 +5,5 @@ Name=PicGo
 Icon=PicGo
 TryExec=/home/tioeare/tools/PicGo.AppImage
 Exec=/home/tioeare/tools/PicGo.AppImage --no-sandbox
-Terminal=False
+Terminal=false
+StartupWMClass=PicGo

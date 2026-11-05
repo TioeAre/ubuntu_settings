@@ -1,10 +1,10 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=localsend
+Name=LocalSend
 Icon=localsend
 TryExec=/home/tioeare/tools/LocalSend.AppImage
 Exec=/home/tioeare/tools/LocalSend.AppImage --no-sandbox
 Terminal=false
-StartupWMClass=localsend
+StartupWMClass=org.localsend.localsend_app
 Comment=localsend

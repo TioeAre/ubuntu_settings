@@ -78,7 +78,7 @@ Comment[wa]=Asspougnî des fitchîs tecses
 Comment[zh_CN]=编辑文本文件
 Comment[zh_TW]=編輯文字檔
 TryExec=/home/tioeare/brew/bin/nvim
-Exec=alacritty -o window.dimensions.columns=130 -o window.dimensions.lines=40 -e "/home/tioeare/brew/bin/nvim" %F
+Exec=alacritty --class nvim,nvim -o window.dimensions.columns=130 -o window.dimensions.lines=40 -e "/home/tioeare/brew/bin/nvim" %F
 Terminal=false
 Type=Application
 Keywords=Text;editor;
@@ -87,7 +87,8 @@ Keywords[fr]=Texte;éditeur;
 Keywords[ru]=текст;текстовый редактор;
 Keywords[sr]=Текст;едитор;
 Keywords[tr]=Metin;düzenleyici;
-Icon=nvim.svg
+Icon=nvim
 Categories=Utility;TextEditor;
 StartupNotify=false
-MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;application/x-shellscript;text/x-c;text/x-c++;
+StartupWMClass=nvim
+MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;application/x-shellscript;text/x-c;text/x-c++;
