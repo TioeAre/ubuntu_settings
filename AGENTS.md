@@ -3,7 +3,6 @@
 ## Scope and workflow
 
 * Complete the requested task with the smallest sufficient change; preserve unrelated user changes.
-* Use `apply_patch` for edits. If unavailable, use `git apply --recount`.
 * Keep durable project facts in `project_summary.md` and setup/usage in `README.md`; update them only when the task materially affects their content.
 
 ## Implementation
